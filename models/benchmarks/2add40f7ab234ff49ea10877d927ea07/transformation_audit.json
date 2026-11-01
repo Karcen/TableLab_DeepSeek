@@ -1,0 +1,118 @@
+{
+  "numeric": [
+    "age",
+    "education-num",
+    "hours-per-week"
+  ],
+  "categorical": [
+    "workclass",
+    "occupation",
+    "marital-status"
+  ],
+  "model_parameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 1500,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "n_train": 26049,
+  "n_validation": 6512,
+  "target_training_mean": 0.24081538638719335,
+  "imputation_medians": {
+    "age": 37.0,
+    "education-num": 10.0,
+    "hours-per-week": 40.0
+  },
+  "scaler_means": {
+    "age": 38.535913086874736,
+    "education-num": 10.076586433260394,
+    "hours-per-week": 40.51057622173596
+  },
+  "scaler_variances": {
+    "age": 183.53421065327765,
+    "education-num": 6.607017930271623,
+    "hours-per-week": 151.54513940077973
+  },
+  "training_categories": {
+    "workclass": [
+      "Federal-gov",
+      "Local-gov",
+      "Never-worked",
+      "Private",
+      "Self-emp-inc",
+      "Self-emp-not-inc",
+      "State-gov",
+      "Without-pay",
+      "__missing__"
+    ],
+    "occupation": [
+      "Adm-clerical",
+      "Armed-Forces",
+      "Craft-repair",
+      "Exec-managerial",
+      "Farming-fishing",
+      "Handlers-cleaners",
+      "Machine-op-inspct",
+      "Other-service",
+      "Priv-house-serv",
+      "Prof-specialty",
+      "Protective-serv",
+      "Sales",
+      "Tech-support",
+      "Transport-moving",
+      "__missing__"
+    ],
+    "marital-status": [
+      "Divorced",
+      "Married-AF-spouse",
+      "Married-civ-spouse",
+      "Married-spouse-absent",
+      "Never-married",
+      "Separated",
+      "Widowed"
+    ]
+  },
+  "transformed_feature_names": [
+    "num__age",
+    "num__education-num",
+    "num__hours-per-week",
+    "cat__workclass_Local-gov",
+    "cat__workclass_Never-worked",
+    "cat__workclass_Private",
+    "cat__workclass_Self-emp-inc",
+    "cat__workclass_Self-emp-not-inc",
+    "cat__workclass_State-gov",
+    "cat__workclass_Without-pay",
+    "cat__workclass___missing__",
+    "cat__occupation_Armed-Forces",
+    "cat__occupation_Craft-repair",
+    "cat__occupation_Exec-managerial",
+    "cat__occupation_Farming-fishing",
+    "cat__occupation_Handlers-cleaners",
+    "cat__occupation_Machine-op-inspct",
+    "cat__occupation_Other-service",
+    "cat__occupation_Priv-house-serv",
+    "cat__occupation_Prof-specialty",
+    "cat__occupation_Protective-serv",
+    "cat__occupation_Sales",
+    "cat__occupation_Tech-support",
+    "cat__occupation_Transport-moving",
+    "cat__occupation___missing__",
+    "cat__marital-status_Married-AF-spouse",
+    "cat__marital-status_Married-civ-spouse",
+    "cat__marital-status_Married-spouse-absent",
+    "cat__marital-status_Never-married",
+    "cat__marital-status_Separated",
+    "cat__marital-status_Widowed"
+  ]
+}

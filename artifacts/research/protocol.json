@@ -1,0 +1,28 @@
+{
+  "outer_folds": 3,
+  "inner_folds": 3,
+  "search_evaluations": 12,
+  "seed": 42,
+  "search_models": [
+    "RF",
+    "HGB"
+  ],
+  "methods": [
+    "grid",
+    "tpe"
+  ],
+  "tpe_startup_trials": 4,
+  "model_selection": "predefined families; no outer-driven retuning",
+  "shap_model": "HGB_grid fixed in advance",
+  "classification_search_metric": "roc_auc",
+  "regression_search_metric": "negative_rmse",
+  "workers": 2,
+  "versions": {
+    "scikit-learn": "1.8.0",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "optuna": "4.9.0",
+    "shap": "0.50.0"
+  },
+  "code_sha256": "e64516611b9c4a77dcdbcd046f1df50d5d9bd7b9027ba587bce2938a46618e96"
+}

@@ -1,0 +1,129 @@
+{
+  "stage": "data_import_and_quality",
+  "status": "pass_with_documented_caveats",
+  "source_scope": "上传课程数据副本；不外发数据；哈希对照用户日志，不是官方数字签名",
+  "rows_removed": 0,
+  "data": [
+    {
+      "dataset": "house",
+      "rows": 1460,
+      "raw_columns": 81,
+      "processed_columns": 82,
+      "missing_cells": 6965,
+      "rows_with_any_missing": 1460,
+      "duplicate_full_records_excluding_ids": 0,
+      "missing_target": 0,
+      "rows_removed": 0,
+      "provenance_status": "user_supplied_unverified"
+    },
+    {
+      "dataset": "adult",
+      "rows": 48842,
+      "raw_columns": 15,
+      "processed_columns": 18,
+      "missing_cells": 6465,
+      "rows_with_any_missing": 3620,
+      "duplicate_full_records_excluding_ids": 52,
+      "missing_target": 0,
+      "rows_removed": 0,
+      "provenance_status": "download_manifest_matched"
+    },
+    {
+      "dataset": "nba",
+      "rows": 12844,
+      "raw_columns": 22,
+      "processed_columns": 23,
+      "missing_cells": 0,
+      "rows_with_any_missing": 0,
+      "duplicate_full_records_excluding_ids": 0,
+      "missing_target": 0,
+      "rows_removed": 0,
+      "provenance_status": "download_manifest_matched"
+    },
+    {
+      "dataset": "students",
+      "rows": 1000,
+      "raw_columns": 8,
+      "processed_columns": 9,
+      "missing_cells": 0,
+      "rows_with_any_missing": 0,
+      "duplicate_full_records_excluding_ids": 0,
+      "missing_target": 0,
+      "rows_removed": 0,
+      "provenance_status": "download_manifest_matched"
+    }
+  ],
+  "findings": [
+    {
+      "dataset": "house",
+      "severity": "must disclose",
+      "finding": "没有房价来源下载记录或原始字段说明附件",
+      "count": 1,
+      "action": "保留 user_supplied_unverified；不宣称与 Kaggle 官方训练文件逐行一致"
+    },
+    {
+      "dataset": "house",
+      "severity": "should disclose",
+      "finding": "缺少 LotFrontage",
+      "count": 259,
+      "action": "不全表删除；仅选作特征时在训练子集中拟合中位数插补"
+    },
+    {
+      "dataset": "house",
+      "severity": "should disclose",
+      "finding": "改建年份晚于出售年份",
+      "count": 1,
+      "action": "标记但不推断更正值；默认特征未使用此字段"
+    },
+    {
+      "dataset": "adult",
+      "severity": "must fix for splitting",
+      "finding": "adult.data 内非目标原始字段完全相同的额外记录",
+      "count": 25,
+      "action": "记录全部保留；按非目标字段指纹分层分组，禁止跨训练与交互验证"
+    },
+    {
+      "dataset": "adult",
+      "severity": "must disclose",
+      "finding": "原始训练/测试文件共有的非目标字段指纹",
+      "count": 26,
+      "action": "未使用 adult.test 训练或报告其性能；未来最终测试需单独规定重合组处置"
+    },
+    {
+      "dataset": "adult",
+      "severity": "should disclose",
+      "finding": "样本权重存在但当前模型与描述统计未加权",
+      "count": 48842,
+      "action": "比例仅代表上传样本；不外推为总体人口比例"
+    },
+    {
+      "dataset": "nba",
+      "severity": "must disclose",
+      "finding": "姓名-赛季键不唯一",
+      "count": 4,
+      "action": "8 条相关记录全部保留；不合并；group 指姓名分组，非验证后的唯一球员分组"
+    },
+    {
+      "dataset": "nba",
+      "severity": "should disclose",
+      "finding": "ts_pct 大于 1",
+      "count": 15,
+      "action": "真实投篮效率不是普通二项概率，不按 0-1 硬截断；无原始投篮次数，不能逐条重算"
+    },
+    {
+      "dataset": "nba",
+      "severity": "should disclose",
+      "finding": "college 为字面 None",
+      "count": 1854,
+      "action": "保留为类别，不用 pandas 默认缺失表吞掉"
+    },
+    {
+      "dataset": "students",
+      "severity": "must disclose",
+      "finding": "源站致谢指向数据生成页面，未核实真实抽样",
+      "count": 1000,
+      "action": "称为课程样本；不用其备考关联支持教育因果结论；保留来源性质限制"
+    }
+  ],
+  "utc": "2026-10-30T12:57:19.234532+00:00"
+}

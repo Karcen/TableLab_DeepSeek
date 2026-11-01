@@ -1,0 +1,275 @@
+{
+  "status": "ok",
+  "run_id": "3ea233c30f1046c2bf0c0e51e55000c3",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "adult",
+    "operation": "aggregate",
+    "columns": [
+      "income_gt_50k"
+    ],
+    "filters": [],
+    "group_by": [
+      "education"
+    ],
+    "metric": "mean",
+    "target": null,
+    "features": [],
+    "algorithm": "linear",
+    "split": "random",
+    "context": "retrospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。"
+  ],
+  "files": [
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "education": "Prof-school",
+      "n_rows": 834,
+      "n_valid": 834,
+      "value": 0.739808153477
+    },
+    {
+      "education": "Doctorate",
+      "n_rows": 594,
+      "n_valid": 594,
+      "value": 0.725589225589
+    },
+    {
+      "education": "Masters",
+      "n_rows": 2657,
+      "n_valid": 2657,
+      "value": 0.549115543846
+    },
+    {
+      "education": "Bachelors",
+      "n_rows": 8025,
+      "n_valid": 8025,
+      "value": 0.412834890966
+    },
+    {
+      "education": "Assoc-acdm",
+      "n_rows": 1601,
+      "n_valid": 1601,
+      "value": 0.257963772642
+    },
+    {
+      "education": "Assoc-voc",
+      "n_rows": 2061,
+      "n_valid": 2061,
+      "value": 0.25327510917
+    },
+    {
+      "education": "Some-college",
+      "n_rows": 10878,
+      "n_valid": 10878,
+      "value": 0.189648832506
+    },
+    {
+      "education": "HS-grad",
+      "n_rows": 15784,
+      "n_valid": 15784,
+      "value": 0.158578307146
+    },
+    {
+      "education": "12th",
+      "n_rows": 657,
+      "n_valid": 657,
+      "value": 0.073059360731
+    },
+    {
+      "education": "7th-8th",
+      "n_rows": 955,
+      "n_valid": 955,
+      "value": 0.064921465969
+    },
+    {
+      "education": "10th",
+      "n_rows": 1389,
+      "n_valid": 1389,
+      "value": 0.062634989201
+    },
+    {
+      "education": "9th",
+      "n_rows": 756,
+      "n_valid": 756,
+      "value": 0.054232804233
+    },
+    {
+      "education": "5th-6th",
+      "n_rows": 509,
+      "n_valid": 509,
+      "value": 0.05304518664
+    },
+    {
+      "education": "11th",
+      "n_rows": 1812,
+      "n_valid": 1812,
+      "value": 0.050772626932
+    },
+    {
+      "education": "1st-4th",
+      "n_rows": 247,
+      "n_valid": 247,
+      "value": 0.032388663968
+    },
+    {
+      "education": "Preschool",
+      "n_rows": 83,
+      "n_valid": 83,
+      "value": 0.012048192771
+    }
+  ],
+  "metrics": {},
+  "summary": "聚合使用筛选后的全部 48,842 条记录，共 16 个结果组。n_rows 是组内行数，n_valid 是实际参与该统计量的非缺失数。",
+  "table_rows_total": 16,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+    "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+    "sha256": "74907b5b1708c43fe9d53be1208f13cde9a85521ef6a5a52185937728d6344ee",
+    "rows": 48842,
+    "columns": [
+      "age",
+      "workclass",
+      "fnlwgt",
+      "education",
+      "education-num",
+      "marital-status",
+      "occupation",
+      "relationship",
+      "race",
+      "sex",
+      "capital-gain",
+      "capital-loss",
+      "hours-per-week",
+      "native-country",
+      "income",
+      "income_gt_50k",
+      "_source_split",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.142630+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 29,
+    "license_note": "CC BY 4.0，引用 UCI Adult。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "download_receipt": {
+      "dataset": "adult",
+      "archive_name": "adult.zip",
+      "source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+      "source_handle_or_url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+      "downloaded_utc": "2026-10-30T12:40:32.738404+00:00",
+      "downloader": "Python standard library urllib",
+      "packaging": "original_source_zip",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+      "archive_bytes": 620237,
+      "files": {
+        "adult.data": {
+          "bytes": 3974305,
+          "sha256": "5b00264637dbfec36bdeaab5676b0b309ff9eb788d63554ca0a249491c86603d",
+          "rows": 32561,
+          "column_count": 15
+        },
+        "adult.test": {
+          "bytes": 2003153,
+          "sha256": "a2a9044bc167a35b2361efbabec64e89d69ce82d9790d2980119aac5fd7e9c05",
+          "rows": 16281,
+          "column_count": 15
+        },
+        "adult.names": {
+          "bytes": 5229,
+          "sha256": "c248284c0b5de30c9e1958d6cdd168a34a654758b620e68f46aefa83fc0a576a"
+        }
+      }
+    },
+    "dataset": "adult",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "3ea233c30f1046c2bf0c0e51e55000c3",
+    "question": "按教育程度比较年收入超过 5 万美元的样本比例。",
+    "rows_before_filter": 48842,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 48842,
+    "elapsed_seconds": 0.028062
+  },
+  "interaction_mode": "manual_parameters",
+  "evidence": [
+    {
+      "id": "adult:scope",
+      "title": "收入分类数据边界",
+      "text": "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.14129
+    },
+    {
+      "id": "adult:field:education-num",
+      "title": "education-num",
+      "text": "education-num 教育程度的有序数值编码，不直接等同于个人实际受教育年数。 数据类型 int64 示例值 ",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.088862
+    },
+    {
+      "id": "adult:field:education",
+      "title": "education",
+      "text": "education 教育程度分类。 数据类型 object 示例值 10th, 11th, 12th, 1st-4th, 5th-6th, 7th-8th, 9th, Assoc-acdm, Assoc-voc, Bachelors, Doctorate, HS-grad",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.064082
+    },
+    {
+      "id": "method:forest",
+      "title": "随机森林",
+      "text": "random_forest 对连续目标使用回归森林，对收入二元目标使用分类森林。固定 120 棵树、最大深度 12、叶节点至少 5 个样本、随机种子 42、一个并行工作线程。不支持现场超参数搜索。",
+      "source": "本项目方法说明",
+      "similarity": 0.050161
+    },
+    {
+      "id": "adult:field:income_gt_50k",
+      "title": "income_gt_50k",
+      "text": "income_gt_50k 派生二元变量：原始 income 为 >50K 时等于 1，<=50K 时等于 0。均值是样本中超过门槛的比例。 数据类型 int64 示例值 ",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.04719
+    },
+    {
+      "id": "adult:field:income",
+      "title": "income",
+      "text": "income 原始年收入类别。只有 >50K 与 <=50K，没有具体金额。 数据类型 object 示例值 <=50K, >50K",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.039905
+    }
+  ]
+}

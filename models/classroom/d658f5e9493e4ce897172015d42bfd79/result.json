@@ -1,0 +1,359 @@
+{
+  "status": "ok",
+  "run_id": "d658f5e9493e4ce897172015d42bfd79",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "nba",
+    "operation": "aggregate",
+    "columns": [
+      "pts"
+    ],
+    "filters": [],
+    "group_by": [
+      "season"
+    ],
+    "metric": "mean",
+    "target": null,
+    "features": [],
+    "algorithm": "linear",
+    "split": "random",
+    "context": "retrospective",
+    "chart": "histogram",
+    "limit": 100,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。"
+  ],
+  "files": [
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "season": "2022-23",
+      "n_rows": 539,
+      "n_valid": 539,
+      "value": 9.12133580705
+    },
+    {
+      "season": "2020-21",
+      "n_rows": 540,
+      "n_valid": 540,
+      "value": 8.942407407407
+    },
+    {
+      "season": "2019-20",
+      "n_rows": 529,
+      "n_valid": 529,
+      "value": 8.726465028355
+    },
+    {
+      "season": "2018-19",
+      "n_rows": 530,
+      "n_valid": 530,
+      "value": 8.61358490566
+    },
+    {
+      "season": "2009-10",
+      "n_rows": 442,
+      "n_valid": 442,
+      "value": 8.571719457014
+    },
+    {
+      "season": "2008-09",
+      "n_rows": 445,
+      "n_valid": 445,
+      "value": 8.503820224719
+    },
+    {
+      "season": "2016-17",
+      "n_rows": 486,
+      "n_valid": 486,
+      "value": 8.426748971193
+    },
+    {
+      "season": "2015-16",
+      "n_rows": 476,
+      "n_valid": 476,
+      "value": 8.349369747899
+    },
+    {
+      "season": "2007-08",
+      "n_rows": 451,
+      "n_valid": 451,
+      "value": 8.267184035477
+    },
+    {
+      "season": "2021-22",
+      "n_rows": 605,
+      "n_valid": 605,
+      "value": 8.24
+    },
+    {
+      "season": "2006-07",
+      "n_rows": 458,
+      "n_valid": 458,
+      "value": 8.208733624454
+    },
+    {
+      "season": "2010-11",
+      "n_rows": 452,
+      "n_valid": 452,
+      "value": 8.206194690265
+    },
+    {
+      "season": "2017-18",
+      "n_rows": 540,
+      "n_valid": 540,
+      "value": 8.16037037037
+    },
+    {
+      "season": "2014-15",
+      "n_rows": 492,
+      "n_valid": 492,
+      "value": 8.12256097561
+    },
+    {
+      "season": "2013-14",
+      "n_rows": 482,
+      "n_valid": 482,
+      "value": 8.090248962656
+    },
+    {
+      "season": "2004-05",
+      "n_rows": 464,
+      "n_valid": 464,
+      "value": 8.088146551724
+    },
+    {
+      "season": "1996-97",
+      "n_rows": 441,
+      "n_valid": 441,
+      "value": 8.026077097506
+    },
+    {
+      "season": "1999-00",
+      "n_rows": 438,
+      "n_valid": 438,
+      "value": 7.985844748858
+    },
+    {
+      "season": "2001-02",
+      "n_rows": 440,
+      "n_valid": 440,
+      "value": 7.982727272727
+    },
+    {
+      "season": "2005-06",
+      "n_rows": 458,
+      "n_valid": 458,
+      "value": 7.982532751092
+    },
+    {
+      "season": "2012-13",
+      "n_rows": 469,
+      "n_valid": 469,
+      "value": 7.957995735608
+    },
+    {
+      "season": "1997-98",
+      "n_rows": 439,
+      "n_valid": 439,
+      "value": 7.947608200456
+    },
+    {
+      "season": "2011-12",
+      "n_rows": 478,
+      "n_valid": 478,
+      "value": 7.928870292887
+    },
+    {
+      "season": "2002-03",
+      "n_rows": 428,
+      "n_valid": 428,
+      "value": 7.849299065421
+    },
+    {
+      "season": "2000-01",
+      "n_rows": 441,
+      "n_valid": 441,
+      "value": 7.811337868481
+    },
+    {
+      "season": "2003-04",
+      "n_rows": 442,
+      "n_valid": 442,
+      "value": 7.745475113122
+    },
+    {
+      "season": "1998-99",
+      "n_rows": 439,
+      "n_valid": 439,
+      "value": 7.35854214123
+    }
+  ],
+  "metrics": {},
+  "summary": "聚合使用筛选后的全部 12,844 条记录，共 27 个结果组。n_rows 是组内行数，n_valid 是实际参与该统计量的非缺失数。",
+  "table_rows_total": 27,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/justinas/nba-players-data",
+    "archive_sha256": "43fe64e83dfc4c57a37d9635c338d525232ed6bef3597de8bf6dd78ddd2bd071",
+    "sha256": "a12f4243164f4be8c5cbfa032e7689b6682e0bf17c38ab4201ea749064624ea3",
+    "rows": 12844,
+    "columns": [
+      "Unnamed: 0",
+      "player_name",
+      "team_abbreviation",
+      "age",
+      "player_height",
+      "player_weight",
+      "college",
+      "country",
+      "draft_year",
+      "draft_round",
+      "draft_number",
+      "gp",
+      "pts",
+      "reb",
+      "ast",
+      "net_rating",
+      "oreb_pct",
+      "dreb_pct",
+      "usg_pct",
+      "ts_pct",
+      "ast_pct",
+      "season",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.360790+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "遵守原 Kaggle 页面列示许可和适用比赛规则；本软件不改变或另授数据许可。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "download_receipt": {
+      "dataset": "nba",
+      "archive_name": "nba.zip",
+      "source_page": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "source_handle_or_url": "justinas/nba-players-data",
+      "downloaded_utc": "2026-10-30T12:40:42.822899+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "43fe64e83dfc4c57a37d9635c338d525232ed6bef3597de8bf6dd78ddd2bd071",
+      "archive_bytes": 561667,
+      "files": {
+        "all_seasons.csv": {
+          "bytes": 1920482,
+          "sha256": "993129eeb859a053103d3db24cc85da7350a389de324e2f0345eed8656d8c096",
+          "rows": 12844,
+          "columns": [
+            "",
+            "player_name",
+            "team_abbreviation",
+            "age",
+            "player_height",
+            "player_weight",
+            "college",
+            "country",
+            "draft_year",
+            "draft_round",
+            "draft_number",
+            "gp",
+            "pts",
+            "reb",
+            "ast",
+            "net_rating",
+            "oreb_pct",
+            "dreb_pct",
+            "usg_pct",
+            "ts_pct",
+            "ast_pct",
+            "season"
+          ]
+        }
+      }
+    },
+    "dataset": "nba",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "d658f5e9493e4ce897172015d42bfd79",
+    "question": "按赛季比较球员场均得分的均值，展示所有赛季。",
+    "rows_before_filter": 12844,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 12844,
+    "elapsed_seconds": 0.019607
+  },
+  "interaction_mode": "manual_parameters",
+  "evidence": [
+    {
+      "id": "nba:field:pts",
+      "title": "pts",
+      "text": "pts 赛季场均得分。 数据类型 float64 示例值 ",
+      "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "similarity": 0.244943
+    },
+    {
+      "id": "nba:scope",
+      "title": "NBA 球员数据边界",
+      "text": "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+      "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "similarity": 0.070333
+    },
+    {
+      "id": "nba:field:ast",
+      "title": "ast",
+      "text": "ast 赛季场均助攻。 数据类型 float64 示例值 ",
+      "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "similarity": 0.055559
+    },
+    {
+      "id": "nba:field:reb",
+      "title": "reb",
+      "text": "reb 赛季场均篮板。 数据类型 float64 示例值 ",
+      "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "similarity": 0.053251
+    },
+    {
+      "id": "method:importance",
+      "title": "特征重要性与解释",
+      "text": "随机森林报告交互验证集上的置换重要性，3 次置换的均值及标准差，不是置信区间，也不是因果效应。相关特征之间可分摊重要性。线性系数的数值变量单位是训练样本的一个标准差。",
+      "source": "本项目方法说明",
+      "similarity": 0.047417
+    },
+    {
+      "id": "nba:field:gp",
+      "title": "gp",
+      "text": "gp 赛季出场场次。 数据类型 int64 示例值 ",
+      "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "similarity": 0.026749
+    }
+  ]
+}

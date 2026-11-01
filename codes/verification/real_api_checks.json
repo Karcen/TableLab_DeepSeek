@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "scope": "FastAPI TestClient；上传课程数据；人工结构化参数；未测试自然语言理解",
+  "llm_status_observed": {
+    "ready": false,
+    "name": "qwen3:8b-q4_K_M",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=11434): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+  },
+  "checks": [
+    {
+      "check": "四份数据已通过载入检查",
+      "passed": true
+    },
+    {
+      "check": "house:schema provenance",
+      "passed": true
+    },
+    {
+      "check": "house:actual mean",
+      "passed": true
+    },
+    {
+      "check": "house:manual mode recorded",
+      "passed": true
+    },
+    {
+      "check": "house:local evidence recorded",
+      "passed": true
+    },
+    {
+      "check": "house:training completed",
+      "passed": true
+    },
+    {
+      "check": "house:PDF real bytes",
+      "passed": true
+    },
+    {
+      "check": "house:transformation audit download",
+      "passed": true
+    },
+    {
+      "check": "house:single record prediction",
+      "passed": true
+    },
+    {
+      "check": "adult:schema provenance",
+      "passed": true
+    },
+    {
+      "check": "adult:actual mean",
+      "passed": true
+    },
+    {
+      "check": "adult:manual mode recorded",
+      "passed": true
+    },
+    {
+      "check": "adult:local evidence recorded",
+      "passed": true
+    },
+    {
+      "check": "adult:training completed",
+      "passed": true
+    },
+    {
+      "check": "adult:PDF real bytes",
+      "passed": true
+    },
+    {
+      "check": "adult:transformation audit download",
+      "passed": true
+    },
+    {
+      "check": "adult:single record prediction",
+      "passed": true
+    },
+    {
+      "check": "nba:schema provenance",
+      "passed": true
+    },
+    {
+      "check": "nba:actual mean",
+      "passed": true
+    },
+    {
+      "check": "nba:manual mode recorded",
+      "passed": true
+    },
+    {
+      "check": "nba:local evidence recorded",
+      "passed": true
+    },
+    {
+      "check": "nba:training completed",
+      "passed": true
+    },
+    {
+      "check": "nba:PDF real bytes",
+      "passed": true
+    },
+    {
+      "check": "nba:transformation audit download",
+      "passed": true
+    },
+    {
+      "check": "nba:single record prediction",
+      "passed": true
+    },
+    {
+      "check": "students:schema provenance",
+      "passed": true
+    },
+    {
+      "check": "students:actual mean",
+      "passed": true
+    },
+    {
+      "check": "students:manual mode recorded",
+      "passed": true
+    },
+    {
+      "check": "students:local evidence recorded",
+      "passed": true
+    },
+    {
+      "check": "students:training completed",
+      "passed": true
+    },
+    {
+      "check": "students:PDF real bytes",
+      "passed": true
+    },
+    {
+      "check": "students:transformation audit download",
+      "passed": true
+    },
+    {
+      "check": "students:single record prediction",
+      "passed": true
+    },
+    {
+      "check": "考前使用同期考试成绩被拒绝",
+      "passed": true
+    },
+    {
+      "check": "缺少本机写标记被拒绝",
+      "passed": true
+    }
+  ]
+}

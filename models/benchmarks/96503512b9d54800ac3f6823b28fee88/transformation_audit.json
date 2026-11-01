@@ -1,0 +1,64 @@
+{
+  "numeric": [],
+  "categorical": [
+    "gender",
+    "parental level of education",
+    "lunch",
+    "test preparation course"
+  ],
+  "model_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 12,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 5,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 120,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "n_train": 800,
+  "n_validation": 200,
+  "target_training_mean": 66.49625,
+  "training_categories": {
+    "gender": [
+      "female",
+      "male"
+    ],
+    "parental level of education": [
+      "associate's degree",
+      "bachelor's degree",
+      "high school",
+      "master's degree",
+      "some college",
+      "some high school"
+    ],
+    "lunch": [
+      "free/reduced",
+      "standard"
+    ],
+    "test preparation course": [
+      "completed",
+      "none"
+    ]
+  },
+  "transformed_feature_names": [
+    "cat__gender_male",
+    "cat__parental level of education_bachelor's degree",
+    "cat__parental level of education_high school",
+    "cat__parental level of education_master's degree",
+    "cat__parental level of education_some college",
+    "cat__parental level of education_some high school",
+    "cat__lunch_standard",
+    "cat__test preparation course_none"
+  ]
+}

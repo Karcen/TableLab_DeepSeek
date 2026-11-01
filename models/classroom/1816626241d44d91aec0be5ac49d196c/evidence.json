@@ -1,0 +1,44 @@
+[
+  {
+    "id": "house:field:Id",
+    "title": "Id",
+    "text": "Id 房屋记录编号；不作为预测特征。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.127605
+  },
+  {
+    "id": "method:split",
+    "title": "训练与交互验证",
+    "text": "填补、标准化、独热编码仅在训练子集拟合。房价和学生随机划分用 80% 训练和 20% 交互验证；Adult 使用原始非目标字段组成的记录指纹分组，在分层分组五折中固定取首折验证，相同预测字段记录不跨组；NBA 按完整赛季时间划分，或按球员分组划分。反复试模型会对交互验证集过拟合，不能把它作为未使用的最终测试集。",
+    "source": "本项目方法说明",
+    "similarity": 0.107621
+  },
+  {
+    "id": "house:field:SalePrice",
+    "title": "SalePrice",
+    "text": "SalePrice 房屋成交价，美元；连续预测目标，不是挂牌价。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.09461
+  },
+  {
+    "id": "house:field:GrLivArea",
+    "title": "GrLivArea",
+    "text": "GrLivArea 地上居住面积，平方英尺；不含地下室面积。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.090313
+  },
+  {
+    "id": "house:scope",
+    "title": "房价数据边界",
+    "text": "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.07601
+  },
+  {
+    "id": "method:linear",
+    "title": "线性回归",
+    "text": "linear 只用于连续目标。数值特征在训练子集上中位数填补并标准化，分类变量在训练子集上填补并作独热编码，删去一个参考类别。系数描述条件线性关联，不是因果效果；本程序不报告显著性或 p 值。",
+    "source": "本项目方法说明",
+    "similarity": 0.073294
+  }
+]

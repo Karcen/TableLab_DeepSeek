@@ -1,0 +1,44 @@
+[
+  {
+    "id": "adult:scope",
+    "title": "收入分类数据边界",
+    "text": "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.14129
+  },
+  {
+    "id": "adult:field:education-num",
+    "title": "education-num",
+    "text": "education-num 教育程度的有序数值编码，不直接等同于个人实际受教育年数。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.088862
+  },
+  {
+    "id": "adult:field:education",
+    "title": "education",
+    "text": "education 教育程度分类。 数据类型 object 示例值 10th, 11th, 12th, 1st-4th, 5th-6th, 7th-8th, 9th, Assoc-acdm, Assoc-voc, Bachelors, Doctorate, HS-grad",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.064082
+  },
+  {
+    "id": "method:forest",
+    "title": "随机森林",
+    "text": "random_forest 对连续目标使用回归森林，对收入二元目标使用分类森林。固定 120 棵树、最大深度 12、叶节点至少 5 个样本、随机种子 42、一个并行工作线程。不支持现场超参数搜索。",
+    "source": "本项目方法说明",
+    "similarity": 0.050161
+  },
+  {
+    "id": "adult:field:income_gt_50k",
+    "title": "income_gt_50k",
+    "text": "income_gt_50k 派生二元变量：原始 income 为 >50K 时等于 1，<=50K 时等于 0。均值是样本中超过门槛的比例。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.04719
+  },
+  {
+    "id": "adult:field:income",
+    "title": "income",
+    "text": "income 原始年收入类别。只有 >50K 与 <=50K，没有具体金额。 数据类型 object 示例值 <=50K, >50K",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.039905
+  }
+]

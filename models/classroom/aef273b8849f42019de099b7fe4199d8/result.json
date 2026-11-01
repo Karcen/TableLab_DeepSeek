@@ -1,0 +1,281 @@
+{
+  "status": "ok",
+  "run_id": "aef273b8849f42019de099b7fe4199d8",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "adult",
+    "operation": "train",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": "income_gt_50k",
+    "features": [
+      "age",
+      "education-num",
+      "hours-per-week"
+    ],
+    "algorithm": "logistic",
+    "split": "random",
+    "context": "retrospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "本次 context=retrospective；模型用于所列特征已知时的同期估计，不宣称前瞻预测。",
+    "已排除 16,281 条原始测试记录；仅在 adult.data 内做交互训练/验证。",
+    "Adult 按全部原始非目标字段的指纹分组后分层划分；相同预测字段记录保留，但不跨越训练与验证。指纹不是个人身份。",
+    "分类阈值固定 0.5；概率未额外校准。本实现的逻辑回归含 L2 正则，不提供 p 值或因果解释。",
+    "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+    "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+  ],
+  "files": [
+    "metrics.csv",
+    "validation_predictions.csv",
+    "split.csv",
+    "diagnostic.pdf",
+    "transformation_audit.json",
+    "confusion.csv",
+    "explanation.csv",
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "metric": "roc_auc",
+      "value": 0.791767025378
+    },
+    {
+      "metric": "average_precision",
+      "value": 0.522338900953
+    },
+    {
+      "metric": "accuracy",
+      "value": 0.788697788698
+    },
+    {
+      "metric": "balanced_accuracy",
+      "value": 0.63286255036
+    },
+    {
+      "metric": "f1",
+      "value": 0.430934656741
+    },
+    {
+      "metric": "brier",
+      "value": 0.147142446373
+    },
+    {
+      "metric": "log_loss",
+      "value": 0.450246516231
+    },
+    {
+      "metric": "baseline_brier",
+      "value": 0.182808227884
+    },
+    {
+      "metric": "validation_positive_rate",
+      "value": 0.240786240786
+    }
+  ],
+  "metrics": {
+    "roc_auc": 0.7917670253781124,
+    "average_precision": 0.522338900952537,
+    "accuracy": 0.7886977886977887,
+    "balanced_accuracy": 0.6328625503599498,
+    "f1": 0.43093465674110837,
+    "brier": 0.14714244637298282,
+    "log_loss": 0.4502465162311992,
+    "baseline_brier": 0.18280822788373735,
+    "validation_positive_rate": 0.24078624078624078
+  },
+  "summary": "训练 26,049 条，交互验证 6,512 条。ROC AUC=0.7918；F1=0.4309；Brier=0.1471。AUC 衡量排序，Brier 衡量概率误差，两者不能互相替代。 其余编码特征固定时，age 每增加训练样本的一个标准差，预测对数几率变化 0.6465；这是模型内的条件关联。",
+  "model_id": "aef273b8849f42019de099b7fe4199d8",
+  "explanation": [
+    {
+      "feature": "num__age",
+      "coefficient": 0.646492519537
+    },
+    {
+      "feature": "num__education-num",
+      "coefficient": 0.891150661496
+    },
+    {
+      "feature": "num__hours-per-week",
+      "coefficient": 0.536264738042
+    }
+  ],
+  "table_rows_total": 9,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+    "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+    "sha256": "74907b5b1708c43fe9d53be1208f13cde9a85521ef6a5a52185937728d6344ee",
+    "rows": 48842,
+    "columns": [
+      "age",
+      "workclass",
+      "fnlwgt",
+      "education",
+      "education-num",
+      "marital-status",
+      "occupation",
+      "relationship",
+      "race",
+      "sex",
+      "capital-gain",
+      "capital-loss",
+      "hours-per-week",
+      "native-country",
+      "income",
+      "income_gt_50k",
+      "_source_split",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.142630+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 29,
+    "license_note": "CC BY 4.0，引用 UCI Adult。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "download_receipt": {
+      "dataset": "adult",
+      "archive_name": "adult.zip",
+      "source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+      "source_handle_or_url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+      "downloaded_utc": "2026-10-30T12:40:32.738404+00:00",
+      "downloader": "Python standard library urllib",
+      "packaging": "original_source_zip",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+      "archive_bytes": 620237,
+      "files": {
+        "adult.data": {
+          "bytes": 3974305,
+          "sha256": "5b00264637dbfec36bdeaab5676b0b309ff9eb788d63554ca0a249491c86603d",
+          "rows": 32561,
+          "column_count": 15
+        },
+        "adult.test": {
+          "bytes": 2003153,
+          "sha256": "a2a9044bc167a35b2361efbabec64e89d69ce82d9790d2980119aac5fd7e9c05",
+          "rows": 16281,
+          "column_count": 15
+        },
+        "adult.names": {
+          "bytes": 5229,
+          "sha256": "c248284c0b5de30c9e1958d6cdd168a34a654758b620e68f46aefa83fc0a576a"
+        }
+      }
+    },
+    "dataset": "adult",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "aef273b8849f42019de099b7fe4199d8",
+    "question": "用年龄、教育编码和每周工时建立逻辑回归，预测高收入概率。",
+    "rows_before_filter": 48842,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 48842,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "stratified_predictor_groups",
+      "seed": 42,
+      "fold": 0,
+      "n_folds": 5,
+      "fingerprint_columns": [
+        "age",
+        "workclass",
+        "fnlwgt",
+        "education",
+        "education-num",
+        "marital-status",
+        "occupation",
+        "relationship",
+        "race",
+        "sex",
+        "capital-gain",
+        "capital-loss",
+        "hours-per-week",
+        "native-country"
+      ],
+      "group_overlap": 0,
+      "n_train": 26049,
+      "n_validation": 6512,
+      "n_eligible": 32561
+    },
+    "intercept": -1.5035496836396833,
+    "elapsed_seconds": 5.652344
+  },
+  "interaction_mode": "manual_parameters",
+  "evidence": [
+    {
+      "id": "method:logistic",
+      "title": "逻辑回归",
+      "text": "logistic 只用于 Adult 的 income_gt_50k 二元目标，使用带 L2 正则的逻辑回归。输出类别 1 的概率。阈值固定 0.5；概率未额外校准。报告 ROC AUC、平均精确率、F1、准确率、平衡准确率、Brier 分数和对数损失。",
+      "source": "本项目方法说明",
+      "similarity": 0.17351
+    },
+    {
+      "id": "adult:field:hours-per-week",
+      "title": "hours-per-week",
+      "text": "hours-per-week 每周工作时长，小时。 数据类型 int64 示例值 ",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.063776
+    },
+    {
+      "id": "adult:field:education-num",
+      "title": "education-num",
+      "text": "education-num 教育程度的有序数值编码，不直接等同于个人实际受教育年数。 数据类型 int64 示例值 ",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.037924
+    },
+    {
+      "id": "method:units",
+      "title": "相关和预测",
+      "text": "皮尔逊相关只度量线性关联。回归报告 MAE、RMSE、R²；R² 允许为负，负值表示比用验证集均值作常数预测还差。基线模型仅从训练子集学习均值或正类比例。点预测不包含预测区间。",
+      "source": "本项目方法说明",
+      "similarity": 0.037619
+    },
+    {
+      "id": "adult:field:age",
+      "title": "age",
+      "text": "age 年龄，岁。 数据类型 int64 示例值 ",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.036897
+    },
+    {
+      "id": "method:linear",
+      "title": "线性回归",
+      "text": "linear 只用于连续目标。数值特征在训练子集上中位数填补并标准化，分类变量在训练子集上填补并作独热编码，删去一个参考类别。系数描述条件线性关联，不是因果效果；本程序不报告显著性或 p 值。",
+      "source": "本项目方法说明",
+      "similarity": 0.018259
+    }
+  ]
+}

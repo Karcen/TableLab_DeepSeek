@@ -1,0 +1,44 @@
+[
+  {
+    "id": "house:field:Neighborhood",
+    "title": "Neighborhood",
+    "text": "Neighborhood 所在社区，分类变量。 数据类型 object 示例值 Blmngtn, Blueste, BrDale, BrkSide, ClearCr, CollgCr, Crawfor, Edwards, Gilbert, IDOTRR, MeadowV, Mitchel",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.176436
+  },
+  {
+    "id": "house:field:SalePrice",
+    "title": "SalePrice",
+    "text": "SalePrice 房屋成交价，美元；连续预测目标，不是挂牌价。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.070664
+  },
+  {
+    "id": "house:scope",
+    "title": "房价数据边界",
+    "text": "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.058073
+  },
+  {
+    "id": "house:field:ScreenPorch",
+    "title": "ScreenPorch",
+    "text": "ScreenPorch 以随原始数据提供的数据字典为准。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.037493
+  },
+  {
+    "id": "house:field:OverallCond",
+    "title": "OverallCond",
+    "text": "OverallCond 以随原始数据提供的数据字典为准。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.03257
+  },
+  {
+    "id": "house:field:RoofMatl",
+    "title": "RoofMatl",
+    "text": "RoofMatl 以随原始数据提供的数据字典为准。 数据类型 object 示例值 ClyTile, CompShg, Membran, Metal, Roll, Tar&Grv, WdShake, WdShngl",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.032279
+  }
+]

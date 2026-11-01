@@ -1,0 +1,26 @@
+{
+  "dataset": "house",
+  "operation": "train",
+  "columns": [],
+  "filters": [],
+  "group_by": [],
+  "metric": "mean",
+  "target": "SalePrice",
+  "features": [
+    "OverallQual",
+    "GrLivArea",
+    "YearBuilt",
+    "TotalBsmtSF",
+    "GarageCars",
+    "Neighborhood"
+  ],
+  "algorithm": "random_forest",
+  "split": "random",
+  "context": "prospective",
+  "chart": "histogram",
+  "limit": 20,
+  "descending": true,
+  "model_id": null,
+  "record": {},
+  "message": ""
+}

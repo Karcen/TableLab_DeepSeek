@@ -1,0 +1,17 @@
+{
+  "real_http_status": 200,
+  "datasets_verified": [
+    "house",
+    "adult",
+    "nba",
+    "students"
+  ],
+  "real_ollama_ready": false,
+  "static_http": {
+    "/": 200,
+    "/static/style.css": 200,
+    "/static/app.js": 200
+  },
+  "browser_navigation": "blocked_or_failed",
+  "browser_error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:8765/\nCall log:\n  - navigating to \"http://127.0.0.1:8765/\", waiting until \"load\"\n"
+}

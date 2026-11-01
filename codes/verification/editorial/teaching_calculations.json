@@ -1,0 +1,91 @@
+{
+  "mean_example": {
+    "n": 150,
+    "sum": 29694866.0,
+    "mean": 197965.77333333335,
+    "full_n": 1460,
+    "full_mean": 180921.19589041095,
+    "lotfrontage_n_valid": 1201,
+    "lotfrontage_mean": 70.04995836802665
+  },
+  "ols_three_rows": {
+    "ids": [
+      1,
+      2,
+      3
+    ],
+    "xbar": 1586.0,
+    "ybar": 204500.0,
+    "sxy": 11748000.0,
+    "sxx": 160352.0,
+    "slope": 73.26381959688685,
+    "intercept": 88303.58211933746,
+    "sse": 45296647.375773594
+  },
+  "reconstruction": [
+    {
+      "case": "house_primary_linear",
+      "run_id": "9d256798205f4f6d96de7fc024a4f0f0",
+      "rows_reconstructed": 292,
+      "max_absolute_difference": 5.820766091346741e-11,
+      "intercept": 158544.5789442759,
+      "example": {
+        "row_id": "house:00000892",
+        "actual": 154500,
+        "predicted": 141984.82497014775,
+        "residual": 12515.175029852251,
+        "rebuilt": 141984.82497014772,
+        "linear_predictor": 141984.82497014772
+      },
+      "scaler_std": {
+        "OverallQual": 1.367033679153499,
+        "GrLivArea": 524.2081378733961,
+        "YearBuilt": 30.66236021609218,
+        "TotalBsmtSF": 440.48764420352774,
+        "GarageCars": 0.7398444341751066
+      },
+      "raw_unit_coefficients": {
+        "OverallQual": 15715.284089487472,
+        "GrLivArea": 46.90156435589607,
+        "YearBuilt": 269.7095756640417,
+        "TotalBsmtSF": 20.224751886018577,
+        "GarageCars": 12806.496168418313
+      }
+    },
+    {
+      "case": "adult_primary_logistic",
+      "run_id": "2add40f7ab234ff49ea10877d927ea07",
+      "rows_reconstructed": 6512,
+      "max_absolute_difference": 3.3306690738754696e-16,
+      "intercept": -2.4590783868146553,
+      "example": {
+        "row_id": "adult:train:00000001",
+        "actual": 0,
+        "predicted_class": 1,
+        "probability_1": 0.5218452576351889,
+        "rebuilt": 0.5218452576351889,
+        "linear_predictor": 0.08743669372405716
+      },
+      "scaler_std": {
+        "age": 13.547479863549444,
+        "education-num": 2.5704120156643415,
+        "hours-per-week": 12.310367151339547
+      },
+      "raw_unit_coefficients": {
+        "age": 0.031013143136341407,
+        "education-num": 0.30485781026618475,
+        "hours-per-week": 0.03140519390587461
+      }
+    }
+  ],
+  "logistic_derivative_check": {
+    "gradient_max_abs_error": 1.0782763570915677e-11,
+    "hessian_max_abs_error": 6.228115245754395e-12,
+    "minimum_hessian_eigenvalue": 0.2183255542800322
+  },
+  "source_sha256": {
+    "train_csv": "06b4acbf769dab2e6b5851fe11e3fb716394535313cd269f157b817463c51ee2"
+  },
+  "new_baseline_fits": 0,
+  "llm_called": false
+}

@@ -1,0 +1,261 @@
+{
+  "status": "ok",
+  "run_id": "1928f31b75d846e7aead8d3a4cfa87ed",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "students",
+    "operation": "predict",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": null,
+    "features": [],
+    "algorithm": "linear",
+    "split": "random",
+    "context": "retrospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": "bab688d8344f408f82c884f4ec2d6e9b",
+    "record": {
+      "lunch": "standard",
+      "test preparation course": "none",
+      "parental level of education": "bachelor's degree"
+    },
+    "message": ""
+  },
+  "notes": [
+    "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "模型最初训练条件：{\"dataset\":\"students\",\"operation\":\"train\",\"columns\":[],\"filters\":[],\"group_by\":[],\"metric\":\"mean\",\"target\":\"math score\",\"features\":[\"lunch\",\"test preparation course\",\"parental level of education\"],\"algorithm\":\"linear\",\"split\":\"random\",\"context\":\"retrospective\",\"chart\":\"histogram\",\"limit\":20,\"descending\":true,\"model_id\":null,\"record\":{},\"message\":\"\"}"
+  ],
+  "files": [
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "target": "math score",
+      "prediction": 72.526423553255
+    }
+  ],
+  "metrics": {},
+  "summary": "math score 的点预测为 72.5264。未计算预测区间；数值适用范围取决于训练样本和输入特征。",
+  "model_id": "bab688d8344f408f82c884f4ec2d6e9b",
+  "training_provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/spscientist/students-performance-in-exams",
+    "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+    "sha256": "a11756d68e71589dbb8e689f8e1e0605c1ae93d32bde0824a329cfd69927150d",
+    "rows": 1000,
+    "columns": [
+      "gender",
+      "race/ethnicity",
+      "parental level of education",
+      "lunch",
+      "test preparation course",
+      "math score",
+      "reading score",
+      "writing score",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.380829+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "核验到的 Kaggle 数据卡标为 Unknown；本项目不授予公开再分发许可。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "classroom_use_only": true,
+    "source_nature": "课程指定数据；源站致谢指向 generated_data/exams，实际生成过程未核实",
+    "download_receipt": {
+      "dataset": "students",
+      "archive_name": "students.zip",
+      "source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "source_handle_or_url": "spscientist/students-performance-in-exams",
+      "downloaded_utc": "2026-10-30T12:40:48.136436+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+      "archive_bytes": 8130,
+      "files": {
+        "StudentsPerformance.csv": {
+          "bytes": 72036,
+          "sha256": "ade5869dba8b2d3e2b96379359fb2f61cb0308e8394d9b1ba37e174cfe3bee69",
+          "rows": 1000,
+          "columns": [
+            "gender",
+            "race/ethnicity",
+            "parental level of education",
+            "lunch",
+            "test preparation course",
+            "math score",
+            "reading score",
+            "writing score"
+          ]
+        }
+      }
+    },
+    "dataset": "students",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "bab688d8344f408f82c884f4ec2d6e9b",
+    "question": "人工参数重新训练检查",
+    "rows_before_filter": 1000,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 1000,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "random",
+      "seed": 42,
+      "n_train": 800,
+      "n_validation": 200,
+      "n_eligible": 1000
+    },
+    "intercept": 63.9168370238749
+  },
+  "table_rows_total": 1,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/spscientist/students-performance-in-exams",
+    "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+    "sha256": "a11756d68e71589dbb8e689f8e1e0605c1ae93d32bde0824a329cfd69927150d",
+    "rows": 1000,
+    "columns": [
+      "gender",
+      "race/ethnicity",
+      "parental level of education",
+      "lunch",
+      "test preparation course",
+      "math score",
+      "reading score",
+      "writing score",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.380829+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "核验到的 Kaggle 数据卡标为 Unknown；本项目不授予公开再分发许可。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "classroom_use_only": true,
+    "source_nature": "课程指定数据；源站致谢指向 generated_data/exams，实际生成过程未核实",
+    "download_receipt": {
+      "dataset": "students",
+      "archive_name": "students.zip",
+      "source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "source_handle_or_url": "spscientist/students-performance-in-exams",
+      "downloaded_utc": "2026-10-30T12:40:48.136436+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+      "archive_bytes": 8130,
+      "files": {
+        "StudentsPerformance.csv": {
+          "bytes": 72036,
+          "sha256": "ade5869dba8b2d3e2b96379359fb2f61cb0308e8394d9b1ba37e174cfe3bee69",
+          "rows": 1000,
+          "columns": [
+            "gender",
+            "race/ethnicity",
+            "parental level of education",
+            "lunch",
+            "test preparation course",
+            "math score",
+            "reading score",
+            "writing score"
+          ]
+        }
+      }
+    },
+    "dataset": "students",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "1928f31b75d846e7aead8d3a4cfa87ed",
+    "question": "",
+    "rows_before_filter": 1000,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 1000,
+    "elapsed_seconds": 0.02445
+  },
+  "interaction_mode": "manual_parameters",
+  "evidence": [
+    {
+      "id": "method:rag",
+      "title": "检索与计算",
+      "text": "RAG 检索的是字段定义、数据边界和方法说明。所有统计量都在完整的筛选后数据上计算；不能把检索命中的几条文本当作统计样本。",
+      "source": "本项目方法说明",
+      "similarity": 0.147419
+    },
+    {
+      "id": "students:scope",
+      "title": "学生成绩数据边界",
+      "text": "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+      "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "similarity": 0.100012
+    },
+    {
+      "id": "method:unsupported",
+      "title": "能力边界",
+      "text": "仅支持四个已注册数据集；筛选条件之间是 AND，不支持 OR、任意 SQL/Python、外部网页、神经网络、XGBoost、因果推断、显著性检验、自动调参和未观测的未来事件。必须明确拒绝范围外要求，不能降级后假装完成。",
+      "source": "本项目方法说明",
+      "similarity": 0.022701
+    },
+    {
+      "id": "students:field:gender",
+      "title": "gender",
+      "text": "gender 原始性别分类。 数据类型 object 示例值 female, male",
+      "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "similarity": 0.009274
+    },
+    {
+      "id": "students:field:math score",
+      "title": "math score",
+      "text": "math score 数学考试分数，原始分数范围 0 至 100。 数据类型 int64 示例值 ",
+      "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "similarity": 0.008676
+    },
+    {
+      "id": "students:field:reading score",
+      "title": "reading score",
+      "text": "reading score 阅读考试分数，0 至 100。 数据类型 int64 示例值 ",
+      "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "similarity": 0.008649
+    }
+  ]
+}

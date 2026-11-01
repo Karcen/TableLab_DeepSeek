@@ -1,0 +1,44 @@
+[
+  {
+    "id": "method:logistic",
+    "title": "逻辑回归",
+    "text": "logistic 只用于 Adult 的 income_gt_50k 二元目标，使用带 L2 正则的逻辑回归。输出类别 1 的概率。阈值固定 0.5；概率未额外校准。报告 ROC AUC、平均精确率、F1、准确率、平衡准确率、Brier 分数和对数损失。",
+    "source": "本项目方法说明",
+    "similarity": 0.17351
+  },
+  {
+    "id": "adult:field:hours-per-week",
+    "title": "hours-per-week",
+    "text": "hours-per-week 每周工作时长，小时。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.063776
+  },
+  {
+    "id": "adult:field:education-num",
+    "title": "education-num",
+    "text": "education-num 教育程度的有序数值编码，不直接等同于个人实际受教育年数。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.037924
+  },
+  {
+    "id": "method:units",
+    "title": "相关和预测",
+    "text": "皮尔逊相关只度量线性关联。回归报告 MAE、RMSE、R²；R² 允许为负，负值表示比用验证集均值作常数预测还差。基线模型仅从训练子集学习均值或正类比例。点预测不包含预测区间。",
+    "source": "本项目方法说明",
+    "similarity": 0.037619
+  },
+  {
+    "id": "adult:field:age",
+    "title": "age",
+    "text": "age 年龄，岁。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.036897
+  },
+  {
+    "id": "method:linear",
+    "title": "线性回归",
+    "text": "linear 只用于连续目标。数值特征在训练子集上中位数填补并标准化，分类变量在训练子集上填补并作独热编码，删去一个参考类别。系数描述条件线性关联，不是因果效果；本程序不报告显著性或 p 值。",
+    "source": "本项目方法说明",
+    "similarity": 0.018259
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "adult:field:hours-per-week",
+    "title": "hours-per-week",
+    "text": "hours-per-week 每周工作时长，小时。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.370088
+  },
+  {
+    "id": "adult:field:education-num",
+    "title": "education-num",
+    "text": "education-num 教育程度的有序数值编码，不直接等同于个人实际受教育年数。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.302447
+  },
+  {
+    "id": "adult:field:marital-status",
+    "title": "marital-status",
+    "text": "marital-status 婚姻状况。 数据类型 object 示例值 Divorced, Married-AF-spouse, Married-civ-spouse, Married-spouse-absent, Never-married, Separated, Widowed",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.233568
+  },
+  {
+    "id": "adult:field:workclass",
+    "title": "workclass",
+    "text": "workclass 雇佣类型。 数据类型 object 示例值 Federal-gov, Local-gov, Never-worked, Private, Self-emp-inc, Self-emp-not-inc, State-gov, Without-pay",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.232522
+  },
+  {
+    "id": "adult:field:income_gt_50k",
+    "title": "income_gt_50k",
+    "text": "income_gt_50k 派生二元变量：原始 income 为 >50K 时等于 1，<=50K 时等于 0。均值是样本中超过门槛的比例。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.222048
+  },
+  {
+    "id": "adult:field:occupation",
+    "title": "occupation",
+    "text": "occupation 职业类别。 数据类型 object 示例值 Adm-clerical, Armed-Forces, Craft-repair, Exec-managerial, Farming-fishing, Handlers-cleaners, Machine-op-inspct, Other-service, Priv-house-serv, Prof-specialty, Protective-serv, Sales",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.198838
+  }
+]

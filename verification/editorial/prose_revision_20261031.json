@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-31",
+  "scope": "论文、技术报告与 Beamer 的语言和标题修改",
+  "skills": [
+    {
+      "path": "/Users/karcenzheng/Downloads/SKILLS/humanizer/Humanizer-zh-main/SKILL.md",
+      "sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+    },
+    {
+      "path": "/Users/karcenzheng/Downloads/SKILLS/humanizer/Research-Paper-Writing-Skills-main/research-paper-writing/SKILL.md",
+      "sha256": "62ef11c06f2796c74e55ab24908ed31bafebfa0f1b736499d1615ac374cf7f6d"
+    },
+    {
+      "path": "/Users/karcenzheng/Downloads/SKILLS/humanizer/anti-defensive-writing-main/SKILL.md",
+      "sha256": "ef055917cc1407064cd0deaffd78264c251e8a27c30c112c54c64fb5ca46ef7a"
+    },
+    {
+      "path": "/Users/karcenzheng/Downloads/SKILLS/humanizer/anti-defensive-writing-main/skill/anti-defensive-writing/SKILL.md",
+      "sha256": "ef055917cc1407064cd0deaffd78264c251e8a27c30c112c54c64fb5ca46ef7a"
+    },
+    {
+      "path": "/Users/karcenzheng/Downloads/SKILLS/humanizer/humanities-thesis-skill-main/SKILL.md",
+      "sha256": "7143b7d640cc5ef0219c3968abfff90930b87e51f60f285f0bec0edcc53452b2"
+    },
+    {
+      "path": "/Users/karcenzheng/Downloads/SKILLS/humanizer/humanizer-main/SKILL.md",
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+    },
+    {
+      "path": "/Users/karcenzheng/Downloads/SKILLS/humanizer/lieflat-less-ai-tone-main/SKILL.md",
+      "sha256": "c55dec1765c2d6ce31f9e03e62876b36a3a65af830350d4d0d5bab6df766b042"
+    },
+    {
+      "path": "/Users/karcenzheng/Downloads/SKILLS/humanizer/no-ai-slop-main/skills/no-ai-slop/SKILL.md",
+      "sha256": "992b365f51a2f62cf4c1c5ed22049a9ee551dfea677550c1a72b371c0ceadd62"
+    }
+  ],
+  "changes": [
+    "论文小标题 11 → 3",
+    "技术报告小标题 52 → 16",
+    "幻灯片使用陈述句标题，精简重复说明",
+    "测试范围和必要限定集中到相关方法、讨论或检查页"
+  ],
+  "validation": {
+    "xelatex_bibtex": "三份 PDF 编译成功",
+    "log_check": "无未解析引用、缺字或 Overfull 警告",
+    "protected_content": "展示公式、代码示例、引用、标签、图片引用一致；表格数字一致",
+    "visual_review": "7 页论文、49 页幻灯片、24 页技术报告均已渲染并查看缩略图",
+    "prose_rule_check": "人文论文检查脚本无错误；连接词警告经人工查看，不为满足词表添加连接套话"
+  },
+  "self_review": {
+    "贡献": "围绕字段检索、统计计算与预测比较；不新增创新性主张",
+    "清晰度": "按均价、一元回归、多元回归、分类和树逐步讲解",
+    "实验结果": "保留各模型的有利与不利指标",
+    "评价范围": "保留固定检索题、人工方案、验证集与待完成问答测试的区别",
+    "方法": "保留样本划分、预处理、超参数和公式"
+  },
+  "claim_evidence": [
+    {
+      "claim": "15 道检索题目标排首位，1 道排第二位",
+      "evidence": "paper.tex 实验结果段，MRR 0.96875",
+      "status": "原稿结果保留"
+    },
+    {
+      "claim": "六变量房价森林误差低于线性回归",
+      "evidence": "同一 292 条验证记录，RMSE 33,611.50 与 36,461.68",
+      "status": "原稿结果保留"
+    },
+    {
+      "claim": "学生成绩线性回归误差略低",
+      "evidence": "同一 200 条验证记录，RMSE 14.320 与 14.524",
+      "status": "原稿结果保留"
+    }
+  ],
+  "backup": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/docs/archive/before_humanizer_20261031.tar.gz"
+}

@@ -1,0 +1,355 @@
+{
+  "purpose": "固定模型与固定划分；主结果 8 个模型，划分敏感性 4 个；不根据结果选择配置",
+  "scope": "交互验证，不是最终盲测或大模型能力测试",
+  "seed": 42,
+  "cases": [
+    {
+      "case": "house_primary_linear",
+      "role": "primary",
+      "plan": {
+        "dataset": "house",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "SalePrice",
+        "features": [
+          "OverallQual",
+          "GrLivArea",
+          "YearBuilt",
+          "TotalBsmtSF",
+          "GarageCars",
+          "Neighborhood"
+        ],
+        "algorithm": "linear",
+        "split": "random",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "house_primary_random_forest",
+      "role": "primary",
+      "plan": {
+        "dataset": "house",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "SalePrice",
+        "features": [
+          "OverallQual",
+          "GrLivArea",
+          "YearBuilt",
+          "TotalBsmtSF",
+          "GarageCars",
+          "Neighborhood"
+        ],
+        "algorithm": "random_forest",
+        "split": "random",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "adult_primary_logistic",
+      "role": "primary",
+      "plan": {
+        "dataset": "adult",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "income_gt_50k",
+        "features": [
+          "age",
+          "education-num",
+          "hours-per-week",
+          "workclass",
+          "occupation",
+          "marital-status"
+        ],
+        "algorithm": "logistic",
+        "split": "random",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "adult_primary_random_forest",
+      "role": "primary",
+      "plan": {
+        "dataset": "adult",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "income_gt_50k",
+        "features": [
+          "age",
+          "education-num",
+          "hours-per-week",
+          "workclass",
+          "occupation",
+          "marital-status"
+        ],
+        "algorithm": "random_forest",
+        "split": "random",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "nba_primary_linear",
+      "role": "primary",
+      "plan": {
+        "dataset": "nba",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "pts",
+        "features": [
+          "age",
+          "player_height",
+          "player_weight",
+          "draft_year"
+        ],
+        "algorithm": "linear",
+        "split": "time",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "nba_primary_random_forest",
+      "role": "primary",
+      "plan": {
+        "dataset": "nba",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "pts",
+        "features": [
+          "age",
+          "player_height",
+          "player_weight",
+          "draft_year"
+        ],
+        "algorithm": "random_forest",
+        "split": "time",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "students_primary_linear",
+      "role": "primary",
+      "plan": {
+        "dataset": "students",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "math score",
+        "features": [
+          "gender",
+          "parental level of education",
+          "lunch",
+          "test preparation course"
+        ],
+        "algorithm": "linear",
+        "split": "random",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "students_primary_random_forest",
+      "role": "primary",
+      "plan": {
+        "dataset": "students",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "math score",
+        "features": [
+          "gender",
+          "parental level of education",
+          "lunch",
+          "test preparation course"
+        ],
+        "algorithm": "random_forest",
+        "split": "random",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "house_time_linear",
+      "role": "split_sensitivity",
+      "plan": {
+        "dataset": "house",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "SalePrice",
+        "features": [
+          "OverallQual",
+          "GrLivArea",
+          "YearBuilt",
+          "TotalBsmtSF",
+          "GarageCars",
+          "Neighborhood"
+        ],
+        "algorithm": "linear",
+        "split": "time",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "house_time_random_forest",
+      "role": "split_sensitivity",
+      "plan": {
+        "dataset": "house",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "SalePrice",
+        "features": [
+          "OverallQual",
+          "GrLivArea",
+          "YearBuilt",
+          "TotalBsmtSF",
+          "GarageCars",
+          "Neighborhood"
+        ],
+        "algorithm": "random_forest",
+        "split": "time",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "nba_group_linear",
+      "role": "split_sensitivity",
+      "plan": {
+        "dataset": "nba",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "pts",
+        "features": [
+          "age",
+          "player_height",
+          "player_weight",
+          "draft_year"
+        ],
+        "algorithm": "linear",
+        "split": "group",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    },
+    {
+      "case": "nba_group_random_forest",
+      "role": "split_sensitivity",
+      "plan": {
+        "dataset": "nba",
+        "operation": "train",
+        "columns": [],
+        "filters": [],
+        "group_by": [],
+        "metric": "mean",
+        "target": "pts",
+        "features": [
+          "age",
+          "player_height",
+          "player_weight",
+          "draft_year"
+        ],
+        "algorithm": "random_forest",
+        "split": "group",
+        "context": "prospective",
+        "chart": "histogram",
+        "limit": 20,
+        "descending": true,
+        "model_id": null,
+        "record": {},
+        "message": ""
+      }
+    }
+  ]
+}

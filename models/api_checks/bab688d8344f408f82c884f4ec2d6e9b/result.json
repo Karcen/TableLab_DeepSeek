@@ -1,0 +1,233 @@
+{
+  "status": "ok",
+  "run_id": "bab688d8344f408f82c884f4ec2d6e9b",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "students",
+    "operation": "train",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": "math score",
+    "features": [
+      "lunch",
+      "test preparation course",
+      "parental level of education"
+    ],
+    "algorithm": "linear",
+    "split": "random",
+    "context": "retrospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "本次 context=retrospective；模型用于所列特征已知时的同期估计，不宣称前瞻预测。",
+    "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+    "分类参考类别：{\"lunch\": \"free/reduced\", \"test preparation course\": \"completed\", \"parental level of education\": \"associate's degree\"}",
+    "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+  ],
+  "files": [
+    "metrics.csv",
+    "validation_predictions.csv",
+    "split.csv",
+    "diagnostic.pdf",
+    "transformation_audit.json",
+    "explanation.csv",
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "metric": "mae",
+      "value": 11.807491442722
+    },
+    {
+      "metric": "rmse",
+      "value": 14.693751995817
+    },
+    {
+      "metric": "r2",
+      "value": 0.112732114148
+    },
+    {
+      "metric": "baseline_rmse",
+      "value": 15.731646896066
+    }
+  ],
+  "metrics": {
+    "mae": 11.807491442721535,
+    "rmse": 14.693751995816656,
+    "r2": 0.11273211414817408,
+    "baseline_rmse": 15.731646896065904
+  },
+  "summary": "训练 800 条，交互验证 200 条。MAE=11.8075；RMSE=14.6938；R²=0.1127。训练均值基线 RMSE=15.7316。误差单位与 math score 一致。",
+  "model_id": "bab688d8344f408f82c884f4ec2d6e9b",
+  "explanation": [
+    {
+      "feature": "cat__lunch_standard",
+      "coefficient": 11.747793096967
+    },
+    {
+      "feature": "cat__test preparation course_none",
+      "coefficient": -6.19956460482
+    },
+    {
+      "feature": "cat__parental level of education_bachelor's degree",
+      "coefficient": 3.061358037233
+    },
+    {
+      "feature": "cat__parental level of education_high school",
+      "coefficient": -4.373572796991
+    },
+    {
+      "feature": "cat__parental level of education_master's degree",
+      "coefficient": 0.795939634367
+    },
+    {
+      "feature": "cat__parental level of education_some college",
+      "coefficient": -0.130195451038
+    },
+    {
+      "feature": "cat__parental level of education_some high school",
+      "coefficient": -3.378088593296
+    }
+  ],
+  "table_rows_total": 4,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/spscientist/students-performance-in-exams",
+    "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+    "sha256": "a11756d68e71589dbb8e689f8e1e0605c1ae93d32bde0824a329cfd69927150d",
+    "rows": 1000,
+    "columns": [
+      "gender",
+      "race/ethnicity",
+      "parental level of education",
+      "lunch",
+      "test preparation course",
+      "math score",
+      "reading score",
+      "writing score",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.380829+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "核验到的 Kaggle 数据卡标为 Unknown；本项目不授予公开再分发许可。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "classroom_use_only": true,
+    "source_nature": "课程指定数据；源站致谢指向 generated_data/exams，实际生成过程未核实",
+    "download_receipt": {
+      "dataset": "students",
+      "archive_name": "students.zip",
+      "source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "source_handle_or_url": "spscientist/students-performance-in-exams",
+      "downloaded_utc": "2026-10-30T12:40:48.136436+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+      "archive_bytes": 8130,
+      "files": {
+        "StudentsPerformance.csv": {
+          "bytes": 72036,
+          "sha256": "ade5869dba8b2d3e2b96379359fb2f61cb0308e8394d9b1ba37e174cfe3bee69",
+          "rows": 1000,
+          "columns": [
+            "gender",
+            "race/ethnicity",
+            "parental level of education",
+            "lunch",
+            "test preparation course",
+            "math score",
+            "reading score",
+            "writing score"
+          ]
+        }
+      }
+    },
+    "dataset": "students",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "bab688d8344f408f82c884f4ec2d6e9b",
+    "question": "人工参数重新训练检查",
+    "rows_before_filter": 1000,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 1000,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "random",
+      "seed": 42,
+      "n_train": 800,
+      "n_validation": 200,
+      "n_eligible": 1000
+    },
+    "intercept": 63.9168370238749,
+    "elapsed_seconds": 0.243955
+  },
+  "interaction_mode": "manual_parameters",
+  "evidence": [
+    {
+      "id": "method:forest",
+      "title": "随机森林",
+      "text": "random_forest 对连续目标使用回归森林，对收入二元目标使用分类森林。固定 120 棵树、最大深度 12、叶节点至少 5 个样本、随机种子 42、一个并行工作线程。不支持现场超参数搜索。",
+      "source": "本项目方法说明",
+      "similarity": 0.047621
+    },
+    {
+      "id": "method:linear",
+      "title": "线性回归",
+      "text": "linear 只用于连续目标。数值特征在训练子集上中位数填补并标准化，分类变量在训练子集上填补并作独热编码，删去一个参考类别。系数描述条件线性关联，不是因果效果；本程序不报告显著性或 p 值。",
+      "source": "本项目方法说明",
+      "similarity": 0.041969
+    },
+    {
+      "id": "method:split",
+      "title": "训练与交互验证",
+      "text": "填补、标准化、独热编码仅在训练子集拟合。房价和学生随机划分用 80% 训练和 20% 交互验证；Adult 使用原始非目标字段组成的记录指纹分组，在分层分组五折中固定取首折验证，相同预测字段记录不跨组；NBA 按完整赛季时间划分，或按球员分组划分。反复试模型会对交互验证集过拟合，不能把它作为未使用的最终测试集。",
+      "source": "本项目方法说明",
+      "similarity": 0.039813
+    },
+    {
+      "id": "method:importance",
+      "title": "特征重要性与解释",
+      "text": "随机森林报告交互验证集上的置换重要性，3 次置换的均值及标准差，不是置信区间，也不是因果效应。相关特征之间可分摊重要性。线性系数的数值变量单位是训练样本的一个标准差。",
+      "source": "本项目方法说明",
+      "similarity": 0.025511
+    },
+    {
+      "id": "method:units",
+      "title": "相关和预测",
+      "text": "皮尔逊相关只度量线性关联。回归报告 MAE、RMSE、R²；R² 允许为负，负值表示比用验证集均值作常数预测还差。基线模型仅从训练子集学习均值或正类比例。点预测不包含预测区间。",
+      "source": "本项目方法说明",
+      "similarity": 0.025212
+    }
+  ]
+}

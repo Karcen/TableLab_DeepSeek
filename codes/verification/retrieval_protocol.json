@@ -1,0 +1,86 @@
+{
+  "k": 6,
+  "cases": [
+    [
+      "house",
+      "房屋成交价 SalePrice 的单位是什么？",
+      "house:field:SalePrice"
+    ],
+    [
+      "house",
+      "地上居住面积 GrLivArea 是否包含地下室？",
+      "house:field:GrLivArea"
+    ],
+    [
+      "house",
+      "房屋所在社区 Neighborhood 是分类变量吗？",
+      "house:field:Neighborhood"
+    ],
+    [
+      "house",
+      "线性回归系数能解释成因果效果吗？",
+      "method:linear"
+    ],
+    [
+      "adult",
+      "高收入 income_gt_50k 中的 1 是什么意思？",
+      "adult:field:income_gt_50k"
+    ],
+    [
+      "adult",
+      "原始收入 income 是否记录了具体金额？",
+      "adult:field:income"
+    ],
+    [
+      "adult",
+      "fnlwgt 是否是样本权重？",
+      "adult:field:fnlwgt"
+    ],
+    [
+      "adult",
+      "education-num 是否直接等于受教育年数？",
+      "adult:field:education-num"
+    ],
+    [
+      "nba",
+      "player_height 的单位是什么？",
+      "nba:field:player_height"
+    ],
+    [
+      "nba",
+      "场均得分 pts 是什么？",
+      "nba:field:pts"
+    ],
+    [
+      "nba",
+      "season 赛季如何用于时间划分？",
+      "nba:field:season"
+    ],
+    [
+      "nba",
+      "player_name 是唯一球员身份吗？",
+      "nba:field:player_name"
+    ],
+    [
+      "students",
+      "math score 数学分数的范围是什么？",
+      "students:field:math score"
+    ],
+    [
+      "students",
+      "lunch 午餐类型是否表示精确家庭收入？",
+      "students:field:lunch"
+    ],
+    [
+      "students",
+      "test preparation course 课程是随机分组吗？",
+      "students:field:test preparation course"
+    ],
+    [
+      "students",
+      "race/ethnicity 群组 A 到 E 对应哪些族群？",
+      "students:field:race/ethnicity"
+    ]
+  ],
+  "scope": "人工固定字段释义题；不是现场未知问题样本"
+}

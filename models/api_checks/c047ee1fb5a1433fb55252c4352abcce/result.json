@@ -1,0 +1,279 @@
+{
+  "status": "ok",
+  "run_id": "c047ee1fb5a1433fb55252c4352abcce",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "nba",
+    "operation": "train",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": "pts",
+    "features": [
+      "age",
+      "player_height",
+      "player_weight"
+    ],
+    "algorithm": "random_forest",
+    "split": "time",
+    "context": "retrospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "本次 context=retrospective；模型用于所列特征已知时的同期估计，不宣称前瞻预测。",
+    "按后续赛季留出验证，不自动等于严格季前预测；本数据没有给出每个字段的采集时点。",
+    "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+    "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+  ],
+  "files": [
+    "metrics.csv",
+    "validation_predictions.csv",
+    "split.csv",
+    "diagnostic.pdf",
+    "transformation_audit.json",
+    "explanation.csv",
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "metric": "mae",
+      "value": 4.95638828426
+    },
+    {
+      "metric": "rmse",
+      "value": 6.492695575706
+    },
+    {
+      "metric": "r2",
+      "value": -0.043555717542
+    },
+    {
+      "metric": "baseline_rmse",
+      "value": 6.379954797627
+    }
+  ],
+  "metrics": {
+    "mae": 4.956388284260103,
+    "rmse": 6.492695575705635,
+    "r2": -0.04355571754177889,
+    "baseline_rmse": 6.379954797627049
+  },
+  "summary": "训练 9,561 条，交互验证 3,283 条。MAE=4.9564；RMSE=6.4927；R²=-0.0436。训练均值基线 RMSE=6.3800。误差单位与 pts 一致。 本次置换重要性均值最大的特征为 player_weight，RMSE 增加值为 0.1392；这不表示因果作用。",
+  "model_id": "c047ee1fb5a1433fb55252c4352abcce",
+  "explanation": [
+    {
+      "feature": "player_weight",
+      "importance_mean": 0.139231359017,
+      "importance_std": 0.025031005147
+    },
+    {
+      "feature": "player_height",
+      "importance_mean": 0.125140139303,
+      "importance_std": 0.023325797422
+    },
+    {
+      "feature": "age",
+      "importance_mean": 0.04694271866,
+      "importance_std": 0.0334484078
+    }
+  ],
+  "table_rows_total": 4,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/justinas/nba-players-data",
+    "archive_sha256": "43fe64e83dfc4c57a37d9635c338d525232ed6bef3597de8bf6dd78ddd2bd071",
+    "sha256": "a12f4243164f4be8c5cbfa032e7689b6682e0bf17c38ab4201ea749064624ea3",
+    "rows": 12844,
+    "columns": [
+      "Unnamed: 0",
+      "player_name",
+      "team_abbreviation",
+      "age",
+      "player_height",
+      "player_weight",
+      "college",
+      "country",
+      "draft_year",
+      "draft_round",
+      "draft_number",
+      "gp",
+      "pts",
+      "reb",
+      "ast",
+      "net_rating",
+      "oreb_pct",
+      "dreb_pct",
+      "usg_pct",
+      "ts_pct",
+      "ast_pct",
+      "season",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.360790+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "遵守原 Kaggle 页面列示许可和适用比赛规则；本软件不改变或另授数据许可。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "download_receipt": {
+      "dataset": "nba",
+      "archive_name": "nba.zip",
+      "source_page": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "source_handle_or_url": "justinas/nba-players-data",
+      "downloaded_utc": "2026-10-30T12:40:42.822899+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "43fe64e83dfc4c57a37d9635c338d525232ed6bef3597de8bf6dd78ddd2bd071",
+      "archive_bytes": 561667,
+      "files": {
+        "all_seasons.csv": {
+          "bytes": 1920482,
+          "sha256": "993129eeb859a053103d3db24cc85da7350a389de324e2f0345eed8656d8c096",
+          "rows": 12844,
+          "columns": [
+            "",
+            "player_name",
+            "team_abbreviation",
+            "age",
+            "player_height",
+            "player_weight",
+            "college",
+            "country",
+            "draft_year",
+            "draft_round",
+            "draft_number",
+            "gp",
+            "pts",
+            "reb",
+            "ast",
+            "net_rating",
+            "oreb_pct",
+            "dreb_pct",
+            "usg_pct",
+            "ts_pct",
+            "ast_pct",
+            "season"
+          ]
+        }
+      }
+    },
+    "dataset": "nba",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "c047ee1fb5a1433fb55252c4352abcce",
+    "question": "人工参数重新训练检查",
+    "rows_before_filter": 12844,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 12844,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "time",
+      "field": "season",
+      "validation_start": 2017,
+      "train_periods": [
+        "1996-97",
+        "1997-98",
+        "1998-99",
+        "1999-00",
+        "2000-01",
+        "2001-02",
+        "2002-03",
+        "2003-04",
+        "2004-05",
+        "2005-06",
+        "2006-07",
+        "2007-08",
+        "2008-09",
+        "2009-10",
+        "2010-11",
+        "2011-12",
+        "2012-13",
+        "2013-14",
+        "2014-15",
+        "2015-16",
+        "2016-17"
+      ],
+      "validation_periods": [
+        "2017-18",
+        "2018-19",
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23"
+      ],
+      "n_train": 9561,
+      "n_validation": 3283,
+      "n_eligible": 12844
+    },
+    "elapsed_seconds": 1.532895
+  },
+  "interaction_mode": "manual_parameters",
+  "evidence": [
+    {
+      "id": "method:forest",
+      "title": "随机森林",
+      "text": "random_forest 对连续目标使用回归森林，对收入二元目标使用分类森林。固定 120 棵树、最大深度 12、叶节点至少 5 个样本、随机种子 42、一个并行工作线程。不支持现场超参数搜索。",
+      "source": "本项目方法说明",
+      "similarity": 0.046562
+    },
+    {
+      "id": "method:linear",
+      "title": "线性回归",
+      "text": "linear 只用于连续目标。数值特征在训练子集上中位数填补并标准化，分类变量在训练子集上填补并作独热编码，删去一个参考类别。系数描述条件线性关联，不是因果效果；本程序不报告显著性或 p 值。",
+      "source": "本项目方法说明",
+      "similarity": 0.04603
+    },
+    {
+      "id": "method:split",
+      "title": "训练与交互验证",
+      "text": "填补、标准化、独热编码仅在训练子集拟合。房价和学生随机划分用 80% 训练和 20% 交互验证；Adult 使用原始非目标字段组成的记录指纹分组，在分层分组五折中固定取首折验证，相同预测字段记录不跨组；NBA 按完整赛季时间划分，或按球员分组划分。反复试模型会对交互验证集过拟合，不能把它作为未使用的最终测试集。",
+      "source": "本项目方法说明",
+      "similarity": 0.044248
+    },
+    {
+      "id": "method:importance",
+      "title": "特征重要性与解释",
+      "text": "随机森林报告交互验证集上的置换重要性，3 次置换的均值及标准差，不是置信区间，也不是因果效应。相关特征之间可分摊重要性。线性系数的数值变量单位是训练样本的一个标准差。",
+      "source": "本项目方法说明",
+      "similarity": 0.027999
+    },
+    {
+      "id": "method:units",
+      "title": "相关和预测",
+      "text": "皮尔逊相关只度量线性关联。回归报告 MAE、RMSE、R²；R² 允许为负，负值表示比用验证集均值作常数预测还差。基线模型仅从训练子集学习均值或正类比例。点预测不包含预测区间。",
+      "source": "本项目方法说明",
+      "similarity": 0.027676
+    }
+  ]
+}

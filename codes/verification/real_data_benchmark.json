@@ -1,0 +1,551 @@
+{
+  "status": "passed",
+  "model_fits": 12,
+  "independently_recomputed_metrics": 58,
+  "blind_test_performance_evaluated": false,
+  "llm_used": false,
+  "runtime": {
+    "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.0",
+      "matplotlib": "3.10.8",
+      "pydantic": "2.13.5",
+      "fonttools": "4.63.0"
+    },
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "cases": [
+    {
+      "case": "house_primary_linear",
+      "role": "primary",
+      "dataset": "house",
+      "algorithm": "linear",
+      "requested_split": "random",
+      "n_train": 1168,
+      "n_validation": 292,
+      "split": {
+        "kind": "random",
+        "seed": 42,
+        "n_train": 1168,
+        "n_validation": 292,
+        "n_eligible": 1460
+      },
+      "metrics": {
+        "mae": 22339.327588945856,
+        "rmse": 36461.681182751345,
+        "r2": 0.8266756642726746,
+        "baseline_rmse": 87619.03450611533
+      },
+      "run_id": "9d256798205f4f6d96de7fc024a4f0f0",
+      "notes": [
+        "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+        "房价为用户自行取得的 CSV；下载清单没有该条目，实际下载网址及原站逐行一致性未核实。不得标成官方原件。",
+        "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+        "分类参考类别：{\"Neighborhood\": \"Blmngtn\"}",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 0.756864,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "house_primary_random_forest",
+      "role": "primary",
+      "dataset": "house",
+      "algorithm": "random_forest",
+      "requested_split": "random",
+      "n_train": 1168,
+      "n_validation": 292,
+      "split": {
+        "kind": "random",
+        "seed": 42,
+        "n_train": 1168,
+        "n_validation": 292,
+        "n_eligible": 1460
+      },
+      "metrics": {
+        "mae": 20019.088387401258,
+        "rmse": 33611.49681097128,
+        "r2": 0.852713862832148,
+        "baseline_rmse": 87619.03450611533
+      },
+      "run_id": "04e0a046c70141c295f1d77ef747bbff",
+      "notes": [
+        "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+        "房价为用户自行取得的 CSV；下载清单没有该条目，实际下载网址及原站逐行一致性未核实。不得标成官方原件。",
+        "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 0.722006,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "adult_primary_logistic",
+      "role": "primary",
+      "dataset": "adult",
+      "algorithm": "logistic",
+      "requested_split": "random",
+      "n_train": 26049,
+      "n_validation": 6512,
+      "split": {
+        "kind": "stratified_predictor_groups",
+        "seed": 42,
+        "fold": 0,
+        "n_folds": 5,
+        "fingerprint_columns": [
+          "age",
+          "workclass",
+          "fnlwgt",
+          "education",
+          "education-num",
+          "marital-status",
+          "occupation",
+          "relationship",
+          "race",
+          "sex",
+          "capital-gain",
+          "capital-loss",
+          "hours-per-week",
+          "native-country"
+        ],
+        "group_overlap": 0,
+        "n_train": 26049,
+        "n_validation": 6512,
+        "n_eligible": 32561
+      },
+      "metrics": {
+        "roc_auc": 0.8838530444034409,
+        "average_precision": 0.6808277429400826,
+        "accuracy": 0.828009828009828,
+        "balanced_accuracy": 0.7301728336965854,
+        "f1": 0.602555003548616,
+        "brier": 0.11502756631443105,
+        "log_loss": 0.35589071312887255,
+        "baseline_brier": 0.18280822788373735,
+        "validation_positive_rate": 0.24078624078624078
+      },
+      "run_id": "2add40f7ab234ff49ea10877d927ea07",
+      "notes": [
+        "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+        "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+        "已排除 16,281 条原始测试记录；仅在 adult.data 内做交互训练/验证。",
+        "Adult 按全部原始非目标字段的指纹分组后分层划分；相同预测字段记录保留，但不跨越训练与验证。指纹不是个人身份。",
+        "分类阈值固定 0.5；概率未额外校准。本实现的逻辑回归含 L2 正则，不提供 p 值或因果解释。",
+        "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+        "分类参考类别：{\"workclass\": \"Federal-gov\", \"occupation\": \"Adm-clerical\", \"marital-status\": \"Divorced\"}",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 6.386397,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "adult_primary_random_forest",
+      "role": "primary",
+      "dataset": "adult",
+      "algorithm": "random_forest",
+      "requested_split": "random",
+      "n_train": 26049,
+      "n_validation": 6512,
+      "split": {
+        "kind": "stratified_predictor_groups",
+        "seed": 42,
+        "fold": 0,
+        "n_folds": 5,
+        "fingerprint_columns": [
+          "age",
+          "workclass",
+          "fnlwgt",
+          "education",
+          "education-num",
+          "marital-status",
+          "occupation",
+          "relationship",
+          "race",
+          "sex",
+          "capital-gain",
+          "capital-loss",
+          "hours-per-week",
+          "native-country"
+        ],
+        "group_overlap": 0,
+        "n_train": 26049,
+        "n_validation": 6512,
+        "n_eligible": 32561
+      },
+      "metrics": {
+        "roc_auc": 0.8904865230376132,
+        "average_precision": 0.7080675783518957,
+        "accuracy": 0.8323095823095823,
+        "balanced_accuracy": 0.720375346740638,
+        "f1": 0.5916230366492147,
+        "brier": 0.11252386831002867,
+        "log_loss": 0.34842970263045814,
+        "baseline_brier": 0.18280822788373735,
+        "validation_positive_rate": 0.24078624078624078
+      },
+      "run_id": "3730f534e02d4c95809347cd94644373",
+      "notes": [
+        "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+        "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+        "已排除 16,281 条原始测试记录；仅在 adult.data 内做交互训练/验证。",
+        "Adult 按全部原始非目标字段的指纹分组后分层划分；相同预测字段记录保留，但不跨越训练与验证。指纹不是个人身份。",
+        "分类阈值固定 0.5；概率未额外校准。本实现的逻辑回归含 L2 正则，不提供 p 值或因果解释。",
+        "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 7.904851,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "nba_primary_linear",
+      "role": "primary",
+      "dataset": "nba",
+      "algorithm": "linear",
+      "requested_split": "time",
+      "n_train": 9561,
+      "n_validation": 3283,
+      "split": {
+        "kind": "time",
+        "field": "season",
+        "validation_start": 2017,
+        "train_periods": [
+          "1996-97",
+          "1997-98",
+          "1998-99",
+          "1999-00",
+          "2000-01",
+          "2001-02",
+          "2002-03",
+          "2003-04",
+          "2004-05",
+          "2005-06",
+          "2006-07",
+          "2007-08",
+          "2008-09",
+          "2009-10",
+          "2010-11",
+          "2011-12",
+          "2012-13",
+          "2013-14",
+          "2014-15",
+          "2015-16",
+          "2016-17"
+        ],
+        "validation_periods": [
+          "2017-18",
+          "2018-19",
+          "2019-20",
+          "2020-21",
+          "2021-22",
+          "2022-23"
+        ],
+        "n_train": 9561,
+        "n_validation": 3283,
+        "n_eligible": 12844
+      },
+      "metrics": {
+        "mae": 4.580472562830392,
+        "rmse": 6.23068301589651,
+        "r2": 0.03897015428855477,
+        "baseline_rmse": 6.379954797627049
+      },
+      "run_id": "540870f94f48476e97d9fd1d88bdcccf",
+      "notes": [
+        "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+        "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+        "按后续赛季留出验证，不自动等于严格季前预测；本数据没有给出每个字段的采集时点。",
+        "draft_year 验证集出现 6 个训练时未见类别；编码为全零，不代表已学会这些类别。",
+        "Found unknown categories in columns [0] during transform. These unknown categories will be encoded as all zeros",
+        "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+        "分类参考类别：{\"draft_year\": \"1987\"}",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 0.325628,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "nba_primary_random_forest",
+      "role": "primary",
+      "dataset": "nba",
+      "algorithm": "random_forest",
+      "requested_split": "time",
+      "n_train": 9561,
+      "n_validation": 3283,
+      "split": {
+        "kind": "time",
+        "field": "season",
+        "validation_start": 2017,
+        "train_periods": [
+          "1996-97",
+          "1997-98",
+          "1998-99",
+          "1999-00",
+          "2000-01",
+          "2001-02",
+          "2002-03",
+          "2003-04",
+          "2004-05",
+          "2005-06",
+          "2006-07",
+          "2007-08",
+          "2008-09",
+          "2009-10",
+          "2010-11",
+          "2011-12",
+          "2012-13",
+          "2013-14",
+          "2014-15",
+          "2015-16",
+          "2016-17"
+        ],
+        "validation_periods": [
+          "2017-18",
+          "2018-19",
+          "2019-20",
+          "2020-21",
+          "2021-22",
+          "2022-23"
+        ],
+        "n_train": 9561,
+        "n_validation": 3283,
+        "n_eligible": 12844
+      },
+      "metrics": {
+        "mae": 4.489589067398955,
+        "rmse": 6.111830662215737,
+        "r2": 0.07528439472558857,
+        "baseline_rmse": 6.379954797627049
+      },
+      "run_id": "455414d5429b4ed99e334dc50c66febf",
+      "notes": [
+        "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+        "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+        "按后续赛季留出验证，不自动等于严格季前预测；本数据没有给出每个字段的采集时点。",
+        "draft_year 验证集出现 6 个训练时未见类别；编码为全零，不代表已学会这些类别。",
+        "Found unknown categories in columns [0] during transform. These unknown categories will be encoded as all zeros",
+        "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 2.200696,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "students_primary_linear",
+      "role": "primary",
+      "dataset": "students",
+      "algorithm": "linear",
+      "requested_split": "random",
+      "n_train": 800,
+      "n_validation": 200,
+      "split": {
+        "kind": "random",
+        "seed": 42,
+        "n_train": 800,
+        "n_validation": 200,
+        "n_eligible": 1000
+      },
+      "metrics": {
+        "mae": 11.453003773597128,
+        "rmse": 14.319772737507522,
+        "r2": 0.15732210266088842,
+        "baseline_rmse": 15.731646896065904
+      },
+      "run_id": "e7cc4d2c4c184b84ac88b968a91c8ddb",
+      "notes": [
+        "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+        "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+        "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+        "分类参考类别：{\"gender\": \"female\", \"parental level of education\": \"associate's degree\", \"lunch\": \"free/reduced\", \"test preparation course\": \"completed\"}",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 0.365363,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "students_primary_random_forest",
+      "role": "primary",
+      "dataset": "students",
+      "algorithm": "random_forest",
+      "requested_split": "random",
+      "n_train": 800,
+      "n_validation": 200,
+      "split": {
+        "kind": "random",
+        "seed": 42,
+        "n_train": 800,
+        "n_validation": 200,
+        "n_eligible": 1000
+      },
+      "metrics": {
+        "mae": 11.502367034729058,
+        "rmse": 14.523998209452937,
+        "r2": 0.13311452697892245,
+        "baseline_rmse": 15.731646896065904
+      },
+      "run_id": "96503512b9d54800ac3f6823b28fee88",
+      "notes": [
+        "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+        "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+        "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 0.418487,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "house_time_linear",
+      "role": "split_sensitivity",
+      "dataset": "house",
+      "algorithm": "linear",
+      "requested_split": "time",
+      "n_train": 1285,
+      "n_validation": 175,
+      "split": {
+        "kind": "time",
+        "field": "YrSold",
+        "validation_start": 2010,
+        "train_periods": [
+          "2006",
+          "2007",
+          "2008",
+          "2009"
+        ],
+        "validation_periods": [
+          "2010"
+        ],
+        "n_train": 1285,
+        "n_validation": 175,
+        "n_eligible": 1460
+      },
+      "metrics": {
+        "mae": 22296.729317265523,
+        "rmse": 35008.878375061795,
+        "r2": 0.8095507455365877,
+        "baseline_rmse": 80321.1474386751
+      },
+      "run_id": "a9fa4eab92174160ad5ed16fac54f5c4",
+      "notes": [
+        "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+        "房价为用户自行取得的 CSV；下载清单没有该条目，实际下载网址及原站逐行一致性未核实。不得标成官方原件。",
+        "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+        "分类参考类别：{\"Neighborhood\": \"Blmngtn\"}",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 0.241008,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "house_time_random_forest",
+      "role": "split_sensitivity",
+      "dataset": "house",
+      "algorithm": "random_forest",
+      "requested_split": "time",
+      "n_train": 1285,
+      "n_validation": 175,
+      "split": {
+        "kind": "time",
+        "field": "YrSold",
+        "validation_start": 2010,
+        "train_periods": [
+          "2006",
+          "2007",
+          "2008",
+          "2009"
+        ],
+        "validation_periods": [
+          "2010"
+        ],
+        "n_train": 1285,
+        "n_validation": 175,
+        "n_eligible": 1460
+      },
+      "metrics": {
+        "mae": 19718.592502882348,
+        "rmse": 30310.717494694054,
+        "r2": 0.8572371146956905,
+        "baseline_rmse": 80321.1474386751
+      },
+      "run_id": "2a1d7183271b47ebbff144f6edbcd0ff",
+      "notes": [
+        "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+        "房价为用户自行取得的 CSV；下载清单没有该条目，实际下载网址及原站逐行一致性未核实。不得标成官方原件。",
+        "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 0.702001,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "nba_group_linear",
+      "role": "split_sensitivity",
+      "dataset": "nba",
+      "algorithm": "linear",
+      "requested_split": "group",
+      "n_train": 10372,
+      "n_validation": 2472,
+      "split": {
+        "kind": "group",
+        "field": "player_name",
+        "seed": 42,
+        "group_overlap": 0,
+        "n_train": 10372,
+        "n_validation": 2472,
+        "n_eligible": 12844
+      },
+      "metrics": {
+        "mae": 4.603030907523982,
+        "rmse": 5.834794169928765,
+        "r2": 0.06042996604808604,
+        "baseline_rmse": 6.020570172868445
+      },
+      "run_id": "bc35aff1ea044da7951c01e44178a883",
+      "notes": [
+        "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+        "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+        "按姓名分组，同名不同人可能被保守放在同组；缺少稳定球员 ID，未声称完成真实身份消歧。",
+        "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+        "分类参考类别：{\"draft_year\": \"1992\"}",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 0.431877,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    },
+    {
+      "case": "nba_group_random_forest",
+      "role": "split_sensitivity",
+      "dataset": "nba",
+      "algorithm": "random_forest",
+      "requested_split": "group",
+      "n_train": 10372,
+      "n_validation": 2472,
+      "split": {
+        "kind": "group",
+        "field": "player_name",
+        "seed": 42,
+        "group_overlap": 0,
+        "n_train": 10372,
+        "n_validation": 2472,
+        "n_eligible": 12844
+      },
+      "metrics": {
+        "mae": 4.681430443351423,
+        "rmse": 6.016388761364913,
+        "r2": 0.0010359505693869897,
+        "baseline_rmse": 6.020570172868445
+      },
+      "run_id": "f25ce9de7fc3498bb74014fe45fac3eb",
+      "notes": [
+        "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+        "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+        "按姓名分组，同名不同人可能被保守放在同组；缺少稳定球员 ID，未声称完成真实身份消歧。",
+        "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+        "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+      ],
+      "seconds_environment_only": 2.536327,
+      "protocol_sha256": "373c9ae3dbf59bd3014cbd7fa52831793ec8418e45344e289c8ea416cf4146b3"
+    }
+  ]
+}

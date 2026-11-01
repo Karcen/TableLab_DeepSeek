@@ -1,0 +1,44 @@
+[
+  {
+    "id": "students:field:test preparation course",
+    "title": "test preparation course",
+    "text": "test preparation course 备考课程完成状态，completed 或 none；不是随机分组。 数据类型 object 示例值 completed, none",
+    "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "similarity": 0.20458
+  },
+  {
+    "id": "students:scope",
+    "title": "学生成绩数据边界",
+    "text": "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+    "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "similarity": 0.066059
+  },
+  {
+    "id": "students:field:math score",
+    "title": "math score",
+    "text": "math score 数学考试分数，原始分数范围 0 至 100。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "similarity": 0.015382
+  },
+  {
+    "id": "method:logistic",
+    "title": "逻辑回归",
+    "text": "logistic 只用于 Adult 的 income_gt_50k 二元目标，使用带 L2 正则的逻辑回归。输出类别 1 的概率。阈值固定 0.5；概率未额外校准。报告 ROC AUC、平均精确率、F1、准确率、平衡准确率、Brier 分数和对数损失。",
+    "source": "本项目方法说明",
+    "similarity": 0.011692
+  },
+  {
+    "id": "method:split",
+    "title": "训练与交互验证",
+    "text": "填补、标准化、独热编码仅在训练子集拟合。房价和学生随机划分用 80% 训练和 20% 交互验证；Adult 使用原始非目标字段组成的记录指纹分组，在分层分组五折中固定取首折验证，相同预测字段记录不跨组；NBA 按完整赛季时间划分，或按球员分组划分。反复试模型会对交互验证集过拟合，不能把它作为未使用的最终测试集。",
+    "source": "本项目方法说明",
+    "similarity": 0.010477
+  },
+  {
+    "id": "method:unsupported",
+    "title": "能力边界",
+    "text": "仅支持四个已注册数据集；筛选条件之间是 AND，不支持 OR、任意 SQL/Python、外部网页、神经网络、XGBoost、因果推断、显著性检验、自动调参和未观测的未来事件。必须明确拒绝范围外要求，不能降级后假装完成。",
+    "source": "本项目方法说明",
+    "similarity": 0.009642
+  }
+]

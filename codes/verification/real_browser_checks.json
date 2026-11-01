@@ -1,0 +1,13 @@
+{
+  "scope": "Chromium/Linux；上传课程数据；人工参数；真实自然语言、Mac 和物理断网均不在检查范围",
+  "status": "blocked_or_failed",
+  "checks": [
+    {
+      "check": "本机 HTTP 状态接口可达",
+      "passed": true
+    }
+  ],
+  "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:8765/\nCall log:\n  - navigating to \"http://127.0.0.1:8765/\", waiting until \"networkidle\"\n",
+  "external_requests": [],
+  "page_errors": []
+}

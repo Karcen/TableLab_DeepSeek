@@ -1,0 +1,138 @@
+{
+  "status": "ok",
+  "run_id": "700518cb21724b2bbf690ed8431e8f64",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "students",
+    "operation": "aggregate",
+    "columns": [
+      "math score"
+    ],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": null,
+    "features": [],
+    "algorithm": "linear",
+    "split": "random",
+    "context": "retrospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。"
+  ],
+  "files": [
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "group": "全部样本",
+      "n_rows": 1000,
+      "n_valid": 1000,
+      "value": 66.089
+    }
+  ],
+  "metrics": {},
+  "summary": "聚合使用筛选后的全部 1,000 条记录，共 1 个结果组。n_rows 是组内行数，n_valid 是实际参与该统计量的非缺失数。",
+  "table_rows_total": 1,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/spscientist/students-performance-in-exams",
+    "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+    "sha256": "a11756d68e71589dbb8e689f8e1e0605c1ae93d32bde0824a329cfd69927150d",
+    "rows": 1000,
+    "columns": [
+      "gender",
+      "race/ethnicity",
+      "parental level of education",
+      "lunch",
+      "test preparation course",
+      "math score",
+      "reading score",
+      "writing score",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.380829+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "核验到的 Kaggle 数据卡标为 Unknown；本项目不授予公开再分发许可。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "classroom_use_only": true,
+    "source_nature": "课程指定数据；源站致谢指向 generated_data/exams，实际生成过程未核实",
+    "download_receipt": {
+      "dataset": "students",
+      "archive_name": "students.zip",
+      "source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "source_handle_or_url": "spscientist/students-performance-in-exams",
+      "downloaded_utc": "2026-10-30T12:40:48.136436+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+      "archive_bytes": 8130,
+      "files": {
+        "StudentsPerformance.csv": {
+          "bytes": 72036,
+          "sha256": "ade5869dba8b2d3e2b96379359fb2f61cb0308e8394d9b1ba37e174cfe3bee69",
+          "rows": 1000,
+          "columns": [
+            "gender",
+            "race/ethnicity",
+            "parental level of education",
+            "lunch",
+            "test preparation course",
+            "math score",
+            "reading score",
+            "writing score"
+          ]
+        }
+      }
+    },
+    "dataset": "students",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "700518cb21724b2bbf690ed8431e8f64",
+    "question": "人工参数功能检查",
+    "rows_before_filter": 1000,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 1000,
+    "elapsed_seconds": 0.014468
+  },
+  "interaction_mode": "manual_parameters",
+  "evidence": [
+    {
+      "id": "method:forest",
+      "title": "随机森林",
+      "text": "random_forest 对连续目标使用回归森林，对收入二元目标使用分类森林。固定 120 棵树、最大深度 12、叶节点至少 5 个样本、随机种子 42、一个并行工作线程。不支持现场超参数搜索。",
+      "source": "本项目方法说明",
+      "similarity": 0.058497
+    }
+  ]
+}

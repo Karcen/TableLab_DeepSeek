@@ -1,0 +1,300 @@
+{
+  "status": "ok",
+  "run_id": "4058cc1a9f234b599d0ed746779c4442",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "adult",
+    "operation": "predict",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": null,
+    "features": [],
+    "algorithm": "linear",
+    "split": "random",
+    "context": "retrospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": "9c5e273038184cb49ac13702d712d879",
+    "record": {
+      "age": 39,
+      "education-num": 13,
+      "hours-per-week": 40
+    },
+    "message": ""
+  },
+  "notes": [
+    "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "模型最初训练条件：{\"dataset\":\"adult\",\"operation\":\"train\",\"columns\":[],\"filters\":[],\"group_by\":[],\"metric\":\"mean\",\"target\":\"income_gt_50k\",\"features\":[\"age\",\"education-num\",\"hours-per-week\"],\"algorithm\":\"logistic\",\"split\":\"random\",\"context\":\"retrospective\",\"chart\":\"histogram\",\"limit\":20,\"descending\":true,\"model_id\":null,\"record\":{},\"message\":\"\"}"
+  ],
+  "files": [
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "probability_gt_50k": 0.379867606824,
+      "predicted_class_at_0_5": 0
+    }
+  ],
+  "metrics": {},
+  "summary": "本条输入的 >50K 类别预测概率为 37.9868%。这是样本训练模型的估计概率，不是年收入金额，也不保证概率已校准。",
+  "model_id": "9c5e273038184cb49ac13702d712d879",
+  "training_provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+    "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+    "sha256": "74907b5b1708c43fe9d53be1208f13cde9a85521ef6a5a52185937728d6344ee",
+    "rows": 48842,
+    "columns": [
+      "age",
+      "workclass",
+      "fnlwgt",
+      "education",
+      "education-num",
+      "marital-status",
+      "occupation",
+      "relationship",
+      "race",
+      "sex",
+      "capital-gain",
+      "capital-loss",
+      "hours-per-week",
+      "native-country",
+      "income",
+      "income_gt_50k",
+      "_source_split",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.142630+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 29,
+    "license_note": "CC BY 4.0，引用 UCI Adult。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "download_receipt": {
+      "dataset": "adult",
+      "archive_name": "adult.zip",
+      "source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+      "source_handle_or_url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+      "downloaded_utc": "2026-10-30T12:40:32.738404+00:00",
+      "downloader": "Python standard library urllib",
+      "packaging": "original_source_zip",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+      "archive_bytes": 620237,
+      "files": {
+        "adult.data": {
+          "bytes": 3974305,
+          "sha256": "5b00264637dbfec36bdeaab5676b0b309ff9eb788d63554ca0a249491c86603d",
+          "rows": 32561,
+          "column_count": 15
+        },
+        "adult.test": {
+          "bytes": 2003153,
+          "sha256": "a2a9044bc167a35b2361efbabec64e89d69ce82d9790d2980119aac5fd7e9c05",
+          "rows": 16281,
+          "column_count": 15
+        },
+        "adult.names": {
+          "bytes": 5229,
+          "sha256": "c248284c0b5de30c9e1958d6cdd168a34a654758b620e68f46aefa83fc0a576a"
+        }
+      }
+    },
+    "dataset": "adult",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "9c5e273038184cb49ac13702d712d879",
+    "question": "人工参数重新训练检查",
+    "rows_before_filter": 48842,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 48842,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "stratified_predictor_groups",
+      "seed": 42,
+      "fold": 0,
+      "n_folds": 5,
+      "fingerprint_columns": [
+        "age",
+        "workclass",
+        "fnlwgt",
+        "education",
+        "education-num",
+        "marital-status",
+        "occupation",
+        "relationship",
+        "race",
+        "sex",
+        "capital-gain",
+        "capital-loss",
+        "hours-per-week",
+        "native-country"
+      ],
+      "group_overlap": 0,
+      "n_train": 26049,
+      "n_validation": 6512,
+      "n_eligible": 32561
+    },
+    "intercept": -1.5035496836396833
+  },
+  "table_rows_total": 1,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+    "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+    "sha256": "74907b5b1708c43fe9d53be1208f13cde9a85521ef6a5a52185937728d6344ee",
+    "rows": 48842,
+    "columns": [
+      "age",
+      "workclass",
+      "fnlwgt",
+      "education",
+      "education-num",
+      "marital-status",
+      "occupation",
+      "relationship",
+      "race",
+      "sex",
+      "capital-gain",
+      "capital-loss",
+      "hours-per-week",
+      "native-country",
+      "income",
+      "income_gt_50k",
+      "_source_split",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.142630+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 29,
+    "license_note": "CC BY 4.0，引用 UCI Adult。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "download_receipt": {
+      "dataset": "adult",
+      "archive_name": "adult.zip",
+      "source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+      "source_handle_or_url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+      "downloaded_utc": "2026-10-30T12:40:32.738404+00:00",
+      "downloader": "Python standard library urllib",
+      "packaging": "original_source_zip",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+      "archive_bytes": 620237,
+      "files": {
+        "adult.data": {
+          "bytes": 3974305,
+          "sha256": "5b00264637dbfec36bdeaab5676b0b309ff9eb788d63554ca0a249491c86603d",
+          "rows": 32561,
+          "column_count": 15
+        },
+        "adult.test": {
+          "bytes": 2003153,
+          "sha256": "a2a9044bc167a35b2361efbabec64e89d69ce82d9790d2980119aac5fd7e9c05",
+          "rows": 16281,
+          "column_count": 15
+        },
+        "adult.names": {
+          "bytes": 5229,
+          "sha256": "c248284c0b5de30c9e1958d6cdd168a34a654758b620e68f46aefa83fc0a576a"
+        }
+      }
+    },
+    "dataset": "adult",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "4058cc1a9f234b599d0ed746779c4442",
+    "question": "",
+    "rows_before_filter": 48842,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 48842,
+    "elapsed_seconds": 0.026303
+  },
+  "interaction_mode": "manual_parameters",
+  "evidence": [
+    {
+      "id": "method:rag",
+      "title": "检索与计算",
+      "text": "RAG 检索的是字段定义、数据边界和方法说明。所有统计量都在完整的筛选后数据上计算；不能把检索命中的几条文本当作统计样本。",
+      "source": "本项目方法说明",
+      "similarity": 0.147416
+    },
+    {
+      "id": "adult:scope",
+      "title": "收入分类数据边界",
+      "text": "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.106383
+    },
+    {
+      "id": "method:unsupported",
+      "title": "能力边界",
+      "text": "仅支持四个已注册数据集；筛选条件之间是 AND，不支持 OR、任意 SQL/Python、外部网页、神经网络、XGBoost、因果推断、显著性检验、自动调参和未观测的未来事件。必须明确拒绝范围外要求，不能降级后假装完成。",
+      "source": "本项目方法说明",
+      "similarity": 0.021659
+    },
+    {
+      "id": "adult:field:sex",
+      "title": "sex",
+      "text": "sex 原数据中的性别分类。 数据类型 object 示例值 Female, Male",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.011328
+    },
+    {
+      "id": "adult:field:age",
+      "title": "age",
+      "text": "age 年龄，岁。 数据类型 int64 示例值 ",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.009181
+    },
+    {
+      "id": "adult:field:race",
+      "title": "race",
+      "text": "race 原数据中的种族分类，仅用于样本统计或模型审计，不能作本质性或因果解释。 数据类型 object 示例值 Amer-Indian-Eskimo, Asian-Pac-Islander, Black, Other, White",
+      "source": "https://archive.ics.uci.edu/dataset/2/adult",
+      "similarity": 0.006304
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+\frametitle{启动 DeepSeek 联网演示}
+在项目根目录双击 \code{TableLab-DeepSeek.command}，或在终端运行：
+\begin{lstlisting}
+bash TableLab-DeepSeek.command
+\end{lstlisting}
+首次按提示输入 DeepSeek API Key；启动器准备 Python 环境并启动网页服务。
+\par\medskip
+浏览器打开 \url{http://127.0.0.1:8765}。输入问题后，点击「检索并生成方案」，核对参数，再点击「校验并执行」。
+\smallnote{生成新方案需要联网。密钥由终端隐藏输入，默认存入当前用户的 Mac 钥匙串。演示结束在终端按 Control-C。}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "method:rag",
+    "title": "检索与计算",
+    "text": "RAG 检索的是字段定义、数据边界和方法说明。所有统计量都在完整的筛选后数据上计算；不能把检索命中的几条文本当作统计样本。",
+    "source": "本项目方法说明",
+    "similarity": 0.147416
+  },
+  {
+    "id": "adult:scope",
+    "title": "收入分类数据边界",
+    "text": "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.106383
+  },
+  {
+    "id": "method:unsupported",
+    "title": "能力边界",
+    "text": "仅支持四个已注册数据集；筛选条件之间是 AND，不支持 OR、任意 SQL/Python、外部网页、神经网络、XGBoost、因果推断、显著性检验、自动调参和未观测的未来事件。必须明确拒绝范围外要求，不能降级后假装完成。",
+    "source": "本项目方法说明",
+    "similarity": 0.021659
+  },
+  {
+    "id": "adult:field:sex",
+    "title": "sex",
+    "text": "sex 原数据中的性别分类。 数据类型 object 示例值 Female, Male",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.011328
+  },
+  {
+    "id": "adult:field:age",
+    "title": "age",
+    "text": "age 年龄，岁。 数据类型 int64 示例值 ",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.009181
+  },
+  {
+    "id": "adult:field:race",
+    "title": "race",
+    "text": "race 原数据中的种族分类，仅用于样本统计或模型审计，不能作本质性或因果解释。 数据类型 object 示例值 Amer-Indian-Eskimo, Asian-Pac-Islander, Black, Other, White",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.006304
+  }
+]

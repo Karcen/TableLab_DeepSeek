@@ -1,0 +1,5 @@
+本版共运行 135 项 pytest 测试，26 项为新增的联网适配测试。四份数据的均值用人工构造的 API 回复触发本地计算，再和独立汇总核对。测试密钥均为占位文字，没有调用付费服务。
+在 Linux 伪终端测试了隐藏密钥输入、联网入口启动和真实回环 HTTP 状态接口，四份数据检查通过。Chromium 的内存页面与本机 TestClient 联调验证了联网提示、方案核对和均价计算；同一浏览器直接导航回环地址时被环境策略阻止。没有实测用户 Mac、真实账户、API 可用性或语言模型答案质量。
+模型接口文档：https://api-docs.deepseek.com/zh-cn/
+JSON 格式：https://api-docs.deepseek.com/zh-cn/guides/json_mode/
+错误码：https://api-docs.deepseek.com/zh-cn/quick_start/error_codes/

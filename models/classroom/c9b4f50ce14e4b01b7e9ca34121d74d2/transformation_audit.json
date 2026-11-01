@@ -1,0 +1,39 @@
+{
+  "numeric": [
+    "age",
+    "player_height",
+    "player_weight"
+  ],
+  "categorical": [],
+  "model_parameters": {
+    "copy_X": true,
+    "fit_intercept": true,
+    "n_jobs": null,
+    "positive": false,
+    "tol": 1e-06
+  },
+  "n_train": 9561,
+  "n_validation": 3283,
+  "target_training_mean": 8.070682982951572,
+  "imputation_medians": {
+    "age": 27.0,
+    "player_height": 203.2,
+    "player_weight": 100.697424
+  },
+  "scaler_means": {
+    "age": 27.33615730572116,
+    "player_height": 200.95582470452882,
+    "player_weight": 100.97162255998326
+  },
+  "scaler_variances": {
+    "age": 18.925383371970735,
+    "player_height": 86.12360520052349,
+    "player_weight": 163.42833938604292
+  },
+  "transformed_feature_names": [
+    "num__age",
+    "num__player_height",
+    "num__player_weight"
+  ],
+  "linear_rank": 3
+}

@@ -1,0 +1,75 @@
+\subsection{多模型与嵌套验证}
+本轮比较九种预设方法，并为随机森林、梯度提升各增加网格和 TPE 搜索，共形成每个任务十三条比较流程。房价的较小平均 RMSE 为 32,338.23 美元，来自提升树＋网格；收入分类中，提升树＋网格的 AUC 为 0.8913。NBA 得分由随机森林取得较小平均误差（5.698 分），学生成绩则是 Ridge（13.545 分）。这些是三折验证中的描述性排序，各折结果见图~\ref{fig:new-benchmark}。
+
+\inlinetab{\captionof{table}{三折外层验证的均值与折间标准差}\label{tab:new-models}
+\begin{tabularx}{\linewidth}{@{}Yrrrr@{}}\toprule
+方法 & 房价 RMSE & 收入 AUC & NBA RMSE & 成绩 RMSE\\\midrule
+常数基线 & 79.26 $\pm$ 6.14 & 0.5000 $\pm$ 0.0000 & 6.055 $\pm$ 0.355 & 15.178 $\pm$ 0.388\\
+逻辑回归 / OLS & 36.33 $\pm$ 6.61 & 0.8826 $\pm$ 0.0038 & 6.003 $\pm$ 0.354 & 13.552 $\pm$ 0.377\\
+强 L2 / Ridge & 36.72 $\pm$ 7.11 & 0.8823 $\pm$ 0.0037 & 5.977 $\pm$ 0.350 & 13.545 $\pm$ 0.395\\
+L1 / Elastic Net & 58.51 $\pm$ 5.86 & 0.8819 $\pm$ 0.0036 & 6.055 $\pm$ 0.355 & 15.178 $\pm$ 0.388\\
+单棵决策树 & 44.61 $\pm$ 8.82 & 0.7282 $\pm$ 0.0046 & 7.045 $\pm$ 0.329 & 13.890 $\pm$ 0.546\\
+随机森林 & 33.94 $\pm$ 4.44 & 0.8900 $\pm$ 0.0024 & 5.698 $\pm$ 0.374 & 13.692 $\pm$ 0.486\\
+Extra Trees & 32.98 $\pm$ 3.80 & 0.8797 $\pm$ 0.0035 & 5.756 $\pm$ 0.402 & 13.806 $\pm$ 0.473\\
+直方图梯度提升 & 33.30 $\pm$ 4.46 & 0.8912 $\pm$ 0.0028 & 5.767 $\pm$ 0.329 & 13.724 $\pm$ 0.506\\
+K 近邻 & 34.07 $\pm$ 4.89 & 0.8757 $\pm$ 0.0029 & 5.987 $\pm$ 0.400 & 13.859 $\pm$ 0.527\\
+森林＋网格 & 32.70 $\pm$ 4.51 & 0.8880 $\pm$ 0.0032 & 5.740 $\pm$ 0.396 & 13.619 $\pm$ 0.441\\
+森林＋TPE & 32.91 $\pm$ 4.50 & 0.8876 $\pm$ 0.0025 & 5.738 $\pm$ 0.392 & 13.629 $\pm$ 0.435\\
+提升树＋网格 & 32.34 $\pm$ 4.30 & 0.8913 $\pm$ 0.0025 & 5.754 $\pm$ 0.307 & 13.609 $\pm$ 0.488\\
+提升树＋TPE & 32.34 $\pm$ 4.30 & 0.8913 $\pm$ 0.0025 & 5.754 $\pm$ 0.307 & 13.642 $\pm$ 0.469\\
+\bottomrule\end{tabularx}
+\tabnote{房价单位为千美元，NBA 与成绩单位为分；AUC 越高越好，其余指标越低越好。误差项为三折间样本标准差。各折训练集有重合，标准差用于描述波动。}}
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/benchmark.pdf}
+\caption{九种预设方法及四条调参流程的外层表现。小点为各折，较大点与误差线为三折均值与标准差。按各任务自身指标排序，不能跨任务比较数值大小。}\label{fig:new-benchmark}
+\end{figure}
+\subsection{网格与 TPE 贝叶斯搜索的实际收益}
+房价中，提升树的网格与 TPE 搜索都使平均 RMSE 比预设参数低 966.57 美元；NBA 的降幅为 0.014 分。学生任务两条流程分别降低 0.115 和 0.082 分，收入分类的平均 AUC 增量约为 0.0001。
+
+森林在收入分类与 NBA 任务中的调参结果反而略差。这些参数由内层选择，外层退化说明内层最优组合的收益未必能在另一批记录上保持。
+
+两种搜索使用相同的十二点离散域；网格遍历全部组合，TPE 允许重复访问。每个任务中提升树的 TPE 平均访问约七至八种不同组合，其最终外层表现有时与网格相同。比较范围是本次候选域和预算；搜索轨迹、重复次数及耗时一并保留。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/search.pdf}
+\caption{提升树内层搜索轨迹。每条线为截至相应候选次数的最优内层分数，误差线为三个外层训练子集上该分数的标准差。网格横轴表示预设枚举顺序，TPE 按已有结果选择下一候选。内层曲线用于观察搜索过程，最终表现由外层记录评价。}\label{fig:new-search}
+\end{figure}
+\subsection{训练误差与验证误差}
+完整决策树在收入分类中的平均训练对数损失为 0.068，外层验证为 6.546；房价训练 RMSE 为 1,073.25 美元，验证为 44,611.87 美元。模型在训练记录上的低误差没有保持到验证记录，过拟合迹象较为清楚。复杂度曲线再观察树深增加后，训练和验证误差如何分离。
+
+浅树也会遗漏预测信息。房价的树深从 1 增至 4 后，平均验证 RMSE 从 58,732.35 降至 48,962.46 美元；学生任务从 14.211 降至 13.920 分，训练误差也同时下降。收入分类的验证对数损失由 0.447 降至 0.377，这些变化与浅树拟合不足的解释一致。NBA 从 5.815 降至 5.801 分，变化相对折间波动很小，需要结合其他模型判断。
+
+学习曲线固定各外层训练折选出的提升树参数，再增加训练数据量。训练和验证误差都高时，还需检查输入信息是否充分；仅凭误差水平，难以将特征不足与模型欠拟合分开。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/learning.pdf}
+\caption{学习曲线。横轴为外层训练集使用比例，NBA 按最早的完整赛季逐步增加，Adult 按记录指纹组增加；其余任务使用固定顺序的嵌套子样本。各子样本重新拟合预处理。训练与验证点均为三折均值，误差线为折间标准差。分类使用对数损失，回归使用 RMSE。}\label{fig:new-learning}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/complexity.pdf}
+\caption{决策树复杂度曲线。Full 表示不限制树深。训练与验证使用同一误差定义；相邻折有重合训练样本，误差线描述折间差异。}\label{fig:new-complexity}
+\end{figure}
+\subsection{SHAP 解释与特征组消融}
+SHAP 与消融统一采用事先指定的网格调参提升树，避免为了得到某种解释而挑选模型。
+
+房价的平均绝对 SHAP 以整体质量最高，但删去面积组后的退化最大，RMSE 平均增加 7,000.18 美元。SHAP 分配的是既定模型中的预测贡献；重新训练的消融允许其余字段替代被删信息，两种排序因而可以不同。
+
+其余任务中，收入分类以婚姻状况、NBA 以选秀年份、学生成绩以午餐类别的平均绝对贡献较大。删去对应字段后，收入 AUC 平均下降 0.0535，NBA 与学生的 RMSE 分别增加 0.263 和 1.043 分。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/shap.pdf}
+\caption{原始字段层面的平均绝对 SHAP。先对每条记录中属于同一原始字段的编码贡献求和，再取绝对值；点与误差线表示各折平均绝对贡献的均值和标准差。分类单位为对数几率，回归单位与目标一致。全部外层验证记录参与计算。}\label{fig:new-shap}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/beeswarm.pdf}
+\caption{SHAP 贡献分布。每点对应一条外层验证记录在相应原始字段上的贡献；纵向抖动只用于显示重叠，横向位置保持计算值。各任务采用全部外层验证记录；类别编码贡献先按原字段相加。}\label{fig:new-beeswarm}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/dependence.pdf}
+\caption{预先指定字段的取值与 SHAP 贡献。四个面板分别使用居住面积、教育编码、年龄和午餐类别；每点对应一条外层验证记录，透明度用于显示重叠。午餐类别仅沿横轴作确定性抖动。曲线或点云描述拟合模型中的关联。}\label{fig:new-dependence}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/ablation.pdf}
+\caption{删去特征组并重新进行内层网格搜索后的性能变化。正值表示相对全部字段的性能损失，负值表示改善；同一折的两种配置使用完全相同的训练与验证记录。点与误差线为三折配对变化的均值和标准差。}\label{fig:new-ablation}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/research/local.pdf}
+\caption{代表性单条预测的字段贡献。每个任务按全部外层验证记录的绝对预测误差排序，取中间记录；橙色条提高预测，蓝色条降低预测，虚线表示基准输出。分类在对数几率尺度分解，回归在目标单位分解；具体行号、真实值、预测值与加和核对保存在计算记录中。}\label{fig:new-local}
+\end{figure}

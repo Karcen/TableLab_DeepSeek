@@ -1,0 +1,17 @@
+TableLab 数据下载器 1.0.0
+验证日期：2026-10-30
+
+已执行 Python 语法编译检查、命令行帮助检查和 Bash 语法检查。
+已执行 python -m unittest -v test_download_tablelab_data：32 项测试全部通过，原始输出见 test_results.txt。
+
+单元测试使用合成文件和模拟下载函数，没有访问真实 Kaggle 数据，也没有验证 Kaggle 服务端的登录结果、最新数据内容或网络协议。测试中的文件名和字段结构依据现有 TableLab 工程的导入要求设置，不把极小夹具当作课程原数据。
+
+另实际执行了一次 Adult 在线下载命令。执行环境无法连接 UCI，程序返回退出码 1；没有生成成功的数据 ZIP，见 live_download_check.txt。本次失败不能推断用户 Mac 的网络也无法连接 UCI。
+
+未执行：真实 Kaggle 下载、Mac ARM64 环境安装、实际 API Token 验证及原始数据全流程导入。没有使用用户凭据，也没有代替用户接受比赛规则。
+
+接口实现依据 Kaggle 官方仓库的公开接口文档和 v1.0.2 数据下载函数签名；kagglehub 固定为 1.0.2。启动脚本记录实际安装的传递依赖版本。没有在当前环境安装或运行 kagglehub 的真实网络下载流程，因此不能将单元测试称为端到端下载验收。
+
+已在线读取 Kaggle 官方 CLI 技能及认证指导；该仓库声明 Apache-2.0 许可。也使用了对话中已读取的 humanizer 与 Humanizer-zh 文本审阅约束。当前环境无法下载并安装上游技能文件，未宣称安装或执行其审计程序。用户指定的 /Users/karcenzheng/Downloads/humanizer 不在当前容器可访问范围内。
+
+交付包不包含上游技能源文件、第三方字体、任何账户凭据或四份课程原始数据。

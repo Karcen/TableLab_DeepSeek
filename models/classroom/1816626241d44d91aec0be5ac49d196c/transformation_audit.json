@@ -1,0 +1,34 @@
+{
+  "numeric": [
+    "GrLivArea",
+    "OverallQual"
+  ],
+  "categorical": [],
+  "model_parameters": {
+    "copy_X": true,
+    "fit_intercept": true,
+    "n_jobs": null,
+    "positive": false,
+    "tol": 1e-06
+  },
+  "n_train": 1168,
+  "n_validation": 292,
+  "target_training_mean": 181441.5419520548,
+  "imputation_medians": {
+    "GrLivArea": 1473.0,
+    "OverallQual": 6.0
+  },
+  "scaler_means": {
+    "GrLivArea": 1527.4015410958905,
+    "OverallQual": 6.1215753424657535
+  },
+  "scaler_variances": {
+    "GrLivArea": 274794.17181269353,
+    "OverallQual": 1.8687810799399514
+  },
+  "transformed_feature_names": [
+    "num__GrLivArea",
+    "num__OverallQual"
+  ],
+  "linear_rank": 2
+}

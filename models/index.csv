@@ -1,0 +1,18 @@
+﻿case,dataset,target,algorithm,features,n_train,n_validation,directory
+house_primary_linear,house,SalePrice,linear,OverallQual;GrLivArea;YearBuilt;TotalBsmtSF;GarageCars;Neighborhood,1168,292,benchmarks/9d256798205f4f6d96de7fc024a4f0f0
+house_primary_random_forest,house,SalePrice,random_forest,OverallQual;GrLivArea;YearBuilt;TotalBsmtSF;GarageCars;Neighborhood,1168,292,benchmarks/04e0a046c70141c295f1d77ef747bbff
+adult_primary_logistic,adult,income_gt_50k,logistic,age;education-num;hours-per-week;workclass;occupation;marital-status,26049,6512,benchmarks/2add40f7ab234ff49ea10877d927ea07
+adult_primary_random_forest,adult,income_gt_50k,random_forest,age;education-num;hours-per-week;workclass;occupation;marital-status,26049,6512,benchmarks/3730f534e02d4c95809347cd94644373
+nba_primary_linear,nba,pts,linear,age;player_height;player_weight;draft_year,9561,3283,benchmarks/540870f94f48476e97d9fd1d88bdcccf
+nba_primary_random_forest,nba,pts,random_forest,age;player_height;player_weight;draft_year,9561,3283,benchmarks/455414d5429b4ed99e334dc50c66febf
+students_primary_linear,students,math score,linear,gender;parental level of education;lunch;test preparation course,800,200,benchmarks/e7cc4d2c4c184b84ac88b968a91c8ddb
+students_primary_random_forest,students,math score,random_forest,gender;parental level of education;lunch;test preparation course,800,200,benchmarks/96503512b9d54800ac3f6823b28fee88
+house_time_linear,house,SalePrice,linear,OverallQual;GrLivArea;YearBuilt;TotalBsmtSF;GarageCars;Neighborhood,1285,175,benchmarks/a9fa4eab92174160ad5ed16fac54f5c4
+house_time_random_forest,house,SalePrice,random_forest,OverallQual;GrLivArea;YearBuilt;TotalBsmtSF;GarageCars;Neighborhood,1285,175,benchmarks/2a1d7183271b47ebbff144f6edbcd0ff
+nba_group_linear,nba,pts,linear,age;player_height;player_weight;draft_year,10372,2472,benchmarks/bc35aff1ea044da7951c01e44178a883
+nba_group_random_forest,nba,pts,random_forest,age;player_height;player_weight;draft_year,10372,2472,benchmarks/f25ce9de7fc3498bb74014fe45fac3eb
+classroom_house_linear,house,SalePrice,linear,GrLivArea;OverallQual,1168,292,classroom/1816626241d44d91aec0be5ac49d196c
+classroom_house_random_forest,house,SalePrice,random_forest,GrLivArea;OverallQual,1168,292,classroom/189d892e44744fb1ba98deb86ee7aba6
+classroom_adult_logistic,adult,income_gt_50k,logistic,age;education-num;hours-per-week,26049,6512,classroom/aef273b8849f42019de099b7fe4199d8
+classroom_nba_linear,nba,pts,linear,age;player_height;player_weight,9561,3283,classroom/c9b4f50ce14e4b01b7e9ca34121d74d2
+classroom_students_linear,students,math score,linear,lunch;parental level of education,800,200,classroom/a7f52c3279b3496bae0a10b5082eb68f

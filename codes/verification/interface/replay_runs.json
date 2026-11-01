@@ -1,0 +1,56 @@
+[
+  {
+    "dataset": "house",
+    "title": "社区均价",
+    "question": "CollgCr 社区房屋的平均成交价是多少？",
+    "run_id": "b3badddcefc94c63a4b2a416b6d93fdc"
+  },
+  {
+    "dataset": "house",
+    "title": "线性回归",
+    "question": "用全部房屋记录，以居住面积和整体质量为自变量，使用线性回归预测成交价，随机划分训练与验证样本。",
+    "run_id": "1816626241d44d91aec0be5ac49d196c"
+  },
+  {
+    "dataset": "house",
+    "title": "随机森林",
+    "question": "用全部房屋记录，以居住面积和整体质量为自变量，使用随机森林预测成交价，随机划分训练与验证样本。",
+    "run_id": "189d892e44744fb1ba98deb86ee7aba6"
+  },
+  {
+    "dataset": "adult",
+    "title": "分组比例",
+    "question": "按教育程度比较年收入超过 5 万美元的样本比例。",
+    "run_id": "3ea233c30f1046c2bf0c0e51e55000c3"
+  },
+  {
+    "dataset": "adult",
+    "title": "概率模型",
+    "question": "用年龄、教育编码和每周工时建立逻辑回归，预测高收入概率。",
+    "run_id": "aef273b8849f42019de099b7fe4199d8"
+  },
+  {
+    "dataset": "nba",
+    "title": "赛季比较",
+    "question": "按赛季比较球员场均得分的均值，展示所有赛季。",
+    "run_id": "d658f5e9493e4ce897172015d42bfd79"
+  },
+  {
+    "dataset": "nba",
+    "title": "后续赛季",
+    "question": "用年龄、身高和体重做线性回归，预测场均得分，按赛季划分验证集。",
+    "run_id": "c9b4f50ce14e4b01b7e9ca34121d74d2"
+  },
+  {
+    "dataset": "students",
+    "title": "备考与成绩",
+    "question": "按备考课程完成状态比较数学平均分。",
+    "run_id": "d5379b56de244f89a28500b5586c5d84"
+  },
+  {
+    "dataset": "students",
+    "title": "考前预测",
+    "question": "只用考前信息，以午餐类别和父母教育程度做线性回归预测数学成绩。",
+    "run_id": "a7f52c3279b3496bae0a10b5082eb68f"
+  }
+]

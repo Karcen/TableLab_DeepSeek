@@ -1,0 +1,24 @@
+{
+  "dataset": "nba",
+  "operation": "train",
+  "columns": [],
+  "filters": [],
+  "group_by": [],
+  "metric": "mean",
+  "target": "pts",
+  "features": [
+    "age",
+    "player_height",
+    "player_weight",
+    "draft_year"
+  ],
+  "algorithm": "random_forest",
+  "split": "group",
+  "context": "prospective",
+  "chart": "histogram",
+  "limit": 20,
+  "descending": true,
+  "model_id": null,
+  "record": {},
+  "message": ""
+}

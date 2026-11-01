@@ -1,0 +1,11 @@
+﻿dataset,severity,finding,count,action
+house,must disclose,没有房价来源下载记录或原始字段说明附件,1,保留 user_supplied_unverified；不宣称与 Kaggle 官方训练文件逐行一致
+house,should disclose,缺少 LotFrontage,259,不全表删除；仅选作特征时在训练子集中拟合中位数插补
+house,should disclose,改建年份晚于出售年份,1,标记但不推断更正值；默认特征未使用此字段
+adult,must fix for splitting,adult.data 内非目标原始字段完全相同的额外记录,25,记录全部保留；按非目标字段指纹分层分组，禁止跨训练与交互验证
+adult,must disclose,原始训练/测试文件共有的非目标字段指纹,26,未使用 adult.test 训练或报告其性能；未来最终测试需单独规定重合组处置
+adult,should disclose,样本权重存在但当前模型与描述统计未加权,48842,比例仅代表上传样本；不外推为总体人口比例
+nba,must disclose,姓名-赛季键不唯一,4,8 条相关记录全部保留；不合并；group 指姓名分组，非验证后的唯一球员分组
+nba,should disclose,ts_pct 大于 1,15,真实投篮效率不是普通二项概率，不按 0-1 硬截断；无原始投篮次数，不能逐条重算
+nba,should disclose,college 为字面 None,1854,保留为类别，不用 pandas 默认缺失表吞掉
+students,must disclose,源站致谢指向数据生成页面，未核实真实抽样,1000,称为课程样本；不用其备考关联支持教育因果结论；保留来源性质限制

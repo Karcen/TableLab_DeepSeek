@@ -1,0 +1,44 @@
+[
+  {
+    "id": "method:rag",
+    "title": "检索与计算",
+    "text": "RAG 检索的是字段定义、数据边界和方法说明。所有统计量都在完整的筛选后数据上计算；不能把检索命中的几条文本当作统计样本。",
+    "source": "本项目方法说明",
+    "similarity": 0.148835
+  },
+  {
+    "id": "house:scope",
+    "title": "房价数据边界",
+    "text": "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.120312
+  },
+  {
+    "id": "method:unsupported",
+    "title": "能力边界",
+    "text": "仅支持四个已注册数据集；筛选条件之间是 AND，不支持 OR、任意 SQL/Python、外部网页、神经网络、XGBoost、因果推断、显著性检验、自动调参和未观测的未来事件。必须明确拒绝范围外要求，不能降级后假装完成。",
+    "source": "本项目方法说明",
+    "similarity": 0.021267
+  },
+  {
+    "id": "house:field:PoolArea",
+    "title": "PoolArea",
+    "text": "PoolArea 以随原始数据提供的数据字典为准。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.006908
+  },
+  {
+    "id": "house:field:FullBath",
+    "title": "FullBath",
+    "text": "FullBath 以随原始数据提供的数据字典为准。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.006847
+  },
+  {
+    "id": "house:field:MiscVal",
+    "title": "MiscVal",
+    "text": "MiscVal 以随原始数据提供的数据字典为准。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "similarity": 0.006815
+  }
+]

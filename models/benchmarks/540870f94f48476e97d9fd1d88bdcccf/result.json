@@ -1,0 +1,350 @@
+{
+  "status": "ok",
+  "run_id": "540870f94f48476e97d9fd1d88bdcccf",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "nba",
+    "operation": "train",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": "pts",
+    "features": [
+      "age",
+      "player_height",
+      "player_weight",
+      "draft_year"
+    ],
+    "algorithm": "linear",
+    "split": "time",
+    "context": "prospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "按后续赛季留出验证，不自动等于严格季前预测；本数据没有给出每个字段的采集时点。",
+    "draft_year 验证集出现 6 个训练时未见类别；编码为全零，不代表已学会这些类别。",
+    "Found unknown categories in columns [0] during transform. These unknown categories will be encoded as all zeros",
+    "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+    "分类参考类别：{\"draft_year\": \"1987\"}",
+    "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+  ],
+  "files": [
+    "metrics.csv",
+    "validation_predictions.csv",
+    "split.csv",
+    "diagnostic.pdf",
+    "transformation_audit.json",
+    "explanation.csv",
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "metric": "mae",
+      "value": 4.58047256283
+    },
+    {
+      "metric": "rmse",
+      "value": 6.230683015897
+    },
+    {
+      "metric": "r2",
+      "value": 0.038970154289
+    },
+    {
+      "metric": "baseline_rmse",
+      "value": 6.379954797627
+    }
+  ],
+  "metrics": {
+    "mae": 4.580472562830392,
+    "rmse": 6.23068301589651,
+    "r2": 0.03897015428855477,
+    "baseline_rmse": 6.379954797627049
+  },
+  "summary": "训练 9,561 条，交互验证 3,283 条。MAE=4.5805；RMSE=6.2307；R²=0.0390。训练均值基线 RMSE=6.3800。误差单位与 pts 一致。 其余编码特征固定时，age 每增加训练样本的一个标准差，预测 pts变化 -0.0792；这是模型内的条件关联。",
+  "model_id": "540870f94f48476e97d9fd1d88bdcccf",
+  "explanation": [
+    {
+      "feature": "num__age",
+      "coefficient": -0.079249264529
+    },
+    {
+      "feature": "num__player_height",
+      "coefficient": -0.740756847738
+    },
+    {
+      "feature": "num__player_weight",
+      "coefficient": 0.151098522067
+    },
+    {
+      "feature": "cat__draft_year_1988",
+      "coefficient": -0.903944030769
+    },
+    {
+      "feature": "cat__draft_year_1989",
+      "coefficient": 0.730459213575
+    },
+    {
+      "feature": "cat__draft_year_1990",
+      "coefficient": -0.063221573177
+    },
+    {
+      "feature": "cat__draft_year_1991",
+      "coefficient": -0.469244735116
+    },
+    {
+      "feature": "cat__draft_year_1992",
+      "coefficient": 0.89859494579
+    },
+    {
+      "feature": "cat__draft_year_1993",
+      "coefficient": 1.573337101969
+    },
+    {
+      "feature": "cat__draft_year_1994",
+      "coefficient": 0.414555059157
+    },
+    {
+      "feature": "cat__draft_year_1995",
+      "coefficient": 0.749290608177
+    },
+    {
+      "feature": "cat__draft_year_1996",
+      "coefficient": 2.158969186303
+    },
+    {
+      "feature": "cat__draft_year_1997",
+      "coefficient": 0.479877973163
+    },
+    {
+      "feature": "cat__draft_year_1998",
+      "coefficient": 1.195503833744
+    },
+    {
+      "feature": "cat__draft_year_1999",
+      "coefficient": 1.367859028408
+    },
+    {
+      "feature": "cat__draft_year_2000",
+      "coefficient": -1.090905628454
+    },
+    {
+      "feature": "cat__draft_year_2001",
+      "coefficient": 0.682973236008
+    },
+    {
+      "feature": "cat__draft_year_2002",
+      "coefficient": 0.44169699918
+    },
+    {
+      "feature": "cat__draft_year_2003",
+      "coefficient": 1.385875617441
+    },
+    {
+      "feature": "cat__draft_year_2004",
+      "coefficient": 0.927048210648
+    },
+    {
+      "feature": "cat__draft_year_2005",
+      "coefficient": 0.761006255821
+    },
+    {
+      "feature": "cat__draft_year_2006",
+      "coefficient": -0.538620434088
+    },
+    {
+      "feature": "cat__draft_year_2007",
+      "coefficient": 1.320094369896
+    },
+    {
+      "feature": "cat__draft_year_2008",
+      "coefficient": 1.785767625098
+    },
+    {
+      "feature": "cat__draft_year_2009",
+      "coefficient": 0.816743812837
+    },
+    {
+      "feature": "cat__draft_year_2010",
+      "coefficient": -0.337783019618
+    },
+    {
+      "feature": "cat__draft_year_2011",
+      "coefficient": 0.899458690658
+    },
+    {
+      "feature": "cat__draft_year_2012",
+      "coefficient": -0.519519294247
+    },
+    {
+      "feature": "cat__draft_year_2013",
+      "coefficient": -1.064623658105
+    },
+    {
+      "feature": "cat__draft_year_2014",
+      "coefficient": -1.694563045829
+    }
+  ],
+  "table_rows_total": 4,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/justinas/nba-players-data",
+    "archive_sha256": "43fe64e83dfc4c57a37d9635c338d525232ed6bef3597de8bf6dd78ddd2bd071",
+    "sha256": "a12f4243164f4be8c5cbfa032e7689b6682e0bf17c38ab4201ea749064624ea3",
+    "rows": 12844,
+    "columns": [
+      "Unnamed: 0",
+      "player_name",
+      "team_abbreviation",
+      "age",
+      "player_height",
+      "player_weight",
+      "college",
+      "country",
+      "draft_year",
+      "draft_round",
+      "draft_number",
+      "gp",
+      "pts",
+      "reb",
+      "ast",
+      "net_rating",
+      "oreb_pct",
+      "dreb_pct",
+      "usg_pct",
+      "ts_pct",
+      "ast_pct",
+      "season",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.360790+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "遵守原 Kaggle 页面列示许可和适用比赛规则；本软件不改变或另授数据许可。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "download_receipt": {
+      "dataset": "nba",
+      "archive_name": "nba.zip",
+      "source_page": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "source_handle_or_url": "justinas/nba-players-data",
+      "downloaded_utc": "2026-10-30T12:40:42.822899+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "43fe64e83dfc4c57a37d9635c338d525232ed6bef3597de8bf6dd78ddd2bd071",
+      "archive_bytes": 561667,
+      "files": {
+        "all_seasons.csv": {
+          "bytes": 1920482,
+          "sha256": "993129eeb859a053103d3db24cc85da7350a389de324e2f0345eed8656d8c096",
+          "rows": 12844,
+          "columns": [
+            "",
+            "player_name",
+            "team_abbreviation",
+            "age",
+            "player_height",
+            "player_weight",
+            "college",
+            "country",
+            "draft_year",
+            "draft_round",
+            "draft_number",
+            "gp",
+            "pts",
+            "reb",
+            "ast",
+            "net_rating",
+            "oreb_pct",
+            "dreb_pct",
+            "usg_pct",
+            "ts_pct",
+            "ast_pct",
+            "season"
+          ]
+        }
+      }
+    },
+    "dataset": "nba",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "540870f94f48476e97d9fd1d88bdcccf",
+    "question": "固定协议参数执行；没有调用自然语言模型",
+    "rows_before_filter": 12844,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 12844,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "time",
+      "field": "season",
+      "validation_start": 2017,
+      "train_periods": [
+        "1996-97",
+        "1997-98",
+        "1998-99",
+        "1999-00",
+        "2000-01",
+        "2001-02",
+        "2002-03",
+        "2003-04",
+        "2004-05",
+        "2005-06",
+        "2006-07",
+        "2007-08",
+        "2008-09",
+        "2009-10",
+        "2010-11",
+        "2011-12",
+        "2012-13",
+        "2013-14",
+        "2014-15",
+        "2015-16",
+        "2016-17"
+      ],
+      "validation_periods": [
+        "2017-18",
+        "2018-19",
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23"
+      ],
+      "n_train": 9561,
+      "n_validation": 3283,
+      "n_eligible": 12844
+    },
+    "intercept": 8.205661324292736,
+    "elapsed_seconds": 0.325628
+  }
+}

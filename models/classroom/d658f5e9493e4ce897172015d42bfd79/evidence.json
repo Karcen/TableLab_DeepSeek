@@ -1,0 +1,44 @@
+[
+  {
+    "id": "nba:field:pts",
+    "title": "pts",
+    "text": "pts 赛季场均得分。 数据类型 float64 示例值 ",
+    "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+    "similarity": 0.244943
+  },
+  {
+    "id": "nba:scope",
+    "title": "NBA 球员数据边界",
+    "text": "记录按球员姓名与赛季组织；同名未必同一人，缺少稳定球员 ID。不能把跨赛季重复记录当作独立个体。默认按赛季留出验证，也支持按姓名保守分组留出；不支持跨赛季自动构造滞后特征或任意未来赛季外推。同期技术统计只能用于同期估计。",
+    "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+    "similarity": 0.070333
+  },
+  {
+    "id": "nba:field:ast",
+    "title": "ast",
+    "text": "ast 赛季场均助攻。 数据类型 float64 示例值 ",
+    "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+    "similarity": 0.055559
+  },
+  {
+    "id": "nba:field:reb",
+    "title": "reb",
+    "text": "reb 赛季场均篮板。 数据类型 float64 示例值 ",
+    "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+    "similarity": 0.053251
+  },
+  {
+    "id": "method:importance",
+    "title": "特征重要性与解释",
+    "text": "随机森林报告交互验证集上的置换重要性，3 次置换的均值及标准差，不是置信区间，也不是因果效应。相关特征之间可分摊重要性。线性系数的数值变量单位是训练样本的一个标准差。",
+    "source": "本项目方法说明",
+    "similarity": 0.047417
+  },
+  {
+    "id": "nba:field:gp",
+    "title": "gp",
+    "text": "gp 赛季出场场次。 数据类型 int64 示例值 ",
+    "source": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+    "similarity": 0.026749
+  }
+]

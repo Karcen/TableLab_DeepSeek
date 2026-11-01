@@ -1,0 +1,26 @@
+{
+  "dataset": "adult",
+  "operation": "train",
+  "columns": [],
+  "filters": [],
+  "group_by": [],
+  "metric": "mean",
+  "target": "income_gt_50k",
+  "features": [
+    "age",
+    "education-num",
+    "hours-per-week",
+    "workclass",
+    "occupation",
+    "marital-status"
+  ],
+  "algorithm": "logistic",
+  "split": "random",
+  "context": "prospective",
+  "chart": "histogram",
+  "limit": 20,
+  "descending": true,
+  "model_id": null,
+  "record": {},
+  "message": ""
+}

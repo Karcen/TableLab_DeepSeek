@@ -1,0 +1,108 @@
+{
+  "format_version": 1,
+  "script_version": "1.0.0",
+  "datasets": {
+    "adult": {
+      "dataset": "adult",
+      "archive_name": "adult.zip",
+      "source_page": "https://archive.ics.uci.edu/dataset/2/adult",
+      "source_handle_or_url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+      "downloaded_utc": "2026-10-30T12:40:32.738404+00:00",
+      "downloader": "Python standard library urllib",
+      "packaging": "original_source_zip",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+      "archive_bytes": 620237,
+      "files": {
+        "adult.data": {
+          "bytes": 3974305,
+          "sha256": "5b00264637dbfec36bdeaab5676b0b309ff9eb788d63554ca0a249491c86603d",
+          "rows": 32561,
+          "column_count": 15
+        },
+        "adult.test": {
+          "bytes": 2003153,
+          "sha256": "a2a9044bc167a35b2361efbabec64e89d69ce82d9790d2980119aac5fd7e9c05",
+          "rows": 16281,
+          "column_count": 15
+        },
+        "adult.names": {
+          "bytes": 5229,
+          "sha256": "c248284c0b5de30c9e1958d6cdd168a34a654758b620e68f46aefa83fc0a576a"
+        }
+      }
+    },
+    "nba": {
+      "dataset": "nba",
+      "archive_name": "nba.zip",
+      "source_page": "https://www.kaggle.com/datasets/justinas/nba-players-data",
+      "source_handle_or_url": "justinas/nba-players-data",
+      "downloaded_utc": "2026-10-30T12:40:42.822899+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "43fe64e83dfc4c57a37d9635c338d525232ed6bef3597de8bf6dd78ddd2bd071",
+      "archive_bytes": 561667,
+      "files": {
+        "all_seasons.csv": {
+          "bytes": 1920482,
+          "sha256": "993129eeb859a053103d3db24cc85da7350a389de324e2f0345eed8656d8c096",
+          "rows": 12844,
+          "columns": [
+            "",
+            "player_name",
+            "team_abbreviation",
+            "age",
+            "player_height",
+            "player_weight",
+            "college",
+            "country",
+            "draft_year",
+            "draft_round",
+            "draft_number",
+            "gp",
+            "pts",
+            "reb",
+            "ast",
+            "net_rating",
+            "oreb_pct",
+            "dreb_pct",
+            "usg_pct",
+            "ts_pct",
+            "ast_pct",
+            "season"
+          ]
+        }
+      }
+    },
+    "students": {
+      "dataset": "students",
+      "archive_name": "students.zip",
+      "source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "source_handle_or_url": "spscientist/students-performance-in-exams",
+      "downloaded_utc": "2026-10-30T12:40:48.136436+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+      "archive_bytes": 8130,
+      "files": {
+        "StudentsPerformance.csv": {
+          "bytes": 72036,
+          "sha256": "ade5869dba8b2d3e2b96379359fb2f61cb0308e8394d9b1ba37e174cfe3bee69",
+          "rows": 1000,
+          "columns": [
+            "gender",
+            "race/ethnicity",
+            "parental level of education",
+            "lunch",
+            "test preparation course",
+            "math score",
+            "reading score",
+            "writing score"
+          ]
+        }
+      }
+    }
+  }
+}

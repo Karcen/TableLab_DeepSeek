@@ -1,0 +1,46 @@
+{
+  "numeric": [
+    "GrLivArea",
+    "OverallQual"
+  ],
+  "categorical": [],
+  "model_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 12,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 5,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 120,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "n_train": 1168,
+  "n_validation": 292,
+  "target_training_mean": 181441.5419520548,
+  "imputation_medians": {
+    "GrLivArea": 1473.0,
+    "OverallQual": 6.0
+  },
+  "scaler_means": {
+    "GrLivArea": 1527.4015410958905,
+    "OverallQual": 6.1215753424657535
+  },
+  "scaler_variances": {
+    "GrLivArea": 274794.17181269353,
+    "OverallQual": 1.8687810799399514
+  },
+  "transformed_feature_names": [
+    "num__GrLivArea",
+    "num__OverallQual"
+  ]
+}

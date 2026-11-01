@@ -1,0 +1,47 @@
+{
+  "numeric": [
+    "age",
+    "education-num",
+    "hours-per-week"
+  ],
+  "categorical": [],
+  "model_parameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 1500,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "n_train": 26049,
+  "n_validation": 6512,
+  "target_training_mean": 0.24081538638719335,
+  "imputation_medians": {
+    "age": 37.0,
+    "education-num": 10.0,
+    "hours-per-week": 40.0
+  },
+  "scaler_means": {
+    "age": 38.535913086874736,
+    "education-num": 10.076586433260394,
+    "hours-per-week": 40.51057622173596
+  },
+  "scaler_variances": {
+    "age": 183.53421065327765,
+    "education-num": 6.607017930271623,
+    "hours-per-week": 151.54513940077973
+  },
+  "transformed_feature_names": [
+    "num__age",
+    "num__education-num",
+    "num__hours-per-week"
+  ]
+}

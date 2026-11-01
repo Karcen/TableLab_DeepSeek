@@ -1,0 +1,16 @@
+[
+  {
+    "id": "method:forest",
+    "title": "随机森林",
+    "text": "random_forest 对连续目标使用回归森林，对收入二元目标使用分类森林。固定 120 棵树、最大深度 12、叶节点至少 5 个样本、随机种子 42、一个并行工作线程。不支持现场超参数搜索。",
+    "source": "本项目方法说明",
+    "similarity": 0.041473
+  },
+  {
+    "id": "adult:scope",
+    "title": "收入分类数据边界",
+    "text": "Adult 是从 1994 年人口普查数据库提取的样本。收入只有 >50K 与 <=50K 标签，不能计算个人工资或平均年收入。本系统默认未按 fnlwgt 加权，样本比例不能直接当作全美人口比例。原始 adult.test 留存，不参与交互模型拟合。",
+    "source": "https://archive.ics.uci.edu/dataset/2/adult",
+    "similarity": 0.037187
+  }
+]

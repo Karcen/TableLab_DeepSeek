@@ -1,0 +1,44 @@
+[
+  {
+    "id": "method:linear",
+    "title": "线性回归",
+    "text": "linear 只用于连续目标。数值特征在训练子集上中位数填补并标准化，分类变量在训练子集上填补并作独热编码，删去一个参考类别。系数描述条件线性关联，不是因果效果；本程序不报告显著性或 p 值。",
+    "source": "本项目方法说明",
+    "similarity": 0.095123
+  },
+  {
+    "id": "students:field:parental level of education",
+    "title": "parental level of education",
+    "text": "parental level of education 父母受教育程度分类。 数据类型 object 示例值 associate's degree, bachelor's degree, high school, master's degree, some college, some high school",
+    "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "similarity": 0.062752
+  },
+  {
+    "id": "students:scope",
+    "title": "学生成绩数据边界",
+    "text": "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+    "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "similarity": 0.053461
+  },
+  {
+    "id": "students:field:lunch",
+    "title": "lunch",
+    "text": "lunch 午餐类型，standard 或 free/reduced；不能等同于精确家庭收入。 数据类型 object 示例值 free/reduced, standard",
+    "source": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "similarity": 0.041819
+  },
+  {
+    "id": "method:units",
+    "title": "相关和预测",
+    "text": "皮尔逊相关只度量线性关联。回归报告 MAE、RMSE、R²；R² 允许为负，负值表示比用验证集均值作常数预测还差。基线模型仅从训练子集学习均值或正类比例。点预测不包含预测区间。",
+    "source": "本项目方法说明",
+    "similarity": 0.035379
+  },
+  {
+    "id": "method:logistic",
+    "title": "逻辑回归",
+    "text": "logistic 只用于 Adult 的 income_gt_50k 二元目标，使用带 L2 正则的逻辑回归。输出类别 1 的概率。阈值固定 0.5；概率未额外校准。报告 ROC AUC、平均精确率、F1、准确率、平衡准确率、Brier 分数和对数损失。",
+    "source": "本项目方法说明",
+    "similarity": 0.027417
+  }
+]

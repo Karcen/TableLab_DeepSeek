@@ -1,0 +1,321 @@
+[
+  {
+    "id": "H01",
+    "dataset": "house",
+    "question": "按 Neighborhood 分组计算 SalePrice 的平均值。",
+    "expected": {
+      "operation": "aggregate",
+      "columns": [
+        "SalePrice"
+      ],
+      "group_by": [
+        "Neighborhood"
+      ],
+      "metric": "mean"
+    }
+  },
+  {
+    "id": "H02",
+    "dataset": "house",
+    "question": "用 GrLivArea 和 OverallQual 建立 SalePrice 的线性回归。",
+    "expected": {
+      "operation": "train",
+      "target": "SalePrice",
+      "features": [
+        "GrLivArea",
+        "OverallQual"
+      ],
+      "algorithm": "linear",
+      "split": "random"
+    }
+  },
+  {
+    "id": "H03",
+    "dataset": "house",
+    "question": "用 GrLivArea 和 YearBuilt 训练随机森林预测 SalePrice。",
+    "expected": {
+      "operation": "train",
+      "target": "SalePrice",
+      "features": [
+        "GrLivArea",
+        "YearBuilt"
+      ],
+      "algorithm": "random_forest"
+    }
+  },
+  {
+    "id": "H04",
+    "dataset": "house",
+    "question": "只保留 YrSold 大于等于2008年的房屋，计算 SalePrice 中位数。",
+    "expected": {
+      "operation": "aggregate",
+      "columns": [
+        "SalePrice"
+      ],
+      "metric": "median",
+      "filters": [
+        {
+          "column": "YrSold",
+          "op": "ge",
+          "value": 2008
+        }
+      ]
+    }
+  },
+  {
+    "id": "H05",
+    "dataset": "house",
+    "question": "画 GrLivArea 与 SalePrice 散点图。",
+    "expected": {
+      "operation": "plot",
+      "chart": "scatter",
+      "columns": [
+        "GrLivArea",
+        "SalePrice"
+      ]
+    }
+  },
+  {
+    "id": "H06",
+    "dataset": "house",
+    "question": "调用 XGBoost 自动调参预测房价。",
+    "expected": {
+      "operation": "unsupported"
+    }
+  },
+  {
+    "id": "A01",
+    "dataset": "adult",
+    "question": "按 sex 分组计算 income_gt_50k 的平均值。",
+    "expected": {
+      "operation": "aggregate",
+      "columns": [
+        "income_gt_50k"
+      ],
+      "group_by": [
+        "sex"
+      ],
+      "metric": "mean"
+    }
+  },
+  {
+    "id": "A02",
+    "dataset": "adult",
+    "question": "用 age 和 education-num 训练逻辑回归预测 income_gt_50k。",
+    "expected": {
+      "operation": "train",
+      "target": "income_gt_50k",
+      "features": [
+        "age",
+        "education-num"
+      ],
+      "algorithm": "logistic"
+    }
+  },
+  {
+    "id": "A03",
+    "dataset": "adult",
+    "question": "用 age 和 hours-per-week 训练随机森林预测 income_gt_50k。",
+    "expected": {
+      "operation": "train",
+      "target": "income_gt_50k",
+      "features": [
+        "age",
+        "hours-per-week"
+      ],
+      "algorithm": "random_forest"
+    }
+  },
+  {
+    "id": "A04",
+    "dataset": "adult",
+    "question": "age 大于40岁的样本有多少条？",
+    "expected": {
+      "operation": "aggregate",
+      "metric": "count",
+      "columns": [],
+      "filters": [
+        {
+          "column": "age",
+          "op": "gt",
+          "value": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": "A05",
+    "dataset": "adult",
+    "question": "解释 fnlwgt 字段。",
+    "expected": {
+      "operation": "explain",
+      "columns": [
+        "fnlwgt"
+      ]
+    }
+  },
+  {
+    "id": "A06",
+    "dataset": "adult",
+    "question": "根据这份数据算出所有人的平均年工资金额。",
+    "expected": {
+      "operation": "unsupported"
+    }
+  },
+  {
+    "id": "N01",
+    "dataset": "nba",
+    "question": "按 season 分组计算 pts 的均值。",
+    "expected": {
+      "operation": "aggregate",
+      "columns": [
+        "pts"
+      ],
+      "group_by": [
+        "season"
+      ],
+      "metric": "mean"
+    }
+  },
+  {
+    "id": "N02",
+    "dataset": "nba",
+    "question": "按赛季时间划分，用 age 和 player_height 线性回归预测 pts。",
+    "expected": {
+      "operation": "train",
+      "target": "pts",
+      "features": [
+        "age",
+        "player_height"
+      ],
+      "algorithm": "linear",
+      "split": "time"
+    }
+  },
+  {
+    "id": "N03",
+    "dataset": "nba",
+    "question": "按球员分组划分，用 age 和 player_weight 随机森林预测 reb。",
+    "expected": {
+      "operation": "train",
+      "target": "reb",
+      "features": [
+        "age",
+        "player_weight"
+      ],
+      "algorithm": "random_forest",
+      "split": "group"
+    }
+  },
+  {
+    "id": "N04",
+    "dataset": "nba",
+    "question": "计算 player_height 和 reb 的皮尔逊相关。",
+    "expected": {
+      "operation": "correlation",
+      "columns": [
+        "player_height",
+        "reb"
+      ]
+    }
+  },
+  {
+    "id": "N05",
+    "dataset": "nba",
+    "question": "画 age 的直方图。",
+    "expected": {
+      "operation": "plot",
+      "columns": [
+        "age"
+      ],
+      "chart": "histogram"
+    }
+  },
+  {
+    "id": "N06",
+    "dataset": "nba",
+    "question": "联网获取明年赛程并预测总冠军。",
+    "expected": {
+      "operation": "unsupported"
+    }
+  },
+  {
+    "id": "S01",
+    "dataset": "students",
+    "question": "按 test preparation course 分组比较 math score 均值。",
+    "expected": {
+      "operation": "aggregate",
+      "columns": [
+        "math score"
+      ],
+      "group_by": [
+        "test preparation course"
+      ],
+      "metric": "mean"
+    }
+  },
+  {
+    "id": "S02",
+    "dataset": "students",
+    "question": "用 lunch 和 parental level of education 线性回归预测 math score。",
+    "expected": {
+      "operation": "train",
+      "target": "math score",
+      "features": [
+        "lunch",
+        "parental level of education"
+      ],
+      "algorithm": "linear"
+    }
+  },
+  {
+    "id": "S03",
+    "dataset": "students",
+    "question": "用 gender 和 lunch 随机森林预测 writing score。",
+    "expected": {
+      "operation": "train",
+      "target": "writing score",
+      "features": [
+        "gender",
+        "lunch"
+      ],
+      "algorithm": "random_forest"
+    }
+  },
+  {
+    "id": "S04",
+    "dataset": "students",
+    "question": "math score 大于等于80分的记录数。",
+    "expected": {
+      "operation": "aggregate",
+      "metric": "count",
+      "columns": [],
+      "filters": [
+        {
+          "column": "math score",
+          "op": "ge",
+          "value": 80
+        }
+      ]
+    }
+  },
+  {
+    "id": "S05",
+    "dataset": "students",
+    "question": "解释 race/ethnicity 字段。",
+    "expected": {
+      "operation": "explain",
+      "columns": [
+        "race/ethnicity"
+      ]
+    }
+  },
+  {
+    "id": "S06",
+    "dataset": "students",
+    "question": "证明参加备考课程会因果性地提高数学成绩，并给出显著性 p 值。",
+    "expected": {
+      "operation": "unsupported"
+    }
+  }
+]

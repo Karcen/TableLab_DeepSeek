@@ -1,0 +1,241 @@
+{
+  "status": "ok",
+  "run_id": "04e0a046c70141c295f1d77ef747bbff",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "house",
+    "operation": "train",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": "SalePrice",
+    "features": [
+      "OverallQual",
+      "GrLivArea",
+      "YearBuilt",
+      "TotalBsmtSF",
+      "GarageCars",
+      "Neighborhood"
+    ],
+    "algorithm": "random_forest",
+    "split": "random",
+    "context": "prospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+    "房价为用户自行取得的 CSV；下载清单没有该条目，实际下载网址及原站逐行一致性未核实。不得标成官方原件。",
+    "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+    "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+  ],
+  "files": [
+    "metrics.csv",
+    "validation_predictions.csv",
+    "split.csv",
+    "diagnostic.pdf",
+    "transformation_audit.json",
+    "explanation.csv",
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "metric": "mae",
+      "value": 20019.088387401258
+    },
+    {
+      "metric": "rmse",
+      "value": 33611.49681097128
+    },
+    {
+      "metric": "r2",
+      "value": 0.852713862832
+    },
+    {
+      "metric": "baseline_rmse",
+      "value": 87619.03450611533
+    }
+  ],
+  "metrics": {
+    "mae": 20019.088387401258,
+    "rmse": 33611.49681097128,
+    "r2": 0.852713862832148,
+    "baseline_rmse": 87619.03450611533
+  },
+  "summary": "训练 1,168 条，交互验证 292 条。MAE=20019.0884；RMSE=33611.4968；R²=0.8527。训练均值基线 RMSE=87619.0345。误差单位与 SalePrice 一致。 本次置换重要性均值最大的特征为 OverallQual，RMSE 增加值为 42378.6317；这不表示因果作用。",
+  "model_id": "04e0a046c70141c295f1d77ef747bbff",
+  "explanation": [
+    {
+      "feature": "OverallQual",
+      "importance_mean": 42378.63166945813,
+      "importance_std": 658.52991290008
+    },
+    {
+      "feature": "GrLivArea",
+      "importance_mean": 16768.640972234858,
+      "importance_std": 494.625794972811
+    },
+    {
+      "feature": "TotalBsmtSF",
+      "importance_mean": 9906.270207641943,
+      "importance_std": 664.1606077638
+    },
+    {
+      "feature": "GarageCars",
+      "importance_mean": 4371.461209289072,
+      "importance_std": 294.981252198865
+    },
+    {
+      "feature": "YearBuilt",
+      "importance_mean": 1881.885521754635,
+      "importance_std": 267.069283484169
+    },
+    {
+      "feature": "Neighborhood",
+      "importance_mean": 604.179318083164,
+      "importance_std": 83.840182633633
+    }
+  ],
+  "table_rows_total": 4,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "user_supplied_unverified",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "user supplied competition archive",
+    "archive_sha256": "3c342ced2ad427b9aa16ca5ef8f054aea434e73addc7983c5e248bf06df30aac",
+    "sha256": "9a1d9a494a79426437c0401823d90f86c7fbec90bae933e3f0f3818c8b3ee9f4",
+    "rows": 1460,
+    "columns": [
+      "Id",
+      "MSSubClass",
+      "MSZoning",
+      "LotFrontage",
+      "LotArea",
+      "Street",
+      "Alley",
+      "LotShape",
+      "LandContour",
+      "Utilities",
+      "LotConfig",
+      "LandSlope",
+      "Neighborhood",
+      "Condition1",
+      "Condition2",
+      "BldgType",
+      "HouseStyle",
+      "OverallQual",
+      "OverallCond",
+      "YearBuilt",
+      "YearRemodAdd",
+      "RoofStyle",
+      "RoofMatl",
+      "Exterior1st",
+      "Exterior2nd",
+      "MasVnrType",
+      "MasVnrArea",
+      "ExterQual",
+      "ExterCond",
+      "Foundation",
+      "BsmtQual",
+      "BsmtCond",
+      "BsmtExposure",
+      "BsmtFinType1",
+      "BsmtFinSF1",
+      "BsmtFinType2",
+      "BsmtFinSF2",
+      "BsmtUnfSF",
+      "TotalBsmtSF",
+      "Heating",
+      "HeatingQC",
+      "CentralAir",
+      "Electrical",
+      "1stFlrSF",
+      "2ndFlrSF",
+      "LowQualFinSF",
+      "GrLivArea",
+      "BsmtFullBath",
+      "BsmtHalfBath",
+      "FullBath",
+      "HalfBath",
+      "BedroomAbvGr",
+      "KitchenAbvGr",
+      "KitchenQual",
+      "TotRmsAbvGrd",
+      "Functional",
+      "Fireplaces",
+      "FireplaceQu",
+      "GarageType",
+      "GarageYrBlt",
+      "GarageFinish",
+      "GarageCars",
+      "GarageArea",
+      "GarageQual",
+      "GarageCond",
+      "PavedDrive",
+      "WoodDeckSF",
+      "OpenPorchSF",
+      "EnclosedPorch",
+      "3SsnPorch",
+      "ScreenPorch",
+      "PoolArea",
+      "PoolQC",
+      "Fence",
+      "MiscFeature",
+      "MiscVal",
+      "MoSold",
+      "YrSold",
+      "SaleType",
+      "SaleCondition",
+      "SalePrice",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:17.471087+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "实际下载来源及其许可未核实；仅随用户提供文件返回，不声明公开再分发许可。",
+    "source_note": "房价为用户自行取得的 CSV；下载清单没有该条目，实际下载网址及原站逐行一致性未核实。不得标成官方原件。",
+    "declared_source_page": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "dataset": "house",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "04e0a046c70141c295f1d77ef747bbff",
+    "question": "固定协议参数执行；没有调用自然语言模型",
+    "rows_before_filter": 1460,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 1460,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "random",
+      "seed": 42,
+      "n_train": 1168,
+      "n_validation": 292,
+      "n_eligible": 1460
+    },
+    "elapsed_seconds": 0.722006
+  }
+}

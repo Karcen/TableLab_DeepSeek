@@ -1,0 +1,329 @@
+{
+  "status": "ok",
+  "run_id": "9d256798205f4f6d96de7fc024a4f0f0",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "house",
+    "operation": "train",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": "SalePrice",
+    "features": [
+      "OverallQual",
+      "GrLivArea",
+      "YearBuilt",
+      "TotalBsmtSF",
+      "GarageCars",
+      "Neighborhood"
+    ],
+    "algorithm": "linear",
+    "split": "random",
+    "context": "prospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "SalePrice 是成交价（美元）。此处只对带标签的 train.csv 建模。Kaggle test.csv 不含成交价，不能用它计算预测误差。反复查看交互验证集后，指标不再属于独立盲测。",
+    "房价为用户自行取得的 CSV；下载清单没有该条目，实际下载网址及原站逐行一致性未核实。不得标成官方原件。",
+    "数值变量系数以训练子集一个标准差为单位；分类变量相对独热编码的参考类别。相关特征可能使系数不稳定。",
+    "分类参考类别：{\"Neighborhood\": \"Blmngtn\"}",
+    "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+  ],
+  "files": [
+    "metrics.csv",
+    "validation_predictions.csv",
+    "split.csv",
+    "diagnostic.pdf",
+    "transformation_audit.json",
+    "explanation.csv",
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "metric": "mae",
+      "value": 22339.327588945856
+    },
+    {
+      "metric": "rmse",
+      "value": 36461.681182751345
+    },
+    {
+      "metric": "r2",
+      "value": 0.826675664273
+    },
+    {
+      "metric": "baseline_rmse",
+      "value": 87619.03450611533
+    }
+  ],
+  "metrics": {
+    "mae": 22339.327588945856,
+    "rmse": 36461.681182751345,
+    "r2": 0.8266756642726746,
+    "baseline_rmse": 87619.03450611533
+  },
+  "summary": "训练 1,168 条，交互验证 292 条。MAE=22339.3276；RMSE=36461.6812；R²=0.8267。训练均值基线 RMSE=87619.0345。误差单位与 SalePrice 一致。 其余编码特征固定时，OverallQual 每增加训练样本的一个标准差，预测 SalePrice变化 21483.3226；这是模型内的条件关联。",
+  "model_id": "9d256798205f4f6d96de7fc024a4f0f0",
+  "explanation": [
+    {
+      "feature": "num__OverallQual",
+      "coefficient": 21483.322627794503
+    },
+    {
+      "feature": "num__GrLivArea",
+      "coefficient": 24586.18171435353
+    },
+    {
+      "feature": "num__YearBuilt",
+      "coefficient": 8269.932162740217
+    },
+    {
+      "feature": "num__TotalBsmtSF",
+      "coefficient": 8908.753312873177
+    },
+    {
+      "feature": "num__GarageCars",
+      "coefficient": 9474.814911489117
+    },
+    {
+      "feature": "cat__Neighborhood_Blueste",
+      "coefficient": -13743.073029984966
+    },
+    {
+      "feature": "cat__Neighborhood_BrDale",
+      "coefficient": -14487.615920120415
+    },
+    {
+      "feature": "cat__Neighborhood_BrkSide",
+      "coefficient": 22888.223292137172
+    },
+    {
+      "feature": "cat__Neighborhood_ClearCr",
+      "coefficient": 49177.966817596694
+    },
+    {
+      "feature": "cat__Neighborhood_CollgCr",
+      "coefficient": 21992.295547457667
+    },
+    {
+      "feature": "cat__Neighborhood_Crawfor",
+      "coefficient": 46107.80842223671
+    },
+    {
+      "feature": "cat__Neighborhood_Edwards",
+      "coefficient": 8650.382149397834
+    },
+    {
+      "feature": "cat__Neighborhood_Gilbert",
+      "coefficient": 15492.893031342313
+    },
+    {
+      "feature": "cat__Neighborhood_IDOTRR",
+      "coefficient": 12700.770602919409
+    },
+    {
+      "feature": "cat__Neighborhood_MeadowV",
+      "coefficient": 5177.084952326561
+    },
+    {
+      "feature": "cat__Neighborhood_Mitchel",
+      "coefficient": 12411.696470326438
+    },
+    {
+      "feature": "cat__Neighborhood_NAmes",
+      "coefficient": 16201.4503631151
+    },
+    {
+      "feature": "cat__Neighborhood_NPkVill",
+      "coefficient": -667.161258526593
+    },
+    {
+      "feature": "cat__Neighborhood_NWAmes",
+      "coefficient": 10926.805711574001
+    },
+    {
+      "feature": "cat__Neighborhood_NoRidge",
+      "coefficient": 68959.0247258694
+    },
+    {
+      "feature": "cat__Neighborhood_NridgHt",
+      "coefficient": 70571.42388174962
+    },
+    {
+      "feature": "cat__Neighborhood_OldTown",
+      "coefficient": 5985.834683712496
+    },
+    {
+      "feature": "cat__Neighborhood_SWISU",
+      "coefficient": 11270.990736216192
+    },
+    {
+      "feature": "cat__Neighborhood_Sawyer",
+      "coefficient": 19112.536316931335
+    },
+    {
+      "feature": "cat__Neighborhood_SawyerW",
+      "coefficient": 13711.419821069538
+    },
+    {
+      "feature": "cat__Neighborhood_Somerst",
+      "coefficient": 28240.813036742948
+    },
+    {
+      "feature": "cat__Neighborhood_StoneBr",
+      "coefficient": 74637.20283740577
+    },
+    {
+      "feature": "cat__Neighborhood_Timber",
+      "coefficient": 37421.50008216284
+    },
+    {
+      "feature": "cat__Neighborhood_Veenker",
+      "coefficient": 63731.79149153635
+    }
+  ],
+  "table_rows_total": 4,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "user_supplied_unverified",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "user supplied competition archive",
+    "archive_sha256": "3c342ced2ad427b9aa16ca5ef8f054aea434e73addc7983c5e248bf06df30aac",
+    "sha256": "9a1d9a494a79426437c0401823d90f86c7fbec90bae933e3f0f3818c8b3ee9f4",
+    "rows": 1460,
+    "columns": [
+      "Id",
+      "MSSubClass",
+      "MSZoning",
+      "LotFrontage",
+      "LotArea",
+      "Street",
+      "Alley",
+      "LotShape",
+      "LandContour",
+      "Utilities",
+      "LotConfig",
+      "LandSlope",
+      "Neighborhood",
+      "Condition1",
+      "Condition2",
+      "BldgType",
+      "HouseStyle",
+      "OverallQual",
+      "OverallCond",
+      "YearBuilt",
+      "YearRemodAdd",
+      "RoofStyle",
+      "RoofMatl",
+      "Exterior1st",
+      "Exterior2nd",
+      "MasVnrType",
+      "MasVnrArea",
+      "ExterQual",
+      "ExterCond",
+      "Foundation",
+      "BsmtQual",
+      "BsmtCond",
+      "BsmtExposure",
+      "BsmtFinType1",
+      "BsmtFinSF1",
+      "BsmtFinType2",
+      "BsmtFinSF2",
+      "BsmtUnfSF",
+      "TotalBsmtSF",
+      "Heating",
+      "HeatingQC",
+      "CentralAir",
+      "Electrical",
+      "1stFlrSF",
+      "2ndFlrSF",
+      "LowQualFinSF",
+      "GrLivArea",
+      "BsmtFullBath",
+      "BsmtHalfBath",
+      "FullBath",
+      "HalfBath",
+      "BedroomAbvGr",
+      "KitchenAbvGr",
+      "KitchenQual",
+      "TotRmsAbvGrd",
+      "Functional",
+      "Fireplaces",
+      "FireplaceQu",
+      "GarageType",
+      "GarageYrBlt",
+      "GarageFinish",
+      "GarageCars",
+      "GarageArea",
+      "GarageQual",
+      "GarageCond",
+      "PavedDrive",
+      "WoodDeckSF",
+      "OpenPorchSF",
+      "EnclosedPorch",
+      "3SsnPorch",
+      "ScreenPorch",
+      "PoolArea",
+      "PoolQC",
+      "Fence",
+      "MiscFeature",
+      "MiscVal",
+      "MoSold",
+      "YrSold",
+      "SaleType",
+      "SaleCondition",
+      "SalePrice",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:17.471087+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "实际下载来源及其许可未核实；仅随用户提供文件返回，不声明公开再分发许可。",
+    "source_note": "房价为用户自行取得的 CSV；下载清单没有该条目，实际下载网址及原站逐行一致性未核实。不得标成官方原件。",
+    "declared_source_page": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data",
+    "classroom_use_only": true,
+    "source_nature": "数据副本；记录真实性不由哈希证明",
+    "dataset": "house",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "9d256798205f4f6d96de7fc024a4f0f0",
+    "question": "固定协议参数执行；没有调用自然语言模型",
+    "rows_before_filter": 1460,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 1460,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "random",
+      "seed": 42,
+      "n_train": 1168,
+      "n_validation": 292,
+      "n_eligible": 1460
+    },
+    "intercept": 158544.5789442759,
+    "elapsed_seconds": 0.756864
+  }
+}

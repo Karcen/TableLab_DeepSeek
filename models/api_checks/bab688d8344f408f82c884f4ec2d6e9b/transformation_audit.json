@@ -1,0 +1,46 @@
+{
+  "numeric": [],
+  "categorical": [
+    "lunch",
+    "test preparation course",
+    "parental level of education"
+  ],
+  "model_parameters": {
+    "copy_X": true,
+    "fit_intercept": true,
+    "n_jobs": null,
+    "positive": false,
+    "tol": 1e-06
+  },
+  "n_train": 800,
+  "n_validation": 200,
+  "target_training_mean": 66.49625,
+  "training_categories": {
+    "lunch": [
+      "free/reduced",
+      "standard"
+    ],
+    "test preparation course": [
+      "completed",
+      "none"
+    ],
+    "parental level of education": [
+      "associate's degree",
+      "bachelor's degree",
+      "high school",
+      "master's degree",
+      "some college",
+      "some high school"
+    ]
+  },
+  "transformed_feature_names": [
+    "cat__lunch_standard",
+    "cat__test preparation course_none",
+    "cat__parental level of education_bachelor's degree",
+    "cat__parental level of education_high school",
+    "cat__parental level of education_master's degree",
+    "cat__parental level of education_some college",
+    "cat__parental level of education_some high school"
+  ],
+  "linear_rank": 7
+}

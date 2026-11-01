@@ -1,0 +1,104 @@
+{
+  "numeric": [
+    "OverallQual",
+    "GrLivArea",
+    "YearBuilt",
+    "TotalBsmtSF",
+    "GarageCars"
+  ],
+  "categorical": [
+    "Neighborhood"
+  ],
+  "model_parameters": {
+    "copy_X": true,
+    "fit_intercept": true,
+    "n_jobs": null,
+    "positive": false,
+    "tol": 1e-06
+  },
+  "n_train": 1285,
+  "n_validation": 175,
+  "target_training_mean": 181401.59766536966,
+  "imputation_medians": {
+    "OverallQual": 6.0,
+    "GrLivArea": 1468.0,
+    "YearBuilt": 1973.0,
+    "TotalBsmtSF": 990.0,
+    "GarageCars": 2.0
+  },
+  "scaler_means": {
+    "OverallQual": 6.11284046692607,
+    "GrLivArea": 1520.3299610894942,
+    "YearBuilt": 1971.3050583657587,
+    "TotalBsmtSF": 1058.3299610894942,
+    "GarageCars": 1.777431906614786
+  },
+  "scaler_variances": {
+    "OverallQual": 1.9335705309694315,
+    "GrLivArea": 279488.06855758606,
+    "YearBuilt": 924.2493518448425,
+    "TotalBsmtSF": 195417.9922929946,
+    "GarageCars": 0.5652494360247695
+  },
+  "training_categories": {
+    "Neighborhood": [
+      "Blmngtn",
+      "Blueste",
+      "BrDale",
+      "BrkSide",
+      "ClearCr",
+      "CollgCr",
+      "Crawfor",
+      "Edwards",
+      "Gilbert",
+      "IDOTRR",
+      "MeadowV",
+      "Mitchel",
+      "NAmes",
+      "NPkVill",
+      "NWAmes",
+      "NoRidge",
+      "NridgHt",
+      "OldTown",
+      "SWISU",
+      "Sawyer",
+      "SawyerW",
+      "Somerst",
+      "StoneBr",
+      "Timber",
+      "Veenker"
+    ]
+  },
+  "transformed_feature_names": [
+    "num__OverallQual",
+    "num__GrLivArea",
+    "num__YearBuilt",
+    "num__TotalBsmtSF",
+    "num__GarageCars",
+    "cat__Neighborhood_Blueste",
+    "cat__Neighborhood_BrDale",
+    "cat__Neighborhood_BrkSide",
+    "cat__Neighborhood_ClearCr",
+    "cat__Neighborhood_CollgCr",
+    "cat__Neighborhood_Crawfor",
+    "cat__Neighborhood_Edwards",
+    "cat__Neighborhood_Gilbert",
+    "cat__Neighborhood_IDOTRR",
+    "cat__Neighborhood_MeadowV",
+    "cat__Neighborhood_Mitchel",
+    "cat__Neighborhood_NAmes",
+    "cat__Neighborhood_NPkVill",
+    "cat__Neighborhood_NWAmes",
+    "cat__Neighborhood_NoRidge",
+    "cat__Neighborhood_NridgHt",
+    "cat__Neighborhood_OldTown",
+    "cat__Neighborhood_SWISU",
+    "cat__Neighborhood_Sawyer",
+    "cat__Neighborhood_SawyerW",
+    "cat__Neighborhood_Somerst",
+    "cat__Neighborhood_StoneBr",
+    "cat__Neighborhood_Timber",
+    "cat__Neighborhood_Veenker"
+  ],
+  "linear_rank": 29
+}

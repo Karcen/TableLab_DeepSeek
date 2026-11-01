@@ -1,0 +1,185 @@
+{
+  "status": "ok",
+  "run_id": "96503512b9d54800ac3f6823b28fee88",
+  "source_kind": "course_dataset",
+  "plan": {
+    "dataset": "students",
+    "operation": "train",
+    "columns": [],
+    "filters": [],
+    "group_by": [],
+    "metric": "mean",
+    "target": "math score",
+    "features": [
+      "gender",
+      "parental level of education",
+      "lunch",
+      "test preparation course"
+    ],
+    "algorithm": "random_forest",
+    "split": "random",
+    "context": "prospective",
+    "chart": "histogram",
+    "limit": 20,
+    "descending": true,
+    "model_id": null,
+    "record": {},
+    "message": ""
+  },
+  "notes": [
+    "该课程数据用于成绩分析演示。Kaggle 致谢指向 generated_data/exams 页面，不能据此当作经过核实的学生实测样本；具体生成过程未确认，不能推广为教育政策结论。用阅读或写作分数解释数学分数属于同期估计，不是考前预测；备考课程系数不能解释为培训的因果效果。",
+    "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "置换重要性在完整交互验证集上计算，重复 3 次；标准差只是置换间波动，不是置信区间。",
+    "这些指标来自可反复查看的交互验证集，不是最终盲测结果；不要用比较次数挑选最好的数字后宣称泛化性能。"
+  ],
+  "files": [
+    "metrics.csv",
+    "validation_predictions.csv",
+    "split.csv",
+    "diagnostic.pdf",
+    "transformation_audit.json",
+    "explanation.csv",
+    "table.csv",
+    "plan.json",
+    "evidence.json",
+    "executor_source.py",
+    "provenance.json",
+    "reproduce.py",
+    "result.json"
+  ],
+  "table": [
+    {
+      "metric": "mae",
+      "value": 11.502367034729
+    },
+    {
+      "metric": "rmse",
+      "value": 14.523998209453
+    },
+    {
+      "metric": "r2",
+      "value": 0.133114526979
+    },
+    {
+      "metric": "baseline_rmse",
+      "value": 15.731646896066
+    }
+  ],
+  "metrics": {
+    "mae": 11.502367034729058,
+    "rmse": 14.523998209452937,
+    "r2": 0.13311452697892245,
+    "baseline_rmse": 15.731646896065904
+  },
+  "summary": "训练 800 条，交互验证 200 条。MAE=11.5024；RMSE=14.5240；R²=0.1331。训练均值基线 RMSE=15.7316。误差单位与 math score 一致。 本次置换重要性均值最大的特征为 lunch，RMSE 增加值为 1.7410；这不表示因果作用。",
+  "model_id": "96503512b9d54800ac3f6823b28fee88",
+  "explanation": [
+    {
+      "feature": "lunch",
+      "importance_mean": 1.741010136226,
+      "importance_std": 0.435644323773
+    },
+    {
+      "feature": "gender",
+      "importance_mean": 0.703109849668,
+      "importance_std": 0.086582254373
+    },
+    {
+      "feature": "parental level of education",
+      "importance_mean": 0.526349347232,
+      "importance_std": 0.303577327318
+    },
+    {
+      "feature": "test preparation course",
+      "importance_mean": 0.498850419715,
+      "importance_std": 0.330348271486
+    }
+  ],
+  "table_rows_total": 4,
+  "provenance": {
+    "source_kind": "course_dataset",
+    "provenance_status": "download_manifest_matched",
+    "origin_mode": "user_supplied_archive",
+    "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/spscientist/students-performance-in-exams",
+    "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+    "sha256": "a11756d68e71589dbb8e689f8e1e0605c1ae93d32bde0824a329cfd69927150d",
+    "rows": 1000,
+    "columns": [
+      "gender",
+      "race/ethnicity",
+      "parental level of education",
+      "lunch",
+      "test preparation course",
+      "math score",
+      "reading score",
+      "writing score",
+      "_row_id"
+    ],
+    "prepared_utc": "2026-10-30T12:57:18.380829+00:00",
+    "exact_duplicate_rows_excluding_identifiers": 0,
+    "license_note": "核验到的 Kaggle 数据卡标为 Unknown；本项目不授予公开再分发许可。",
+    "source_note": "上传文件及包内登记文件与用户下载清单 SHA-256 一致；清单不是第三方数字签名，未重新从原站逐字节认证。",
+    "declared_source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+    "classroom_use_only": true,
+    "source_nature": "课程指定数据；源站致谢指向 generated_data/exams，实际生成过程未核实",
+    "download_receipt": {
+      "dataset": "students",
+      "archive_name": "students.zip",
+      "source_page": "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+      "source_handle_or_url": "spscientist/students-performance-in-exams",
+      "downloaded_utc": "2026-10-30T12:40:48.136436+00:00",
+      "downloader": "kagglehub==1.0.2",
+      "packaging": "repacked_source_files_unchanged",
+      "version_policy": "Source version acquired at download time; retain file hashes to identify this copy.",
+      "archive_sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+      "archive_bytes": 8130,
+      "files": {
+        "StudentsPerformance.csv": {
+          "bytes": 72036,
+          "sha256": "ade5869dba8b2d3e2b96379359fb2f61cb0308e8394d9b1ba37e174cfe3bee69",
+          "rows": 1000,
+          "columns": [
+            "gender",
+            "race/ethnicity",
+            "parental level of education",
+            "lunch",
+            "test preparation course",
+            "math score",
+            "reading score",
+            "writing score"
+          ]
+        }
+      }
+    },
+    "dataset": "students",
+    "engine_sha256": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+    "run_id": "96503512b9d54800ac3f6823b28fee88",
+    "question": "固定协议参数执行；没有调用自然语言模型",
+    "rows_before_filter": 1000,
+    "random_seed": 42,
+    "runtime": {
+      "package_sha256": "86805ea3e94915a8a6cb13d790ceb448937ca8c629d3b346ae095a4697a510c4",
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.0",
+        "matplotlib": "3.10.8",
+        "pydantic": "2.13.5",
+        "fonttools": "4.63.0"
+      },
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+    },
+    "rows_after_filter": 1000,
+    "rows_missing_target_excluded": 0,
+    "split": {
+      "kind": "random",
+      "seed": 42,
+      "n_train": 800,
+      "n_validation": 200,
+      "n_eligible": 1000
+    },
+    "elapsed_seconds": 0.418487
+  }
+}

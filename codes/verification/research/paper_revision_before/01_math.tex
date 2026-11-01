@@ -1,0 +1,480 @@
+\section{数学推导与计算示例}\label{app:math}
+本附录展开正文模型和评价指标的计算过程。一元回归的截距与斜率记作 $b_0,b_1$，对应正文的 $a,b$；$\Train$ 和 $\Valid$ 分别表示训练集与验证集。
+
+\subsection{从均值到一元回归}
+设训练数据有 $n$ 套房屋，成交价为 $y_1,\ldots,y_n$。先用常数 $c$ 预测每套房屋。第 $i$ 套的误差为 $y_i-c$。误差有正有负，直接相加会互相抵消；平方后每项均为非负，较大的误差也会受到更高惩罚。总平方误差为
+\begin{equation}
+L(c)=\sum_{i=1}^{n}(y_i-c)^2.
+\end{equation}
+对 $c$ 求导：
+\[
+\frac{\mathrm dL}{\mathrm dc}
+=\sum_{i=1}^{n}2(y_i-c)(-1)
+=-2\sum_{i=1}^{n}(y_i-c).
+\]
+令导数等于零，得到 $\sum_i y_i-nc=0$，于是
+\begin{equation}\label{app:eq:constant}
+\hat c=\bar y=\frac1n\sum_{i=1}^{n}y_i.
+\end{equation}
+二阶导数为 $2n>0$，所以这里取得最小值。均值基线由此得到：如果只允许输出一个常数，训练均价是使训练平方误差最小的选择。
+
+现在加入面积 $x_i$，用
+\begin{equation}\label{app:eq:line}
+\hat y_i=b_0+b_1x_i
+\end{equation}
+预测成交价。$b_0$ 是截距，$b_1$ 是斜率；面积增加一个单位，拟合价格改变 $b_1$ 个价格单位。我们选择使下式最小的两个参数：
+\begin{equation}\label{app:eq:ols-loss}
+L(b_0,b_1)=\sum_{i=1}^{n}(y_i-b_0-b_1x_i)^2.
+\end{equation}
+先对截距求偏导。此时把 $b_1$ 看成固定数：
+\[
+\frac{\partial L}{\partial b_0}
+=-2\sum_i(y_i-b_0-b_1x_i)=0.
+\]
+移项并除以 $n$，得到
+\begin{equation}\label{app:eq:ols-intercept}
+\hat b_0=\bar y-\hat b_1\bar x.
+\end{equation}
+所以拟合直线通过样本均值点 $(\bar x,\bar y)$。把式\eqref{app:eq:ols-intercept}代回残差，有
+\[
+y_i-\hat b_0-b_1x_i=(y_i-\bar y)-b_1(x_i-\bar x).
+\]
+接着对 $b_1$ 求导：
+\begin{align*}
+\frac{\mathrm dL}{\mathrm db_1}
+&=-2\sum_i(x_i-\bar x)\{(y_i-\bar y)-b_1(x_i-\bar x)\}=0,\\
+\hat b_1\sum_i(x_i-\bar x)^2
+&=\sum_i(x_i-\bar x)(y_i-\bar y).
+\end{align*}
+只要面积不全部相同，分母为正，从而
+\begin{equation}\label{app:eq:ols-slope}
+\hat b_1=
+\frac{\sum_i(x_i-\bar x)(y_i-\bar y)}{\sum_i(x_i-\bar x)^2},
+\qquad \hat b_0=\bar y-\hat b_1\bar x.
+\end{equation}
+分子衡量面积与价格如何共同偏离各自均值；分母衡量面积自身的变化。如果大面积房屋经常高于平均价格，小面积房屋经常低于平均价格，分子的乘积通常为正，斜率也倾向于为正。
+
+取上传房价表中 Id 为 1、2、3 的记录。它们只用于展示算式，正式模型仍使用后文的训练与验证划分。
+\begin{table}[htbp]\centering
+\begin{tabular}{rrr}\toprule
+Id & 地上居住面积 $x_i$（平方英尺） & 成交价 $y_i$（美元）\\\midrule
+1 & 1,710 & 208,500\\
+2 & 1,262 & 181,500\\
+3 & 1,786 & 223,500\\\bottomrule
+\end{tabular}
+\caption{三条教学计算记录，来自上传的 \code{train.csv}。}
+\end{table}
+先求两个均值：
+\[
+\bar x=\frac{1710+1262+1786}{3}=1586,
+\qquad
+\bar y=\frac{208500+181500+223500}{3}=204500.
+\]
+去均值后，面积偏差为 $(124,-324,200)$，价格偏差为 $(4000,-23000,19000)$。因此
+\begin{align*}
+\sum_i(x_i-\bar x)(y_i-\bar y)
+&=124\times4000+(-324)\times(-23000)+200\times19000\\
+&=11\,748\,000,\\
+\sum_i(x_i-\bar x)^2&=124^2+(-324)^2+200^2=160\,352.
+\end{align*}
+代回式\eqref{app:eq:ols-slope}，得到
+\[
+\hat b_1=73.2638,\qquad
+\hat b_0=204500-73.2638\times1586\approx88303.58.
+\]
+这三条记录的拟合直线为
+\begin{equation}
+\hat y=88303.58+73.2638x.
+\end{equation}
+参数用原始单位表达：面积多一个平方英尺，拟合价格增加约 73.26 美元。这个斜率来自三条记录，正式房价模型使用后文的完整训练集。计算脚本核对了闭式解与最小二乘数值解，二者一致。
+\source{\code{tables/teaching/ols_three_rows.csv}；\code{tools/teaching_calculations.py}}
+
+残差 $e_i=y_i-\hat y_i$ 表示实际价格与拟合价格的差。截距和斜率的一阶条件分别给出
+\begin{equation}\label{app:eq:ols-orthogonal}
+\sum_i e_i=0,\qquad \sum_i x_ie_i=0.
+\end{equation}
+这两式是训练样本上最小二乘解的代数性质。它们说明，继续给截距或斜率加一个微小改动，已经不能一阶降低平方误差。模型应用到新数据后，残差均值可以偏离零；因此训练拟合仍需用留出的样本检查。
+
+
+\subsection{多元房价回归}
+正式模型使用面积以外的房屋特征。拟合之前，先把数据分成训练集 $\Train$ 和验证集 $\Valid$。训练集决定参数，验证集用于检查模型对未参与拟合记录的预测。后文用 $n_T=|\Train|$、$n_V=|\Valid|$ 表示两部分的样本数。
+
+房价主配置按固定随机种子 42 划分，1,168 条用于训练，292 条用于验证。同一划分中的线性回归和随机森林使用相同的行。这样比较误差时，两种算法面对的是同一批房屋。基准预测则把每套验证房屋都预测为训练均价 181,441.54 美元。
+
+数据预处理也从训练集学习。比如，填补面积缺失值所用的中位数，必须由训练记录计算。验证集沿用这个值；新房屋也沿用它。\citet{sklearnpitfalls}将这种先划分、再拟合预处理的做法列为防止信息泄漏的基本步骤。
+
+对数值特征 $j$，先从训练集的非缺失值计算中位数 $m_j$，把缺失值替换为 $m_j$，得到 $\tilde x_{ij}$。随后计算
+\begin{equation}
+\mu_j=\frac1{n_T}\sum_{i\in\Train}\tilde x_{ij},\qquad
+s_j=\sqrt{\frac1{n_T}\sum_{i\in\Train}(\tilde x_{ij}-\mu_j)^2}.
+\end{equation}
+标准化后的值为
+\begin{equation}\label{app:eq:scale}
+z_{ij}=\frac{\tilde x_{ij}-\mu_j}{s_j}.
+\end{equation}
+$z_{ij}=1$ 表示该记录比训练均值高一个训练标准差。本项目的 StandardScaler 使用分母 $n_T$；当训练方差为零时，程序采用缩放因子 1，避免除以零。训练子集中全缺失的特征会被拒绝。
+
+社区是类别，不能把“Blmngtn、CollgCr、Sawyer”直接当作有距离关系的数字。独热编码为每个类别建立一个取值为 0 或 1 的变量。例如，$D_{i,\text{CollgCr}}=1$ 表示第 $i$ 套房屋属于 CollgCr，否则为 0。因为各类别指示变量之和恒为 1，与截距重复，模型保留一个参考类别，其余类别各占一列。
+
+房价主配置有 5 个数值变量，训练集有 25 个社区类别，参考类别是 Blmngtn。因此模型使用 5 个数值列和 24 个社区列，共 29 个斜率参数，另加截距。分类缺失值先记作单独类别 \code{__missing__}；每个分类字段最多保留 30 个编码类别。验证时遇到训练中未见的类别，编码器给出全零，并保存提示。
+
+把一个样本的编码结果记为 $\mathbf z_i=(z_{i1},\ldots,z_{ip})^{\mathsf T}$。多元模型为
+\begin{equation}
+\hat y_i=\beta_0+\sum_{j=1}^{p}\beta_jz_{ij}.
+\end{equation}
+写成矩阵时，第一列放常数 1，后面放编码特征：
+\[
+X=\begin{pmatrix}
+1&z_{11}&\cdots&z_{1p}\\
+1&z_{21}&\cdots&z_{2p}\\
+\vdots&\vdots&&\vdots\\
+1&z_{n_T1}&\cdots&z_{n_Tp}
+\end{pmatrix},\quad
+\boldsymbol\beta=\begin{pmatrix}\beta_0\\\beta_1\\\vdots\\\beta_p\end{pmatrix},\quad
+\mathbf y=\begin{pmatrix}y_1\\y_2\\\vdots\\y_{n_T}\end{pmatrix}.
+\]
+于是全部预测为 $X\boldsymbol\beta$，平方误差可以写成
+\begin{align}
+L(\boldsymbol\beta)
+&=(\mathbf y-X\boldsymbol\beta)^{\mathsf T}(\mathbf y-X\boldsymbol\beta)\\
+&=\mathbf y^{\mathsf T}\mathbf y
+-2\boldsymbol\beta^{\mathsf T}X^{\mathsf T}\mathbf y
++\boldsymbol\beta^{\mathsf T}X^{\mathsf T}X\boldsymbol\beta.
+\end{align}
+第一项不含参数，导数为零；后两项分别给出 $-2X^{\mathsf T}\mathbf y$ 和 $2X^{\mathsf T}X\boldsymbol\beta$。令梯度为零，得到正规方程
+\begin{equation}\label{app:eq:normal}
+X^{\mathsf T}X\hat{\boldsymbol\beta}=X^{\mathsf T}\mathbf y.
+\end{equation}
+$X$ 满列秩时，$X^{\mathsf T}X$ 可逆，从而
+\begin{equation}\label{app:eq:matrix-ols}
+\hat{\boldsymbol\beta}=(X^{\mathsf T}X)^{-1}X^{\mathsf T}\mathbf y.
+\end{equation}
+式\eqref{app:eq:matrix-ols}说明解的形式。实际 LinearRegression 使用数值最小二乘算法求解，无需显式构造逆矩阵\citep{sklearn}。若特征存在精确线性关系，系数可能不唯一；接近线性相关时，系数也可能对样本变化敏感。
+
+二阶导数为 $2X^{\mathsf T}X$。任取向量 $\mathbf v$，有
+\[
+\mathbf v^{\mathsf T}(2X^{\mathsf T}X)\mathbf v=2\|X\mathbf v\|^2\geq0.
+\]
+所以平方误差是凸函数；满列秩时不等式对非零 $\mathbf v$ 严格成立，最小值唯一。式\eqref{app:eq:normal}也可写成 $X^{\mathsf T}\hat{\mathbf e}=0$，即训练残差与每一列特征正交。
+
+数值特征的拟合项是 $\beta_jz_j$。代入式\eqref{app:eq:scale}：
+\[
+\beta_jz_j=\frac{\beta_j}{s_j}\tilde x_j-\frac{\beta_j\mu_j}{s_j}.
+\]
+因此原始单位下的斜率是 $\beta_j/s_j$，数值部分换回原始单位后的截距是
+\begin{equation}
+\beta_0^{\rm raw}=\beta_0-\sum_{j\in\text{数值列}}\frac{\beta_j\mu_j}{s_j}.
+\end{equation}
+类别编码保持不变。房价主配置中，面积系数为 24,586.18，面积训练标准差为 524.2081 平方英尺，因此
+\[
+\frac{24586.18}{524.2081}=46.9016\text{ 美元/平方英尺}.
+\]
+其余编码特征相同时，面积增加 100 平方英尺，预测价格增加约 4,690.16 美元。这是模型给出的价格差。实际改造收益还取决于其他因素和改造成本。
+
+保存的验证记录 \code{house:00000892} 的实际成交价为 154,500 美元。由训练阶段保存的均值、标准差和系数，可以逐项重建预测。
+\begin{table}[htbp]\centering\small
+\begin{tabular}{lrrr}\toprule
+项目 & 编码值 & 系数 & 对预测的贡献（美元）\\\midrule
+截距 & 1 & 158,544.58 & 158,544.58\\
+整体质量 & $-0.088934$ & 21,483.32 & $-1,910.59$\\
+居住面积 & $-0.876372$ & 24,586.18 & $-21,546.65$\\
+建成年份 & $-0.259789$ & 8,269.93 & $-2,148.44$\\
+地下室面积 & $-0.006292$ & 8,908.75 & $-56.05$\\
+车位数 & $-1.056544$ & 9,474.81 & $-10,010.56$\\
+Sawyer 社区 & 1 & 19,112.54 & 19,112.54\\\bottomrule
+\end{tabular}
+\caption{仅列非零项。展示值经过四舍五入，重算使用完整精度。}
+\end{table}
+把最后一列相加，得到 141,984.82 美元；实际价减预测价，残差为 12,515.18 美元。脚本还用保存的参数重建了全部 292 条房价验证预测，最大绝对差小于 $6\times10^{-11}$ 美元。
+\source{\code{tables/teaching/house_primary_linear_contributions.csv}；\code{verification/editorial/teaching_calculations.json}}
+
+
+\subsection{收入分类与逻辑回归}
+Adult 的目标只有两种取值：超过年收入 5 万美元记为 1，否则记为 0。我们希望得到 $p_i=P(y_i=1\mid\mathbf z_i)$。线性组合 $\eta_i=\beta_0+\mathbf z_i^{\mathsf T}\boldsymbol\beta$ 可以取任意实数，需要一个映射把它变成 0 到 1 之间的概率。
+
+逻辑回归令概率的对数几率随特征线性变化：
+\begin{equation}\label{app:eq:logit}
+\log\frac{p_i}{1-p_i}=\eta_i.
+\end{equation}
+几率 $p/(1-p)$ 比较“发生”和“不发生”的概率。例如，$p=0.8$ 时几率为 4；$p=0.2$ 时几率为 $1/4$。对式\eqref{app:eq:logit}两边取指数，再把 $p_i$ 移到一侧：
+\begin{align*}
+\frac{p_i}{1-p_i}&=e^{\eta_i},\\
+p_i&=e^{\eta_i}(1-p_i),\\
+p_i(1+e^{\eta_i})&=e^{\eta_i}.
+\end{align*}
+所以
+\begin{equation}\label{app:eq:sigmoid}
+p_i=\sigma(\eta_i)=\frac{1}{1+e^{-\eta_i}}.
+\end{equation}
+$\eta_i=0$ 时 $p_i=0.5$；$\eta_i$ 越大，概率越接近 1。项目在概率达到 0.5 时预测为高收入类别。
+
+对一个实际结果为 $y_i$ 的样本，伯努利概率可统一写成
+\begin{equation}
+P(y_i\mid\mathbf z_i)=p_i^{y_i}(1-p_i)^{1-y_i}.
+\end{equation}
+若 $y_i=1$，它等于 $p_i$；若 $y_i=0$，它等于 $1-p_i$。在模型采用的条件独立假设下，训练样本的似然为
+\[
+\mathcal L(\boldsymbol\beta)=\prod_{i\in\Train}p_i^{y_i}(1-p_i)^{1-y_i}.
+\]
+取对数将乘积变成求和；再取负号，把最大化似然写成最小化损失：
+\begin{equation}\label{app:eq:crossentropy}
+\ell(\boldsymbol\beta)
+=-\sum_{i\in\Train}\{y_i\log p_i+(1-y_i)\log(1-p_i)\}.
+\end{equation}
+实际为高收入的样本，如果预测概率很小，$-\log p_i$ 就很大。实际为低收入的样本，如果预测概率很大，$-\log(1-p_i)$ 同样很大。损失函数据此惩罚自信但错误的预测。
+
+记 $\mathbf x_i=(1,\mathbf z_i^{\mathsf T})^{\mathsf T}$，并把截距并入参数向量。先对 sigmoid 求导：
+\begin{align*}
+\frac{\mathrm dp_i}{\mathrm d\eta_i}
+&=\frac{e^{-\eta_i}}{(1+e^{-\eta_i})^2}\\
+&=\frac1{1+e^{-\eta_i}}\left(1-\frac1{1+e^{-\eta_i}}\right)
+=p_i(1-p_i).
+\end{align*}
+单个样本的负对数似然对 $p_i$ 的导数为
+\[
+\frac{\partial\ell_i}{\partial p_i}
+=-\frac{y_i}{p_i}+\frac{1-y_i}{1-p_i}
+=\frac{p_i-y_i}{p_i(1-p_i)}.
+\]
+链式法则把它与 $\mathrm dp_i/\mathrm d\eta_i$ 相乘，得到 $\partial\ell_i/\partial\eta_i=p_i-y_i$。又因为 $\eta_i=\mathbf x_i^{\mathsf T}\boldsymbol\beta$，所以
+\begin{equation}
+\nabla\ell(\boldsymbol\beta)=X^{\mathsf T}(\mathbf p-\mathbf y).
+\end{equation}
+梯度仍由预测与实际的差组成，只是这里比较的是概率与 0/1 标签。概率本身含有参数，无法像线性回归那样直接移项得到一个固定矩阵的逆，需要迭代求解。
+
+实现采用 \code{C=1} 的逻辑回归，\code{lbfgs} 求解，最大迭代次数为 1,500。按照所用 scikit-learn 1.8 的定义，在没有样本权重和类别权重时，等价目标为\citep{sklearn}
+\begin{equation}\label{app:eq:penalized}
+J(\boldsymbol\beta)=\frac1{n_T}\sum_{i\in\Train}\ell_i
++\frac{1}{2Cn_T}\sum_{j=1}^{p}\beta_j^2.
+\end{equation}
+式\eqref{app:eq:penalized}是正文式\eqref{eq:loss}除以 $n_T$ 后的形式，两者得到相同的最优参数。惩罚项只作用于斜率，截距不受惩罚。$C$ 越小，惩罚越强。令 $D=\operatorname{diag}(0,1,\ldots,1)$，则
+\begin{equation}\label{app:eq:logit-gradient}
+\nabla J=\frac{X^{\mathsf T}(\mathbf p-\mathbf y)}{n_T}
++\frac{D\boldsymbol\beta}{Cn_T}.
+\end{equation}
+再求一次导数，令 $W=\operatorname{diag}\{p_i(1-p_i)\}$，得到
+\begin{equation}\label{app:eq:logit-hessian}
+\nabla^2J=\frac{X^{\mathsf T}WX}{n_T}+\frac{D}{Cn_T}.
+\end{equation}
+两项都是半正定矩阵，因此目标函数为凸函数。计算脚本用数值差分检查了式\eqref{app:eq:logit-gradient}与式\eqref{app:eq:logit-hessian}，最大绝对误差均小于 $2\times10^{-11}$。这项核对使用四行固定数值输入，结果单独保存。
+
+对标准化特征，$\beta_j$ 表示该特征增加一个训练标准差时，对数几率的变化。由式\eqref{app:eq:logit}可得，相应几率乘以 $e^{\beta_j}$。若需要原始单位下的比较，把系数除以训练标准差即可。
+
+Adult 主配置的年龄系数为 0.42015，年龄训练标准差为 13.54748 岁，所以每增加一岁，模型对数几率增加约 0.03101。概率变化还取决于起点。由链式法则，年龄的局部概率变化率为
+\begin{equation}
+\frac{\partial p}{\partial\mathrm{age}}
+=p(1-p)\frac{0.42015}{13.54748}.
+\end{equation}
+同一个系数在 $p$ 接近 0.5 时对应较大的概率变化，在 $p$ 接近 0 或 1 时对应较小的变化。
+
+保存的验证记录 \code{adult:train:00000001} 的线性预测值为 $\eta=0.08743669$。代入 sigmoid：
+\[
+\hat p=\frac1{1+e^{-0.08743669}}=0.52184526.
+\]
+阈值为 0.5，所以模型把这条记录预测为高收入；实际标签为 0，这是一条假阳性。讲解计算重建了全部 6,512 条逻辑回归验证概率，最大绝对差小于 $4\times10^{-16}$。
+\source{\code{tables/teaching/adult_primary_logistic_contributions.csv}；\code{verification/editorial/teaching_calculations.json}}
+
+这些系数描述其他特征相同时的样本关联。Adult 使用观察数据，估计教育、职业或婚姻状态的因果效果需要另外的研究设计。各项比例和模型使用未按 \code{fnlwgt} 加权的样本。
+
+
+\subsection{回归树与随机森林}
+社区均价给每个社区内的房屋一个相同预测。回归树也把样本分成若干组，但分组规则由训练数据选择。例如，它可以先按面积是否超过某个值分成两组，再在组内按房屋质量继续分组。
+
+对节点中的训练集合 $A$，先预测其平均值 $\bar y_A$。若用特征 $j$ 和阈值 $t$ 分组，得到
+\[
+A_L(j,t)=\{i\in A:x_{ij}\leq t\},\qquad
+A_R(j,t)=\{i\in A:x_{ij}>t\}.
+\]
+候选分裂的平方误差为
+\begin{equation}\label{app:eq:tree-split}
+Q(j,t)=\sum_{i\in A_L}(y_i-\bar y_{A_L})^2
++\sum_{i\in A_R}(y_i-\bar y_{A_R})^2.
+\end{equation}
+程序考察候选特征和阈值，选择使 $Q(j,t)$ 最小的组合，然后在子节点重复。每一组的预测取均值，是因为式\eqref{app:eq:constant}已证明均值使组内平方误差最小。最终停止分裂的组称为叶节点，新房屋沿分裂规则到达某个叶节点，获得该节点的预测。
+
+这是一种逐节点选择的贪心算法：每一步挑当前最合适的分裂。树越深，可形成的组越细；也越容易把训练样本的偶然差异记下来。项目把最大深度固定为 12，并设置叶节点最少样本数为 5\citep{sklearntree}。
+
+在 Adult 中，一个叶节点给出该节点高收入记录的比例。节点中正类比例为 $p_A$ 时，基尼不纯度为
+\begin{equation}
+G(A)=1-p_A^2-(1-p_A)^2=2p_A(1-p_A).
+\end{equation}
+当所有记录都属于同一类时，$G(A)=0$；两类各占一半时，$G(A)=0.5$。选择分裂时，分类树最小化左右节点的加权不纯度：
+\begin{equation}
+Q_G(j,t)=\frac{|A_L|}{|A|}G(A_L)+\frac{|A_R|}{|A|}G(A_R).
+\end{equation}
+因此一个分裂的作用，是让两个子节点中的类别更集中。采用 bootstrap 抽样时，重复抽中的记录带有抽样次数权重，节点均值、比例与不纯度按相应权重计算。
+
+一棵树的分裂可能对训练样本变化敏感。随机森林反复从训练数据有放回抽样，每份样本训练一棵树，然后把预测合起来。回归森林取树预测的平均：
+\begin{equation}
+\hat f(\mathbf x)=\frac1B\sum_{b=1}^{B}\hat f_b(\mathbf x),\qquad B=120.
+\end{equation}
+分类森林平均各树叶节点中的正类概率，再按 0.5 阈值给出类别。scikit-learn 的实现使用概率平均，而非先把每棵树变成硬类别再投票\citep{sklearnforestclass}。
+
+求平均为什么可能更稳定，可以用一个简化的方差计算理解。假设对固定输入 $\mathbf x$，每棵树预测的方差都是 $\sigma^2$，任意两棵树的相关系数都是 $\rho$。于是
+\begin{align}
+\operatorname{Var}\left(\frac1B\sum_b\hat f_b\right)
+&=\frac1{B^2}\left[B\sigma^2+B(B-1)\rho\sigma^2\right]\\
+&=\rho\sigma^2+\frac{1-\rho}{B}\sigma^2.\label{app:eq:forest-var}
+\end{align}
+推导把方差之和与两两协方差分开。$B$ 增大时，第二项缩小；如果各树高度相关，第一项仍然存在。因此增加树数带来的稳定性取决于树之间的相关程度。式\eqref{app:eq:forest-var}用来解释树数和相关程度怎样影响平均预测的方差。
+
+本项目回归森林和分类森林都使用 120 棵树、深度 12、叶节点最少样本数 5、单线程和随机种子 42。两类森林采用的候选特征数不同：回归森林沿用 \code{max_features=1.0}，每个节点考察全部编码特征\citep{sklearnforestreg}；分类森林沿用 \code{max_features="sqrt"}，每次从编码特征中抽取约平方根数量的候选列\citep{sklearnforestclass}。
+
+因此，当前回归森林的随机变化主要来自 bootstrap 样本，分类森林还对节点候选特征随机抽样。森林沿用与线性模型相同的预处理；标准化统一了输入处理；树的分裂也可以直接使用原始数值。
+
+项目采用验证集置换重要性。先计算原始验证误差；再随机打乱某一特征列，保持其他列与模型不变，观察误差怎样变化。对回归，特征 $j$ 的第 $r$ 次重要性为
+\begin{equation}
+I_j^{(r)}=\operatorname{RMSE}(y_V,\hat f(X_V^{\pi_{jr}}))
+-\operatorname{RMSE}(y_V,\hat f(X_V)).
+\end{equation}
+分类使用打乱前 AUC 减打乱后 AUC。程序重复 3 次，报告均值和标准差。较大的正值表明，在当前验证样本和当前模型中，破坏这一列与其他信息的对应关系会明显降低预测表现。
+
+相关特征可能互相替代，所以某列的重要性较低，仍可能与目标有关；少数置换还可能偶然改善指标，得到负值。三次置换的标准差描述重复打乱这一列时的变化。总体置信区间和因果效应需要另外估计。
+
+
+\subsection{预测评价}
+训练时，程序已经用实际结果选择了参数。在这些样本上误差小，可能只是参数适应了训练数据。验证集的用途，是让拟合完成的模型预测另一批记录，再将预测与实际结果比较。
+
+本项目先确定样本划分，再计算插补值、标准化参数和类别编码。验证记录只经过训练时确定的变换，不能参与这些参数的估计。比较两个算法时，目标、特征和验证记录保持相同；否则误差的差异可能来自样本变化。
+
+记验证集大小为 $n_V$，第 $i$ 条记录的实际值为 $y_i$，预测值为 $\hat y_i$，误差为 $e_i=y_i-\hat y_i$。正误差表示低估，负误差表示高估。如果直接平均误差，高估与低估会相互抵消。平均绝对误差因此先去掉符号：
+\begin{equation}
+\operatorname{MAE}=\frac1{n_V}\sum_{i\in\Valid}|e_i|.
+\end{equation}
+房价以美元记录，所以 MAE 也以美元计量。它回答的是“每套房屋的预测与实际成交价，平均相差多少”。
+
+均方根误差先平方、平均，再开平方：
+\begin{equation}\label{app:eq:rmse}
+\operatorname{RMSE}=\sqrt{\frac1{n_V}\sum_{i\in\Valid}e_i^2}.
+\end{equation}
+平方使较大的误差占更大比重；开平方把单位恢复到目标变量的原单位。由 $\frac1n\sum a_i^2\geq(\frac1n\sum a_i)^2$，取 $a_i=|e_i|$ 可得 $\operatorname{RMSE}\geq\operatorname{MAE}$。两者差距较大时，可以再查看逐条误差，找出影响 RMSE 的记录。
+
+$R^2$ 将模型平方误差与验证集围绕自身均值的波动比较：
+\begin{equation}\label{app:eq:r2}
+R^2=1-\frac{\sum_{i\in\Valid}(y_i-\hat y_i)^2}
+{\sum_{i\in\Valid}(y_i-\bar y_V)^2},\qquad
+\bar y_V=\frac1{n_V}\sum_{i\in\Valid}y_i.
+\end{equation}
+预测完全正确时 $R^2=1$；误差平方和等于分母时 $R^2=0$；比该参照更差时 $R^2<0$。在验证集上，$R^2$ 可以为负。这个定义要求验证目标并非全部相同。
+
+新房屋的成交价尚未发生，模型无法事先取得新样本的目标均值。可实际使用的常数预测是训练均值 $\bar y_T$：对每条验证记录都预测同一个 $\bar y_T$。其误差为
+\[
+\operatorname{RMSE}_{\mathrm{mean}}=
+\sqrt{\frac1{n_V}\sum_{i\in\Valid}(y_i-\bar y_T)^2}.
+\]
+它与式\eqref{app:eq:r2}分母中的验证均值有不同作用。令 $y_i-\bar y_T=(y_i-\bar y_V)+(\bar y_V-\bar y_T)$，展开平方并利用 $\sum_{i\in\Valid}(y_i-\bar y_V)=0$，得到
+\begin{equation}
+\sum_{i\in\Valid}(y_i-\bar y_T)^2
+=\sum_{i\in\Valid}(y_i-\bar y_V)^2+n_V(\bar y_V-\bar y_T)^2.
+\end{equation}
+所以，训练均值基线通常比式\eqref{app:eq:r2}的分母多出一项均值偏移。报告时分别标明训练均值基线和验证目标的波动。
+
+Adult 的预测概率以 0.5 为阈值。实际为 1、预测为 1 记为真正例 TP；实际为 0、预测为 1 记为假正例 FP；实际为 1、预测为 0 记为假负例 FN。逻辑回归在保存的 6,512 条验证记录中得到：
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+ & 预测为 0 & 预测为 1\\
+\midrule
+实际为 0 & 4,543 & 401\\
+实际为 1 & 719 & 849\\
+\bottomrule
+\end{tabular}
+\end{center}
+精确率衡量预测为正的记录中有多少确实为正；召回率衡量所有实际正例中找到了多少：
+\begin{equation}
+P=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}},\qquad
+R=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}}.
+\end{equation}
+F1 是二者的调和平均：
+\begin{align}
+F_1&=\frac{2PR}{P+R}
+=\frac{2\mathrm{TP}}{2\mathrm{TP}+\mathrm{FP}+\mathrm{FN}}\\
+&=\frac{2\times849}{2\times849+401+719}
+=0.602555\ldots.
+\end{align}
+因此 F1 的数值可以直接从混淆矩阵复算。改变阈值会改变哪些记录被判为正，进而改变 TP、FP、FN；本次基准没有用验证集再挑选阈值。
+\source{\code{artifacts/benchmarks/2add40f7ab234ff49ea10877d927ea07/confusion.csv}}
+
+ROC AUC 评价正例与负例的排序。令正例集合为 $V_+$、负例集合为 $V_-$，其大小分别为 $n_+$、$n_-$。AUC 可以写成
+\begin{equation}\label{app:eq:auc}
+\operatorname{AUC}=\frac{1}{n_+n_-}
+\sum_{i\in V_+}\sum_{j\in V_-}
+\left[\Ind(\hat p_i>\hat p_j)+\tfrac12\Ind(\hat p_i=\hat p_j)\right].
+\end{equation}
+对每一对正、负记录，正例概率更大得 1 分，并列得半分。平均后，就得到模型把正例排在负例之前的比例。AUC 使用整套排序，F1 使用某个阈值后的类别，因此两个模型在这两项指标上的名次可以不同。
+
+Brier 分数直接比较概率与实际标签：
+\begin{equation}
+\operatorname{Brier}=\frac1{n_V}\sum_{i\in\Valid}(y_i-\hat p_i)^2.
+\end{equation}
+验证对数损失则把式\eqref{app:eq:crossentropy}应用于验证集并取平均，不含训练惩罚项。两项概率误差越低越好。数值计算对极端概率按软件实现截断，以避免 $\log0$。概率校准要另外比较各概率区间的预测值和实际频率，本次实验报告整体概率误差。
+
+这些指标都由保存的逐行预测计算。项目保留了独立复算结果，用于检查行号对齐、分母和概率并列的处理。本文比较固定验证样本上的误差，算法差异的显著性尚未检验。
+
+
+\subsection{本地字段检索}
+检索程序负责查找问题需要的字段说明。它将数据说明、字段名称、中文释义、示例取值和方法说明分别保存成短文档。房价检索索引实际包含 90 份文档，每份都有固定标识，例如 \code{house:field:Neighborhood}。
+
+当前检索器使用字符 TF--IDF。字符串连续取长度为 2、3、4 的片段，例如“平均成交价”可产生“平均”“均成”“成交”“交价”，以及更长的连续片段。英文先转成小写。采用字符片段后，中文查询不需要先分词，英文列名的部分重合也可以参与匹配。
+
+它适合字段名、常见说法和已整理的中文释义。对索引中未出现的同义说法，词面匹配可能很弱。因此字段释义是否写清楚，会影响哪些信息能被检索到。
+
+用 $c_{td}$ 表示字符片段 $t$ 在文档 $d$ 中出现的次数。若只看出现次数，长文档或反复出现的词容易占优势。项目启用次线性词频，使用
+\begin{equation}
+\operatorname{tf}(t,d)=
+\begin{cases}
+1+\log c_{td},&c_{td}>0,\\
+0,&c_{td}=0.
+\end{cases}
+\end{equation}
+对数使重复出现的贡献逐渐减小。另一个问题是：某片段如果在所有说明中都出现，它就不太能区分文档。设文档总数为 $N$，包含片段 $t$ 的文档数为 $\operatorname{df}(t)$，平滑逆文档频率为
+\begin{equation}
+\operatorname{idf}(t)=1+\log\frac{N+1}{\operatorname{df}(t)+1}.
+\end{equation}
+片段越少见，IDF 越大；所有文档都出现时，IDF 为 1。加 1 是当前实现的平滑方式。二者相乘得到未归一化权重
+\[
+w_{td}=\operatorname{tf}(t,d)\operatorname{idf}(t).
+\]
+以上定义与项目使用的 \code{sublinear_tf=True}、\code{smooth_idf=True} 对应\citep{sklearntfidf}。
+
+把全部片段的权重排成向量 $\mathbf w_d$。长文档可能具有更多非零项，直接点积容易受到长度影响。检索器先除以向量长度：
+\begin{equation}
+\mathbf v_d=\frac{\mathbf w_d}{\|\mathbf w_d\|_2}.
+\end{equation}
+查询也用同一个词表和同一组 IDF 变换为 $\mathbf v_q$。两个非零单位向量的点积等于余弦相似度：
+\begin{equation}\label{app:eq:cosine}
+s(q,d)=\mathbf v_q^{\mathsf T}\mathbf v_d
+=\frac{\mathbf w_q^{\mathsf T}\mathbf w_d}
+{\|\mathbf w_q\|_2\|\mathbf w_d\|_2}.
+\end{equation}
+片段重合越多、相应权重越大，相似度通常越高。如果查询中的片段均未进入词表，变换结果为零向量，程序不返回正相似度文档。
+
+对“CollgCr 社区房屋的平均成交价是多少？”，本次实际检索的前六条如下。表中分数由执行结果保留六位小数。
+\begin{center}\small
+\begin{tabular}{lrl}
+\toprule
+说明文档 & 相似度 & 内容\\
+\midrule
+\code{house:field:Neighborhood} & 0.176436 & 社区字段\\
+\code{house:field:SalePrice} & 0.070664 & 成交价字段\\
+\code{house:scope} & 0.058073 & 房价数据说明\\
+\code{house:field:ScreenPorch} & 0.037493 & 纱窗门廊字段\\
+\code{house:field:OverallCond} & 0.032570 & 整体状况字段\\
+\code{house:field:RoofMatl} & 0.032279 & 屋顶材料字段\\
+\bottomrule
+\end{tabular}
+\end{center}
+前两条直接对应问题所需的列，后面几条只有较弱的词面匹配。检索返回候选说明，生成方案时还要结合问题和完整字段模式判断哪些列应被采用。相似度 0.176436 是式\eqref{app:eq:cosine}得到的词面匹配分数。
+\source{\code{verification/editorial/worked_retrieval.json}}
+
+DeepSeek API 收到当前数据集的字段名与类型、检索到的说明、用户问题以及必要的上一轮分析方案。它输出目标字段、筛选条件、算法等 JSON 参数。程序检查参数格式与字段是否存在，用户核对后再运行相应计算函数。结果解释由实际指标和固定文字模板组成。
+
+检索增强生成的基本思路是让生成过程使用外部查得的信息\citep{lewis2020}。这里的外部信息来自本机说明文件；数值计算仍读取完整筛选样本。检索使用字符 TF--IDF。
+
+检索是否找到需要的列、语言模型是否理解了提问、计算函数是否算对，是三个可以分别检查的问题。旧版的 16 道固定检索题全部在前六条命中目标文档，平均倒数排名为 0.96875。其定义是
+\[
+\operatorname{MRR}=\frac1Q\sum_{q=1}^{Q}\frac1{r_q},
+\]
+其中 $r_q$ 为首条目标文档的排名，未命中按 0 分处理。题目多数含有原字段名。自由中文问答的测试安排见附录~\ref{app:implementation}：通过 DeepSeek API 生成方案，保存原始回复并核对参数，再加入现场新问题。
+
+
