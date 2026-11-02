@@ -1,0 +1,26 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 1,
+    "variant": "No cross branch",
+    "model": "DCN",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/No_cross_branch",
+    "seed": 142,
+    "architecture_ablation": "No cross branch"
+  },
+  "selected_params": {
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "width": 64
+  },
+  "seconds": 20.19659262499772,
+  "parameter_count": 6490,
+  "model_sha256": "e817f22546e43eb48d2a0e2ca577b50140512adb6be83370547f66b5f5c4a652",
+  "prediction_sha256": "db82bbd28a56e04a5229cd75c55467583dafc565b8aec3d9aa7f8e65f678d34b",
+  "metrics_sha256": "1279b7b5dce662bdb16b71c7fffed67e0fe5e9841b266317b17c1699e9e8f6ce"
+}

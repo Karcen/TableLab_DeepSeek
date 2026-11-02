@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "students",
+    "fold": 1,
+    "variant": "No parental education",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold1/No_parental_education/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold1/No_parental_education",
+    "seed": 142
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "min_child_samples": 30,
+    "num_leaves": 31
+  },
+  "seconds": 0.33961370901670307,
+  "parameter_count": null,
+  "model_sha256": "a7c3321f66f881edf1786d40fa18c3b3b220a8e3d9cf285d37779e521e0dd9f4",
+  "prediction_sha256": "eab3cc07e77d81dfe14c1a2a64e6d247001392e8d463bc3f284f606c1819b6a5",
+  "metrics_sha256": "fd10ee1975cb05545636164a5649ec573170dff17957e53f612f12420220bd20"
+}

@@ -1,0 +1,97 @@
+% !TEX program = xelatex
+% Adapted from TDReportTemplate_CN_TITLE.tex supplied by the user.
+\RequirePackage[T1]{fontenc}
+\documentclass[12pt,journal,onecolumn,a4paper]{IEEEtran}
+\usepackage[UTF8,fontset=fandol,scheme=chinese]{ctex}
+\setmainfont{texgyretermes}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\usepackage{graphicx,amsmath,amssymb,bm,booktabs,tabularx,longtable,array}
+\usepackage{indentfirst,placeins,caption,microtype,xcolor,listings,enumitem,xurl,float,needspace,etoolbox}
+\usepackage[numbers,square,sort&compress]{natbib}
+\usepackage[unicode,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{float,fontawesome5}
+\hypersetup{pdftitle={TableLab：基于本地字段检索的中文表格问答与预测},pdfauthor={郑嘉诚},pdfsubject={天津大学机器学习与人工智能课程报告}}
+\captionsetup{hypcap=false,font=small,labelfont=bf,labelsep=quad,skip=5pt}
+\setlength{\parindent}{2\ccwd}
+\setlength{\parskip}{3pt plus .5pt minus .3pt}
+\emergencystretch=2em
+% Allow figures and tables to share pages with text.
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.85}
+\renewcommand{\textfraction}{.08}
+\renewcommand{\floatpagefraction}{.85}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\raggedbottom
+\setcounter{tocdepth}{1}
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{4.5em}}
+\makeatother
+\newcommand{\field}[1]{\texttt{#1}}
+\newcommand{\T}{\mathcal{T}}\newcommand{\V}{\mathcal{V}}
+\newcommand{\tabnote}[1]{\par\vspace{2pt}\begin{minipage}{\linewidth}\footnotesize #1\end{minipage}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\inlinetab}[1]{\begin{table}[!htbp]\centering\small #1\end{table}}
+\definecolor{InkBlue}{HTML}{184E80}
+\newcommand{\code}[1]{\nolinkurl{#1}}
+\newcommand{\Train}{\T}\newcommand{\Valid}{\V}
+\newcommand{\Ind}{\mathbf 1}
+\newcommand{\source}[1]{\par{\footnotesize\raggedright\noindent 计算记录：#1\par}}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,keepspaces=true,frame=lines,rulecolor=\color{InkBlue},showstringspaces=false,aboveskip=8pt,belowskip=8pt}
+\begin{document}\section{方法排版检查}\subsection{扩展比较与搜索协议}\label{sec:new-protocol}
+四个原任务保持既定字段和合格记录，外层三折、内层三折的行号与前期嵌套验证一致。房价和学生随机分折；Adult 仅用原训练文件，按全部十四个非目标原始字段指纹分组并分层；NBA 按完整赛季向前分折，内层沿用同一规则。插补、标准化和独热编码只在当前训练折拟合。为使线性、核和神经网络的回归训练有可比的数值尺度，所有回归模型均用当前训练目标的均值和标准差缩放目标，预测再反变换。该协议及候选域与前期十三流程不同，不合并报告其均值。
+
+二十一个表格模型条目包括常数、无惩罚线性、L2、弹性网、决策树、随机森林、Extra Trees、直方图梯度提升、近邻、AdaBoost、线性 SVM、XGBoost、LightGBM、CatBoost，以及 MLP、残差 MLP、Deep \& Cross、门控 MLP、字段 Transformer、ELM 和 RBF 网络。XGBoost、LightGBM 与 CatBoost 分别依据其官方实现\citep{xgboost2016,lightgbm2017,catboost2018}。为控制编码差异，均接收同一训练折的独热编码输入；本轮没有检验原生类别处理的优势。分类的无惩罚项使用 Logistic，L2 和弹性网使用相应惩罚的 Logistic；线性 SVM 在当前训练数据内分三折分组做 sigmoid 校准，外层验证不参与校准。
+
+每项可训练模型分别完成网格和 TPE 搜索。大部分模型的域为八点，无惩罚线性模型仅比较是否保留截距的两点。两种搜索均评估完整域大小的次数；TPE 前三次为启动采样，两点域则为两次，种子为 42 加外层折号的 100 倍。相同候选使用相同内层训练种子，重复配置在本次搜索内复用分数，并保留重复轨迹。主比较采用网格流程，TPE 的外层效果另行报告，不按外层结果替每个模型选择搜索方法。分类按内层平均 AUC、回归按平均 RMSE 选参数；阈值固定为 0.5。
+
+\inlinetab{\captionof{table}{扩展实验的参数域与固定训练量}\label{tab:expanded-spaces}
+\begin{tabularx}{\linewidth}{@{}lY@{}}\toprule
+模型或组 & 参数域与固定配置\\\midrule
+无惩罚线性 & 截距：有或无；分类使用无惩罚 Logistic。\\
+L2 & $\alpha\in\{.001,.01,.1,1,10,100,1000,10000\}$；分类取 $C=1/\alpha$。\\
+弹性网 & $\alpha\in\{.01,.1,1,10\}$；L1 比例 $.5$ 或 $1$，分类取 $C=1/\alpha$。\\
+决策树 & 深度 $2,4,8$ 或不限；叶节点最少 $2$ 或 $10$ 条。\\
+森林、Extra Trees & 深度 $6/12$；叶节点最少 $3/10$；候选特征比例 $.7/1$；64 棵树。\\
+直方图提升 & 叶节点上限 $7/31$；学习率 $.05/.1$；L2 为 $0/1$；100 次迭代，关闭早停。\\
+K 近邻 & 邻居数 $3,7,15,31$；等权或距离权重。\\
+AdaBoost & 基树深度 $1/3$；学习率 $.03/.1$；50/100 棵树。\\
+线性 SVM & $C\in\{.001,.01,.1,.3,1,3,10,100\}$；回归 $\epsilon=.1$。\\
+XGBoost & 深度 $3/6$；学习率 $.03/.1$；L2 为 $1/10$；120 棵树。\\
+LightGBM & 叶节点上限 $7/31$；学习率 $.03/.1$；叶节点最少 $10/30$；120 棵树。\\
+CatBoost & 深度 $4/6$；学习率 $.03/.1$；L2 为 $1/10$；120 次迭代。\\
+端到端网络 & 宽度 $32/64$，学习率 $.003/.01$，权重衰减 $.0001/.01$；两类 Transformer 宽度为 $16/32$。\\
+ELM & 隐层 $32/128$，tanh/ReLU，输出层惩罚 $.1/10$。\\
+RBF 网络 & 中心 $16/64$，宽度参数 $.1/1$，输出层惩罚 $.1/10$。\\\bottomrule
+\end{tabularx}\tabnote{除常数和沿用上季得分外均调参。候选域有限，不代表各算法在更大预算下的最佳性能。}} 
+
+\subsection{网络训练与结构控制}
+端到端网络使用本地明确实现，固定四十轮、每批 2,048 条、AdamW、梯度范数上限 5，dropout 为 0.1。残差 MLP 含两个残差块；门控 MLP 含两个带 sigmoid 门的残差块；Deep \& Cross 包含三层显式交叉与两层深层分支\citep{dcn2017}。字段 Transformer 将同一原始字段的编码投影为一个 token，使用单层、两头自注意力与均值汇总\citep{transformer2017}。这些是小规模本地实现，不声称复现 FT-Transformer、TabNet 或同名论文的完整实验。ELM 使用固定种子的随机隐层，RBF 网络在全部当前训练样本上学习中心，再拟合带惩罚的输出层。
+
+固定轮数使外层验证不参与早停。训练与验证曲线仅在第 1、5、10、20、30、40 轮记录；不按曲线重新选择轮数。结构控制分别关闭 MLP 激活、残差相加、自注意力，或将交叉分支输出置零、门控置为一。每项控制重新进行内层网格搜索。特征组消融也为每个可训练模型重新拟合预处理和网格搜索，不沿用完整模型的参数。
+
+原四任务的消融组与前期定义一致：房价面积组为 \code{GrLivArea} 与 \code{TotalBsmtSF}，另设仅保留 \code{GrLivArea} 与 \code{OverallQual} 的两字段配置；Adult 工作组为工时、用工类别和职业；NBA 身体属性组为身高与体重；其余变体逐项删去指定字段。完整模型与变体使用同一外层样本，按同折指标差评价。
+
+\subsection{NBA 历史窗口的构造}
+从原 NBA 表构造三个连续历史赛季预测下一赛季的样本。按姓名、国家和选秀年份组成的哈希键连接记录，排除该键与赛季不唯一的记录；要求相邻年龄增量在 0 至 2 岁之间、身高变化不超过 5 厘米。该键不是已核实的球员编号。原 12,844 条记录中，2 条键与赛季重复，6,512 条缺少完整连续历史，102 条未通过衔接检查，保留 6,228 个目标窗口；原始文件不改写。连接与排除不依据得分大小或预测成绩。
+
+每个历史赛季输入年龄、身高、体重、场均得分、篮板、助攻和出场数，共二十一列；不输入目标赛季技术统计。所有模型使用同一窗口，平面模型将三个赛季展平，序列模型保留时间轴。比较 RNN、GRU、BiGRU、LSTM、BiLSTM、双层因果卷积与单层序列 Transformer\citep{torchlstm,tcn2018,transformer2017}，以及七项共享基线和固定沿用上季得分参照。循环网络为单层，双向编码仅覆盖预测时已经知道的历史窗口。因果卷积核宽为 2，膨胀率为 1、2；序列 Transformer 使用可学习历史位置。
+
+外层与内层均按目标赛季向前分折。验证块按每次前进一步的下一季预测解释，因此后来时点可以使用该时点以前已观测的赛季；模型在整个验证块中保持固定。额外删除年龄、身体属性、历史产出、出场数，或改为只保留最近两个赛季，且所有变体保持同一目标样本。该任务沿用已分析的 NBA 数据，不能称独立新队列测试。
+
+\subsection{解释、精度与复算}
+SHAP 事先固定解释网格提升树，使用训练树路径计数为背景，覆盖四任务全部外层验证记录。回归先将基准与贡献反变换回目标尺度，分类解释原始对数几率；类别编码先有符号合并，再计算原始字段绝对贡献。逐条检查贡献加和与保存预测一致。结构消融、特征消融及 SHAP 均描述预测依赖，不直接识别因果效应。
+
+部分估计器原生输出为单精度。模型训练、搜索分数与参数选择保持不变，导出时将预测转换为双精度后再反变换，统一用双精度复算外层指标；原精度记录另行归档，模型哈希保持一致。该步骤只修正数值舍入，没有重训或按评价成绩调整参数。独立脚本按稳定行号复核每项模型及消融的目标值、预测指标、内层分组、时间顺序、训练预处理和文件哈希。三折标准差同时受样本与固定训练种子影响，没有独立估计初始化变异。
+
+前期 Adult 预留测试的冻结协议与结果单独保留；新增模型不再使用该文件做选择或测试。完整扩展入口为 \code{Run-Expanded.command}，结果、参数、模型、逐条预测及协议位于 \code{artifacts/expanded}。需要先准备项目 Python 环境；本轮使用 Python 3.13、CPU 四个任务进程、每个模型单线程。依赖版本见 \code{codes/requirements-expanded.txt} 与冻结协议。批量实验不调用 DeepSeek API。
+\subsection{Adult 预留测试协议}
+预留测试在开始拟合前写入 \code{artifacts/holdout/adult/protocol.json}，固定输入字段、十三条训练流程、原始数据和代码哈希、样本排除规则及指标。主评价流程根据此前嵌套验证选为提升树＋网格；TPE 与其三折结果相同，仍保留为单独流程。全部 32,561 条原训练记录用于最终拟合。四条调参流程仅在原训练文件内进行三折分层分组验证，沿用十二点参数域与十二次评估，TPE 种子为 42；预处理仍在每次训练子集拟合。本次新增 144 次内层拟合和 13 次最终拟合。全部模型及参数保存并锁定哈希后，才计算测试预测；测试成绩未用于重选模型、参数或阈值。
+
+在完整原训练文件的内层验证中，网格提升树选出叶节点上限 31、学习率 0.05、L2 惩罚 0；TPE 选出叶节点上限 15、学习率 0.1、L2 惩罚 1。森林两种搜索均选出最大深度 8、叶节点最少 3 条、候选特征比例 0.7。各参数与外层三折的参数分别保存，因此原先三折均值相同的两条流程，最终重拟合的参数仍可不同。
+
+原测试文件排除与训练文件十四个非目标原始字段指纹重合的 26 条，保留 16,255 条、16,249 个指纹组。指纹包括 \code{fnlwgt}，仅用于分组核查；模型仍只输入六个字段，指标不按人口权重加权。保留测试集内部重复组，按全部指纹组有放回重抽样 2,000 次，种子为 20261102，同一次抽样用于全部模型。以百分位法给出 AUC 和事先选定流程与各比较流程 AUC 差的 95\% 区间；若一个组被抽中多次，其全部记录获得相应重数。比较区间未作多重比较校正，不用于事后挑选新模型。区间以最终模型为条件，只反映测试抽样变化，不包含重新训练和搜索的不确定性。原测试文件曾参与数据内容核查，本文称为预留测试，不称从未查看的盲测。
+
+主指标为 ROC AUC，另报告 AP、Brier、对数损失和固定 0.5 阈值的 F1。通过稳定行号对齐原始标签，独立复算 65 项指标，重新检查三折内层的指纹组互斥、跨文件排除规则以及模型冻结时间；另用独立加权 AUC 实现复核 91 项 bootstrap 分数。原始数据文件保持不变。
+上述预留测试的十三流程属于前期协议：普通、强 L2 与 L1 Logistic 的 $C$ 分别为 1、0.1、0.1；完整树不限制深度；森林和 Extra Trees 为 64 棵、深度 12、叶节点最少 5 条；预设提升树为 100 次迭代，近邻数为 15。森林的十二点域为深度 $4,8$ 或不限、叶节点最少 $3/10$、特征比例 $.7/1$；提升树十二点域为叶节点上限 $7,15,31$、L2 为 $0/1$、学习率 $.05/.1$。这些参数与本轮扩展的八点域分别保存，未混作同一实验。
+\bibliographystyle{IEEEtranN}\bibliography{merged_refs}\end{document}

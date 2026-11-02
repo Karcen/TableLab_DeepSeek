@@ -1,0 +1,26 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 1,
+    "variant": "No gates",
+    "model": "GatedMLP",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/No_gates",
+    "seed": 142,
+    "architecture_ablation": "No gates"
+  },
+  "selected_params": {
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "width": 32
+  },
+  "seconds": 45.30508499999996,
+  "parameter_count": 5409,
+  "model_sha256": "e36b44457072e8c1d7a7fa39f315326c4bc553f9880c7c08cc86ea6880035d59",
+  "prediction_sha256": "b04d787102a723157f08c27d71df0e013e87fc1f22859c8779e6581f16670ba2",
+  "metrics_sha256": "9b5afb4ef50a1974718d16c47b48acd2664a78c5dd75cb729b367429744e82aa"
+}

@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 1,
+    "variant": "No education",
+    "model": "CatBoost",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/No_education/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/No_education",
+    "seed": 142
+  },
+  "selected_params": {
+    "depth": 6,
+    "l2_leaf_reg": 10.0,
+    "learning_rate": 0.1
+  },
+  "seconds": 15.205047041992657,
+  "parameter_count": null,
+  "model_sha256": "7d95f540221c98bba07660e8080116ae72d767cc34fd10a05e0289f63216aaa2",
+  "prediction_sha256": "621f3a86a85236c64cf3dc3202ce29760e09b076134e3b6085437fd00be1e998",
+  "metrics_sha256": "925e6fe2dd73f178c24761a79c879f039b39e072812338c0143934a000079dab"
+}

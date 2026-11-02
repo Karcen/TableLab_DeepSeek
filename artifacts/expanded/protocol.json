@@ -1,0 +1,805 @@
+{
+  "frozen_at_utc": "2026-11-01T18:16:07.455771+00:00",
+  "specification": {
+    "static_models": [
+      "Mean",
+      "Linear",
+      "Ridge",
+      "Sparse",
+      "Tree",
+      "RF",
+      "ExtraTrees",
+      "HGB",
+      "KNN",
+      "AdaBoost",
+      "SVM",
+      "XGB",
+      "LightGBM",
+      "CatBoost",
+      "MLP",
+      "ResMLP",
+      "DCN",
+      "GatedMLP",
+      "FeatureTransformer",
+      "ELM",
+      "RBFNet"
+    ],
+    "sequence_models": [
+      "Mean",
+      "Persistence",
+      "Linear",
+      "Ridge",
+      "RF",
+      "XGB",
+      "LightGBM",
+      "MLP",
+      "RNN",
+      "GRU",
+      "BiGRU",
+      "LSTM",
+      "BiLSTM",
+      "TCN",
+      "SeqTransformer"
+    ],
+    "outer_folds": 3,
+    "inner_folds": 3,
+    "methods": [
+      "grid",
+      "tpe"
+    ],
+    "ablation_search": "grid repeated within each reduced-feature training set",
+    "structural_controls": {
+      "MLP": "disable activations",
+      "ResMLP": "disable residual addition",
+      "DCN": "zero the cross branch output",
+      "GatedMLP": "replace gates by one",
+      "FeatureTransformer": "bypass self-attention encoder"
+    },
+    "primary_search_comparison": "grid results compare model families; TPE is a separately reported search comparison, not selected by outer-fold scores",
+    "domains": {
+      "False": {
+        "Mean": {},
+        "Linear": {
+          "fit_intercept": [
+            true,
+            false
+          ]
+        },
+        "Ridge": {
+          "alpha": [
+            0.001,
+            0.01,
+            0.1,
+            1.0,
+            10.0,
+            100.0,
+            1000.0,
+            10000.0
+          ]
+        },
+        "Sparse": {
+          "alpha": [
+            0.01,
+            0.1,
+            1.0,
+            10.0
+          ],
+          "l1_ratio": [
+            0.5,
+            1.0
+          ]
+        },
+        "Tree": {
+          "max_depth": [
+            2,
+            4,
+            8,
+            null
+          ],
+          "min_samples_leaf": [
+            2,
+            10
+          ]
+        },
+        "RF": {
+          "max_depth": [
+            6,
+            12
+          ],
+          "min_samples_leaf": [
+            3,
+            10
+          ],
+          "max_features": [
+            0.7,
+            1.0
+          ]
+        },
+        "ExtraTrees": {
+          "max_depth": [
+            6,
+            12
+          ],
+          "min_samples_leaf": [
+            3,
+            10
+          ],
+          "max_features": [
+            0.7,
+            1.0
+          ]
+        },
+        "HGB": {
+          "max_leaf_nodes": [
+            7,
+            31
+          ],
+          "learning_rate": [
+            0.05,
+            0.1
+          ],
+          "l2_regularization": [
+            0.0,
+            1.0
+          ]
+        },
+        "KNN": {
+          "n_neighbors": [
+            3,
+            7,
+            15,
+            31
+          ],
+          "weights": [
+            "uniform",
+            "distance"
+          ]
+        },
+        "AdaBoost": {
+          "max_depth": [
+            1,
+            3
+          ],
+          "learning_rate": [
+            0.03,
+            0.1
+          ],
+          "n_estimators": [
+            50,
+            100
+          ]
+        },
+        "SVM": {
+          "C": [
+            0.001,
+            0.01,
+            0.1,
+            0.3,
+            1.0,
+            3.0,
+            10.0,
+            100.0
+          ]
+        },
+        "XGB": {
+          "max_depth": [
+            3,
+            6
+          ],
+          "learning_rate": [
+            0.03,
+            0.1
+          ],
+          "reg_lambda": [
+            1.0,
+            10.0
+          ]
+        },
+        "LightGBM": {
+          "num_leaves": [
+            7,
+            31
+          ],
+          "learning_rate": [
+            0.03,
+            0.1
+          ],
+          "min_child_samples": [
+            10,
+            30
+          ]
+        },
+        "CatBoost": {
+          "depth": [
+            4,
+            6
+          ],
+          "learning_rate": [
+            0.03,
+            0.1
+          ],
+          "l2_leaf_reg": [
+            1.0,
+            10.0
+          ]
+        },
+        "MLP": {
+          "width": [
+            32,
+            64
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "ResMLP": {
+          "width": [
+            32,
+            64
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "DCN": {
+          "width": [
+            32,
+            64
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "GatedMLP": {
+          "width": [
+            32,
+            64
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "FeatureTransformer": {
+          "width": [
+            16,
+            32
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "ELM": {
+          "width": [
+            32,
+            128
+          ],
+          "activation": [
+            "tanh",
+            "relu"
+          ],
+          "alpha": [
+            0.1,
+            10.0
+          ]
+        },
+        "RBFNet": {
+          "centres": [
+            16,
+            64
+          ],
+          "gamma": [
+            0.1,
+            1.0
+          ],
+          "alpha": [
+            0.1,
+            10.0
+          ]
+        }
+      },
+      "True": {
+        "Mean": {},
+        "Linear": {
+          "fit_intercept": [
+            true,
+            false
+          ]
+        },
+        "Ridge": {
+          "alpha": [
+            0.001,
+            0.01,
+            0.1,
+            1.0,
+            10.0,
+            100.0,
+            1000.0,
+            10000.0
+          ]
+        },
+        "Sparse": {
+          "alpha": [
+            0.01,
+            0.1,
+            1.0,
+            10.0
+          ],
+          "l1_ratio": [
+            0.5,
+            1.0
+          ]
+        },
+        "Tree": {
+          "max_depth": [
+            2,
+            4,
+            8,
+            null
+          ],
+          "min_samples_leaf": [
+            2,
+            10
+          ]
+        },
+        "RF": {
+          "max_depth": [
+            6,
+            12
+          ],
+          "min_samples_leaf": [
+            3,
+            10
+          ],
+          "max_features": [
+            0.7,
+            1.0
+          ]
+        },
+        "ExtraTrees": {
+          "max_depth": [
+            6,
+            12
+          ],
+          "min_samples_leaf": [
+            3,
+            10
+          ],
+          "max_features": [
+            0.7,
+            1.0
+          ]
+        },
+        "HGB": {
+          "max_leaf_nodes": [
+            7,
+            31
+          ],
+          "learning_rate": [
+            0.05,
+            0.1
+          ],
+          "l2_regularization": [
+            0.0,
+            1.0
+          ]
+        },
+        "KNN": {
+          "n_neighbors": [
+            3,
+            7,
+            15,
+            31
+          ],
+          "weights": [
+            "uniform",
+            "distance"
+          ]
+        },
+        "AdaBoost": {
+          "max_depth": [
+            1,
+            3
+          ],
+          "learning_rate": [
+            0.03,
+            0.1
+          ],
+          "n_estimators": [
+            50,
+            100
+          ]
+        },
+        "SVM": {
+          "C": [
+            0.001,
+            0.01,
+            0.1,
+            0.3,
+            1.0,
+            3.0,
+            10.0,
+            100.0
+          ]
+        },
+        "XGB": {
+          "max_depth": [
+            3,
+            6
+          ],
+          "learning_rate": [
+            0.03,
+            0.1
+          ],
+          "reg_lambda": [
+            1.0,
+            10.0
+          ]
+        },
+        "LightGBM": {
+          "num_leaves": [
+            7,
+            31
+          ],
+          "learning_rate": [
+            0.03,
+            0.1
+          ],
+          "min_child_samples": [
+            10,
+            30
+          ]
+        },
+        "CatBoost": {
+          "depth": [
+            4,
+            6
+          ],
+          "learning_rate": [
+            0.03,
+            0.1
+          ],
+          "l2_leaf_reg": [
+            1.0,
+            10.0
+          ]
+        },
+        "MLP": {
+          "width": [
+            32,
+            64
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "ResMLP": {
+          "width": [
+            32,
+            64
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "DCN": {
+          "width": [
+            32,
+            64
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "GatedMLP": {
+          "width": [
+            32,
+            64
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "FeatureTransformer": {
+          "width": [
+            16,
+            32
+          ],
+          "lr": [
+            0.003,
+            0.01
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        },
+        "ELM": {
+          "width": [
+            32,
+            128
+          ],
+          "activation": [
+            "tanh",
+            "relu"
+          ],
+          "alpha": [
+            0.1,
+            10.0
+          ]
+        },
+        "RBFNet": {
+          "centres": [
+            16,
+            64
+          ],
+          "gamma": [
+            0.1,
+            1.0
+          ],
+          "alpha": [
+            0.1,
+            10.0
+          ]
+        }
+      }
+    },
+    "sequence_domains": {
+      "Mean": {},
+      "Persistence": {},
+      "Linear": {
+        "fit_intercept": [
+          true,
+          false
+        ]
+      },
+      "Ridge": {
+        "alpha": [
+          0.001,
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0,
+          10000.0
+        ]
+      },
+      "RF": {
+        "max_depth": [
+          6,
+          12
+        ],
+        "min_samples_leaf": [
+          3,
+          10
+        ],
+        "max_features": [
+          0.7,
+          1.0
+        ]
+      },
+      "XGB": {
+        "max_depth": [
+          3,
+          6
+        ],
+        "learning_rate": [
+          0.03,
+          0.1
+        ],
+        "reg_lambda": [
+          1.0,
+          10.0
+        ]
+      },
+      "LightGBM": {
+        "num_leaves": [
+          7,
+          31
+        ],
+        "learning_rate": [
+          0.03,
+          0.1
+        ],
+        "min_child_samples": [
+          10,
+          30
+        ]
+      },
+      "MLP": {
+        "width": [
+          32,
+          64
+        ],
+        "lr": [
+          0.003,
+          0.01
+        ],
+        "weight_decay": [
+          0.0001,
+          0.01
+        ]
+      },
+      "RNN": {
+        "width": [
+          32,
+          64
+        ],
+        "lr": [
+          0.003,
+          0.01
+        ],
+        "weight_decay": [
+          0.0001,
+          0.01
+        ]
+      },
+      "GRU": {
+        "width": [
+          32,
+          64
+        ],
+        "lr": [
+          0.003,
+          0.01
+        ],
+        "weight_decay": [
+          0.0001,
+          0.01
+        ]
+      },
+      "BiGRU": {
+        "width": [
+          32,
+          64
+        ],
+        "lr": [
+          0.003,
+          0.01
+        ],
+        "weight_decay": [
+          0.0001,
+          0.01
+        ]
+      },
+      "LSTM": {
+        "width": [
+          32,
+          64
+        ],
+        "lr": [
+          0.003,
+          0.01
+        ],
+        "weight_decay": [
+          0.0001,
+          0.01
+        ]
+      },
+      "BiLSTM": {
+        "width": [
+          32,
+          64
+        ],
+        "lr": [
+          0.003,
+          0.01
+        ],
+        "weight_decay": [
+          0.0001,
+          0.01
+        ]
+      },
+      "TCN": {
+        "width": [
+          32,
+          64
+        ],
+        "lr": [
+          0.003,
+          0.01
+        ],
+        "weight_decay": [
+          0.0001,
+          0.01
+        ]
+      },
+      "SeqTransformer": {
+        "width": [
+          16,
+          32
+        ],
+        "lr": [
+          0.003,
+          0.01
+        ],
+        "weight_decay": [
+          0.0001,
+          0.01
+        ]
+      }
+    },
+    "neural_training": {
+      "device": "CPU",
+      "epochs": 40,
+      "batch_size": 2048,
+      "optimizer": "AdamW",
+      "gradient_clip": 5.0,
+      "dropout": 0.1,
+      "threads": 1,
+      "seeds": "42 + 100*outer_fold; inner adds fold number + 1",
+      "early_stopping": false
+    },
+    "tpe": "same finite domain and same evaluation count as grid; startup min(3, domain size); duplicate deterministic candidates cached within search",
+    "preprocessing": "original six/four fields, training-only imputation/encoding/scaling; train-only target mean/SD for every regression model",
+    "comparison": "new common protocol; do not pool means with the earlier 13 flows",
+    "adult_reserved_test": "Already evaluated in prior study; keep prior outputs unchanged; any later use is an explicitly labelled extension, not a newly unseen test",
+    "source_sha256": {
+      "codes/tablelab/research/expanded.py": "813fb73235ff9aa32d4ba50d9fbf323e61bdc49a93944dfe0d533224804436ef",
+      "codes/tablelab/research/networks.py": "99de937bbd4fb5cda19d7ec16064e236a12d895ab1bbac30fe3514afda715162",
+      "codes/tools/run_expanded.py": "1fdf3b83adb37b80df76610dba7a22ef5158e15872ba1fda142244105e14c7bb",
+      "codes/tablelab/research/experiment.py": "e64516611b9c4a77dcdbcd046f1df50d5d9bd7b9027ba587bce2938a46618e96"
+    },
+    "data_sha256": {
+      "house": "9a1d9a494a79426437c0401823d90f86c7fbec90bae933e3f0f3818c8b3ee9f4",
+      "adult": "74907b5b1708c43fe9d53be1208f13cde9a85521ef6a5a52185937728d6344ee",
+      "nba": "a12f4243164f4be8c5cbfa032e7689b6682e0bf17c38ab4201ea749064624ea3",
+      "students": "a11756d68e71589dbb8e689f8e1e0605c1ae93d32bde0824a329cfd69927150d"
+    },
+    "versions": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "optuna": "4.9.0",
+      "torch": "2.15.0",
+      "xgboost": "3.4.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "students",
+    "fold": 1,
+    "variant": "No lunch",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold1/No_lunch/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold1/No_lunch",
+    "seed": 142
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "min_child_samples": 30,
+    "num_leaves": 7
+  },
+  "seconds": 0.3908263329649344,
+  "parameter_count": null,
+  "model_sha256": "1a4f4e7d03ff044516ced7abe555f458b138bd711b65621725fa712c425fca76",
+  "prediction_sha256": "0abce820f8a7f5e1ba8cede477f483d8f84837d423cf8ac5193f535786f7c766",
+  "metrics_sha256": "ca29b3ad3c1e67d02634cd796c340fa4a0c3246749e155a4e09641bbd524a002"
+}

@@ -1,0 +1,27 @@
+{
+  "task": {
+    "dataset": "nba",
+    "fold": 2,
+    "variant": "Full",
+    "model": "KNN",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold2/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold2/Full",
+    "seed": 242
+  },
+  "selected_params": {
+    "n_neighbors": 31,
+    "weights": "uniform"
+  },
+  "seconds": 1.7755496670724824,
+  "parameter_count": null,
+  "model_sha256": "79965daca571c3f3131d2a0b36c5c6a379722fd8f5c79769eb9da2f2ee5a4477",
+  "prediction_sha256": "12f1ca4b4bd215f20f1ca165254e7725a425a307462b3b69e6f6c5b0d7167b58",
+  "metrics_sha256": "c44d263cb2539a521a34610282f712de377ec3ac7fc192b922de520c8f5c1dce",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "0699a8a586fbcc7e30a43c9f7b0fb49261d78f7c79717e160275a102eb8b6095",
+  "max_prediction_rounding_correction": 1.7763568394002505e-15
+}

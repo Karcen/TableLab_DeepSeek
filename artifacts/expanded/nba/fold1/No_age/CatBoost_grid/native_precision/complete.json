@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "nba",
+    "fold": 1,
+    "variant": "No age",
+    "model": "CatBoost",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold1/No_age/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold1/No_age",
+    "seed": 142
+  },
+  "selected_params": {
+    "depth": 6,
+    "l2_leaf_reg": 1.0,
+    "learning_rate": 0.1
+  },
+  "seconds": 2.1238222499378026,
+  "parameter_count": null,
+  "model_sha256": "573cdc51ce4c25002ebdc543dd2d2f4c9f503ae48fb2de1fad8c0435a0bc6025",
+  "prediction_sha256": "df6e79308f3666ea28e2c2552656b1ce48a8e682e8dd6320fa1b31d03d54b6ad",
+  "metrics_sha256": "452da0e47bf404d95b69a00f465b8909b2f1a9bc465b66b2ec69ac9fedb5c29e"
+}

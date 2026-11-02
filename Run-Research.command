@@ -10,8 +10,12 @@ fi
 "$research_python" codes/tools/run_research.py --workers 2
 "$research_python" codes/tools/verify_research.py
 "$research_python" codes/tools/summarize_research.py
+"$research_python" codes/tools/run_adult_holdout.py
+"$research_python" codes/tools/verify_adult_holdout.py
 nature_skill="${NATURE_FIGURE_SKILL:-$HOME/Downloads/SKILLS/nature-skills-main/skills/nature-figure}"
 "$research_python" codes/tools/plot_research.py --skill-root "$nature_skill"
+"$research_python" codes/tools/plot_talk_figures.py --skill-root "$nature_skill"
+"$research_python" codes/tools/plot_adult_holdout.py --skill-root "$nature_skill"
 "$research_python" codes/tools/audit_research_figures.py --skill-root "$nature_skill"
 "$research_python" codes/tools/integrate_research_docs.py
 bash docs/build_research_docs.sh

@@ -24,44 +24,42 @@ If double-clicking reports a permission error, type `bash` followed by a space i
 
 LaTeX and BibTeX sources are in `docs/source`. The file `docs/demo_on_mac.txt` contains demonstration instructions. Open `docs/classroom_replay.html` to replay fixed examples without API calls; new questions require the web app.
 
-## Four-task experiments
+## Experiments
 
-The comparison includes nine preset methods: a constant baseline, linear and regularized models, a decision tree, random forest, Extra Trees, histogram gradient boosting, and nearest neighbors. Grid and TPE searches for the forest and boosting models bring the total to thirteen training procedures per task.
+The four original tasks compare 21 model entries: linear methods, tree ensembles, neighbors, SVM, XGBoost, LightGBM, CatBoost, MLP, residual and gated MLPs, Deep & Cross, a feature Transformer, ELM, and an RBF network. A separate NBA task compares 15 entries on the same three-season history windows, including RNN, GRU, BiGRU, LSTM, BiLSTM, causal TCN, and a sequence Transformer. These are batch experiments; the web app retains its existing interactive methods.
 
-Three outer folds evaluate each procedure, and three inner folds select parameters. House and student records use random folds. Adult uses stratified groups defined by fingerprints of the original fields. NBA validation moves forward through complete seasons. The inner folds follow the same rules. Imputation, encoding, and scaling are fitted only on the current training fold. Grid and TPE each make twelve evaluations over the same twelve-point parameter domain; TPE can revisit a combination.
+Each trainable entry has grid and TPE searches. Most domains have eight configurations; unpenalized linear models compare two intercept settings. Three inner folds select parameters and three outer folds evaluate the procedure. Adult uses stratified groups of full-predictor fingerprints. NBA validation advances through complete seasons. Preprocessing and regression target scaling are fitted only on training data. Each feature ablation repeats grid search; five tabular networks also have structural controls. The gradient-trained networks run for 40 epochs.
 
-| Task | Best mean result in this comparison | Outer-fold mean |
+| Task | Better grid result in this comparison | Outer-fold mean ± SD |
 | --- | --- | --- |
-| House prices | Boosting with grid or TPE search | RMSE USD 32,338.23 |
-| Adult income | Boosting with grid or TPE search | AUC 0.8913 |
-| NBA points | Preset random forest | RMSE 5.698 points |
-| Student mathematics | Ridge | RMSE 13.545 points |
+| House prices | RBFNet | RMSE 31,202.70 ± 4,473.78 USD |
+| Adult income | CatBoost | AUC 0.8926 ± 0.0023 |
+| NBA points | Random forest | RMSE 5.687 ± 0.393 points |
+| Student mathematics | Linear SVM | RMSE 13.540 ± 0.387 points |
+| NBA next-season points | BiGRU | RMSE 2.888 ± 0.098 points |
 
-The rankings describe these three folds. The paper also reports variation across folds. The earlier single-split experiment and the nested experiment use different samples and configurations, so their scores do not directly measure tuning gains. Training and validation curves help diagnose fitting gaps. SHAP describes contributions within a fitted model; ablation removes fields, repeats tuning, and retrains the model. Both need to be read with possible substitution between fields in mind.
+Adult also has a subsequent test extension for the 21 grid or fixed entries. The model selected from CV before testing is CatBoost: test AUC 0.8924, with a 95% cluster-bootstrap interval of [0.8871, 0.8977]. The original test had already been used for the earlier 13 procedures, so this is not a new blind test. Test scores did not change parameters or thresholds. The other tasks still lack new independent test samples. The NBA history task uses different inputs and records from the original NBA task; their errors do not directly measure an architecture gain.
 
-The question-answering evaluation checks field retrieval on sixteen fixed questions, fifteen of which include English field names. MRR is 0.96875. The quality of plans generated through the DeepSeek API has not been evaluated.
+SHAP explains a boosting reference fixed before the expanded results, on all outer-validation records. Ablation measures performance after retraining with less information or a disabled component. Neither field attribution nor feature removal identifies real-world causal effects. Retrieval is still checked on 16 fixed questions, 15 containing English field names; real DeepSeek plan quality has not been evaluated. [Results and methods, in Chinese](docs/research_summary.md).
 
 ## Reproduce and check results
 
-Launch the app once to prepare the Python environment, then double-click `Run-Research.command`. It installs experiment dependencies, runs the four tasks, checks metrics, produces figures, and rebuilds the paper and slides. Batch experiments make no DeepSeek API calls. Two task processes run in parallel, with one thread per model. Document compilation requires XeLaTeX and BibTeX.
+Launch the app once to prepare the Python environment, stop the web service, then run `Run-Expanded.command`. It installs the pinned research dependencies, runs nested search and ablations, exports predictions in float64, checks the results, generates figures, and rebuilds the paper and Madrid slides. Batch experiments make no DeepSeek API calls. Each model uses one CPU thread; completed jobs are reused under the frozen protocol.
 
-Results are saved in `artifacts/research`, including fold row IDs, search histories, fitted models, row-level predictions, SHAP values, and ablations. Completed folds are reused. Archive old results before rerunning after a change to the experiment code.
+Expanded results are in `artifacts/expanded`. The earlier thirteen-procedure comparison is in `artifacts/research`, and its Adult test is in `artifacts/holdout/adult`; those records remain unchanged. The new Adult test extension is stored separately under `artifacts/expanded/holdout_extension`. Archive incompatible results before changing a frozen training implementation.
 
-Plotting uses Nature Skills at `~/Downloads/SKILLS/nature-skills-main/skills/nature-figure` by default. Set `NATURE_FIGURE_SKILL` to use another location for that skill directory.
-
-Run these commands from the project root to check saved results or rebuild the documents:
+Figures use the designated Nature Skills directory, `~/Downloads/SKILLS/nature-skills-main/skills/nature-figure`. Set `NATURE_FIGURE_SKILL` to use another location. Document compilation needs XeLaTeX, BibTeX, and Font Awesome 5.
 
 ```bash
-# Check the earlier single-split results
-codes/.venv/bin/python codes/check_results.py
+# Recompute expanded metrics and check every split and search
+codes/.venv/bin/python codes/tools/verify_expanded.py
+codes/.venv/bin/python codes/tools/verify_expanded_holdout.py
+codes/.venv/bin/python codes/tools/verify_expanded_shap.py
 
-# Recompute extended experiment metrics and check splits and SHAP additivity
-codes/.venv/bin/python codes/tools/verify_research.py
-
-# Compile the paper and Beamer slides
+# Rebuild the paper and slides
 bash docs/build_docs.sh
 
-# Check the current research deliverables before modifying files
+# Check the delivered files before modifying them
 shasum -a 256 -c codes/verification/research/files.sha256
 ```
 
@@ -71,6 +69,7 @@ shasum -a 256 -c codes/verification/research/files.sha256
 | --- | --- |
 | `data` | Four datasets, source manifest, and processed CSV files |
 | `codes` | Web app, field retrieval, DeepSeek interface, models, and verification code |
+| `artifacts/expanded` | Expanded search, ablations, models, predictions, and test extension |
 | `artifacts/research` | Models and row-level results from nested validation |
 | `figures`, `tables` | Figures and result tables from the earlier single-split checks |
 | `models` | Earlier training plans, splits, predictions, and demonstration records |

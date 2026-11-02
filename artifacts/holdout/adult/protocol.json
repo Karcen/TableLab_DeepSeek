@@ -1,0 +1,128 @@
+{
+  "frozen_at_utc": "2026-11-01T17:18:30.554070+00:00",
+  "specification": {
+    "dataset": "adult",
+    "source_sha256": "74907b5b1708c43fe9d53be1208f13cde9a85521ef6a5a52185937728d6344ee",
+    "audit_flags_sha256": "54c4443bad344009241492f4d3cc79937f2e0efe49db36fd867d3555b69164ae",
+    "prior_cv_summary_sha256": "b5500c6e268d187ad39defd20c7dbc2215224c156324066a35b06afaa0b0436d",
+    "code_sha256": {
+      "codes/tools/run_adult_holdout.py": "af90dc37cc392652949c565dc5800bd2db15481d1f6173fdea5a5c86acf691ab",
+      "codes/tablelab/research/experiment.py": "e64516611b9c4a77dcdbcd046f1df50d5d9bd7b9027ba587bce2938a46618e96",
+      "codes/tablelab/engine.py": "a51d4d6bc51fab7683f71cd21f9e87c701e1cf1ab293ae5bb4a07302f6b1d624",
+      "codes/tablelab/catalog.py": "da68a1fca11491e8eceeae1aff1fa8a82b1e4275272d5c2bf6535803ea01b2fe"
+    },
+    "split_sha256": "5cebbd9a21b891ad4fb2a726f2d2bf6fa9834f12cc701f6bafdbf3e85ba85454",
+    "training_rows": 32561,
+    "test_rows": 16255,
+    "excluded_cross_file_rows": 26,
+    "test_fingerprint_groups": 16249,
+    "fingerprint_columns": [
+      "age",
+      "workclass",
+      "fnlwgt",
+      "education",
+      "education-num",
+      "marital-status",
+      "occupation",
+      "relationship",
+      "race",
+      "sex",
+      "capital-gain",
+      "capital-loss",
+      "hours-per-week",
+      "native-country"
+    ],
+    "features": [
+      "age",
+      "education-num",
+      "hours-per-week",
+      "workclass",
+      "occupation",
+      "marital-status"
+    ],
+    "target": "income_gt_50k",
+    "models": [
+      "Mean",
+      "Linear",
+      "Ridge",
+      "Sparse",
+      "Tree",
+      "RF",
+      "ExtraTrees",
+      "HGB",
+      "KNN",
+      "RF_grid",
+      "RF_tpe",
+      "HGB_grid",
+      "HGB_tpe"
+    ],
+    "selected_before_test": "HGB_grid",
+    "primary_metric": "auc",
+    "secondary_metrics": [
+      "ap",
+      "brier",
+      "log_loss",
+      "f1"
+    ],
+    "threshold": 0.5,
+    "inner_cv": "3-fold StratifiedGroupKFold on 14-predictor fingerprints, shuffle=True, random_state=42",
+    "search": {
+      "trials": 12,
+      "tpe_seed": 42,
+      "tpe_startup_trials": 4,
+      "domains": {
+        "RF": {
+          "model__max_depth": [
+            4,
+            8,
+            null
+          ],
+          "model__min_samples_leaf": [
+            3,
+            10
+          ],
+          "model__max_features": [
+            0.7,
+            1.0
+          ]
+        },
+        "HGB": {
+          "model__max_leaf_nodes": [
+            7,
+            15,
+            31
+          ],
+          "model__l2_regularization": [
+            0.0,
+            1.0
+          ],
+          "model__learning_rate": [
+            0.05,
+            0.1
+          ]
+        }
+      }
+    },
+    "fit_count": {
+      "inner": 144,
+      "final": 13
+    },
+    "test_duplicates": "Retain all rows; cluster bootstrap by full-predictor fingerprint",
+    "uncertainty": {
+      "replicates": 2000,
+      "seed": 20261102,
+      "method": "paired nonparametric cluster bootstrap, percentile 95% CI",
+      "comparisons": "HGB_grid minus each other flow; descriptive intervals, no multiplicity adjustment",
+      "scope": "Conditional on fitted models; test sampling uncertainty, not training or tuning variance"
+    },
+    "test_access_history": "Previously profiled for content and overlap; not previously used for fitting or saved performance estimates",
+    "evaluation_rule": "Freeze protocol before fitting; lock all 13 fitted models before predictions; no test-driven refitting, model selection, or threshold selection",
+    "versions": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "optuna": "4.9.0",
+      "joblib": "1.5.3"
+    }
+  }
+}

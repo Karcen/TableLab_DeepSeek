@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "students",
+    "fold": 2,
+    "variant": "Full",
+    "model": "LightGBM",
+    "method": "tpe",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold2/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold2/Full",
+    "seed": 242
+  },
+  "selected_params": {
+    "num_leaves": 31,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+  },
+  "seconds": 0.19497979199513793,
+  "parameter_count": null,
+  "model_sha256": "9311647567f4c7960da635204b9b571ff78a1c22a50a7767c1de23feaf587b54",
+  "prediction_sha256": "c7b6ac3a83a2adec0de3095695b1092ede4ab4bfce106874082588502d4b9718",
+  "metrics_sha256": "641b6b73a4a825cef81af85f98891ef9733c64702aec142a64108436240033a9"
+}

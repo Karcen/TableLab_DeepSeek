@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "nba_sequence",
+    "fold": 2,
+    "variant": "No physique",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": false,
+    "channels": 5,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold2/No_physique/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold2/No_physique",
+    "seed": 242
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "min_child_samples": 30,
+    "num_leaves": 7
+  },
+  "seconds": 2.1969831249443814,
+  "parameter_count": null,
+  "model_sha256": "06766e73b6d28b6e2c642ad9d8d81668821f414cb081e270107ccadb26e93135",
+  "prediction_sha256": "b57559a76c0500ca676f7cb574e679190402f3569f47b7e328c6c8f30956d2db",
+  "metrics_sha256": "a8d927aefc4389f5b1ee8f6ea11d90c4a79370aca45815cc878071b10c5b4901"
+}

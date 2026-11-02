@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "students",
+    "fold": 2,
+    "variant": "No gender",
+    "model": "CatBoost",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold2/No_gender/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold2/No_gender",
+    "seed": 242
+  },
+  "selected_params": {
+    "depth": 4,
+    "l2_leaf_reg": 10.0,
+    "learning_rate": 0.03
+  },
+  "seconds": 0.7179587910650298,
+  "parameter_count": null,
+  "model_sha256": "b1384d555c4afdec367ca2e12ffef5c5a2bb61b02fc688a70f591e8d3c1c88f5",
+  "prediction_sha256": "c38bb96f96c122529615da39ca8242067c44e09a08652df54ce71b5c221ccbb4",
+  "metrics_sha256": "28b664e562fcaa709bacbf8e1bfbdb4721451019d72f0799347536c98feb1275",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "cb8e6086aa0ea3c6a854f941752659e1c4b5d3f48a0e22350efa7d7cf8c4cdeb",
+  "max_prediction_rounding_correction": 0.0
+}

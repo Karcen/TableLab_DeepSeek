@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 1,
+    "variant": "Full",
+    "model": "AdaBoost",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/Full",
+    "seed": 142
+  },
+  "selected_params": {
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "n_estimators": 100
+  },
+  "seconds": 21.638501290930435,
+  "parameter_count": null,
+  "model_sha256": "ea4b15ee92a39c9af6612895e54e7954f0e162290f61bcc753e58eb9848e9dec",
+  "prediction_sha256": "991661eda6156609ed119d2f9396beb8bdb06dd6ebae60b3d510a9d23556df96",
+  "metrics_sha256": "c9e77f189251302c514ac616f0958ba7d822c0b219b4ff0d0abd540d92e9a4ef",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "9bd791ffed393b06caad3a6b6df1f41d30201b4f0eb32f997f62d404f93b3359",
+  "max_prediction_rounding_correction": 9.71445146547012e-17
+}

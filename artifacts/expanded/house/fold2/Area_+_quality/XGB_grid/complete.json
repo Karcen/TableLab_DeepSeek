@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "house",
+    "fold": 2,
+    "variant": "Area + quality",
+    "model": "XGB",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/house/fold2/Area_+_quality/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/house/fold2/Area_+_quality",
+    "seed": 242
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "max_depth": 3,
+    "reg_lambda": 1.0
+  },
+  "seconds": 0.7359530000248924,
+  "parameter_count": null,
+  "model_sha256": "6bdc446d541ab8dc4a80d5b60743f31b5453dd643f9fc9bce030b7efe5b215d2",
+  "prediction_sha256": "3d759c4a6e4d44678223a26fc19aa9e38e17d37f560f607be24d51e953abcbe2",
+  "metrics_sha256": "b8dd15b63cfb4b82af73dc1b50b049b5eefaf08d986f4578f9a3eb562976d182",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "832c8822961bb08cfe789d284425fe2487708100d1e6a5ba25cf745b8db03265",
+  "max_prediction_rounding_correction": 0.02990701363887638
+}

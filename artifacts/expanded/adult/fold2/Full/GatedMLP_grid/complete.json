@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 2,
+    "variant": "Full",
+    "model": "GatedMLP",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/Full",
+    "seed": 242
+  },
+  "selected_params": {
+    "lr": 0.003,
+    "weight_decay": 0.01,
+    "width": 32
+  },
+  "seconds": 56.03834320907481,
+  "parameter_count": 5409,
+  "model_sha256": "8377d6e340259588a89751e706b67b7409d87b3fd3ad7b224fe7189b887de9ff",
+  "prediction_sha256": "bee0720be47a9e12831a874b957be8f0788369744bfafdf7c67cb20a11e2c4d8",
+  "metrics_sha256": "19d88891ace19f166abf4843bcb32ed0eb4e2c44562dbbc7cd262d265cf223a2",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "386a0460458f7c3680a72f2b9cb88c30be3e604eddc07662503b44392194496a",
+  "max_prediction_rounding_correction": 2.9795837352963872e-08
+}

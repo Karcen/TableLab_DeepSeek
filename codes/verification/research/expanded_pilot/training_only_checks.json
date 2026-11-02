@@ -1,0 +1,597 @@
+[
+  {
+    "dataset": "house",
+    "model": "Linear",
+    "n_training": 973,
+    "seconds": 0.01390345802064985,
+    "params": {
+      "fit_intercept": true
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "Ridge",
+    "n_training": 973,
+    "seconds": 0.0027625829679891467,
+    "params": {
+      "alpha": 0.001
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "Sparse",
+    "n_training": 973,
+    "seconds": 0.0013111670268699527,
+    "params": {
+      "alpha": 0.001,
+      "l1_ratio": 0.5
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "Tree",
+    "n_training": 973,
+    "seconds": 0.001518458011560142,
+    "params": {
+      "max_depth": 2,
+      "min_samples_leaf": 2
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "RF",
+    "n_training": 973,
+    "seconds": 0.046832166030071676,
+    "params": {
+      "max_depth": 6,
+      "max_features": 0.7,
+      "min_samples_leaf": 3
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "ExtraTrees",
+    "n_training": 973,
+    "seconds": 0.025014333077706397,
+    "params": {
+      "max_depth": 6,
+      "max_features": 0.7,
+      "min_samples_leaf": 3
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "HGB",
+    "n_training": 973,
+    "seconds": 0.03757608390878886,
+    "params": {
+      "l2_regularization": 0.0,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "KNN",
+    "n_training": 973,
+    "seconds": 0.0031310420017689466,
+    "params": {
+      "n_neighbors": 3,
+      "weights": "uniform"
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "AdaBoost",
+    "n_training": 973,
+    "seconds": 0.028387999976985157,
+    "params": {
+      "learning_rate": 0.03,
+      "max_depth": 1,
+      "n_estimators": 50
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "SVM",
+    "n_training": 973,
+    "seconds": 0.011235125013627112,
+    "params": {
+      "C": 0.1,
+      "gamma": "scale"
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "XGB",
+    "n_training": 973,
+    "seconds": 0.7803432910004631,
+    "params": {
+      "learning_rate": 0.03,
+      "max_depth": 3,
+      "reg_lambda": 1.0
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "LightGBM",
+    "n_training": 973,
+    "seconds": 0.1536818330641836,
+    "params": {
+      "learning_rate": 0.03,
+      "min_child_samples": 10,
+      "num_leaves": 7
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "CatBoost",
+    "n_training": 973,
+    "seconds": 0.9058539579855278,
+    "params": {
+      "depth": 4,
+      "l2_leaf_reg": 1.0,
+      "learning_rate": 0.03
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "MLP",
+    "n_training": 973,
+    "seconds": 8.012077999999747,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 2049,
+    "last_training_objective": 0.21179769933223724
+  },
+  {
+    "dataset": "house",
+    "model": "ResMLP",
+    "n_training": 973,
+    "seconds": 0.034245625021867454,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 5345,
+    "last_training_objective": 0.139302596449852
+  },
+  {
+    "dataset": "house",
+    "model": "DCN",
+    "n_training": 973,
+    "seconds": 0.025255291955545545,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 2252,
+    "last_training_objective": 0.1592969000339508
+  },
+  {
+    "dataset": "house",
+    "model": "GatedMLP",
+    "n_training": 973,
+    "seconds": 0.0412778330501169,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 5345,
+    "last_training_objective": 0.1421973705291748
+  },
+  {
+    "dataset": "house",
+    "model": "FeatureTransformer",
+    "n_training": 973,
+    "seconds": 0.47804395807906985,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 9761,
+    "last_training_objective": 0.17296642065048218
+  },
+  {
+    "dataset": "house",
+    "model": "ELM",
+    "n_training": 973,
+    "seconds": 0.0050807499792426825,
+    "params": {
+      "activation": "tanh",
+      "alpha": 0.1,
+      "width": 32
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "house",
+    "model": "RBFNet",
+    "n_training": 973,
+    "seconds": 0.007639207993634045,
+    "params": {
+      "alpha": 0.1,
+      "centres": 16,
+      "gamma": 0.1
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "Linear",
+    "n_training": 21706,
+    "seconds": 0.013422374962829053,
+    "params": {
+      "C": 0.01
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "Ridge",
+    "n_training": 21706,
+    "seconds": 0.020613792003132403,
+    "params": {
+      "alpha": 0.001
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "Sparse",
+    "n_training": 21706,
+    "seconds": 3.1948443329893053,
+    "params": {
+      "alpha": 0.001,
+      "l1_ratio": 0.5
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "Tree",
+    "n_training": 21706,
+    "seconds": 0.006723416969180107,
+    "params": {
+      "max_depth": 2,
+      "min_samples_leaf": 2
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "RF",
+    "n_training": 21706,
+    "seconds": 0.5098056249553338,
+    "params": {
+      "max_depth": 6,
+      "max_features": 0.7,
+      "min_samples_leaf": 3
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "ExtraTrees",
+    "n_training": 21706,
+    "seconds": 0.39262837497517467,
+    "params": {
+      "max_depth": 6,
+      "max_features": 0.7,
+      "min_samples_leaf": 3
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "HGB",
+    "n_training": 21706,
+    "seconds": 0.4838846669299528,
+    "params": {
+      "l2_regularization": 0.0,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "KNN",
+    "n_training": 21706,
+    "seconds": 0.0028532500145956874,
+    "params": {
+      "n_neighbors": 3,
+      "weights": "uniform"
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "AdaBoost",
+    "n_training": 21706,
+    "seconds": 0.2368975830031559,
+    "params": {
+      "learning_rate": 0.03,
+      "max_depth": 1,
+      "n_estimators": 50
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "SVM",
+    "n_training": 21706,
+    "seconds": 19.59244299994316,
+    "params": {
+      "C": 0.1,
+      "gamma": "scale"
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "XGB",
+    "n_training": 21706,
+    "seconds": 0.09412345907185227,
+    "params": {
+      "learning_rate": 0.03,
+      "max_depth": 3,
+      "reg_lambda": 1.0
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "LightGBM",
+    "n_training": 21706,
+    "seconds": 0.10380366700701416,
+    "params": {
+      "learning_rate": 0.03,
+      "min_child_samples": 10,
+      "num_leaves": 7
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "CatBoost",
+    "n_training": 21706,
+    "seconds": 0.2943554159719497,
+    "params": {
+      "depth": 4,
+      "l2_leaf_reg": 1.0,
+      "learning_rate": 0.03
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "MLP",
+    "n_training": 21706,
+    "seconds": 0.4848808340029791,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 2113,
+    "last_training_objective": 0.3359617338492048
+  },
+  {
+    "dataset": "adult",
+    "model": "ResMLP",
+    "n_training": 21706,
+    "seconds": 0.9692609590711072,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 5409,
+    "last_training_objective": 0.31571616750153203
+  },
+  {
+    "dataset": "adult",
+    "model": "DCN",
+    "n_training": 21706,
+    "seconds": 0.6786304999841377,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 2330,
+    "last_training_objective": 0.3316987733088319
+  },
+  {
+    "dataset": "adult",
+    "model": "GatedMLP",
+    "n_training": 21706,
+    "seconds": 1.1763609580229968,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 5409,
+    "last_training_objective": 0.3213753644183057
+  },
+  {
+    "dataset": "adult",
+    "model": "FeatureTransformer",
+    "n_training": 21706,
+    "seconds": 14.566698416951112,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 9825,
+    "last_training_objective": 0.3354532837065905
+  },
+  {
+    "dataset": "adult",
+    "model": "ELM",
+    "n_training": 21706,
+    "seconds": 0.05361470906063914,
+    "params": {
+      "activation": "tanh",
+      "alpha": 0.1,
+      "width": 32
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "adult",
+    "model": "RBFNet",
+    "n_training": 21706,
+    "seconds": 0.07389799994416535,
+    "params": {
+      "alpha": 0.1,
+      "centres": 16,
+      "gamma": 0.1
+    },
+    "parameter_count": null,
+    "last_training_objective": null
+  },
+  {
+    "dataset": "nba_sequence",
+    "model": "RNN",
+    "n_training": 1522,
+    "seconds": 0.05994554189965129,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 1345,
+    "last_training_objective": 0.22968405485153198
+  },
+  {
+    "dataset": "nba_sequence",
+    "model": "GRU",
+    "n_training": 1522,
+    "seconds": 0.15693504095543176,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 3969,
+    "last_training_objective": 0.2304120808839798
+  },
+  {
+    "dataset": "nba_sequence",
+    "model": "BiGRU",
+    "n_training": 1522,
+    "seconds": 0.331567749963142,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 7937,
+    "last_training_objective": 0.22598353028297424
+  },
+  {
+    "dataset": "nba_sequence",
+    "model": "LSTM",
+    "n_training": 1522,
+    "seconds": 0.19160270795691758,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 5281,
+    "last_training_objective": 0.26562121510505676
+  },
+  {
+    "dataset": "nba_sequence",
+    "model": "BiLSTM",
+    "n_training": 1522,
+    "seconds": 0.44445541594177485,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 10561,
+    "last_training_objective": 0.24656614661216736
+  },
+  {
+    "dataset": "nba_sequence",
+    "model": "TCN",
+    "n_training": 1522,
+    "seconds": 1.7629154999740422,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 2593,
+    "last_training_objective": 0.2380882054567337
+  },
+  {
+    "dataset": "nba_sequence",
+    "model": "SeqTransformer",
+    "n_training": 1522,
+    "seconds": 0.3815813750261441,
+    "params": {
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "width": 32
+    },
+    "parameter_count": 8929,
+    "last_training_objective": 0.22159650921821594
+  }
+]

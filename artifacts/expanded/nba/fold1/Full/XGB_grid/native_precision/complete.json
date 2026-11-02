@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "nba",
+    "fold": 1,
+    "variant": "Full",
+    "model": "XGB",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold1/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold1/Full",
+    "seed": 142
+  },
+  "selected_params": {
+    "learning_rate": 0.1,
+    "max_depth": 6,
+    "reg_lambda": 1.0
+  },
+  "seconds": 1.5408440829487517,
+  "parameter_count": null,
+  "model_sha256": "365730c2af9a735b79e7441c3ce52aa68b17797969ecae52ca8034acfde03e3d",
+  "prediction_sha256": "c28991dfa2ee2cbc56159eb155c3077e32c2b953cac60e116a391e6537fe84d9",
+  "metrics_sha256": "0154b621ceb23b13def76e705961d955f504eafacca6aea10e6519a5759c24af"
+}

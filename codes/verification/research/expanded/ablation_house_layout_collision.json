@@ -1,0 +1,68 @@
+{
+  "pdf": "codes/verification/research/expanded/ablation_house_layout.pdf",
+  "auditable": true,
+  "verdict": "FIX BEFORE DELIVERY",
+  "page_count": 1,
+  "visible_text_box_count": 29,
+  "text_trace_count": 29,
+  "stroke_path_count": 27,
+  "filled_region_count": 6,
+  "image_region_count": 2,
+  "summary": {
+    "fail": 2,
+    "warn": 0,
+    "contained_fill_overlays": 0,
+    "contained_image_overlays": 0
+  },
+  "thresholds": {
+    "text_inset_pt": 0.6,
+    "min_overlap_ratio": 0.05,
+    "clipping_tolerance_pt": 0.5
+  },
+  "findings": [
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 25.2% of the smaller box",
+      "text": "No neighborhood",
+      "text_bbox": [
+        75.82360076904297,
+        180.66436767578125,
+        121.55388641357422,
+        212.5997772216797
+      ],
+      "other_text": "No area group",
+      "other_bbox": [
+        111.81592559814453,
+        180.68145751953125,
+        150.49594116210938,
+        208.2113800048828
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 98.2% of the smaller box",
+      "text": "No year",
+      "text_bbox": [
+        185.68214416503906,
+        180.6873779296875,
+        237.44166564941406,
+        215.0754852294922
+      ],
+      "other_text": "Only area + quality",
+      "other_bbox": [
+        187.5215606689453,
+        180.16583251953125,
+        237.48297119140625,
+        215.14163208007812
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    }
+  ]
+}

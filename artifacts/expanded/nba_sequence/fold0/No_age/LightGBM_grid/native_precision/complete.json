@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "nba_sequence",
+    "fold": 0,
+    "variant": "No age",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": false,
+    "channels": 6,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold0/No_age/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold0/No_age",
+    "seed": 42
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "min_child_samples": 10,
+    "num_leaves": 7
+  },
+  "seconds": 1.4042244999436662,
+  "parameter_count": null,
+  "model_sha256": "f03dc3ac1fceb7cce88e6d5881af846d07537bec88df79c5a2366fca8f1c5a9b",
+  "prediction_sha256": "67cce71c6d1f280d1d0037d2f9a9cfcdd7c70118518c05eec5ca6f9df967e84c",
+  "metrics_sha256": "79d6816303dc66503c3acc034a14defda8020c068efada087613689dc988ff84"
+}

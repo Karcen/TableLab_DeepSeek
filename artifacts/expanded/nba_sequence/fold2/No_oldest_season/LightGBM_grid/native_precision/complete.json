@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "nba_sequence",
+    "fold": 2,
+    "variant": "No oldest season",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": false,
+    "channels": 7,
+    "steps": 2,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold2/No_oldest_season/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold2/No_oldest_season",
+    "seed": 242
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "min_child_samples": 30,
+    "num_leaves": 7
+  },
+  "seconds": 2.4368197500007227,
+  "parameter_count": null,
+  "model_sha256": "9e5a4db617bb2d3605fbf0d1870ed8ec7e35df73968931f6b5e25240a84811b8",
+  "prediction_sha256": "3e64cc2a9f2667dea24d4b2a1803018383b9fe172287de5605824e0e977ff54f",
+  "metrics_sha256": "4ca921ad48561a3c8db3e4d078f9e38f2e753a5d9a935e464a209263d863ca9f"
+}

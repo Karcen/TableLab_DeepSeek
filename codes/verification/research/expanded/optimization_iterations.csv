@@ -1,0 +1,261 @@
+dataset,fold,model,method,variant,iterations,limit,limit_reached,component
+house,0,Sparse,grid,Full,19,10000,False,
+house,0,Sparse,tpe,Full,18,10000,False,
+house,0,SVM,grid,Full,6,5000,False,
+house,0,SVM,tpe,Full,6,5000,False,
+house,0,Sparse,grid,No neighborhood,16,10000,False,
+house,0,SVM,grid,No neighborhood,4,5000,False,
+house,0,Sparse,grid,No size,16,10000,False,
+house,0,SVM,grid,No size,8,5000,False,
+house,0,Sparse,grid,No quality,15,10000,False,
+house,0,SVM,grid,No quality,6,5000,False,
+house,0,Sparse,grid,No year,14,10000,False,
+house,0,SVM,grid,No year,6,5000,False,
+house,0,Sparse,grid,Area + quality,9,10000,False,
+house,0,SVM,grid,Area + quality,3,5000,False,
+house,1,Sparse,grid,Full,20,10000,False,
+house,1,Sparse,tpe,Full,20,10000,False,
+house,1,SVM,grid,Full,5,5000,False,
+house,1,SVM,tpe,Full,5,5000,False,
+house,1,Sparse,grid,No neighborhood,17,10000,False,
+house,1,SVM,grid,No neighborhood,4,5000,False,
+house,1,Sparse,grid,No size,15,10000,False,
+house,1,SVM,grid,No size,5,5000,False,
+house,1,Sparse,grid,No quality,14,10000,False,
+house,1,SVM,grid,No quality,5,5000,False,
+house,1,Sparse,grid,No year,15,10000,False,
+house,1,SVM,grid,No year,5,5000,False,
+house,1,Sparse,grid,Area + quality,10,10000,False,
+house,1,SVM,grid,Area + quality,4,5000,False,
+house,2,Sparse,grid,Full,20,10000,False,
+house,2,Sparse,tpe,Full,20,10000,False,
+house,2,SVM,grid,Full,7,5000,False,
+house,2,SVM,tpe,Full,7,5000,False,
+house,2,Sparse,grid,No neighborhood,17,10000,False,
+house,2,SVM,grid,No neighborhood,4,5000,False,
+house,2,Sparse,grid,No size,16,10000,False,
+house,2,SVM,grid,No size,8,5000,False,
+house,2,Sparse,grid,No quality,15,10000,False,
+house,2,SVM,grid,No quality,8,5000,False,
+house,2,Sparse,grid,No year,14,10000,False,
+house,2,SVM,grid,No year,7,5000,False,
+house,2,Sparse,grid,Area + quality,11,10000,False,
+house,2,SVM,grid,Area + quality,4,5000,False,
+adult,0,Linear,grid,Full,56,3000,False,
+adult,0,Linear,tpe,Full,56,3000,False,
+adult,0,Ridge,grid,Full,58,3000,False,
+adult,0,Ridge,tpe,Full,58,3000,False,
+adult,0,Sparse,grid,Full,204,3000,False,
+adult,0,Sparse,tpe,Full,204,3000,False,
+adult,0,SVM,grid,Full,6,5000,False,calibration_0
+adult,0,SVM,grid,Full,7,5000,False,calibration_1
+adult,0,SVM,grid,Full,7,5000,False,calibration_2
+adult,0,SVM,tpe,Full,6,5000,False,calibration_0
+adult,0,SVM,tpe,Full,7,5000,False,calibration_1
+adult,0,SVM,tpe,Full,7,5000,False,calibration_2
+adult,0,ELM,grid,Full,348,2000,False,basis_output
+adult,0,ELM,tpe,Full,348,2000,False,basis_output
+adult,0,RBFNet,grid,Full,144,2000,False,basis_output
+adult,0,RBFNet,tpe,Full,47,2000,False,basis_output
+adult,0,Linear,grid,No education,44,3000,False,
+adult,0,Ridge,grid,No education,43,3000,False,
+adult,0,Sparse,grid,No education,347,3000,False,
+adult,0,SVM,grid,No education,6,5000,False,calibration_0
+adult,0,SVM,grid,No education,7,5000,False,calibration_1
+adult,0,SVM,grid,No education,7,5000,False,calibration_2
+adult,0,ELM,grid,No education,382,2000,False,basis_output
+adult,0,RBFNet,grid,No education,176,2000,False,basis_output
+adult,0,Linear,grid,No work,34,3000,False,
+adult,0,Ridge,grid,No work,34,3000,False,
+adult,0,Sparse,grid,No work,28,3000,False,
+adult,0,SVM,grid,No work,5,5000,False,calibration_0
+adult,0,SVM,grid,No work,5,5000,False,calibration_1
+adult,0,SVM,grid,No work,6,5000,False,calibration_2
+adult,0,ELM,grid,No work,217,2000,False,basis_output
+adult,0,RBFNet,grid,No work,91,2000,False,basis_output
+adult,0,Linear,grid,No marital,67,3000,False,
+adult,0,Ridge,grid,No marital,62,3000,False,
+adult,0,Sparse,grid,No marital,285,3000,False,
+adult,0,SVM,grid,No marital,7,5000,False,calibration_0
+adult,0,SVM,grid,No marital,7,5000,False,calibration_1
+adult,0,SVM,grid,No marital,7,5000,False,calibration_2
+adult,0,ELM,grid,No marital,397,2000,False,basis_output
+adult,0,RBFNet,grid,No marital,149,2000,False,basis_output
+adult,0,Linear,grid,No age,47,3000,False,
+adult,0,Ridge,grid,No age,48,3000,False,
+adult,0,Sparse,grid,No age,455,3000,False,
+adult,0,SVM,grid,No age,6,5000,False,calibration_0
+adult,0,SVM,grid,No age,6,5000,False,calibration_1
+adult,0,SVM,grid,No age,6,5000,False,calibration_2
+adult,0,ELM,grid,No age,349,2000,False,basis_output
+adult,0,RBFNet,grid,No age,114,2000,False,basis_output
+adult,1,Linear,grid,Full,59,3000,False,
+adult,1,Linear,tpe,Full,59,3000,False,
+adult,1,Ridge,grid,Full,57,3000,False,
+adult,1,Ridge,tpe,Full,57,3000,False,
+adult,1,Sparse,grid,Full,2202,3000,False,
+adult,1,Sparse,tpe,Full,207,3000,False,
+adult,1,SVM,grid,Full,6,5000,False,calibration_0
+adult,1,SVM,grid,Full,6,5000,False,calibration_1
+adult,1,SVM,grid,Full,6,5000,False,calibration_2
+adult,1,SVM,tpe,Full,6,5000,False,calibration_0
+adult,1,SVM,tpe,Full,6,5000,False,calibration_1
+adult,1,SVM,tpe,Full,6,5000,False,calibration_2
+adult,1,ELM,grid,Full,368,2000,False,basis_output
+adult,1,ELM,tpe,Full,179,2000,False,basis_output
+adult,1,RBFNet,grid,Full,188,2000,False,basis_output
+adult,1,RBFNet,tpe,Full,188,2000,False,basis_output
+adult,1,Linear,grid,No education,46,3000,False,
+adult,1,Ridge,grid,No education,51,3000,False,
+adult,1,Sparse,grid,No education,922,3000,False,
+adult,1,SVM,grid,No education,6,5000,False,calibration_0
+adult,1,SVM,grid,No education,6,5000,False,calibration_1
+adult,1,SVM,grid,No education,6,5000,False,calibration_2
+adult,1,ELM,grid,No education,370,2000,False,basis_output
+adult,1,RBFNet,grid,No education,173,2000,False,basis_output
+adult,1,Linear,grid,No work,32,3000,False,
+adult,1,Ridge,grid,No work,18,3000,False,
+adult,1,Sparse,grid,No work,30,3000,False,
+adult,1,SVM,grid,No work,5,5000,False,calibration_0
+adult,1,SVM,grid,No work,5,5000,False,calibration_1
+adult,1,SVM,grid,No work,6,5000,False,calibration_2
+adult,1,ELM,grid,No work,73,2000,False,basis_output
+adult,1,RBFNet,grid,No work,96,2000,False,basis_output
+adult,1,Linear,grid,No marital,53,3000,False,
+adult,1,Ridge,grid,No marital,51,3000,False,
+adult,1,Sparse,grid,No marital,704,3000,False,
+adult,1,SVM,grid,No marital,5,5000,False,calibration_0
+adult,1,SVM,grid,No marital,6,5000,False,calibration_1
+adult,1,SVM,grid,No marital,6,5000,False,calibration_2
+adult,1,ELM,grid,No marital,355,2000,False,basis_output
+adult,1,RBFNet,grid,No marital,217,2000,False,basis_output
+adult,1,Linear,grid,No age,48,3000,False,
+adult,1,Ridge,grid,No age,45,3000,False,
+adult,1,Sparse,grid,No age,108,3000,False,
+adult,1,SVM,grid,No age,6,5000,False,calibration_0
+adult,1,SVM,grid,No age,6,5000,False,calibration_1
+adult,1,SVM,grid,No age,6,5000,False,calibration_2
+adult,1,ELM,grid,No age,332,2000,False,basis_output
+adult,1,RBFNet,grid,No age,126,2000,False,basis_output
+adult,2,Linear,grid,Full,60,3000,False,
+adult,2,Linear,tpe,Full,60,3000,False,
+adult,2,Ridge,grid,Full,61,3000,False,
+adult,2,Ridge,tpe,Full,61,3000,False,
+adult,2,Sparse,grid,Full,471,3000,False,
+adult,2,Sparse,tpe,Full,471,3000,False,
+adult,2,SVM,grid,Full,7,5000,False,calibration_0
+adult,2,SVM,grid,Full,7,5000,False,calibration_1
+adult,2,SVM,grid,Full,6,5000,False,calibration_2
+adult,2,SVM,tpe,Full,7,5000,False,calibration_0
+adult,2,SVM,tpe,Full,7,5000,False,calibration_1
+adult,2,SVM,tpe,Full,6,5000,False,calibration_2
+adult,2,ELM,grid,Full,270,2000,False,basis_output
+adult,2,ELM,tpe,Full,98,2000,False,basis_output
+adult,2,RBFNet,grid,Full,173,2000,False,basis_output
+adult,2,RBFNet,tpe,Full,43,2000,False,basis_output
+adult,2,Linear,grid,No education,48,3000,False,
+adult,2,Ridge,grid,No education,51,3000,False,
+adult,2,Sparse,grid,No education,433,3000,False,
+adult,2,SVM,grid,No education,7,5000,False,calibration_0
+adult,2,SVM,grid,No education,6,5000,False,calibration_1
+adult,2,SVM,grid,No education,6,5000,False,calibration_2
+adult,2,ELM,grid,No education,314,2000,False,basis_output
+adult,2,RBFNet,grid,No education,148,2000,False,basis_output
+adult,2,Linear,grid,No work,33,3000,False,
+adult,2,Ridge,grid,No work,33,3000,False,
+adult,2,Sparse,grid,No work,24,3000,False,
+adult,2,SVM,grid,No work,6,5000,False,calibration_0
+adult,2,SVM,grid,No work,6,5000,False,calibration_1
+adult,2,SVM,grid,No work,6,5000,False,calibration_2
+adult,2,ELM,grid,No work,89,2000,False,basis_output
+adult,2,RBFNet,grid,No work,89,2000,False,basis_output
+adult,2,Linear,grid,No marital,51,3000,False,
+adult,2,Ridge,grid,No marital,53,3000,False,
+adult,2,Sparse,grid,No marital,465,3000,False,
+adult,2,SVM,grid,No marital,7,5000,False,calibration_0
+adult,2,SVM,grid,No marital,6,5000,False,calibration_1
+adult,2,SVM,grid,No marital,6,5000,False,calibration_2
+adult,2,ELM,grid,No marital,406,2000,False,basis_output
+adult,2,RBFNet,grid,No marital,157,2000,False,basis_output
+adult,2,Linear,grid,No age,48,3000,False,
+adult,2,Ridge,grid,No age,47,3000,False,
+adult,2,Sparse,grid,No age,432,3000,False,
+adult,2,SVM,grid,No age,7,5000,False,calibration_0
+adult,2,SVM,grid,No age,6,5000,False,calibration_1
+adult,2,SVM,grid,No age,6,5000,False,calibration_2
+adult,2,ELM,grid,No age,301,2000,False,basis_output
+adult,2,RBFNet,grid,No age,158,2000,False,basis_output
+nba,0,Sparse,grid,Full,7,10000,False,
+nba,0,Sparse,tpe,Full,7,10000,False,
+nba,0,SVM,grid,Full,4,5000,False,
+nba,0,SVM,tpe,Full,4,5000,False,
+nba,0,Sparse,grid,No age,7,10000,False,
+nba,0,SVM,grid,No age,4,5000,False,
+nba,0,Sparse,grid,No physique,7,10000,False,
+nba,0,SVM,grid,No physique,4,5000,False,
+nba,0,Sparse,grid,No draft,3,10000,False,
+nba,0,SVM,grid,No draft,2,5000,False,
+nba,1,Sparse,grid,Full,6,10000,False,
+nba,1,Sparse,tpe,Full,6,10000,False,
+nba,1,SVM,grid,Full,4,5000,False,
+nba,1,SVM,tpe,Full,4,5000,False,
+nba,1,Sparse,grid,No age,6,10000,False,
+nba,1,SVM,grid,No age,4,5000,False,
+nba,1,Sparse,grid,No physique,6,10000,False,
+nba,1,SVM,grid,No physique,4,5000,False,
+nba,1,Sparse,grid,No draft,3,10000,False,
+nba,1,SVM,grid,No draft,2,5000,False,
+nba,2,Sparse,grid,Full,5,10000,False,
+nba,2,Sparse,tpe,Full,9,10000,False,
+nba,2,SVM,grid,Full,4,5000,False,
+nba,2,SVM,tpe,Full,4,5000,False,
+nba,2,Sparse,grid,No age,5,10000,False,
+nba,2,SVM,grid,No age,3,5000,False,
+nba,2,Sparse,grid,No physique,5,10000,False,
+nba,2,SVM,grid,No physique,3,5000,False,
+nba,2,Sparse,grid,No draft,20,10000,False,
+nba,2,SVM,grid,No draft,2,5000,False,
+students,0,Sparse,grid,Full,10,10000,False,
+students,0,Sparse,tpe,Full,8,10000,False,
+students,0,SVM,grid,Full,4,5000,False,
+students,0,SVM,tpe,Full,4,5000,False,
+students,0,Sparse,grid,No gender,10,10000,False,
+students,0,SVM,grid,No gender,4,5000,False,
+students,0,Sparse,grid,No parental education,4,10000,False,
+students,0,SVM,grid,No parental education,4,5000,False,
+students,0,Sparse,grid,No lunch,12,10000,False,
+students,0,SVM,grid,No lunch,4,5000,False,
+students,0,Sparse,grid,No preparation,11,10000,False,
+students,0,SVM,grid,No preparation,4,5000,False,
+students,1,Sparse,grid,Full,8,10000,False,
+students,1,Sparse,tpe,Full,8,10000,False,
+students,1,SVM,grid,Full,3,5000,False,
+students,1,SVM,tpe,Full,3,5000,False,
+students,1,Sparse,grid,No gender,8,10000,False,
+students,1,SVM,grid,No gender,3,5000,False,
+students,1,Sparse,grid,No parental education,4,10000,False,
+students,1,SVM,grid,No parental education,3,5000,False,
+students,1,Sparse,grid,No lunch,8,10000,False,
+students,1,SVM,grid,No lunch,4,5000,False,
+students,1,Sparse,grid,No preparation,8,10000,False,
+students,1,SVM,grid,No preparation,4,5000,False,
+students,2,Sparse,grid,Full,12,10000,False,
+students,2,Sparse,tpe,Full,12,10000,False,
+students,2,SVM,grid,Full,3,5000,False,
+students,2,SVM,tpe,Full,3,5000,False,
+students,2,Sparse,grid,No gender,12,10000,False,
+students,2,SVM,grid,No gender,3,5000,False,
+students,2,Sparse,grid,No parental education,4,10000,False,
+students,2,SVM,grid,No parental education,3,5000,False,
+students,2,Sparse,grid,No lunch,10,10000,False,
+students,2,SVM,grid,No lunch,4,5000,False,
+students,2,Sparse,grid,No preparation,12,10000,False,
+students,2,SVM,grid,No preparation,4,5000,False,
+adult_extension,-1,Linear,grid,Full,56,3000,False,
+adult_extension,-1,Ridge,grid,Full,61,3000,False,
+adult_extension,-1,Sparse,grid,Full,165,3000,False,
+adult_extension,-1,SVM,grid,Full,7,5000,False,calibration_0
+adult_extension,-1,SVM,grid,Full,6,5000,False,calibration_1
+adult_extension,-1,SVM,grid,Full,7,5000,False,calibration_2
+adult_extension,-1,ELM,grid,Full,224,2000,False,basis_output
+adult_extension,-1,RBFNet,grid,Full,253,2000,False,basis_output

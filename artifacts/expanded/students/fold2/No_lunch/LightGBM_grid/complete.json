@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "students",
+    "fold": 2,
+    "variant": "No lunch",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold2/No_lunch/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/students/fold2/No_lunch",
+    "seed": 242
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "min_child_samples": 30,
+    "num_leaves": 7
+  },
+  "seconds": 0.4244605420390144,
+  "parameter_count": null,
+  "model_sha256": "8fe7cf6104a18309c1919075bb1b4085cc9b9ae2d87794e93a94c20be062fd99",
+  "prediction_sha256": "cbedd3555a5b34ce8ee5221b1e11795cf229f9ab1ce5d4ede9df572ca8963812",
+  "metrics_sha256": "e2949f98d5cb86bae0018b7d11aa4ef5003b9a67b0c2d29b8e79cbf022d72de5",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "8e567c401d0dfe4ee4deee8c85d1346074628491bc3604bc42837b278b203e53",
+  "max_prediction_rounding_correction": 7.105427357601002e-15
+}

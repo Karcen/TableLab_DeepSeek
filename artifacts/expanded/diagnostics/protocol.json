@@ -1,0 +1,21 @@
+{
+  "code_sha256": "c1ca0f7a7b7488aa65cfb2a8d4b97b776ba8e3316c03e3c0c429d0f4779efe1f",
+  "expanded_protocol_sha256": "aaa4cb60965d13102bc25a7992126549fb402e112a9eeeb6fd6e4a9d0bd3c95a",
+  "learning_fractions": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "learning_model": "HGB; fixed parameters selected in the full outer-training fold; refit all preprocessing on each smaller training subset",
+  "subset": "Adult full-predictor groups; NBA earliest complete training seasons; other tasks fixed-seed permutation. No changes to validation rows.",
+  "complexity_depths": [
+    1,
+    2,
+    4,
+    8,
+    null
+  ],
+  "tree_min_samples_leaf": 2,
+  "evaluation": "Both training and all outer-validation records; all predictions saved. Diagnostic controls, not additional leaderboard entries."
+}

@@ -1,0 +1,164 @@
+{
+  "audit_date": "2026-11-02",
+  "scope": "Saved data, split row IDs, inner split row IDs and prediction row IDs; no model fitting or test scoring.",
+  "datasets": [
+    {
+      "dataset": "house",
+      "available_rows": 1460,
+      "outer_train_unique": 1460,
+      "outer_validation_unique": 1460,
+      "used_in_outer_any_role": 1460,
+      "outer_training_only": 0,
+      "outer_validation_only": 0,
+      "outside_outer_experiment": 0,
+      "maximum_validation_repeats": 1,
+      "minimum_validation_repeats_among_validated": 1,
+      "missing_target_rows": 0,
+      "used_in_all_saved_splits_or_predictions": 1460,
+      "outside_all_saved_splits_or_predictions": 0
+    },
+    {
+      "dataset": "adult",
+      "available_rows": 48842,
+      "outer_train_unique": 32561,
+      "outer_validation_unique": 32561,
+      "used_in_outer_any_role": 32561,
+      "outer_training_only": 0,
+      "outer_validation_only": 0,
+      "outside_outer_experiment": 16281,
+      "maximum_validation_repeats": 1,
+      "minimum_validation_repeats_among_validated": 1,
+      "missing_target_rows": 0,
+      "used_in_all_saved_splits_or_predictions": 32561,
+      "outside_all_saved_splits_or_predictions": 16281
+    },
+    {
+      "dataset": "nba",
+      "available_rows": 12844,
+      "outer_train_unique": 9561,
+      "outer_validation_unique": 8872,
+      "used_in_outer_any_role": 12844,
+      "outer_training_only": 3972,
+      "outer_validation_only": 3283,
+      "outside_outer_experiment": 0,
+      "maximum_validation_repeats": 1,
+      "minimum_validation_repeats_among_validated": 1,
+      "missing_target_rows": 0,
+      "used_in_all_saved_splits_or_predictions": 12844,
+      "outside_all_saved_splits_or_predictions": 0
+    },
+    {
+      "dataset": "students",
+      "available_rows": 1000,
+      "outer_train_unique": 1000,
+      "outer_validation_unique": 1000,
+      "used_in_outer_any_role": 1000,
+      "outer_training_only": 0,
+      "outer_validation_only": 0,
+      "outside_outer_experiment": 0,
+      "maximum_validation_repeats": 1,
+      "minimum_validation_repeats_among_validated": 1,
+      "missing_target_rows": 0,
+      "used_in_all_saved_splits_or_predictions": 1000,
+      "outside_all_saved_splits_or_predictions": 0
+    }
+  ],
+  "adult": {
+    "direct_merge_reconciled": true,
+    "six_field_direct_merge_reconciled": true,
+    "training_rows": 32561,
+    "original_test_rows": 16281,
+    "fingerprint_columns": [
+      "age",
+      "workclass",
+      "fnlwgt",
+      "education",
+      "education-num",
+      "marital-status",
+      "occupation",
+      "relationship",
+      "race",
+      "sex",
+      "capital-gain",
+      "capital-loss",
+      "hours-per-week",
+      "native-country"
+    ],
+    "shared_full_predictor_groups": 26,
+    "affected_training_rows": 28,
+    "affected_test_rows": 26,
+    "test_rows_after_cross_file_exclusion": 16255,
+    "unique_candidate_groups": 16249,
+    "training_duplicate_extra_rows": 25,
+    "test_duplicate_extra_rows": 6,
+    "test_rows_in_repeated_groups": 12,
+    "candidate_duplicate_extra_rows": 6,
+    "shared_model_input_six_field_groups": 3683,
+    "test_rows_matching_training_on_six_model_fields": 6456,
+    "prior_use_in_saved_models": {
+      "train": 0,
+      "validation": 0,
+      "other": 0
+    },
+    "test_file_previously_profiled": true,
+    "score_computed_in_this_audit": false,
+    "targets_used_to_select_candidate_rows": false
+  },
+  "nba": {
+    "season_count": 27,
+    "first_season": "1996-97",
+    "last_season": "2022-23",
+    "nonunique_name_season_rows": 8,
+    "nonunique_name_season_keys": 4
+  },
+  "outer_folds_checked": 12,
+  "inner_folds_checked": 36,
+  "saved_files_checked": 66,
+  "active_adult_test_occurrences": 0,
+  "archive_inventory": [
+    {
+      "archive": "data/raw/adult/source.zip",
+      "sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+      "members": [
+        "Index",
+        "adult.data",
+        "adult.names",
+        "adult.test",
+        "old.adult.names"
+      ]
+    },
+    {
+      "archive": "data/raw/house/source.zip",
+      "sha256": "3c342ced2ad427b9aa16ca5ef8f054aea434e73addc7983c5e248bf06df30aac",
+      "members": [
+        "train.csv"
+      ]
+    },
+    {
+      "archive": "data/raw/nba/source.zip",
+      "sha256": "43fe64e83dfc4c57a37d9635c338d525232ed6bef3597de8bf6dd78ddd2bd071",
+      "members": [
+        "all_seasons.csv"
+      ]
+    },
+    {
+      "archive": "data/raw/students/source.zip",
+      "sha256": "42d05f2700135bcc1a29c5ade65d6dc9d57a70d9f9b690da9e7ee566189d0a2b",
+      "members": [
+        "StudentsPerformance.csv"
+      ]
+    }
+  ],
+  "data_alias": {
+    "codes_data_is_symlink": true,
+    "codes_data_resolves_to_data": true
+  },
+  "processed_source_sha256": {
+    "data/processed/house.csv": "9a1d9a494a79426437c0401823d90f86c7fbec90bae933e3f0f3818c8b3ee9f4",
+    "data/processed/adult.csv": "74907b5b1708c43fe9d53be1208f13cde9a85521ef6a5a52185937728d6344ee",
+    "data/processed/nba.csv": "a12f4243164f4be8c5cbfa032e7689b6682e0bf17c38ab4201ea749064624ea3",
+    "data/processed/students.csv": "a11756d68e71589dbb8e689f8e1e0605c1ae93d32bde0824a329cfd69927150d"
+  },
+  "data_unchanged": true,
+  "limits": "Absence from saved model records does not prove labels were never viewed; original Adult test was previously inspected for data quality. Six-field model-input matches do not identify individual people."
+}

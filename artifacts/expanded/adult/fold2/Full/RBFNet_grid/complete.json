@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 2,
+    "variant": "Full",
+    "model": "RBFNet",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/Full",
+    "seed": 242
+  },
+  "selected_params": {
+    "alpha": 0.1,
+    "centres": 64,
+    "gamma": 1.0
+  },
+  "seconds": 5.411116249975748,
+  "parameter_count": null,
+  "model_sha256": "9e5b33915029eec15a822bcc02e5a10bb72142e54f38da1d83c7d4c6580ed982",
+  "prediction_sha256": "4833c283d03f5ca07d37c47b9a8aeba87641a9dac28ea3d89530571b1afd3542",
+  "metrics_sha256": "dc49e307967b813092ef211be06fa9ee6ba1b7670931657d67a38674ac24260d",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "81efc9fb5934d49161dc3e74d811ddb545f0d2b5a6274805efc8a39b4d542e95",
+  "max_prediction_rounding_correction": 1.1102230246251565e-16
+}

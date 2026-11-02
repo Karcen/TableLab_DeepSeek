@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "nba_sequence",
+    "fold": 2,
+    "variant": "No physique",
+    "model": "XGB",
+    "method": "grid",
+    "cls": false,
+    "channels": 5,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold2/No_physique/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold2/No_physique",
+    "seed": 242
+  },
+  "selected_params": {
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "reg_lambda": 10.0
+  },
+  "seconds": 1.9725393330445513,
+  "parameter_count": null,
+  "model_sha256": "d39f2e6f7f5fd6ee5b2dd3b704232a35bfdec8b142e64aae81d12735001f2f8e",
+  "prediction_sha256": "5bad03146a2565d3163d2c1453c0e394c03963ac6211648af9547b841227eba2",
+  "metrics_sha256": "c2a1ae804ccc66bb3eb40254328cd8b9cee8470fc2860f31ae405dbee79ba26d",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "2b7b6390d3363899784806b60de44a971ee20af05e8a945d97a537cdef26b618",
+  "max_prediction_rounding_correction": 2.2427011643344485e-06
+}

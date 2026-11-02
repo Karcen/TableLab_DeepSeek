@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "house",
+    "fold": 2,
+    "variant": "No neighborhood",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/house/fold2/No_neighborhood/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/house/fold2/No_neighborhood",
+    "seed": 242
+  },
+  "selected_params": {
+    "learning_rate": 0.1,
+    "min_child_samples": 10,
+    "num_leaves": 7
+  },
+  "seconds": 0.8282642910489812,
+  "parameter_count": null,
+  "model_sha256": "b371cba03182dc6b94f4600e5924ce3d33680da8b64e16f2e7c551f312e47b79",
+  "prediction_sha256": "d9e7f8ca237eb124f455508cd71167ce724db8914136a8d0a44bbcf0b2c04f5c",
+  "metrics_sha256": "850ca660cad804cdfc925262e4a1ddccea6b35adc1f155d1c4887940b5b63ce8"
+}

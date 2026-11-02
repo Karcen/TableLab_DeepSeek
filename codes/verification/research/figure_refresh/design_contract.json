@@ -1,0 +1,70 @@
+{
+  "backend": "Python / matplotlib, established in this task",
+  "reuse": "Rebuild visual structure from saved measurements; preserve statistical definitions and all observations.",
+  "archetype": "quantitative grid with paired evidence columns",
+  "figure_sequence": [
+    [
+      "benchmark",
+      "Model preference depends on the task.",
+      "All thirteen methods, three outer folds, mean and SD; family colours and task-specific winner highlight."
+    ],
+    [
+      "search_validation",
+      "Inner search improvement need not transfer to outer validation.",
+      "Four rows: inner HGB trajectory then paired outer gains for both HGB and RF."
+    ],
+    [
+      "fit_diagnostics",
+      "Training fit and generalization diverge as capacity changes.",
+      "Four rows: learning curve followed by tree-depth curve; train/validation and identical SD definitions."
+    ],
+    [
+      "explanation_ablation",
+      "Fixed-model contribution and retrained removal answer different questions.",
+      "Four rows: field SHAP followed by paired ablation; retain house keep-only variant."
+    ],
+    [
+      "shap_structure",
+      "Global field importance hides heterogeneous record-level contributions.",
+      "Four rows: all-record contribution distributions followed by selected feature dependence."
+    ],
+    [
+      "local",
+      "A representative individual prediction can be reconstructed additively.",
+      "Four actual median-error cases; connected waterfall with base and prediction."
+    ],
+    [
+      "legacy_overview",
+      "The original single-split comparisons use a separate protocol.",
+      "Four panels: house/NBA/student RMSE and Adult ROC, explicitly labelled single split."
+    ]
+  ],
+  "integrity": {
+    "excluded_observations": 0,
+    "no_model_refits": true,
+    "variability": "sample SD of three outer folds, not CI",
+    "density": "hexbin sums checked against all records; categorical dependence retains all observations",
+    "beeswarm_colour": "sign and relative magnitude of SHAP contribution, not raw category ordering",
+    "units": "House numeric axes rescaled from USD to thousands of USD; values unchanged."
+  },
+  "export": {
+    "paper_width_inches": 7.2,
+    "glyph_floor_pt": 5,
+    "formats": [
+      "PDF",
+      "SVG",
+      "600 dpi PNG"
+    ],
+    "slides": "separate wide component views, preserving the talk order"
+  },
+  "data_sha256": {
+    "artifacts/research/ablation_deltas.csv": "e55f42c85688c98edb5debe02673e25453b1ace6e22fbd75bf55d586dcf90f8f",
+    "artifacts/research/ablations.csv": "48cf8ba315b07e74c4be08469efa1eca209181346d474bfa1de9a9e4dd8e02d7",
+    "artifacts/research/diagnostics.csv": "254135c9774304b1c9c3794ba63081abe964fee5259a6eda9a08a668fb0f825d",
+    "artifacts/research/local_cases.csv": "6512be1a32e71dd0744f034f532c12d337ea40afa04cd4462cd91f262ff26986",
+    "artifacts/research/metrics.csv": "df9d6a6d10b5ec98cb8e08af05c24bce191c866ceb60361011135636c2424d62",
+    "artifacts/research/shap_importance.csv": "64eab12ed25a300f8ecefede0ab79e1ab6e2194c587133faa2c642088269986a",
+    "artifacts/research/summary.csv": "b5500c6e268d187ad39defd20c7dbc2215224c156324066a35b06afaa0b0436d",
+    "artifacts/research/tuning_summary.csv": "95cbca07d758aab21a655b1314c53d17bb4b8434dcff90fea6e57d13096b0338"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "house",
+    "fold": 2,
+    "variant": "Area + quality",
+    "model": "CatBoost",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/house/fold2/Area_+_quality/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/house/fold2/Area_+_quality",
+    "seed": 242
+  },
+  "selected_params": {
+    "depth": 4,
+    "l2_leaf_reg": 1.0,
+    "learning_rate": 0.03
+  },
+  "seconds": 1.100192041019909,
+  "parameter_count": null,
+  "model_sha256": "f9474e24a2b4488f21947b62ff9dc4616aa9aeb50c8d0a3afd883d5f07d9d4c8",
+  "prediction_sha256": "a737b4ce2ffe1a6766e1ecd853cae6c2195e3a4d4d219a58ccc4a2545c046e3c",
+  "metrics_sha256": "e1780e86b0dc169a5959a43956453227876db746520f15d39479d9580477671b"
+}

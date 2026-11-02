@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.14)  1 NOV 2026 21:34
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.14)  2 NOV 2026 03:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -796,7 +796,25 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip73
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 )
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5-utex-he
+lper.sty
+Package: fontawesome5-utex-helper 2022/05/02 v5.15.4 uTeX helper for fontawesom
+e5
+LaTeX Font Info:    Trying to load font information for TU+fontawesomefree on i
+nput line 69.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/tufontawesomefree.fd
+)
+LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
+ input line 70.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.
+fd)))
 (/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/docs/source/../../co
 des/verification/research/latex/paper.aux)
 \openout1 = `paper.aux'.
@@ -982,30 +1000,37 @@ des/verification/research/latex/paper.toc)
 
 [2
 
-] (./research_results.tex
-File: figures/research/benchmark.pdf Graphic file (type pdf)
-<use figures/research/benchmark.pdf>
-File: figures/research/search.pdf Graphic file (type pdf)
-<use figures/research/search.pdf>
+] (./expanded_results.tex
+File: figures/expanded/benchmark.pdf Graphic file (type pdf)
+<use figures/expanded/benchmark.pdf>
+File: figures/expanded/fit_diagnostics.pdf Graphic file (type pdf)
+<use figures/expanded/fit_diagnostics.pdf>
+File: figures/expanded/neural_training.pdf Graphic file (type pdf)
+<use figures/expanded/neural_training.pdf>
+File: figures/expanded/ablation.pdf Graphic file (type pdf)
+<use figures/expanded/ablation.pdf>
+File: figures/expanded/architecture.pdf Graphic file (type pdf)
+<use figures/expanded/architecture.pdf>
 
 
 [3
 
 ]
-File: figures/research/learning.pdf Graphic file (type pdf)
-<use figures/research/learning.pdf>
-File: figures/research/complexity.pdf Graphic file (type pdf)
-<use figures/research/complexity.pdf>
-File: figures/research/shap.pdf Graphic file (type pdf)
-<use figures/research/shap.pdf>
-File: figures/research/beeswarm.pdf Graphic file (type pdf)
-<use figures/research/beeswarm.pdf>
-File: figures/research/dependence.pdf Graphic file (type pdf)
-<use figures/research/dependence.pdf>
-File: figures/research/ablation.pdf Graphic file (type pdf)
-<use figures/research/ablation.pdf>
-File: figures/research/local.pdf Graphic file (type pdf)
-<use figures/research/local.pdf>
+
+[4]
+File: figures/expanded/sequence.pdf Graphic file (type pdf)
+<use figures/expanded/sequence.pdf>
+File: figures/expanded/shap.pdf Graphic file (type pdf)
+<use figures/expanded/shap.pdf>
+File: figures/expanded/local.pdf Graphic file (type pdf)
+<use figures/expanded/local.pdf>
+
+
+[5]
+
+[6]
+File: figures/expanded/holdout_extension.pdf Graphic file (type pdf)
+<use figures/expanded/holdout_extension.pdf>
 )
 
 Package fontspec Info: 
@@ -1033,15 +1058,6 @@ t;"
 
 
 
-[4]
-
-[5]
-
-[6]
-File: figures/adult_roc.pdf Graphic file (type pdf)
-<use figures/adult_roc.pdf>
-
-
 [7]
 
 [8]
@@ -1056,30 +1072,33 @@ File: figures/adult_roc.pdf Graphic file (type pdf)
 
 [13]
 
-[14] (./research_methods.tex
+[14] (./expanded_methods.tex
 
-[15])
+[15]
+
+[16]
+
+[17])
+
+[18]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-[16]
+[19]
 
-[17]
+[20] (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
+File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
+ndard glyph set (RS)
+)
 
-[18] (./appendices/01_math.tex
+[21] (./appendices/01_math.tex
 
-[19
+[22
 
 ]
-
-[20]
-
-[21]
-
-[22]
 
 [23]
 
@@ -1091,46 +1110,50 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [27]
 
-[28])
+[28]
 
-[29] (./appendices/02_aggregate.tex
+[29]
 
-[30
+[30]
 
-])
+[31])
 
-[31] (./appendices/03_results.tex
-File: figures/house_rmse_slide.pdf Graphic file (type pdf)
-<use figures/house_rmse_slide.pdf>
-File: figures/nba_rmse_slide.pdf Graphic file (type pdf)
-<use figures/nba_rmse_slide.pdf>
-File: figures/students_rmse_slide.pdf Graphic file (type pdf)
-<use figures/students_rmse_slide.pdf>
+[32] (./appendices/02_aggregate.tex
 
-
-[32
+[33
 
 ])
 
-[33] (./appendices/04_implementation.tex
+[34] (./appendices/03_results.tex
+File: figures/research/legacy_overview.pdf Graphic file (type pdf)
+<use figures/research/legacy_overview.pdf>
 
-[34
+
+[35
+
+])
+
+[36] (./appendices/04_implementation.tex
+
+[37
 
 ]
-
-[35]
-
-[36]
-
-[37])
 
 [38]
+
+[39]
+
+[40])
+
+[41]
 (/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/docs/source/../../co
-des/verification/research/latex/paper.bbl)
+des/verification/research/latex/paper.bbl
 
-[39
+[42
 
-]
+])
+
+[43]
 (/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/docs/source/../../co
 des/verification/research/latex/paper.aux)
  ***********
@@ -1141,13 +1164,13 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 769E43952778ECC978DAA97349FB4E0F;960.
  ) 
 Here is how much of TeX's memory you used:
- 22586 strings out of 473832
- 488919 string characters out of 5729480
- 921887 words of memory out of 5000000
- 45229 multiletter control sequences out of 15000+600000
- 644266 words of font info for 229 fonts, out of 8000000 for 9000
+ 24203 strings out of 473832
+ 509508 string characters out of 5729480
+ 948676 words of memory out of 5000000
+ 46822 multiletter control sequences out of 15000+600000
+ 644282 words of font info for 231 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,11n,112p,1002b,980s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on /Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/doc
-s/source/../../codes/verification/research/latex/paper.pdf (40 pages).
+s/source/../../codes/verification/research/latex/paper.pdf (44 pages).

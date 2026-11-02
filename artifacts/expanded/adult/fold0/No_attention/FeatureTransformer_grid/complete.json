@@ -1,0 +1,29 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 0,
+    "variant": "No attention",
+    "model": "FeatureTransformer",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold0/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold0/No_attention",
+    "seed": 42,
+    "architecture_ablation": "No attention"
+  },
+  "selected_params": {
+    "lr": 0.01,
+    "weight_decay": 0.01,
+    "width": 16
+  },
+  "seconds": 25.873070832923986,
+  "parameter_count": 2865,
+  "model_sha256": "4032eeb7de5bfc0d940ce9623ca58b7634f6d843e278c55529f9b503067cd711",
+  "prediction_sha256": "39c15e0a606d36966ad6a4385b786a5ac76007c6507b4a91ff430b5cc6f5f38d",
+  "metrics_sha256": "b31c5fb370af5dc9ba6c158f04a961c5fa191cff91c24de8964ea25fae017886",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "22ab19ebb836496c9566c951e97d787c796c5824aed604f9b0bad9c4c7868c67",
+  "max_prediction_rounding_correction": 2.9788970956623473e-08
+}

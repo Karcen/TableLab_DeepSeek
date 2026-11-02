@@ -1,0 +1,93 @@
+{
+  "backend": "Python / matplotlib",
+  "skill": "/Users/karcenzheng/Downloads/SKILLS/nature-skills-main/skills/nature-figure",
+  "destination": "Chinese course paper and Madrid slides; not a journal submission",
+  "export": "Editable PDF/SVG and 600dpi PNG; final embedded glyphs >=5pt; final draw panel alignment <=1.5pt; source/PDF glyph/collision audits and visual QA",
+  "figures": {
+    "benchmark": {
+      "question": "How do the 21 tabular entries compare under the new shared nested protocol?",
+      "panels": "Four tasks, both grid and TPE per named entry, all three folds summarized by mean and SD",
+      "selection": "All entries in paper; slides show the first seven grid-ranked nonconstant entries plus constant, using a fixed presentation rule only",
+      "dimensions_inches": [
+        7.2,
+        6.65
+      ],
+      "archetype": "paired search performance forest"
+    },
+    "ablation": {
+      "question": "Which feature dependencies persist across models and folds?",
+      "panels": "Four task-specific matrices; each model/feature-group cell contains three vertical strips for three paired outer-fold changes",
+      "variability": "All fold changes retained, not only means; task-specific linear diverging colour scales",
+      "dimensions_inches": [
+        7.2,
+        7.06
+      ],
+      "archetype": "paired fold feature-ablation matrix"
+    },
+    "architecture": {
+      "question": "Does disabling a neural component worsen held-out performance?",
+      "panels": "Five prespecified controls across four tasks, retaining all paired outer-fold changes",
+      "controls": [
+        "No activations",
+        "No residuals",
+        "No cross branch",
+        "No gates",
+        "No attention"
+      ],
+      "archetype": "paired fold structural-control matrix"
+    },
+    "neural_training": {
+      "question": "Are errors still changing within the fixed 40-epoch neural budget?",
+      "panels": "Four tasks, training and validation curves for ResMLP and FeatureTransformer, a fixed display choice not ranked by outer scores",
+      "variability": "Three-fold means and SD; curves are diagnostic only, no epoch selection or early stopping",
+      "archetype": "training and validation trajectories"
+    },
+    "sequence": {
+      "question": "Do sequence models improve on the same available history and persistence reference?",
+      "panels": {
+        "a": "All 15 entries, both searches where applicable, mean and SD",
+        "b": "All 13 fitted entries under five history/field-group ablations, all fold changes"
+      },
+      "identity_and_timing": "6,228 eligible three-season windows; hashed composite name/country/draft key is imperfect; all lag sources precede target season; not an independent new cohort",
+      "archetype": "shared-information performance and ablation"
+    },
+    "shap": {
+      "question": "How does a fixed boosting reference use the original fields?",
+      "panels": "Four tasks, all outer validation rows, training-only paths as background, grouped original fields",
+      "fixed_model": "Expanded HGB grid, chosen before results, not the best model selected after explanation",
+      "output": "Regression target units after inverse scaling; Adult log odds",
+      "archetype": "grouped original-field contribution bars"
+    },
+    "fit_diagnostics": {
+      "question": "How do errors change with sample size and tree depth?",
+      "panels": "Four tasks by learning/complexity controls; 108 auxiliary fits; mean and fold SD",
+      "training_fraction": "HGB parameters from full outer-training inner CV; preprocessing refit per subset; no outer tuning",
+      "dimensions_inches": [
+        7.2,
+        8.7
+      ],
+      "archetype": "sample-size and complexity response curves"
+    },
+    "local": {
+      "question": "How do original fields combine in one fixed-model prediction?",
+      "panels": "House and Adult median absolute-error record, selected across all outer folds",
+      "uncertainty": "One actual observation per task; not a replicate aggregate",
+      "dimensions_inches": [
+        7.2,
+        3.6
+      ],
+      "archetype": "single-record additive contribution waterfall"
+    },
+    "holdout_extension": {
+      "question": "How does the CV-preselected classifier compare on the previously used Adult test?",
+      "panels": "All 21 test AUC intervals and fixed-reference paired differences",
+      "uncertainty": "2000 paired fingerprint-group bootstrap samples; 95% percentiles; conditional on fitted models, no multiplicity correction",
+      "selection": "CatBoost chosen from CV before test predictions; no test-driven reselection",
+      "dimensions_inches": [
+        7.2,
+        5.2
+      ],
+      "archetype": "test intervals and paired differences"
+    }
+  }
+}

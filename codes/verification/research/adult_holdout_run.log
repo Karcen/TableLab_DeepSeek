@@ -1,0 +1,45 @@
+Fitting Mean on original train only
+Finished Mean in 0.0s
+Fitting Linear on original train only
+Finished Linear in 0.1s
+Fitting Ridge on original train only
+Finished Ridge in 0.1s
+Fitting Sparse on original train only
+/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/codes/.venv/lib/python3.13/site-packages/sklearn/linear_model/_logistic.py:1135: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', and C=np.inf instead of penalty=None.
+  warnings.warn(
+/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/codes/.venv/lib/python3.13/site-packages/sklearn/linear_model/_logistic.py:1160: UserWarning: Inconsistent values: penalty=l1 with l1_ratio=0.0. penalty is deprecated. Please use l1_ratio only.
+  warnings.warn(
+Finished Sparse in 0.1s
+Fitting Tree on original train only
+Finished Tree in 0.1s
+Fitting RF on original train only
+Finished RF in 0.5s
+Fitting ExtraTrees on original train only
+Finished ExtraTrees in 0.4s
+Fitting HGB on original train only
+Finished HGB in 0.8s
+Fitting KNN on original train only
+Finished KNN in 0.1s
+Fitting RF_grid on original train only
+Finished RF_grid in 32.8s
+Fitting RF_tpe on original train only
+Finished RF_tpe in 28.2s
+Fitting HGB_grid on original train only
+Finished HGB_grid in 28.7s
+Fitting HGB_tpe on original train only
+Finished HGB_tpe in 42.4s
+                n       auc        ap     brier  log_loss        f1  auc_ci_low  auc_ci_high  test_rank    cv_auc  cv_rank
+model                                                                                                                     
+HGB_tpe     16255  0.892425  0.714015  0.109095  0.339514  0.634485    0.887046     0.897792          1  0.891334        1
+HGB_grid    16255  0.892196  0.712603  0.109305  0.340104  0.634250    0.886871     0.897530          2  0.891334        1
+HGB         16255  0.891326  0.710677  0.109756  0.341019  0.634742    0.885942     0.896735          3  0.891221        3
+RF          16255  0.890253  0.710001  0.110814  0.346189  0.606033    0.884830     0.895507          4  0.889984        4
+RF_grid     16255  0.887738  0.704820  0.111260  0.345768  0.631846    0.882215     0.893145          5  0.888022        5
+RF_tpe      16255  0.887738  0.704820  0.111260  0.345768  0.631846    0.882215     0.893145          5  0.887556        6
+Linear      16255  0.884104  0.683169  0.113461  0.352311  0.609806    0.878661     0.889763          7  0.882612        7
+Ridge       16255  0.884072  0.682659  0.113542  0.352538  0.606538    0.878563     0.889711          8  0.882284        8
+Sparse      16255  0.883928  0.682361  0.113597  0.352782  0.605290    0.878447     0.889605          9  0.881943        9
+ExtraTrees  16255  0.882059  0.693606  0.115587  0.360544  0.588885    0.876508     0.887609         10  0.879689       10
+KNN         16255  0.871942  0.658327  0.116859  0.632174  0.617954    0.865924     0.878148         11  0.875711       11
+Tree        16255  0.733291  0.433488  0.197955  6.327226  0.561834    0.724965     0.741917         12  0.728216       12
+Mean        16255  0.500000  0.236235  0.180449  0.546759  0.000000    0.500000     0.500000         13  0.500000       13

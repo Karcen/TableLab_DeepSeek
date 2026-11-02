@@ -1,0 +1,26 @@
+{
+  "task": {
+    "dataset": "nba",
+    "fold": 2,
+    "variant": "No residuals",
+    "model": "ResMLP",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold2/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold2/No_residuals",
+    "seed": 242,
+    "architecture_ablation": "No residuals"
+  },
+  "selected_params": {
+    "lr": 0.01,
+    "weight_decay": 0.01,
+    "width": 64
+  },
+  "seconds": 15.257121999980882,
+  "parameter_count": 19073,
+  "model_sha256": "36aa6c16827937ffd8835bbef6720a156ddcc6b50a16bee3f271ba3e082facfc",
+  "prediction_sha256": "1b3fc923a5def4b43573390b07dffc86437796f9a1d45bff6f3d2233310bf7e5",
+  "metrics_sha256": "c812b544fe06ce7ac82a60dd9ff1d41bca7bc0d67826d588859e9ac2dd278d41"
+}

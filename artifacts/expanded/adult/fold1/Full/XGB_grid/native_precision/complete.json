@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 1,
+    "variant": "Full",
+    "model": "XGB",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/Full",
+    "seed": 142
+  },
+  "selected_params": {
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "reg_lambda": 10.0
+  },
+  "seconds": 3.966946249944158,
+  "parameter_count": null,
+  "model_sha256": "394b335b6622f50ef5779a994bd56595b8b964e6c2fa4b137789d675f8619819",
+  "prediction_sha256": "7fa301739b7364238c29207ae5b4c1285943f194ffb77f046f1a2e4c537c5af4",
+  "metrics_sha256": "e9034fd3b5c0904c8d40924846b89ae0704bf5df921367cf95e22f01eb9ba50f"
+}

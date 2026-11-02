@@ -1,0 +1,32 @@
+{
+  "backend": "Python / matplotlib",
+  "question": "Does the CV-selected Adult flow retain its relative performance on reserved records?",
+  "claim": "Show held-out AUC and paired differences without asserting the outcome before scoring.",
+  "archetype": "quantitative grid",
+  "panels": {
+    "a": "All 13 flows: absolute test AUC with paired-cluster-bootstrap marginal 95% intervals",
+    "b": "HGB_grid minus the other five RF/HGB preset or tuned flows: paired 95% intervals to resolve close rankings"
+  },
+  "selection": "All 13 absolute scores; paired panel focuses on all six forest/boosting flows already in the search comparison, selected before inspecting held-out scores. All twelve paired comparisons remain in CSV and report.",
+  "records": "16,255 rows / 16,249 groups; exclude 26 cross-file full-predictor matches, retain internal repeats",
+  "uncertainty": "2,000 paired cluster bootstrap resamples, seed 20261102, conditional on fitted models, unadjusted descriptive intervals",
+  "journal": "Course report, Nature-style figure guidance; no journal submission claim",
+  "export": {
+    "paper_inches": [
+      7.2,
+      4.5
+    ],
+    "deck_inches": [
+      12,
+      5
+    ],
+    "formats": [
+      "editable PDF",
+      "editable SVG",
+      "600dpi PNG"
+    ],
+    "minimum_embedded_glyph_pt": 5
+  },
+  "source_data": "artifacts/holdout/adult/metrics.csv and paired_differences.csv",
+  "QA": "final draw alignment <=1.5pt, source validator, PDF glyph and collision audits, visual inspection"
+}

@@ -1,0 +1,193 @@
+     dataset              model method         mean           sd
+       adult           AdaBoost   grid     0.885796     0.003225
+       adult           AdaBoost    tpe     0.884737     0.005012
+       adult           CatBoost   grid     0.892633     0.002340
+       adult           CatBoost    tpe     0.892245     0.003071
+       adult                DCN   grid     0.891497     0.002736
+       adult                DCN    tpe     0.891526     0.002781
+       adult                ELM   grid     0.889662     0.002727
+       adult                ELM    tpe     0.889211     0.003112
+       adult         ExtraTrees   grid     0.887608     0.001951
+       adult         ExtraTrees    tpe     0.888205     0.002164
+       adult FeatureTransformer   grid     0.892352     0.002578
+       adult FeatureTransformer    tpe     0.892328     0.002589
+       adult           GatedMLP   grid     0.888307     0.003422
+       adult           GatedMLP    tpe     0.888194     0.003432
+       adult                HGB   grid     0.891334     0.002475
+       adult                HGB    tpe     0.891369     0.002486
+       adult                KNN   grid     0.882684     0.003836
+       adult                KNN    tpe     0.882684     0.003836
+       adult           LightGBM   grid     0.891527     0.002582
+       adult           LightGBM    tpe     0.891218     0.002099
+       adult             Linear   grid     0.882683     0.003740
+       adult             Linear    tpe     0.882683     0.003740
+       adult                MLP   grid     0.891835     0.002651
+       adult                MLP    tpe     0.891744     0.002577
+       adult               Mean  fixed     0.500000     0.000000
+       adult             RBFNet   grid     0.884602     0.003365
+       adult             RBFNet    tpe     0.879304     0.006743
+       adult                 RF   grid     0.888127     0.002292
+       adult                 RF    tpe     0.887162     0.001616
+       adult             ResMLP   grid     0.885541     0.005086
+       adult             ResMLP    tpe     0.885498     0.005016
+       adult              Ridge   grid     0.882680     0.003742
+       adult              Ridge    tpe     0.882680     0.003742
+       adult                SVM   grid     0.882714     0.003830
+       adult                SVM    tpe     0.882687     0.003853
+       adult             Sparse   grid     0.882723     0.003729
+       adult             Sparse    tpe     0.882724     0.003728
+       adult               Tree   grid     0.874733     0.003673
+       adult               Tree    tpe     0.872583     0.003300
+       adult                XGB   grid     0.891421     0.002637
+       adult                XGB    tpe     0.891683     0.002773
+       house           AdaBoost   grid 38584.366124  5511.680998
+       house           AdaBoost    tpe 39099.997805  6403.237613
+       house           CatBoost   grid 32019.280880  6646.275295
+       house           CatBoost    tpe 32431.008029  6427.799412
+       house                DCN   grid 35542.997909 10809.869538
+       house                DCN    tpe 35555.883072 10828.655758
+       house                ELM   grid 36467.651206 10634.354945
+       house                ELM    tpe 35398.042743 11902.947866
+       house         ExtraTrees   grid 32235.504800  3103.318454
+       house         ExtraTrees    tpe 32235.504800  3103.318454
+       house FeatureTransformer   grid 31365.081600  5207.606829
+       house FeatureTransformer    tpe 31382.703503  5225.068611
+       house           GatedMLP   grid 35654.960512  9785.427592
+       house           GatedMLP    tpe 35678.357933  9825.926194
+       house                HGB   grid 32338.125238  4300.542871
+       house                HGB    tpe 32492.325102  4337.210343
+       house                KNN   grid 34340.719503  5137.017291
+       house                KNN    tpe 33449.146643  4374.356682
+       house           LightGBM   grid 33274.364034  6351.753666
+       house           LightGBM    tpe 33315.544495  6347.415707
+       house             Linear   grid 36332.361070  6614.560898
+       house             Linear    tpe 36332.361070  6614.560898
+       house                MLP   grid 36029.116885 12685.853162
+       house                MLP    tpe 35995.203550 12705.152136
+       house               Mean  fixed 79259.141050  6144.564107
+       house             RBFNet   grid 31202.704350  4473.775511
+       house             RBFNet    tpe 34227.668111  6366.284450
+       house                 RF   grid 32996.179479  5114.601201
+       house                 RF    tpe 33766.318255  5559.618981
+       house             ResMLP   grid 36392.198877 11901.049262
+       house             ResMLP    tpe 36431.214753 11867.560353
+       house              Ridge   grid 36363.535749  6697.795331
+       house              Ridge    tpe 36329.540853  6622.614512
+       house                SVM   grid 36898.899210  6879.546450
+       house                SVM    tpe 37015.965981  7064.462583
+       house             Sparse   grid 37459.938640  7073.762875
+       house             Sparse    tpe 37833.272696  7077.268992
+       house               Tree   grid 43007.416679  9893.983687
+       house               Tree    tpe 39314.482656  4836.138706
+       house                XGB   grid 31480.438211  4630.325240
+       house                XGB    tpe 32098.906911  5386.113528
+         nba           AdaBoost   grid     5.737432     0.280763
+         nba           AdaBoost    tpe     5.734129     0.263817
+         nba           CatBoost   grid     5.706398     0.360880
+         nba           CatBoost    tpe     5.691408     0.333289
+         nba                DCN   grid     6.098204     0.171607
+         nba                DCN    tpe     6.113903     0.156059
+         nba                ELM   grid     5.857799     0.376647
+         nba                ELM    tpe     5.855789     0.338980
+         nba         ExtraTrees   grid     5.738626     0.406340
+         nba         ExtraTrees    tpe     5.775993     0.401140
+         nba FeatureTransformer   grid     5.928670     0.365205
+         nba FeatureTransformer    tpe     5.927985     0.365958
+         nba           GatedMLP   grid     6.148636     0.293301
+         nba           GatedMLP    tpe     6.259766     0.478179
+         nba                HGB   grid     5.762364     0.321017
+         nba                HGB    tpe     5.746118     0.298663
+         nba                KNN   grid     5.965521     0.402397
+         nba                KNN    tpe     5.996353     0.441195
+         nba           LightGBM   grid     5.734390     0.331020
+         nba           LightGBM    tpe     5.701503     0.309824
+         nba             Linear   grid     6.015795     0.350968
+         nba             Linear    tpe     6.016014     0.351169
+         nba                MLP   grid     5.976870     0.364906
+         nba                MLP    tpe     5.986515     0.384502
+         nba               Mean  fixed     6.054564     0.354518
+         nba             RBFNet   grid     5.755845     0.321055
+         nba             RBFNet    tpe     5.769341     0.327793
+         nba                 RF   grid     5.686530     0.393418
+         nba                 RF    tpe     5.686530     0.393418
+         nba             ResMLP   grid     6.255141     0.336343
+         nba             ResMLP    tpe     6.218659     0.356180
+         nba              Ridge   grid     5.870398     0.350856
+         nba              Ridge    tpe     5.905701     0.300334
+         nba                SVM   grid     5.868046     0.330456
+         nba                SVM    tpe     5.880553     0.345841
+         nba             Sparse   grid     5.787757     0.328914
+         nba             Sparse    tpe     5.790345     0.332311
+         nba               Tree   grid     5.819832     0.246595
+         nba               Tree    tpe     5.819832     0.246595
+         nba                XGB   grid     5.758187     0.303408
+         nba                XGB    tpe     5.762921     0.313150
+nba_sequence              BiGRU   grid     2.888048     0.098132
+nba_sequence              BiGRU    tpe     2.904504     0.126033
+nba_sequence             BiLSTM   grid     2.909844     0.103165
+nba_sequence             BiLSTM    tpe     2.909827     0.103138
+nba_sequence                GRU   grid     2.893754     0.105189
+nba_sequence                GRU    tpe     2.893668     0.105110
+nba_sequence               LSTM   grid     2.903469     0.096843
+nba_sequence               LSTM    tpe     2.903473     0.096859
+nba_sequence           LightGBM   grid     2.942489     0.091451
+nba_sequence           LightGBM    tpe     2.942246     0.091425
+nba_sequence             Linear   grid     2.962621     0.110107
+nba_sequence             Linear    tpe     2.962621     0.110107
+nba_sequence                MLP   grid     2.927157     0.109685
+nba_sequence                MLP    tpe     2.925020     0.107867
+nba_sequence               Mean  fixed     6.425524     0.408091
+nba_sequence        Persistence  fixed     3.187326     0.066425
+nba_sequence                 RF   grid     2.936122     0.088938
+nba_sequence                 RF    tpe     2.940610     0.081562
+nba_sequence                RNN   grid     2.932434     0.105452
+nba_sequence                RNN    tpe     2.937589     0.114177
+nba_sequence              Ridge   grid     2.948713     0.112030
+nba_sequence              Ridge    tpe     2.948816     0.111929
+nba_sequence     SeqTransformer   grid     2.926148     0.108609
+nba_sequence     SeqTransformer    tpe     2.926148     0.108609
+nba_sequence                TCN   grid     2.927467     0.107970
+nba_sequence                TCN    tpe     2.927411     0.107990
+nba_sequence                XGB   grid     2.937579     0.075328
+nba_sequence                XGB    tpe     2.948761     0.095511
+    students           AdaBoost   grid    13.726703     0.467046
+    students           AdaBoost    tpe    13.726703     0.467046
+    students           CatBoost   grid    13.597125     0.458356
+    students           CatBoost    tpe    13.602938     0.461760
+    students                DCN   grid    13.658229     0.345770
+    students                DCN    tpe    13.658887     0.346664
+    students                ELM   grid    13.609624     0.387656
+    students                ELM    tpe    13.592823     0.403468
+    students         ExtraTrees   grid    13.680731     0.454824
+    students         ExtraTrees    tpe    13.725225     0.531119
+    students FeatureTransformer   grid    13.627771     0.471553
+    students FeatureTransformer    tpe    13.627820     0.471472
+    students           GatedMLP   grid    13.731948     0.603328
+    students           GatedMLP    tpe    13.731025     0.603520
+    students                HGB   grid    13.609059     0.488130
+    students                HGB    tpe    13.609204     0.488379
+    students                KNN   grid    13.837812     0.549231
+    students                KNN    tpe    13.837812     0.549231
+    students           LightGBM   grid    13.612393     0.447291
+    students           LightGBM    tpe    13.633256     0.483158
+    students             Linear   grid    13.591337     0.351834
+    students             Linear    tpe    13.552321     0.377307
+    students                MLP   grid    13.672643     0.407759
+    students                MLP    tpe    13.672996     0.407447
+    students               Mean  fixed    15.177565     0.388064
+    students             RBFNet   grid    13.545836     0.392873
+    students             RBFNet    tpe    13.545624     0.392852
+    students                 RF   grid    13.609822     0.429215
+    students                 RF    tpe    13.610699     0.429733
+    students             ResMLP   grid    13.827527     0.550058
+    students             ResMLP    tpe    13.800738     0.507528
+    students              Ridge   grid    13.547972     0.392112
+    students              Ridge    tpe    13.548698     0.391459
+    students                SVM   grid    13.539786     0.386540
+    students                SVM    tpe    13.542056     0.384792
+    students             Sparse   grid    13.552558     0.402795
+    students             Sparse    tpe    13.553317     0.404110
+    students               Tree   grid    13.954903     0.327910
+    students               Tree    tpe    13.954903     0.327910
+    students                XGB   grid    13.603368     0.481459
+    students                XGB    tpe    13.608855     0.504416

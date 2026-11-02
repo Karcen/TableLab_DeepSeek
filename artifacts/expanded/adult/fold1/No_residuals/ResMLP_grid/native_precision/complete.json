@@ -1,0 +1,26 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 1,
+    "variant": "No residuals",
+    "model": "ResMLP",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/No_residuals",
+    "seed": 142,
+    "architecture_ablation": "No residuals"
+  },
+  "selected_params": {
+    "lr": 0.003,
+    "weight_decay": 0.01,
+    "width": 32
+  },
+  "seconds": 38.96885945799295,
+  "parameter_count": 5409,
+  "model_sha256": "366051fb30dff178dab65741da4007d93c128c7d0ec0947c830a948c5c9673b5",
+  "prediction_sha256": "5a5378fc9c05335dac4592e0957bb9b42a25a1e91de191969a4cf93f821b7576",
+  "metrics_sha256": "93fd617600ca5a286629bece9b1248499c845464fc3036a30430203d8da9706b"
+}

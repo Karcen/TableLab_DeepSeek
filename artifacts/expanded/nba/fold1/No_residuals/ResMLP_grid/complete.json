@@ -1,0 +1,29 @@
+{
+  "task": {
+    "dataset": "nba",
+    "fold": 1,
+    "variant": "No residuals",
+    "model": "ResMLP",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold1/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold1/No_residuals",
+    "seed": 142,
+    "architecture_ablation": "No residuals"
+  },
+  "selected_params": {
+    "lr": 0.01,
+    "weight_decay": 0.01,
+    "width": 64
+  },
+  "seconds": 17.686757958028466,
+  "parameter_count": 19073,
+  "model_sha256": "2741b29c93a113dad983c3d48d34a91fe58eae18e1d778cc6ecd3cacade5b0cf",
+  "prediction_sha256": "a09cda5decfbe6bc36eb7dda72da50aff6d6d4752aa4376a37dac1b30c631c7f",
+  "metrics_sha256": "b9da4d89c89855766e2ac74fab8e226d39971d6b23d8ec2ff5bc41bef54ab5d0",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "dabc80da040a3781ba517d44feb5204802f55459dedeb7535c4661ba8f19e71c",
+  "max_prediction_rounding_correction": 2.1139011927573392e-06
+}

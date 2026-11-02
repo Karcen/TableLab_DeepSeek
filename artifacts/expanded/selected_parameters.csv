@@ -1,0 +1,1792 @@
+dataset,fold,variant,model,method,parameters,seconds,parameter_count
+adult,0,Full,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",22.83160862501245,
+adult,0,Full,AdaBoost,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",12.79779524996411,
+adult,0,Full,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",15.159050167072564,
+adult,0,Full,CatBoost,tpe,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",7.564197874977253,
+adult,0,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",32.90096250001807,6490.0
+adult,0,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",17.0715616249945,6490.0
+adult,0,Full,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",7.89504204201512,
+adult,0,Full,ELM,tpe,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",4.212263875058852,
+adult,0,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",26.65739129204303,
+adult,0,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 10}",15.845915458048694,
+adult,0,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",366.7672769159544,9825.0
+adult,0,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",204.47895741695538,9825.0
+adult,0,Full,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",59.87796999991406,5409.0
+adult,0,Full,GatedMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",30.66858804190997,5409.0
+adult,0,Full,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",20.899584582890384,
+adult,0,Full,HGB,tpe,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",10.90890862501692,
+adult,0,Full,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",13.674319499987178,
+adult,0,Full,KNN,tpe,"{""n_neighbors"": 31, ""weights"": ""uniform""}",9.506311667035334,
+adult,0,Full,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",5.386836207937449,
+adult,0,Full,LightGBM,tpe,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",2.9770047090714797,
+adult,0,Full,Linear,grid,"{""fit_intercept"": true}",0.5772439999273047,
+adult,0,Full,Linear,tpe,"{""fit_intercept"": true}",0.6077299999305978,
+adult,0,Full,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",25.044297375017777,6273.0
+adult,0,Full,MLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",15.549785582930781,6273.0
+adult,0,Full,Mean,fixed,{},0.19513845909386873,
+adult,0,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",5.8972281670430675,
+adult,0,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",2.983699082979001,
+adult,0,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",30.650810457998887,
+adult,0,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 10}",17.375972041045316,
+adult,0,Full,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",50.765391916036606,5409.0
+adult,0,Full,ResMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",25.43492150004022,5409.0
+adult,0,Full,Ridge,grid,"{""alpha"": 0.001}",1.1787113749887794,
+adult,0,Full,Ridge,tpe,"{""alpha"": 0.001}",1.0004600420361385,
+adult,0,Full,SVM,grid,"{""C"": 100.0}",2.108053082949482,
+adult,0,Full,SVM,tpe,"{""C"": 10.0}",1.6007142920279875,
+adult,0,Full,Sparse,grid,"{""alpha"": 0.1, ""l1_ratio"": 1.0}",62.498572916025296,
+adult,0,Full,Sparse,tpe,"{""alpha"": 0.1, ""l1_ratio"": 1.0}",39.20380783302244,
+adult,0,Full,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.8990401659393683,
+adult,0,Full,Tree,tpe,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.5755049160216004,
+adult,0,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",4.620920541929081,
+adult,0,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 10.0}",2.6600205830764025,
+adult,0,No activations,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",24.775464624981396,6273.0
+adult,0,No age,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",21.58107562502846,
+adult,0,No age,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",15.16903754195664,
+adult,0,No age,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",26.017362000071444,2291.0
+adult,0,No age,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",7.356236916035414,
+adult,0,No age,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",25.503629917046055,
+adult,0,No age,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",259.3872516670963,9761.0
+adult,0,No age,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",54.74461195792537,5377.0
+adult,0,No age,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",20.86882258404512,
+adult,0,No age,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",14.961143749998882,
+adult,0,No age,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",5.528116125031374,
+adult,0,No age,Linear,grid,"{""fit_intercept"": true}",0.5503247909946367,
+adult,0,No age,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",24.43022745801136,6209.0
+adult,0,No age,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",5.636146958102472,
+adult,0,No age,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",27.55520683398936,
+adult,0,No age,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",44.24088049994316,5377.0
+adult,0,No age,Ridge,grid,"{""alpha"": 0.01}",0.925179542042315,
+adult,0,No age,SVM,grid,"{""C"": 3.0}",1.9591006659902632,
+adult,0,No age,Sparse,grid,"{""alpha"": 0.1, ""l1_ratio"": 1.0}",72.50384212494828,
+adult,0,No age,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.8494788750540465,
+adult,0,No age,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",4.672338749980554,
+adult,0,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",25.873070832923986,2865.0
+adult,0,No cross branch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",23.223726083058864,6490.0
+adult,0,No education,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",21.0921545419842,
+adult,0,No education,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",14.546682583051734,
+adult,0,No education,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",27.503666167031042,2291.0
+adult,0,No education,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",7.583143666968681,
+adult,0,No education,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 10}",23.39435291697737,
+adult,0,No education,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",280.87089195800945,9761.0
+adult,0,No education,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",45.1600188750308,5377.0
+adult,0,No education,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",19.05064641602803,
+adult,0,No education,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",13.74717387498822,
+adult,0,No education,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",4.996863457956351,
+adult,0,No education,Linear,grid,"{""fit_intercept"": true}",0.5377395830582827,
+adult,0,No education,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",19.72436179209035,6209.0
+adult,0,No education,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",6.523959209094755,
+adult,0,No education,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",23.955672832904384,
+adult,0,No education,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",36.785550875007175,5377.0
+adult,0,No education,Ridge,grid,"{""alpha"": 0.01}",0.8726754171075299,
+adult,0,No education,SVM,grid,"{""C"": 3.0}",1.860362667008303,
+adult,0,No education,Sparse,grid,"{""alpha"": 0.1, ""l1_ratio"": 0.5}",68.06964737491217,
+adult,0,No education,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.7071409170748666,
+adult,0,No education,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",4.02515595802106,
+adult,0,No gates,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",33.65801549993921,5409.0
+adult,0,No marital,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",25.53623295808211,
+adult,0,No marital,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",15.70416116702836,
+adult,0,No marital,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",27.81259333307389,6064.0
+adult,0,No marital,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",7.8973390409955755,
+adult,0,No marital,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 10}",24.328753749956377,
+adult,0,No marital,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",262.51474699995015,2753.0
+adult,0,No marital,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",51.517458958085626,5217.0
+adult,0,No marital,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",18.11251208395697,
+adult,0,No marital,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",15.332060333923437,
+adult,0,No marital,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",6.252043458982371,
+adult,0,No marital,Linear,grid,"{""fit_intercept"": true}",0.5198629159713164,
+adult,0,No marital,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",27.07574275007937,5889.0
+adult,0,No marital,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",9.014757541008294,
+adult,0,No marital,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",28.694351583952084,
+adult,0,No marital,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",40.983286041999236,5217.0
+adult,0,No marital,Ridge,grid,"{""alpha"": 0.001}",0.8597466669743881,
+adult,0,No marital,SVM,grid,"{""C"": 100.0}",2.3943028330104426,
+adult,0,No marital,Sparse,grid,"{""alpha"": 0.1, ""l1_ratio"": 1.0}",50.77878295897972,
+adult,0,No marital,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.786349166999571,
+adult,0,No marital,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 10.0}",4.695942666963674,
+adult,0,No residuals,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",43.48603691696189,5409.0
+adult,0,No work,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",13.849702500039712,
+adult,0,No work,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",5.701339166960679,
+adult,0,No work,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",17.179228209075518,4857.0
+adult,0,No work,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",6.40637245902326,
+adult,0,No work,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",9.768116791034117,
+adult,0,No work,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",167.3050901669776,8993.0
+adult,0,No work,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",46.23715158295818,4673.0
+adult,0,No work,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",8.177677707979456,
+adult,0,No work,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",2.602712000021711,
+adult,0,No work,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",3.9313846660079435,
+adult,0,No work,Linear,grid,"{""fit_intercept"": true}",0.42769645899534225,
+adult,0,No work,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",18.745993125019595,1377.0
+adult,0,No work,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",3.9780557500198483,
+adult,0,No work,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",14.5025113329757,
+adult,0,No work,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",42.5246290829964,4673.0
+adult,0,No work,Ridge,grid,"{""alpha"": 0.1}",0.5911697919946164,
+adult,0,No work,SVM,grid,"{""C"": 0.3}",1.3547680840129033,
+adult,0,No work,Sparse,grid,"{""alpha"": 1.0, ""l1_ratio"": 0.5}",1.90373541705776,
+adult,0,No work,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.46351250004954636,
+adult,0,No work,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",2.621797667001374,
+adult,1,Full,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",21.638501290930435,
+adult,1,Full,AdaBoost,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 50}",9.160899666021578,
+adult,1,Full,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",13.069377250038087,
+adult,1,Full,CatBoost,tpe,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",7.183138082968071,
+adult,1,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",23.041179042076692,2330.0
+adult,1,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",13.858719458105043,2330.0
+adult,1,Full,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",7.071638375055045,
+adult,1,Full,ELM,tpe,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",4.892485750024207,
+adult,1,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",23.29374029196333,
+adult,1,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",10.355891958926804,
+adult,1,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",380.3267357919831,9825.0
+adult,1,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",209.44426083401777,9825.0
+adult,1,Full,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",46.658380291075446,5409.0
+adult,1,Full,GatedMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",24.479735500062816,5409.0
+adult,1,Full,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",18.02484995801933,
+adult,1,Full,HGB,tpe,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",9.54363320802804,
+adult,1,Full,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",12.857033208943903,
+adult,1,Full,KNN,tpe,"{""n_neighbors"": 31, ""weights"": ""uniform""}",7.811347667011432,
+adult,1,Full,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",5.181699458975345,
+adult,1,Full,LightGBM,tpe,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",2.8724050000309944,
+adult,1,Full,Linear,grid,"{""fit_intercept"": true}",0.5477979170391336,
+adult,1,Full,Linear,tpe,"{""fit_intercept"": true}",0.5484449580544606,
+adult,1,Full,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",19.824142792029306,6273.0
+adult,1,Full,MLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",11.979381583048962,6273.0
+adult,1,Full,Mean,fixed,{},0.17591104202438146,
+adult,1,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",5.989591958932579,
+adult,1,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",2.782553124940023,
+adult,1,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",29.66439716599416,
+adult,1,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",12.712610167101957,
+adult,1,Full,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",41.43842554197181,5409.0
+adult,1,Full,ResMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",21.591612459043972,5409.0
+adult,1,Full,Ridge,grid,"{""alpha"": 0.001}",0.9337170840008184,
+adult,1,Full,Ridge,tpe,"{""alpha"": 0.001}",0.8088559170719236,
+adult,1,Full,SVM,grid,"{""C"": 0.3}",1.9618143340339884,
+adult,1,Full,SVM,tpe,"{""C"": 0.1}",1.3728667499963194,
+adult,1,Full,Sparse,grid,"{""alpha"": 0.1, ""l1_ratio"": 0.5}",87.20101924997289,
+adult,1,Full,Sparse,tpe,"{""alpha"": 0.1, ""l1_ratio"": 1.0}",48.17666191700846,
+adult,1,Full,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.8386197909712791,
+adult,1,Full,Tree,tpe,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.49405237508472055,
+adult,1,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",3.966946249944158,
+adult,1,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",2.211288458900526,
+adult,1,No activations,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",19.762336874962784,2113.0
+adult,1,No age,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",19.319232834037393,
+adult,1,No age,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",13.112669916939922,
+adult,1,No age,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",23.938125875080004,6419.0
+adult,1,No age,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",6.518215832998976,
+adult,1,No age,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",20.980584458098747,
+adult,1,No age,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",275.74796208401676,2833.0
+adult,1,No age,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",45.696628249948844,5377.0
+adult,1,No age,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",16.94557654100936,
+adult,1,No age,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",12.490969541016966,
+adult,1,No age,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",4.821749374968931,
+adult,1,No age,Linear,grid,"{""fit_intercept"": true}",0.4119509580777958,
+adult,1,No age,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",18.17689004202839,6209.0
+adult,1,No age,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",5.118382249958813,
+adult,1,No age,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",23.342308791936375,
+adult,1,No age,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",38.423818332958035,5377.0
+adult,1,No age,Ridge,grid,"{""alpha"": 1.0}",0.7174265420762822,
+adult,1,No age,SVM,grid,"{""C"": 0.3}",1.9192103329114616,
+adult,1,No age,Sparse,grid,"{""alpha"": 1.0, ""l1_ratio"": 0.5}",40.7204707080964,
+adult,1,No age,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.7429425829323009,
+adult,1,No age,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",3.665694584022276,
+adult,1,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",31.570355167030357,2865.0
+adult,1,No cross branch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",20.19659262499772,6490.0
+adult,1,No education,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",23.53854679199867,
+adult,1,No education,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",15.205047041992657,
+adult,1,No education,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",31.06419399997685,6419.0
+adult,1,No education,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",7.163378999917768,
+adult,1,No education,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 10}",25.442139332997613,
+adult,1,No education,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",249.90919720800593,9761.0
+adult,1,No education,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",54.72873716708273,5377.0
+adult,1,No education,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",19.179860457894392,
+adult,1,No education,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",14.151715749991126,
+adult,1,No education,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",5.7974249590188265,
+adult,1,No education,Linear,grid,"{""fit_intercept"": true}",0.5786555419908836,
+adult,1,No education,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",25.994732833001763,6209.0
+adult,1,No education,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",6.181865333928727,
+adult,1,No education,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",29.08844770898577,
+adult,1,No education,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",51.859807749977335,5377.0
+adult,1,No education,Ridge,grid,"{""alpha"": 0.01}",1.1755889999913052,
+adult,1,No education,SVM,grid,"{""C"": 0.1}",2.3311227499507368,
+adult,1,No education,Sparse,grid,"{""alpha"": 0.1, ""l1_ratio"": 0.5}",71.62864720798098,
+adult,1,No education,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.8375288750976324,
+adult,1,No education,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",4.632718084030785,
+adult,1,No gates,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",45.30508499999996,5409.0
+adult,1,No marital,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",18.720889708027244,
+adult,1,No marital,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",12.917099541984499,
+adult,1,No marital,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",19.993728832923807,6064.0
+adult,1,No marital,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",7.085531082935631,
+adult,1,No marital,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",19.547712708008476,
+adult,1,No marital,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",245.89076712494716,9601.0
+adult,1,No marital,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",44.53435750002973,5217.0
+adult,1,No marital,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",14.948638917063363,
+adult,1,No marital,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",12.267846832983196,
+adult,1,No marital,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",4.573979041073471,
+adult,1,No marital,Linear,grid,"{""fit_intercept"": true}",0.4301206669770181,
+adult,1,No marital,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",17.254265416995622,5889.0
+adult,1,No marital,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",4.132580209057778,
+adult,1,No marital,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",24.744527583941817,
+adult,1,No marital,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",40.74511712498497,5217.0
+adult,1,No marital,Ridge,grid,"{""alpha"": 0.1}",0.7980658749584109,
+adult,1,No marital,SVM,grid,"{""C"": 0.3}",1.7291313329478726,
+adult,1,No marital,Sparse,grid,"{""alpha"": 0.1, ""l1_ratio"": 0.5}",44.174943333957344,
+adult,1,No marital,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.7165810000151396,
+adult,1,No marital,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",3.4333753749961033,
+adult,1,No residuals,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",38.96885945799295,5409.0
+adult,1,No work,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",12.871544250054285,
+adult,1,No work,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",5.065009375102818,
+adult,1,No work,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",15.802320332964882,1433.0
+adult,1,No work,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",5.089207458076999,
+adult,1,No work,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",10.269354125019163,
+adult,1,No work,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",131.7749896249734,8993.0
+adult,1,No work,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",38.27908479201142,4673.0
+adult,1,No work,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",8.104256915976293,
+adult,1,No work,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",2.386415999964811,
+adult,1,No work,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",3.6661416669376194,
+adult,1,No work,Linear,grid,"{""fit_intercept"": true}",0.3864093329757452,
+adult,1,No work,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",17.34805720904842,1377.0
+adult,1,No work,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",4.101602000067942,
+adult,1,No work,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",15.35722420795355,
+adult,1,No work,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",39.11506745801307,4673.0
+adult,1,No work,Ridge,grid,"{""alpha"": 10.0}",0.7357632089406252,
+adult,1,No work,SVM,grid,"{""C"": 1.0}",1.2352340840734541,
+adult,1,No work,Sparse,grid,"{""alpha"": 1.0, ""l1_ratio"": 0.5}",2.454739708104171,
+adult,1,No work,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.5416232090210542,
+adult,1,No work,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",2.490192832890898,
+adult,2,Full,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",22.100997417001054,
+adult,2,Full,AdaBoost,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",12.682636582991108,
+adult,2,Full,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",13.908015041961335,
+adult,2,Full,CatBoost,tpe,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",5.75838641601149,
+adult,2,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",30.94716054201126,2330.0
+adult,2,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",16.806221917038783,2330.0
+adult,2,Full,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",7.230274292058311,
+adult,2,Full,ELM,tpe,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",2.355935166007839,
+adult,2,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",23.29049904202111,
+adult,2,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 10}",11.609104292001575,
+adult,2,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",410.65631104202475,9825.0
+adult,2,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",170.39925154205412,9825.0
+adult,2,Full,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",56.03834320907481,5409.0
+adult,2,Full,GatedMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",30.95301312499214,5409.0
+adult,2,Full,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",16.91502874996513,
+adult,2,Full,HGB,tpe,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",8.078751542023383,
+adult,2,Full,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",12.53307775000576,
+adult,2,Full,KNN,tpe,"{""n_neighbors"": 31, ""weights"": ""uniform""}",9.29548945906572,
+adult,2,Full,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",5.129577792016789,
+adult,2,Full,LightGBM,tpe,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 31}",2.852315832977183,
+adult,2,Full,Linear,grid,"{""fit_intercept"": true}",0.42899554094765335,
+adult,2,Full,Linear,tpe,"{""fit_intercept"": true}",0.3388578749727458,
+adult,2,Full,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",24.036405207938515,2113.0
+adult,2,Full,MLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",11.608558250009082,2113.0
+adult,2,Full,Mean,fixed,{},0.14801608305424452,
+adult,2,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",5.411116249975748,
+adult,2,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",3.617330375011079,
+adult,2,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",27.436908792005852,
+adult,2,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 10}",15.564941708929837,
+adult,2,Full,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",45.13304370793048,5409.0
+adult,2,Full,ResMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",24.415241250069812,5409.0
+adult,2,Full,Ridge,grid,"{""alpha"": 0.01}",0.8811805410077795,
+adult,2,Full,Ridge,tpe,"{""alpha"": 0.01}",0.550471166963689,
+adult,2,Full,SVM,grid,"{""C"": 100.0}",2.232306082965806,
+adult,2,Full,SVM,tpe,"{""C"": 100.0}",1.5581195829436183,
+adult,2,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",54.49435412499588,
+adult,2,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",29.662039416958578,
+adult,2,Full,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.7994903749786317,
+adult,2,Full,Tree,tpe,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.6093773749889806,
+adult,2,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",4.4370602909475565,
+adult,2,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 10.0}",1.991745917010121,
+adult,2,No activations,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",26.01836529094726,2113.0
+adult,2,No age,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",19.181602834025398,
+adult,2,No age,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",13.538850000011735,
+adult,2,No age,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",23.991518041933887,2291.0
+adult,2,No age,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",6.854959915974177,
+adult,2,No age,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",21.134286292013712,
+adult,2,No age,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",344.08441770798527,9761.0
+adult,2,No age,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",47.473114749998786,5377.0
+adult,2,No age,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",16.935718500055373,
+adult,2,No age,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",12.300805249949917,
+adult,2,No age,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",4.82478450005874,
+adult,2,No age,Linear,grid,"{""fit_intercept"": true}",0.4900084160035476,
+adult,2,No age,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",22.81429870892316,6209.0
+adult,2,No age,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",5.378814916941337,
+adult,2,No age,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",23.402315165963955,
+adult,2,No age,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",43.149528832989745,5377.0
+adult,2,No age,Ridge,grid,"{""alpha"": 0.001}",1.113303125021048,
+adult,2,No age,SVM,grid,"{""C"": 10.0}",1.861359916976653,
+adult,2,No age,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",57.248705375008285,
+adult,2,No age,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.7036574579542503,
+adult,2,No age,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",4.371647165971808,
+adult,2,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",29.012911166995764,9825.0
+adult,2,No cross branch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",27.702803332940675,2330.0
+adult,2,No education,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",24.39946829190012,
+adult,2,No education,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",15.527152583934367,
+adult,2,No education,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",37.50507470802404,6419.0
+adult,2,No education,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",8.610754541005008,
+adult,2,No education,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",21.539988624979742,
+adult,2,No education,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",340.8934726250591,9761.0
+adult,2,No education,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",68.050903125084,5377.0
+adult,2,No education,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",17.633611083962023,
+adult,2,No education,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",12.951477875001729,
+adult,2,No education,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",5.239656500052661,
+adult,2,No education,Linear,grid,"{""fit_intercept"": true}",0.5023625839967281,
+adult,2,No education,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",31.02247395797167,6209.0
+adult,2,No education,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",6.135722875013016,
+adult,2,No education,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",22.838635708088987,
+adult,2,No education,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",53.76532137498725,5377.0
+adult,2,No education,Ridge,grid,"{""alpha"": 0.01}",0.7919016670202836,
+adult,2,No education,SVM,grid,"{""C"": 100.0}",2.251288582920097,
+adult,2,No education,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",61.86491283401847,
+adult,2,No education,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.671031582984142,
+adult,2,No education,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",4.577242625062354,
+adult,2,No gates,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",37.61886695900466,5409.0
+adult,2,No marital,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",21.729880708036944,
+adult,2,No marital,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",14.75668404204771,
+adult,2,No marital,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",29.912712750025094,6064.0
+adult,2,No marital,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",8.377592834061943,
+adult,2,No marital,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",20.582795583992265,
+adult,2,No marital,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",316.7277862500632,2753.0
+adult,2,No marital,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",60.149747999967076,5217.0
+adult,2,No marital,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",15.350999333080836,
+adult,2,No marital,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",13.207238583010621,
+adult,2,No marital,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",5.18651604198385,
+adult,2,No marital,Linear,grid,"{""fit_intercept"": true}",0.5772985420189798,
+adult,2,No marital,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",24.33773066708818,1921.0
+adult,2,No marital,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",5.31033120804932,
+adult,2,No marital,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",25.976847124984488,
+adult,2,No marital,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",47.390376708004624,5217.0
+adult,2,No marital,Ridge,grid,"{""alpha"": 0.01}",0.9434831660473719,
+adult,2,No marital,SVM,grid,"{""C"": 100.0}",2.1208069580607116,
+adult,2,No marital,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",72.37878499994986,
+adult,2,No marital,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.7893245830200613,
+adult,2,No marital,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",4.072710542008281,
+adult,2,No residuals,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",45.99825762491673,5409.0
+adult,2,No work,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",15.016618250054307,
+adult,2,No work,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",6.070963499951176,
+adult,2,No work,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",22.939077667077072,4857.0
+adult,2,No work,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",5.745077915955335,
+adult,2,No work,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",10.177825291990303,
+adult,2,No work,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",169.84958454209846,2449.0
+adult,2,No work,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",55.713088832912035,4673.0
+adult,2,No work,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",8.49442216695752,
+adult,2,No work,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",3.2277454999275506,
+adult,2,No work,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",4.260970292030834,
+adult,2,No work,Linear,grid,"{""fit_intercept"": true}",0.3654689999530092,
+adult,2,No work,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",27.156651958008297,1377.0
+adult,2,No work,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",4.347619207925163,
+adult,2,No work,RF,grid,"{""max_depth"": 6, ""max_features"": 1.0, ""min_samples_leaf"": 10}",15.044435666990466,
+adult,2,No work,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",51.64409937500022,4673.0
+adult,2,No work,Ridge,grid,"{""alpha"": 0.1}",0.6819692091085017,
+adult,2,No work,SVM,grid,"{""C"": 1.0}",1.5294651249423623,
+adult,2,No work,Sparse,grid,"{""alpha"": 1.0, ""l1_ratio"": 1.0}",2.3735743750585243,
+adult,2,No work,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.49298416706733406,
+adult,2,No work,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 6, ""reg_lambda"": 10.0}",2.9196576250251383,
+house,0,Area + quality,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",1.5365417499560863,
+house,0,Area + quality,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.7909977919189259,
+house,0,Area + quality,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.2417327909497544,1199.0
+house,0,Area + quality,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 32}",0.047206416027620435,
+house,0,Area + quality,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",0.6514096249593422,
+house,0,Area + quality,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",4.804680500063114,8769.0
+house,0,Area + quality,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.326195416972041,17153.0
+house,0,Area + quality,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.0685704170027748,
+house,0,Area + quality,KNN,grid,"{""n_neighbors"": 15, ""weights"": ""uniform""}",0.045832916046492755,
+house,0,Area + quality,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",0.3593455000082031,
+house,0,Area + quality,Linear,grid,"{""fit_intercept"": false}",0.014961165958084166,
+house,0,Area + quality,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.3217263750266284,4417.0
+house,0,Area + quality,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.4064098750241101,
+house,0,Area + quality,RF,grid,"{""max_depth"": 6, ""max_features"": 1.0, ""min_samples_leaf"": 10}",1.1839920419733971,
+house,0,Area + quality,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",2.42148262495175,17153.0
+house,0,Area + quality,Ridge,grid,"{""alpha"": 10.0}",0.024162541958503425,
+house,0,Area + quality,SVM,grid,"{""C"": 0.1}",0.036488624988123775,
+house,0,Area + quality,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.02378383290488273,
+house,0,Area + quality,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.025305291987024248,
+house,0,Area + quality,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.3622170420130715,
+house,0,Full,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",1.5570173340383917,
+house,0,Full,AdaBoost,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",0.9136388340266421,
+house,0,Full,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.0902481250232086,
+house,0,Full,CatBoost,tpe,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",0.5733089169953018,
+house,0,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",0.9081414580577984,6348.0
+house,0,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",0.5245314169442281,6348.0
+house,0,Full,ELM,grid,"{""activation"": ""relu"", ""alpha"": 0.1, ""width"": 128}",0.04220433300361037,
+house,0,Full,ELM,tpe,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 128}",0.025638540973886847,
+house,0,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.8381228329380974,
+house,0,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.4631451249588281,
+house,0,Full,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",9.542770999949425,2833.0
+house,0,Full,FeatureTransformer,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",4.9721559170866385,2833.0
+house,0,Full,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.7700152080506086,18881.0
+house,0,Full,GatedMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",0.8846762089524418,18881.0
+house,0,Full,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.378360041999258,
+house,0,Full,HGB,tpe,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",0.6904345409711823,
+house,0,Full,KNN,grid,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.04923554207198322,
+house,0,Full,KNN,tpe,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.03439204103779048,
+house,0,Full,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.490257708937861,
+house,0,Full,LightGBM,tpe,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",0.2698662920156494,
+house,0,Full,Linear,grid,"{""fit_intercept"": true}",0.07377358304802328,
+house,0,Full,Linear,tpe,"{""fit_intercept"": true}",0.07384787499904633,
+house,0,Full,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.427957957959734,6145.0
+house,0,Full,MLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",2.072038042009808,6145.0
+house,0,Full,Mean,fixed,{},0.006363957887515426,
+house,0,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.38017754105385393,
+house,0,Full,RBFNet,tpe,"{""alpha"": 10.0, ""centres"": 64, ""gamma"": 1.0}",0.2892016250407323,
+house,0,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.357585750054568,
+house,0,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.7202816250501201,
+house,0,Full,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.820801082998514,18881.0
+house,0,Full,ResMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",2.2583302500424907,18881.0
+house,0,Full,Ridge,grid,"{""alpha"": 1.0}",0.07846662506926805,
+house,0,Full,Ridge,tpe,"{""alpha"": 1.0}",0.07060149998869747,
+house,0,Full,SVM,grid,"{""C"": 0.3}",0.026950416970066726,
+house,0,Full,SVM,tpe,"{""C"": 0.3}",0.020547207910567522,
+house,0,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.016174834105186164,
+house,0,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.01512024994008243,
+house,0,Full,Tree,grid,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.03441004198975861,
+house,0,Full,Tree,tpe,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.02703716594260186,
+house,0,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.5308796670287848,
+house,0,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.2978930410463363,
+house,0,No activations,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",0.6836810420500115,2049.0
+house,0,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",1.2595209169667214,2833.0
+house,0,No cross branch,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",0.7462496249936521,6348.0
+house,0,No gates,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.393070250051096,18881.0
+house,0,No neighborhood,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",1.3710962500190362,
+house,0,No neighborhood,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",1.065963500062935,
+house,0,No neighborhood,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",0.7846011250512674,4644.0
+house,0,No neighborhood,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",0.03771416703239083,
+house,0,No neighborhood,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",0.7040554999839514,
+house,0,No neighborhood,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",8.60190112493001,8961.0
+house,0,No neighborhood,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",2.1189772919751704,17345.0
+house,0,No neighborhood,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",0.8476575840031728,
+house,0,No neighborhood,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.05056012503337115,
+house,0,No neighborhood,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",0.4405189160024747,
+house,0,No neighborhood,Linear,grid,"{""fit_intercept"": false}",0.010770292021334171,
+house,0,No neighborhood,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",0.6656370830023661,4609.0
+house,0,No neighborhood,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.40629970806185156,
+house,0,No neighborhood,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.3117591670015827,
+house,0,No neighborhood,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",1.4319004999706522,17345.0
+house,0,No neighborhood,Ridge,grid,"{""alpha"": 100.0}",0.017187208984978497,
+house,0,No neighborhood,SVM,grid,"{""C"": 0.01}",0.017967832973226905,
+house,0,No neighborhood,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.021231541992165148,
+house,0,No neighborhood,Tree,grid,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.036930333939380944,
+house,0,No neighborhood,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.3596119589637965,
+house,0,No quality,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",1.6989659999962896,
+house,0,No quality,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.2519287499599159,
+house,0,No quality,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",1.0518076660810038,2213.0
+house,0,No quality,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",0.040302665904164314,
+house,0,No quality,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.9936360410647467,
+house,0,No quality,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",9.102341167046688,9697.0
+house,0,No quality,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.792913250043057,18817.0
+house,0,No quality,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.638981958036311,
+house,0,No quality,KNN,grid,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.055010874988511205,
+house,0,No quality,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.5268338330788538,
+house,0,No quality,Linear,grid,"{""fit_intercept"": false}",0.016565124969929457,
+house,0,No quality,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",0.8379817910026759,6081.0
+house,0,No quality,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.38784941704943776,
+house,0,No quality,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.6053177500143647,
+house,0,No quality,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",1.7717927920166403,18817.0
+house,0,No quality,Ridge,grid,"{""alpha"": 1.0}",0.02264870807994157,
+house,0,No quality,SVM,grid,"{""C"": 0.3}",0.026603625039570034,
+house,0,No quality,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.02465475001372397,
+house,0,No quality,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.05089954205323011,
+house,0,No quality,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.4948908749502152,
+house,0,No residuals,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.4828668750124052,18881.0
+house,0,No size,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 100}",1.7730444999178872,
+house,0,No size,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",0.5296932919882238,
+house,0,No size,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",0.9765771670499817,6206.0
+house,0,No size,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",0.03439712501130998,
+house,0,No size,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.1308901249431074,
+house,0,No size,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",5.8997501250123605,9633.0
+house,0,No size,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",1.805397041956894,5281.0
+house,0,No size,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",2.103820415912196,
+house,0,No size,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""uniform""}",0.06641612504608929,
+house,0,No size,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",0.4400072500575334,
+house,0,No size,Linear,grid,"{""fit_intercept"": true}",0.01920995907858014,
+house,0,No size,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",0.8031450409907848,6017.0
+house,0,No size,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.39425795804709196,
+house,0,No size,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.5566302090883255,
+house,0,No size,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",1.483806416974403,18753.0
+house,0,No size,Ridge,grid,"{""alpha"": 0.01}",0.03170541697181761,
+house,0,No size,SVM,grid,"{""C"": 100.0}",0.0631192090222612,
+house,0,No size,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03802695800550282,
+house,0,No size,Tree,grid,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.05022583296522498,
+house,0,No size,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.5580209159525111,
+house,0,No year,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",1.8556424169801176,
+house,0,No year,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.116546833072789,
+house,0,No year,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",1.1699519579997286,6277.0
+house,0,No year,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 128}",0.04304129199590534,
+house,0,No year,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.9529390829848126,
+house,0,No year,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",9.856339708087035,2801.0
+house,0,No year,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.3266050840029493,18817.0
+house,0,No year,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.6637701250147074,
+house,0,No year,KNN,grid,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.06058937497437,
+house,0,No year,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.4967364170588553,
+house,0,No year,Linear,grid,"{""fit_intercept"": true}",0.01401225000154227,
+house,0,No year,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",0.9890160840004683,6081.0
+house,0,No year,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.6077473330078647,
+house,0,No year,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.4641577079892159,
+house,0,No year,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.980772375012748,18817.0
+house,0,No year,Ridge,grid,"{""alpha"": 1.0}",0.020472749951295555,
+house,0,No year,SVM,grid,"{""C"": 0.3}",0.030457583954557776,
+house,0,No year,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.02308499999344349,
+house,0,No year,Tree,grid,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.039161792024970055,
+house,0,No year,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.4750150829786435,
+house,1,Area + quality,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",2.2492097910726443,
+house,1,Area + quality,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",0.8655060000019148,
+house,1,Area + quality,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.6985179579351097,4431.0
+house,1,Area + quality,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",0.06450162502005696,
+house,1,Area + quality,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",0.9228806660976261,
+house,1,Area + quality,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",6.5626769999507815,8769.0
+house,1,Area + quality,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.6149605000391603,17153.0
+house,1,Area + quality,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.3618410410126671,
+house,1,Area + quality,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""uniform""}",0.05698504205793142,
+house,1,Area + quality,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",0.620040874928236,
+house,1,Area + quality,Linear,grid,"{""fit_intercept"": true}",0.015950000029988587,
+house,1,Area + quality,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.4341513749677688,4417.0
+house,1,Area + quality,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.5515715000219643,
+house,1,Area + quality,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.5729667500127107,
+house,1,Area + quality,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.2768671250669286,17153.0
+house,1,Area + quality,Ridge,grid,"{""alpha"": 1.0}",0.03756008297204971,
+house,1,Area + quality,SVM,grid,"{""C"": 0.1}",0.035996416001580656,
+house,1,Area + quality,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03764841693919152,
+house,1,Area + quality,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 2}",0.04247395903803408,
+house,1,Area + quality,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.5231592499185354,
+house,1,Full,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",2.4613141670124605,
+house,1,Full,AdaBoost,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 50}",0.859188542002812,
+house,1,Full,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.5508010829798877,
+house,1,Full,CatBoost,tpe,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",0.7721722079440951,
+house,1,Full,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.7435438330285251,6348.0
+house,1,Full,DCN,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",0.7897952500497922,6348.0
+house,1,Full,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 128}",0.08176716696470976,
+house,1,Full,ELM,tpe,"{""activation"": ""relu"", ""alpha"": 0.1, ""width"": 128}",0.05616691696923226,
+house,1,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.3925604169489816,
+house,1,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",0.6470686249667779,
+house,1,Full,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",16.562956208945252,9761.0
+house,1,Full,FeatureTransformer,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",7.18059116601944,9761.0
+house,1,Full,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",3.487425999948755,5345.0
+house,1,Full,GatedMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",1.8133774580201134,5345.0
+house,1,Full,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",2.4545554999494925,
+house,1,Full,HGB,tpe,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.2129893749952316,
+house,1,Full,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.07842545898165554,
+house,1,Full,KNN,tpe,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.06390000006649643,
+house,1,Full,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.653015207964927,
+house,1,Full,LightGBM,tpe,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.3629651670344174,
+house,1,Full,Linear,grid,"{""fit_intercept"": true}",0.015170332975685596,
+house,1,Full,Linear,tpe,"{""fit_intercept"": true}",0.014804000034928322,
+house,1,Full,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.1607430829899386,6145.0
+house,1,Full,MLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",0.5809175830800086,6145.0
+house,1,Full,Mean,fixed,{},0.010095749981701374,
+house,1,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.807695124996826,
+house,1,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.3427765000378713,
+house,1,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.159914124989882,
+house,1,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",0.9335935419658199,
+house,1,Full,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.6526330000488088,18881.0
+house,1,Full,ResMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",0.8025105420965701,18881.0
+house,1,Full,Ridge,grid,"{""alpha"": 1.0}",0.021791249979287386,
+house,1,Full,Ridge,tpe,"{""alpha"": 0.1}",0.024614416994154453,
+house,1,Full,SVM,grid,"{""C"": 0.3}",0.043168541975319386,
+house,1,Full,SVM,tpe,"{""C"": 0.1}",0.03252762497868389,
+house,1,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.025349375093355775,
+house,1,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.022330124978907406,
+house,1,Full,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.05044745793566108,
+house,1,Full,Tree,tpe,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.03540716599673033,
+house,1,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.7247494159964845,
+house,1,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 1.0}",0.37273637508042157,
+house,1,No activations,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",1.134300542064011,6145.0
+house,1,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",2.2119685830548406,2833.0
+house,1,No cross branch,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.145031665917486,6348.0
+house,1,No gates,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",2.5317606669850647,5345.0
+house,1,No neighborhood,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",2.9877970409579575,
+house,1,No neighborhood,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.6859197500161827,
+house,1,No neighborhood,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.7735887080198154,4644.0
+house,1,No neighborhood,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 128}",0.05246108304709196,
+house,1,No neighborhood,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.1603355830302462,
+house,1,No neighborhood,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",15.137554957997054,2433.0
+house,1,No neighborhood,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.523012874997221,17345.0
+house,1,No neighborhood,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.7966659580124542,
+house,1,No neighborhood,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.0826107079628855,
+house,1,No neighborhood,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.7908937919419259,
+house,1,No neighborhood,Linear,grid,"{""fit_intercept"": false}",0.014331625076010823,
+house,1,No neighborhood,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.5989534170366824,4609.0
+house,1,No neighborhood,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.5321042500436306,
+house,1,No neighborhood,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.318488791002892,
+house,1,No neighborhood,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.0996169159188867,17345.0
+house,1,No neighborhood,Ridge,grid,"{""alpha"": 10.0}",0.025493500055745244,
+house,1,No neighborhood,SVM,grid,"{""C"": 0.01}",0.038910542032681406,
+house,1,No neighborhood,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.025707041029818356,
+house,1,No neighborhood,Tree,grid,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.04948787507601082,
+house,1,No neighborhood,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.7256290420191363,
+house,1,No quality,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",2.9829219999955967,
+house,1,No quality,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.9643128340831026,
+house,1,No quality,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",2.1471760839922354,6277.0
+house,1,No quality,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 128}",0.0630566249601543,
+house,1,No quality,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.6538777078967541,
+house,1,No quality,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",14.982003874960355,9697.0
+house,1,No quality,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",3.819558957940899,18817.0
+house,1,No quality,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",2.902644999907352,
+house,1,No quality,KNN,grid,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.11055087496060878,
+house,1,No quality,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.7744137919507921,
+house,1,No quality,Linear,grid,"{""fit_intercept"": false}",0.02203220804221928,
+house,1,No quality,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.5648796249879524,6081.0
+house,1,No quality,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.7627720419550315,
+house,1,No quality,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.8280812080483884,
+house,1,No quality,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",3.253053624997847,5313.0
+house,1,No quality,Ridge,grid,"{""alpha"": 1.0}",0.03571833309251815,
+house,1,No quality,SVM,grid,"{""C"": 0.3}",0.051845917012542486,
+house,1,No quality,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.050885917036794126,
+house,1,No quality,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.08767208305653185,
+house,1,No quality,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 10.0}",0.9422070420114323,
+house,1,No residuals,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",2.401133624953218,5345.0
+house,1,No size,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 50}",3.2723511250223964,
+house,1,No size,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.1450776669662446,
+house,1,No size,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",1.9573774999007583,2174.0
+house,1,No size,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",0.09551537502557039,
+house,1,No size,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.3706168750068173,
+house,1,No size,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",12.050099291023798,9633.0
+house,1,No size,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",4.200589207932353,18753.0
+house,1,No size,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",3.3733442089287564,
+house,1,No size,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""uniform""}",0.08260199998039752,
+house,1,No size,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.6916070419829339,
+house,1,No size,Linear,grid,"{""fit_intercept"": true}",0.021150125074200332,
+house,1,No size,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.7519425000064075,6017.0
+house,1,No size,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.9390384160215035,
+house,1,No size,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.7893102910602465,
+house,1,No size,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.4254698749864474,18753.0
+house,1,No size,Ridge,grid,"{""alpha"": 1.0}",0.028966916957870126,
+house,1,No size,SVM,grid,"{""C"": 0.3}",0.060794124961830676,
+house,1,No size,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03140012489166111,
+house,1,No size,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.04246825003065169,
+house,1,No size,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.6958404158940539,
+house,1,No year,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",3.127684833947569,
+house,1,No year,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.7652410420123488,
+house,1,No year,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.6701163749676198,6277.0
+house,1,No year,ELM,grid,"{""activation"": ""relu"", ""alpha"": 0.1, ""width"": 128}",0.0668699590023607,
+house,1,No year,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.7061847920995206,
+house,1,No year,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",14.284577833022922,9697.0
+house,1,No year,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",3.231387999956496,18817.0
+house,1,No year,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",3.1380215421086177,
+house,1,No year,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.09737304109148681,
+house,1,No year,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.9059180830372497,
+house,1,No year,Linear,grid,"{""fit_intercept"": false}",0.027575166895985603,
+house,1,No year,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.588209749897942,6081.0
+house,1,No year,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.7402025000192225,
+house,1,No year,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.5083587920526043,
+house,1,No year,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",2.7664280419703573,5313.0
+house,1,No year,Ridge,grid,"{""alpha"": 1.0}",0.03955774998757988,
+house,1,No year,SVM,grid,"{""C"": 0.3}",0.062193875084631145,
+house,1,No year,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.05364075000397861,
+house,1,No year,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.07120095810387284,
+house,1,No year,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.7645414579892531,
+house,2,Area + quality,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",3.511396582936868,
+house,2,Area + quality,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.03}",1.100192041019909,
+house,2,Area + quality,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",1.6487164580030367,4431.0
+house,2,Area + quality,ELM,grid,"{""activation"": ""relu"", ""alpha"": 0.1, ""width"": 32}",0.06316724990028888,
+house,2,Area + quality,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.1834735000738874,
+house,2,Area + quality,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",7.348762292065658,8769.0
+house,2,Area + quality,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",3.5344260840211064,4481.0
+house,2,Area + quality,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",2.301089582964778,
+house,2,Area + quality,KNN,grid,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.1238772920332849,
+house,2,Area + quality,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",0.7176394169218838,
+house,2,Area + quality,Linear,grid,"{""fit_intercept"": false}",0.02287087496370077,
+house,2,Area + quality,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.1355251249624416,4417.0
+house,2,Area + quality,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.5958349170396104,
+house,2,Area + quality,RF,grid,"{""max_depth"": 6, ""max_features"": 1.0, ""min_samples_leaf"": 3}",2.1450047079706565,
+house,2,Area + quality,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.8880309170344844,17153.0
+house,2,Area + quality,Ridge,grid,"{""alpha"": 10.0}",0.034612958086654544,
+house,2,Area + quality,SVM,grid,"{""C"": 0.01}",0.07725041592493653,
+house,2,Area + quality,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.048155250027775764,
+house,2,Area + quality,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.05634720798116177,
+house,2,Area + quality,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.7359530000248924,
+house,2,Full,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",3.0247915830696,
+house,2,Full,AdaBoost,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",1.5123089579865336,
+house,2,Full,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.9713846670929343,
+house,2,Full,CatBoost,tpe,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.0090882499935105,
+house,2,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",1.9575400840258226,6348.0
+house,2,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",0.7993119169259444,6348.0
+house,2,Full,ELM,grid,"{""activation"": ""relu"", ""alpha"": 0.1, ""width"": 128}",0.07175512507092208,
+house,2,Full,ELM,tpe,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",0.04868162493221462,
+house,2,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.7898966670036316,
+house,2,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",0.7950500840088353,
+house,2,Full,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",19.43265266600065,9761.0
+house,2,Full,FeatureTransformer,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",8.756959500024095,9761.0
+house,2,Full,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.7506287910509855,18881.0
+house,2,Full,GatedMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.7747859581140801,18881.0
+house,2,Full,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",2.949926458997652,
+house,2,Full,HGB,tpe,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.463463917025365,
+house,2,Full,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.08169004099909216,
+house,2,Full,KNN,tpe,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.05904120800551027,
+house,2,Full,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.8472365830093622,
+house,2,Full,LightGBM,tpe,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.387258458067663,
+house,2,Full,Linear,grid,"{""fit_intercept"": true}",0.02823795797303319,
+house,2,Full,Linear,tpe,"{""fit_intercept"": true}",0.025986916036345065,
+house,2,Full,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.4834497919073328,6145.0
+house,2,Full,MLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",0.606782624963671,6145.0
+house,2,Full,Mean,fixed,{},0.017344958963803947,
+house,2,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.8936353340977803,
+house,2,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",0.392259250045754,
+house,2,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.8757512079318985,
+house,2,Full,RF,tpe,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.4948710839962587,
+house,2,Full,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",3.0263377079972997,18881.0
+house,2,Full,ResMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",1.2425138750113547,18881.0
+house,2,Full,Ridge,grid,"{""alpha"": 0.1}",0.033856207970529795,
+house,2,Full,Ridge,tpe,"{""alpha"": 0.01}",0.032995458925142884,
+house,2,Full,SVM,grid,"{""C"": 3.0}",0.05124150007031858,
+house,2,Full,SVM,tpe,"{""C"": 3.0}",0.03967479197308421,
+house,2,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.04611729097086936,
+house,2,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.048701458028517663,
+house,2,Full,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.0773203750140965,
+house,2,Full,Tree,tpe,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.05652837501838803,
+house,2,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.8928219999652356,
+house,2,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.4701901660300791,
+house,2,No activations,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",1.711557750008069,2049.0
+house,2,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",2.4818636249983683,2833.0
+house,2,No cross branch,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.5901358750415966,6348.0
+house,2,No gates,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",2.9110225830227137,5345.0
+house,2,No neighborhood,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",2.961675834027119,
+house,2,No neighborhood,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.91854633402545,
+house,2,No neighborhood,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",1.5889038749737665,4644.0
+house,2,No neighborhood,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 128}",0.05744754208717495,
+house,2,No neighborhood,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.307538624969311,
+house,2,No neighborhood,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",16.81162408401724,8961.0
+house,2,No neighborhood,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.2801757500274107,17345.0
+house,2,No neighborhood,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.8287707500858232,
+house,2,No neighborhood,KNN,grid,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.1178078749217093,
+house,2,No neighborhood,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.8282642910489812,
+house,2,No neighborhood,Linear,grid,"{""fit_intercept"": false}",0.028486875002272427,
+house,2,No neighborhood,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.592990207951516,4609.0
+house,2,No neighborhood,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.49165141698904335,
+house,2,No neighborhood,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.5015224158996716,
+house,2,No neighborhood,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.163437750074081,17345.0
+house,2,No neighborhood,Ridge,grid,"{""alpha"": 100.0}",0.038533707964234054,
+house,2,No neighborhood,SVM,grid,"{""C"": 0.01}",0.03097670804709196,
+house,2,No neighborhood,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.04108395904768258,
+house,2,No neighborhood,Tree,grid,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.0673425419954583,
+house,2,No neighborhood,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.7469743749825284,
+house,2,No quality,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",3.937728959019296,
+house,2,No quality,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",2.19190241699107,
+house,2,No quality,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",1.6658237499650568,6277.0
+house,2,No quality,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",0.06407662504352629,
+house,2,No quality,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.945476375054568,
+house,2,No quality,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",17.35621879203245,9697.0
+house,2,No quality,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.109088958008215,18817.0
+house,2,No quality,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",3.7492917920462787,
+house,2,No quality,KNN,grid,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.12099524994846433,
+house,2,No quality,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.868973333039321,
+house,2,No quality,Linear,grid,"{""fit_intercept"": true}",0.027920125052332878,
+house,2,No quality,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.8266812920337543,6081.0
+house,2,No quality,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.6452254169853404,
+house,2,No quality,RF,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",3.1143780420534313,
+house,2,No quality,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.1305225410033017,18817.0
+house,2,No quality,Ridge,grid,"{""alpha"": 0.1}",0.04131945804692805,
+house,2,No quality,SVM,grid,"{""C"": 3.0}",0.060191874974407256,
+house,2,No quality,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.05156379099935293,
+house,2,No quality,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.09129487490281463,
+house,2,No quality,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.0759975840337574,
+house,2,No residuals,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.221072332933545,18881.0
+house,2,No size,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",3.251011500018649,
+house,2,No size,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.1677948338910937,
+house,2,No size,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.421469833003357,6206.0
+house,2,No size,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",0.09617233299650252,
+house,2,No size,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.7844419169705361,
+house,2,No size,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",13.043632666929625,9633.0
+house,2,No size,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",4.051103041972965,18753.0
+house,2,No size,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",3.4572257499676198,
+house,2,No size,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.12896229198668152,
+house,2,No size,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.7123997090384364,
+house,2,No size,Linear,grid,"{""fit_intercept"": true}",0.024422292015515268,
+house,2,No size,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",2.0364487499464303,6017.0
+house,2,No size,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.7375063749495894,
+house,2,No size,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.400478083989583,
+house,2,No size,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",3.8162454169942066,5281.0
+house,2,No size,Ridge,grid,"{""alpha"": 0.1}",0.031434708973392844,
+house,2,No size,SVM,grid,"{""C"": 10.0}",0.07182137505151331,
+house,2,No size,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03516700002364814,
+house,2,No size,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 2}",0.05463550006970763,
+house,2,No size,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.8004069579765201,
+house,2,No year,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",3.437086540972814,
+house,2,No year,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.7291812910698354,
+house,2,No year,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",1.8082515420392156,6277.0
+house,2,No year,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",0.12117099994793534,
+house,2,No year,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",1.8812109580030665,
+house,2,No year,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",17.500867875060067,9697.0
+house,2,No year,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",4.011252374970354,18817.0
+house,2,No year,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",3.5484215839533135,
+house,2,No year,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.1121782500995323,
+house,2,No year,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.9083485000301152,
+house,2,No year,Linear,grid,"{""fit_intercept"": true}",0.021555665996856987,
+house,2,No year,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.6715770839946344,6081.0
+house,2,No year,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",0.7488704159623012,
+house,2,No year,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.9031883330317214,
+house,2,No year,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.0111708330223337,18817.0
+house,2,No year,Ridge,grid,"{""alpha"": 0.1}",0.08229233406018466,
+house,2,No year,SVM,grid,"{""C"": 10.0}",0.07779516710434109,
+house,2,No year,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.05233516695443541,
+house,2,No year,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.07154795899987221,
+house,2,No year,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.9256065000081435,
+nba,0,Full,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",4.544761708006263,
+nba,0,Full,AdaBoost,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",2.3093816658947617,
+nba,0,Full,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.3962316670222208,
+nba,0,Full,CatBoost,tpe,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",0.773060666047968,
+nba,0,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",6.5540754169924185,2330.0
+nba,0,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",3.076482499949634,2330.0
+nba,0,Full,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.17634904209990054,
+nba,0,Full,ELM,tpe,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.09688504098448902,
+nba,0,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",3.2613314581103623,
+nba,0,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.7148058750899509,
+nba,0,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",46.860608167015016,2833.0
+nba,0,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",25.078366375062615,2833.0
+nba,0,Full,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",11.41692841600161,19009.0
+nba,0,Full,GatedMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",6.207545042037964,19009.0
+nba,0,Full,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",4.526158208958805,
+nba,0,Full,HGB,tpe,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",2.5093055840115994,
+nba,0,Full,KNN,grid,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.4439465419854969,
+nba,0,Full,KNN,tpe,"{""n_neighbors"": 7, ""weights"": ""distance""}",0.32969666610006243,
+nba,0,Full,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 31}",1.1487121250247583,
+nba,0,Full,LightGBM,tpe,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 31}",0.6838620420312509,
+nba,0,Full,Linear,grid,"{""fit_intercept"": false}",0.044487749924883246,
+nba,0,Full,Linear,tpe,"{""fit_intercept"": false}",0.04496358393225819,
+nba,0,Full,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",4.581324500031769,6273.0
+nba,0,Full,MLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",2.161510291043669,6273.0
+nba,0,Full,Mean,fixed,{},0.034767874982208014,
+nba,0,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",2.6791562500875443,
+nba,0,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",1.4823224170831963,
+nba,0,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",4.8538424159633,
+nba,0,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.556485207984224,
+nba,0,Full,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",9.227579374914058,19009.0
+nba,0,Full,ResMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",5.758887291071005,19009.0
+nba,0,Full,Ridge,grid,"{""alpha"": 100.0}",0.059378999983891845,
+nba,0,Full,Ridge,tpe,"{""alpha"": 1000.0}",0.059125375002622604,
+nba,0,Full,SVM,grid,"{""C"": 0.01}",0.12612870801240206,
+nba,0,Full,SVM,tpe,"{""C"": 0.01}",0.09453933301847428,
+nba,0,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.06330516701564193,
+nba,0,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.06351191690191627,
+nba,0,Full,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.12718175002373755,
+nba,0,Full,Tree,tpe,"{""max_depth"": 8, ""min_samples_leaf"": 2}",0.09959516604430974,
+nba,0,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 1.0}",1.0534184999996796,
+nba,0,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 10.0}",0.6459209580207244,
+nba,0,No activations,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",5.440225833910517,2113.0
+nba,0,No age,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",5.696886415942572,
+nba,0,No age,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.7074143330100924,
+nba,0,No age,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",6.442962458007969,6419.0
+nba,0,No age,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 0.1, ""width"": 128}",0.20095387496985495,
+nba,0,No age,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",3.4398102919803932,
+nba,0,No age,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",36.2587767499499,9697.0
+nba,0,No age,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",12.764561958028935,18945.0
+nba,0,No age,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",6.207365875015967,
+nba,0,No age,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""distance""}",0.5562006670515984,
+nba,0,No age,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 31}",1.2935990839032456,
+nba,0,No age,Linear,grid,"{""fit_intercept"": true}",0.05627579102292657,
+nba,0,No age,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",5.964359459001571,6209.0
+nba,0,No age,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",2.187342124991119,
+nba,0,No age,RF,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",4.64938470791094,
+nba,0,No age,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",10.759386125020683,18945.0
+nba,0,No age,Ridge,grid,"{""alpha"": 100.0}",0.09212758403737098,
+nba,0,No age,SVM,grid,"{""C"": 0.01}",0.16300995904020965,
+nba,0,No age,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.0900482089491561,
+nba,0,No age,Tree,grid,"{""max_depth"": null, ""min_samples_leaf"": 2}",0.1497300829505548,
+nba,0,No age,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 1.0}",1.2626392079982907,
+nba,0,No attention,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",5.6670216670027,2833.0
+nba,0,No cross branch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",5.4388097079936415,2330.0
+nba,0,No draft,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",3.30135158309713,
+nba,0,No draft,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.27015041699633,
+nba,0,No draft,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",3.5467070000013337,4502.0
+nba,0,No draft,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",0.14848779200110584,
+nba,0,No draft,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.216622208012268,
+nba,0,No draft,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",26.181075374945067,8833.0
+nba,0,No draft,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",9.149720625020564,17217.0
+nba,0,No draft,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.943160166963935,
+nba,0,No draft,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.2169919169973582,
+nba,0,No draft,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.9203858339460567,
+nba,0,No draft,Linear,grid,"{""fit_intercept"": true}",0.03368404204957187,
+nba,0,No draft,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",3.7291246249806136,4481.0
+nba,0,No draft,RBFNet,grid,"{""alpha"": 10.0, ""centres"": 64, ""gamma"": 1.0}",1.1306076670298353,
+nba,0,No draft,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",3.2232582919532433,
+nba,0,No draft,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",7.415008416981436,4513.0
+nba,0,No draft,Ridge,grid,"{""alpha"": 100.0}",0.04127137491013855,
+nba,0,No draft,SVM,grid,"{""C"": 0.01}",0.05784966691862792,
+nba,0,No draft,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.05393345805350691,
+nba,0,No draft,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.09373675007373095,
+nba,0,No draft,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.6931104999966919,
+nba,0,No gates,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",10.135465165949427,5409.0
+nba,0,No physique,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",4.7668159999884665,
+nba,0,No physique,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",1.4443591670133173,
+nba,0,No physique,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",4.955976333003491,2252.0
+nba,0,No physique,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.15747341699898243,
+nba,0,No physique,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",3.9004137499723583,
+nba,0,No physique,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",17.416899124975316,2769.0
+nba,0,No physique,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",8.953275957959704,5345.0
+nba,0,No physique,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",5.620291250059381,
+nba,0,No physique,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.48694629198871553,
+nba,0,No physique,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.1638759169727564,
+nba,0,No physique,Linear,grid,"{""fit_intercept"": false}",0.05777199997100979,
+nba,0,No physique,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",4.78265750000719,2049.0
+nba,0,No physique,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",1.4773978750454262,
+nba,0,No physique,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",3.7297901249257848,
+nba,0,No physique,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",8.23508137499448,18881.0
+nba,0,No physique,Ridge,grid,"{""alpha"": 100.0}",0.0709193330258131,
+nba,0,No physique,SVM,grid,"{""C"": 0.01}",0.126833250047639,
+nba,0,No physique,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.07352958293631673,
+nba,0,No physique,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.13051008293405175,
+nba,0,No physique,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.9581058749463409,
+nba,0,No residuals,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",10.836906375014223,19009.0
+nba,1,Full,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",7.3936863749986514,
+nba,1,Full,AdaBoost,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 100}",3.607860166928731,
+nba,1,Full,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",2.187288416083902,
+nba,1,Full,CatBoost,tpe,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",1.023055958095938,
+nba,1,Full,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",7.442035041982308,6561.0
+nba,1,Full,DCN,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.4004188750404865,6561.0
+nba,1,Full,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.24466091603972018,
+nba,1,Full,ELM,tpe,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.16109325003344566,
+nba,1,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",5.751842790981755,
+nba,1,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",2.648954042000696,
+nba,1,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",81.38508262496907,9793.0
+nba,1,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",36.19136812502984,9793.0
+nba,1,Full,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",17.654988792026415,19073.0
+nba,1,Full,GatedMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",6.987868666998111,19073.0
+nba,1,Full,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",6.634534082957543,
+nba,1,Full,HGB,tpe,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",3.1817560420604423,
+nba,1,Full,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",1.018694124999456,
+nba,1,Full,KNN,tpe,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.7029888749821112,
+nba,1,Full,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 31}",1.5084873749874532,
+nba,1,Full,LightGBM,tpe,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 31}",0.7433302080025896,
+nba,1,Full,Linear,grid,"{""fit_intercept"": false}",0.06397941603790969,
+nba,1,Full,Linear,tpe,"{""fit_intercept"": false}",0.06956574996002018,
+nba,1,Full,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",6.707309833029285,6337.0
+nba,1,Full,MLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",3.131771291955374,6337.0
+nba,1,Full,Mean,fixed,{},0.04840429197065532,
+nba,1,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",2.7792873330181465,
+nba,1,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 1.0}",1.5288982910569757,
+nba,1,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",8.356836959021166,
+nba,1,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",3.6798926669871435,
+nba,1,Full,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",12.338473082985729,19073.0
+nba,1,Full,ResMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",6.1658158749341965,19073.0
+nba,1,Full,Ridge,grid,"{""alpha"": 100.0}",0.06794833403546363,
+nba,1,Full,Ridge,tpe,"{""alpha"": 10.0}",0.07030762499198318,
+nba,1,Full,SVM,grid,"{""C"": 0.01}",0.18895866605453193,
+nba,1,Full,SVM,tpe,"{""C"": 0.01}",0.1482882909476757,
+nba,1,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.08897329098545015,
+nba,1,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.0932845410425216,
+nba,1,Full,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.23493054206483066,
+nba,1,Full,Tree,tpe,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.17178195889573544,
+nba,1,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 1.0}",1.5408440829487517,
+nba,1,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 1.0}",0.7533757080091164,
+nba,1,No activations,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",8.950287999934517,2145.0
+nba,1,No age,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",8.12473870802205,
+nba,1,No age,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",2.1238222499378026,
+nba,1,No age,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",8.498859625076875,6490.0
+nba,1,No age,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",0.23656841600313783,
+nba,1,No age,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",7.642707708990201,
+nba,1,No age,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",47.216928792069666,2817.0
+nba,1,No age,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",15.91182220808696,19009.0
+nba,1,No age,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",8.063973957905546,
+nba,1,No age,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""distance""}",1.1524009159766138,
+nba,1,No age,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 31}",1.5326909170253202,
+nba,1,No age,Linear,grid,"{""fit_intercept"": false}",0.07749950001016259,
+nba,1,No age,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",7.661843333975412,6273.0
+nba,1,No age,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",2.4363570420537144,
+nba,1,No age,RF,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",11.183684000046924,
+nba,1,No age,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",13.218632000032812,19009.0
+nba,1,No age,Ridge,grid,"{""alpha"": 100.0}",0.08762433298397809,
+nba,1,No age,SVM,grid,"{""C"": 0.01}",0.22243825008627027,
+nba,1,No age,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.09835341689176857,
+nba,1,No age,Tree,grid,"{""max_depth"": null, ""min_samples_leaf"": 2}",0.2684943339554593,
+nba,1,No age,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 1.0}",1.6181699169101194,
+nba,1,No attention,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",8.797456791973673,2849.0
+nba,1,No cross branch,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",7.790744374971837,6561.0
+nba,1,No draft,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",5.660047500045039,
+nba,1,No draft,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",2.2260069170733914,
+nba,1,No draft,DCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",5.256560625042766,4502.0
+nba,1,No draft,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",0.21020641701761633,
+nba,1,No draft,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",2.591035958030261,
+nba,1,No draft,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",39.687034417060204,8833.0
+nba,1,No draft,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",13.15962849999778,17217.0
+nba,1,No draft,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",2.7470939580816776,
+nba,1,No draft,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.3330698750214651,
+nba,1,No draft,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 31}",1.36484199995175,
+nba,1,No draft,Linear,grid,"{""fit_intercept"": true}",0.04626962495967746,
+nba,1,No draft,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",5.879902540938929,4481.0
+nba,1,No draft,RBFNet,grid,"{""alpha"": 10.0, ""centres"": 64, ""gamma"": 1.0}",1.4931824590312317,
+nba,1,No draft,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",5.083986125071533,
+nba,1,No draft,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",11.486139999935403,4513.0
+nba,1,No draft,Ridge,grid,"{""alpha"": 0.001}",0.06626537500414997,
+nba,1,No draft,SVM,grid,"{""C"": 100.0}",0.08633974997792393,
+nba,1,No draft,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.056729417061433196,
+nba,1,No draft,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 10}",0.1295418330701068,
+nba,1,No draft,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.8835339170182124,
+nba,1,No gates,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",17.49961370800156,19073.0
+nba,1,No physique,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",6.0653552080038935,
+nba,1,No physique,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.03}",1.6566036250442266,
+nba,1,No physique,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",7.173467749962583,2291.0
+nba,1,No physique,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.22093904193025082,
+nba,1,No physique,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 1.0, ""min_samples_leaf"": 10}",4.681903708027676,
+nba,1,No physique,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",31.44738054194022,2785.0
+nba,1,No physique,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",15.651195125072263,18945.0
+nba,1,No physique,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",6.164813999901526,
+nba,1,No physique,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.8934894159901887,
+nba,1,No physique,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.3028823750792071,
+nba,1,No physique,Linear,grid,"{""fit_intercept"": false}",0.07206362497527152,
+nba,1,No physique,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",6.852347916923463,2081.0
+nba,1,No physique,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",2.5419714170275256,
+nba,1,No physique,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",5.126729625044391,
+nba,1,No physique,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",13.43063345795963,18945.0
+nba,1,No physique,Ridge,grid,"{""alpha"": 100.0}",0.08662620803806931,
+nba,1,No physique,SVM,grid,"{""C"": 0.01}",0.16416600008960813,
+nba,1,No physique,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.10113800002727658,
+nba,1,No physique,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.15603537508286536,
+nba,1,No physique,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",1.2364625829504803,
+nba,1,No residuals,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",17.686757958028466,19073.0
+nba,2,Full,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",8.277106416993774,
+nba,2,Full,AdaBoost,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 100}",4.77457858400885,
+nba,2,Full,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",2.455322957946919,
+nba,2,Full,CatBoost,tpe,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.1}",1.0805252919672057,
+nba,2,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",7.533968749921769,2369.0
+nba,2,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",3.997764041996561,2369.0
+nba,2,Full,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.24918070796411484,
+nba,2,Full,ELM,tpe,"{""activation"": ""relu"", ""alpha"": 0.1, ""width"": 32}",0.15677720797248185,
+nba,2,Full,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",6.6977842500200495,
+nba,2,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",3.4323819999117404,
+nba,2,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",65.8209753750125,2849.0
+nba,2,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",36.503968207980506,2849.0
+nba,2,Full,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",18.023363334010355,19073.0
+nba,2,Full,GatedMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",8.811931916046888,5441.0
+nba,2,Full,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",6.972534958040342,
+nba,2,Full,HGB,tpe,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",3.6298870419850573,
+nba,2,Full,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",1.7755496670724824,
+nba,2,Full,KNN,tpe,"{""n_neighbors"": 31, ""weights"": ""distance""}",1.222399291000329,
+nba,2,Full,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 31}",1.8808811670169234,
+nba,2,Full,LightGBM,tpe,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.9368732079165056,
+nba,2,Full,Linear,grid,"{""fit_intercept"": false}",0.08111350005492568,
+nba,2,Full,Linear,tpe,"{""fit_intercept"": true}",0.06969179201405495,
+nba,2,Full,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",6.9846365000121295,2145.0
+nba,2,Full,MLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.835015624994412,6337.0
+nba,2,Full,Mean,fixed,{},0.050979541963897645,
+nba,2,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",2.247853041975759,
+nba,2,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",1.120928957941942,
+nba,2,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",9.60638429201208,
+nba,2,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",4.796733375056647,
+nba,2,Full,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",12.889535458991304,5441.0
+nba,2,Full,ResMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",6.9219245000276715,5441.0
+nba,2,Full,Ridge,grid,"{""alpha"": 100.0}",0.09162595903035253,
+nba,2,Full,Ridge,tpe,"{""alpha"": 1000.0}",0.07852454192470759,
+nba,2,Full,SVM,grid,"{""C"": 0.001}",0.2003610839601606,
+nba,2,Full,SVM,tpe,"{""C"": 0.01}",0.1674697919515893,
+nba,2,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.08840579190291464,
+nba,2,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.08824333304073662,
+nba,2,Full,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 10}",0.25083212507888675,
+nba,2,Full,Tree,tpe,"{""max_depth"": 4, ""min_samples_leaf"": 10}",0.15491062495857477,
+nba,2,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 1.0}",1.6906506249215454,
+nba,2,Full,XGB,tpe,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 10.0}",0.8553995839320123,
+nba,2,No activations,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",6.954132584040053,2145.0
+nba,2,No age,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",7.5654372500721365,
+nba,2,No age,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.1}",2.178953707916662,
+nba,2,No age,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",7.86188979097642,6490.0
+nba,2,No age,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.20619604107923806,
+nba,2,No age,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 3}",6.136966749909334,
+nba,2,No age,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",50.64461645798292,9729.0
+nba,2,No age,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",14.89186554204207,5409.0
+nba,2,No age,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",6.783013958949596,
+nba,2,No age,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""distance""}",1.7288562919711694,
+nba,2,No age,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 31}",1.6670993340667337,
+nba,2,No age,Linear,grid,"{""fit_intercept"": false}",0.06679054093547165,
+nba,2,No age,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",6.738474208978005,6273.0
+nba,2,No age,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",2.1445062089478597,
+nba,2,No age,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",7.804771833005361,
+nba,2,No age,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",12.822313708951697,19009.0
+nba,2,No age,Ridge,grid,"{""alpha"": 100.0}",0.08238845807500184,
+nba,2,No age,SVM,grid,"{""C"": 0.01}",0.20962433400563896,
+nba,2,No age,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.08872716594487429,
+nba,2,No age,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.2140912910690531,
+nba,2,No age,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 6, ""reg_lambda"": 1.0}",1.5561732919886708,
+nba,2,No attention,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",8.166176667087711,2849.0
+nba,2,No cross branch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",5.9098985000746325,2369.0
+nba,2,No draft,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",6.190676582977176,
+nba,2,No draft,CatBoost,grid,"{""depth"": 6, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.03}",2.151361958938651,
+nba,2,No draft,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",6.4712535419967026,1238.0
+nba,2,No draft,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.2194290419574827,
+nba,2,No draft,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 1.0, ""min_samples_leaf"": 3}",2.71046012500301,
+nba,2,No draft,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",55.53812383301556,2369.0
+nba,2,No draft,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",15.898455000016838,4513.0
+nba,2,No draft,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",2.3697529579512775,
+nba,2,No draft,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.47872216592077166,
+nba,2,No draft,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.462994375033304,
+nba,2,No draft,Linear,grid,"{""fit_intercept"": false}",0.044826416997238994,
+nba,2,No draft,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",7.558549250010401,1217.0
+nba,2,No draft,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 0.1}",1.5646515829721466,
+nba,2,No draft,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",5.702716542058624,
+nba,2,No draft,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",14.146958834026009,4513.0
+nba,2,No draft,Ridge,grid,"{""alpha"": 0.001}",0.06628200004342943,
+nba,2,No draft,SVM,grid,"{""C"": 100.0}",0.08151816693134606,
+nba,2,No draft,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.07221399992704391,
+nba,2,No draft,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.15766266698483378,
+nba,2,No draft,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.940421791980043,
+nba,2,No gates,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",13.442001207964495,19073.0
+nba,2,No physique,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",6.538454166031443,
+nba,2,No physique,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",1.8619535840116441,
+nba,2,No physique,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",8.238003166974522,2291.0
+nba,2,No physique,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.2229933749185875,
+nba,2,No physique,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 1.0, ""min_samples_leaf"": 10}",5.393562208046205,
+nba,2,No physique,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",35.416002208017744,2785.0
+nba,2,No physique,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",16.755282833008096,5377.0
+nba,2,No physique,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",6.613055000081658,
+nba,2,No physique,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",1.5667251659324393,
+nba,2,No physique,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",1.5309387079905719,
+nba,2,No physique,Linear,grid,"{""fit_intercept"": false}",0.06366720807272941,
+nba,2,No physique,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",7.444498958997428,2081.0
+nba,2,No physique,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",2.37161833292339,
+nba,2,No physique,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",5.6251577499788254,
+nba,2,No physique,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",14.546633291989565,5377.0
+nba,2,No physique,Ridge,grid,"{""alpha"": 100.0}",0.075839291093871,
+nba,2,No physique,SVM,grid,"{""C"": 0.001}",0.18175287498161197,
+nba,2,No physique,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.08315166691318154,
+nba,2,No physique,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.1607904159463942,
+nba,2,No physique,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",1.2995347500545904,
+nba,2,No residuals,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",15.257121999980882,19073.0
+nba_sequence,0,Full,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",18.305898082908243,7937.0
+nba_sequence,0,Full,BiGRU,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",9.024117958033457,7937.0
+nba_sequence,0,Full,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",21.441890708054416,37505.0
+nba_sequence,0,Full,BiLSTM,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",12.417129459092394,37505.0
+nba_sequence,0,Full,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",8.848553500021808,14081.0
+nba_sequence,0,Full,GRU,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",4.7594875410432,14081.0
+nba_sequence,0,Full,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",11.713135750032961,18753.0
+nba_sequence,0,Full,LSTM,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",6.67767400003504,18753.0
+nba_sequence,0,Full,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.52215829200577,
+nba_sequence,0,Full,LightGBM,tpe,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",0.8049762090668082,
+nba_sequence,0,Full,Linear,grid,"{""fit_intercept"": true}",0.025554790976457298,
+nba_sequence,0,Full,Linear,tpe,"{""fit_intercept"": true}",0.02687679196242243,
+nba_sequence,0,Full,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.5260045418981463,5633.0
+nba_sequence,0,Full,MLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",0.906330082914792,5633.0
+nba_sequence,0,Full,Mean,fixed,{},0.017640292062424123,
+nba_sequence,0,Full,Persistence,fixed,{},0.01707312499638647,
+nba_sequence,0,Full,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",7.650804250035435,
+nba_sequence,0,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",4.165693457936868,
+nba_sequence,0,Full,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",3.266824792022817,1345.0
+nba_sequence,0,Full,RNN,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",1.5733554160688072,1345.0
+nba_sequence,0,Full,Ridge,grid,"{""alpha"": 10.0}",0.043027832987718284,
+nba_sequence,0,Full,Ridge,tpe,"{""alpha"": 10.0}",0.04199470893945545,
+nba_sequence,0,Full,SeqTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",9.967958875000477,2417.0
+nba_sequence,0,Full,SeqTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",5.608293167082593,2417.0
+nba_sequence,0,Full,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",103.69860212504864,9281.0
+nba_sequence,0,Full,TCN,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",57.59221854095813,9281.0
+nba_sequence,0,Full,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.8904639169340953,
+nba_sequence,0,Full,XGB,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.0116644999943674,
+nba_sequence,0,No age,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",15.48049662495032,7745.0
+nba_sequence,0,No age,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",16.03610199992545,10305.0
+nba_sequence,0,No age,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",7.47750991594512,3873.0
+nba_sequence,0,No age,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",9.200310582993552,5153.0
+nba_sequence,0,No age,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.4042244999436662,
+nba_sequence,0,No age,Linear,grid,"{""fit_intercept"": false}",0.026291957939974964,
+nba_sequence,0,No age,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.6216384170111269,5441.0
+nba_sequence,0,No age,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",6.932513499981724,
+nba_sequence,0,No age,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.3965101659996435,4673.0
+nba_sequence,0,No age,Ridge,grid,"{""alpha"": 10.0}",0.04197500005830079,
+nba_sequence,0,No age,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",9.226234875037335,2401.0
+nba_sequence,0,No age,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",96.1277347910218,2529.0
+nba_sequence,0,No age,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.8339127500075847,
+nba_sequence,0,No availability,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",10.936347916955128,7745.0
+nba_sequence,0,No availability,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",13.141330415965058,36993.0
+nba_sequence,0,No availability,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",5.111522375023924,3873.0
+nba_sequence,0,No availability,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",6.950249374960549,5153.0
+nba_sequence,0,No availability,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.1880283750360832,
+nba_sequence,0,No availability,Linear,grid,"{""fit_intercept"": false}",0.02645770797971636,
+nba_sequence,0,No availability,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",1.1750597089994699,1697.0
+nba_sequence,0,No availability,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",6.04638200008776,
+nba_sequence,0,No availability,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.407227750052698,4673.0
+nba_sequence,0,No availability,Ridge,grid,"{""alpha"": 10.0}",0.036079166107811034,
+nba_sequence,0,No availability,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",6.741270708036609,2401.0
+nba_sequence,0,No availability,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",92.78141283302102,2529.0
+nba_sequence,0,No availability,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.3138168749865144,
+nba_sequence,0,No oldest season,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",8.599713500007056,28161.0
+nba_sequence,0,No oldest season,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",12.071589792030863,37505.0
+nba_sequence,0,No oldest season,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.705156125011854,14081.0
+nba_sequence,0,No oldest season,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",5.664886499987915,18753.0
+nba_sequence,0,No oldest season,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",0.971593042020686,
+nba_sequence,0,No oldest season,Linear,grid,"{""fit_intercept"": true}",0.01824708399362862,
+nba_sequence,0,No oldest season,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.146755374968052,5185.0
+nba_sequence,0,No oldest season,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",4.766697500017472,
+nba_sequence,0,No oldest season,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.7734141249675304,4737.0
+nba_sequence,0,No oldest season,Ridge,grid,"{""alpha"": 10.0}",0.02714754198677838,
+nba_sequence,0,No oldest season,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",6.819163249921985,8897.0
+nba_sequence,0,No oldest season,TCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",96.18444520793855,9281.0
+nba_sequence,0,No oldest season,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.1251264170277864,
+nba_sequence,0,No past production,BiGRU,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",13.120488750049844,27009.0
+nba_sequence,0,No past production,BiLSTM,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",15.720131000038236,35969.0
+nba_sequence,0,No past production,GRU,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",6.461362250032835,13505.0
+nba_sequence,0,No past production,LSTM,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",7.608811875106767,4897.0
+nba_sequence,0,No past production,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 10, ""num_leaves"": 7}",0.8714098749915138,
+nba_sequence,0,No past production,Linear,grid,"{""fit_intercept"": false}",0.02039299998432398,
+nba_sequence,0,No past production,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.325780582963489,1505.0
+nba_sequence,0,No past production,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",4.14092595805414,
+nba_sequence,0,No past production,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.743445958942175,4545.0
+nba_sequence,0,No past production,Ridge,grid,"{""alpha"": 100.0}",0.0359683339484036,
+nba_sequence,0,No past production,SeqTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",7.644658874953166,2369.0
+nba_sequence,0,No past production,TCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",88.55473462503869,2401.0
+nba_sequence,0,No past production,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 6, ""reg_lambda"": 1.0}",1.0314017500495538,
+nba_sequence,0,No physique,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",14.336506874999031,27393.0
+nba_sequence,0,No physique,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",15.81680549995508,36481.0
+nba_sequence,0,No physique,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",7.243397000012919,3777.0
+nba_sequence,0,No physique,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",8.303713290952146,5025.0
+nba_sequence,0,No physique,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.317249583080411,
+nba_sequence,0,No physique,Linear,grid,"{""fit_intercept"": false}",0.02770145796239376,
+nba_sequence,0,No physique,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.6712927500484511,5249.0
+nba_sequence,0,No physique,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 3}",6.246907916967757,
+nba_sequence,0,No physique,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.1127695000031963,4609.0
+nba_sequence,0,No physique,Ridge,grid,"{""alpha"": 10.0}",0.054350833990611136,
+nba_sequence,0,No physique,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 16}",8.293900249991566,2385.0
+nba_sequence,0,No physique,TCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",94.2773613750469,9025.0
+nba_sequence,0,No physique,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.572351999930106,
+nba_sequence,1,Full,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",23.183379792026244,7937.0
+nba_sequence,1,Full,BiGRU,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",12.421570708975196,7937.0
+nba_sequence,1,Full,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",25.693282125052065,10561.0
+nba_sequence,1,Full,BiLSTM,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",14.237585125025362,10561.0
+nba_sequence,1,Full,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",11.898828083998524,14081.0
+nba_sequence,1,Full,GRU,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",5.4553438749862835,14081.0
+nba_sequence,1,Full,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",14.437034750008024,18753.0
+nba_sequence,1,Full,LSTM,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",6.812144250026904,18753.0
+nba_sequence,1,Full,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",2.002587500028312,
+nba_sequence,1,Full,LightGBM,tpe,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",1.032365708029829,
+nba_sequence,1,Full,Linear,grid,"{""fit_intercept"": true}",0.03340750001370907,
+nba_sequence,1,Full,Linear,tpe,"{""fit_intercept"": true}",0.033309665974229574,
+nba_sequence,1,Full,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",2.275110666989349,5633.0
+nba_sequence,1,Full,MLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.057530082995072,5633.0
+nba_sequence,1,Full,Mean,fixed,{},0.026627750019542873,
+nba_sequence,1,Full,Persistence,fixed,{},0.022844291990622878,
+nba_sequence,1,Full,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",10.806721917004324,
+nba_sequence,1,Full,RF,tpe,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",5.754171208012849,
+nba_sequence,1,Full,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",4.682738000061363,4737.0
+nba_sequence,1,Full,RNN,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.2851221249438822,4737.0
+nba_sequence,1,Full,Ridge,grid,"{""alpha"": 10.0}",0.04355429101269692,
+nba_sequence,1,Full,Ridge,tpe,"{""alpha"": 0.1}",0.04792770801577717,
+nba_sequence,1,Full,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",14.057651916984469,8929.0
+nba_sequence,1,Full,SeqTransformer,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",6.478744082967751,8929.0
+nba_sequence,1,Full,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",133.65290566708427,2593.0
+nba_sequence,1,Full,TCN,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",76.58439587499015,2593.0
+nba_sequence,1,Full,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",2.0421209590276703,
+nba_sequence,1,Full,XGB,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",1.0728052499471232,
+nba_sequence,1,No age,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",18.907710542087443,7745.0
+nba_sequence,1,No age,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",21.653097082977183,36993.0
+nba_sequence,1,No age,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",9.118033792008646,3873.0
+nba_sequence,1,No age,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",11.270013082888909,5153.0
+nba_sequence,1,No age,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.772459915955551,
+nba_sequence,1,No age,Linear,grid,"{""fit_intercept"": false}",0.02927320811431855,
+nba_sequence,1,No age,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",2.093686250038445,1697.0
+nba_sequence,1,No age,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",9.796289584017359,
+nba_sequence,1,No age,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.8336704580578953,4673.0
+nba_sequence,1,No age,Ridge,grid,"{""alpha"": 10.0}",0.036210999940522015,
+nba_sequence,1,No age,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",11.031794624985196,8897.0
+nba_sequence,1,No age,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",127.84653520793654,9153.0
+nba_sequence,1,No age,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",1.9219458749284968,
+nba_sequence,1,No availability,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",15.021698749973439,27777.0
+nba_sequence,1,No availability,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",17.51962433301378,10305.0
+nba_sequence,1,No availability,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",7.015623915940523,3873.0
+nba_sequence,1,No availability,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",8.955297750071622,18497.0
+nba_sequence,1,No availability,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.4260072079487145,
+nba_sequence,1,No availability,Linear,grid,"{""fit_intercept"": false}",0.02058162505272776,
+nba_sequence,1,No availability,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.5791722499998286,5441.0
+nba_sequence,1,No availability,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",7.939583332976326,
+nba_sequence,1,No availability,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.4064918339718133,4673.0
+nba_sequence,1,No availability,Ridge,grid,"{""alpha"": 10.0}",0.029972082935273647,
+nba_sequence,1,No availability,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",8.985182459000498,2401.0
+nba_sequence,1,No availability,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",83.2907122920733,2529.0
+nba_sequence,1,No availability,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.3005823750281706,
+nba_sequence,1,No oldest season,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",15.586988750030287,28161.0
+nba_sequence,1,No oldest season,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",19.632986582932062,37505.0
+nba_sequence,1,No oldest season,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",10.429643582901917,14081.0
+nba_sequence,1,No oldest season,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",8.918022083933465,18753.0
+nba_sequence,1,No oldest season,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.5903143340256065,
+nba_sequence,1,No oldest season,Linear,grid,"{""fit_intercept"": false}",0.10359841701574624,
+nba_sequence,1,No oldest season,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",4.360365750035271,1569.0
+nba_sequence,1,No oldest season,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",7.553396000061184,
+nba_sequence,1,No oldest season,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.5720495419809595,4737.0
+nba_sequence,1,No oldest season,Ridge,grid,"{""alpha"": 10.0}",0.09563758398871869,
+nba_sequence,1,No oldest season,SeqTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",11.818612957955338,8897.0
+nba_sequence,1,No oldest season,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",139.08973020908888,2593.0
+nba_sequence,1,No oldest season,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",1.5426783339353278,
+nba_sequence,1,No past production,BiGRU,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",14.435872416943312,7361.0
+nba_sequence,1,No past production,BiLSTM,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",16.231406667036936,9793.0
+nba_sequence,1,No past production,GRU,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",7.125799834029749,13505.0
+nba_sequence,1,No past production,LSTM,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",8.520103584043682,4897.0
+nba_sequence,1,No past production,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",0.9384571249829605,
+nba_sequence,1,No past production,Linear,grid,"{""fit_intercept"": false}",0.02120750001631677,
+nba_sequence,1,No past production,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.4621062090154737,1505.0
+nba_sequence,1,No past production,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",4.985085833002813,
+nba_sequence,1,No past production,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",2.947033541975543,1249.0
+nba_sequence,1,No past production,Ridge,grid,"{""alpha"": 100.0}",0.02857249998487532,
+nba_sequence,1,No past production,SeqTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",9.331005042069592,8833.0
+nba_sequence,1,No past production,TCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",109.92516025004443,8897.0
+nba_sequence,1,No past production,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.8633387499721721,
+nba_sequence,1,No physique,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",14.534986415994354,7553.0
+nba_sequence,1,No physique,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",17.756878459011205,36481.0
+nba_sequence,1,No physique,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",7.628762749955058,13697.0
+nba_sequence,1,No physique,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",9.400314292055555,18241.0
+nba_sequence,1,No physique,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.423675625002943,
+nba_sequence,1,No physique,Linear,grid,"{""fit_intercept"": false}",0.02181095804553479,
+nba_sequence,1,No physique,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",1.5806297500384971,1601.0
+nba_sequence,1,No physique,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",7.905312500079162,
+nba_sequence,1,No physique,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.1940825420897454,4609.0
+nba_sequence,1,No physique,Ridge,grid,"{""alpha"": 10.0}",0.032534083002246916,
+nba_sequence,1,No physique,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",9.25134329102002,2385.0
+nba_sequence,1,No physique,TCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",125.46050812501926,9025.0
+nba_sequence,1,No physique,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.4235964589752257,
+nba_sequence,2,Full,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",56.42919575003907,7937.0
+nba_sequence,2,Full,BiGRU,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",28.023950707982294,28161.0
+nba_sequence,2,Full,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",64.28250529197976,37505.0
+nba_sequence,2,Full,BiLSTM,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",31.522746333968826,37505.0
+nba_sequence,2,Full,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",25.368845666991547,14081.0
+nba_sequence,2,Full,GRU,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",11.701970583060756,14081.0
+nba_sequence,2,Full,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",35.25590300001204,18753.0
+nba_sequence,2,Full,LSTM,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",17.744157167035155,18753.0
+nba_sequence,2,Full,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",2.6318724169395864,
+nba_sequence,2,Full,LightGBM,tpe,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.3603037080029026,
+nba_sequence,2,Full,Linear,grid,"{""fit_intercept"": false}",0.11236062494572252,
+nba_sequence,2,Full,Linear,tpe,"{""fit_intercept"": true}",0.10304862493649125,
+nba_sequence,2,Full,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",6.537672208040021,5633.0
+nba_sequence,2,Full,MLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",4.432777332956903,5633.0
+nba_sequence,2,Full,Mean,fixed,{},0.0320636659162119,
+nba_sequence,2,Full,Persistence,fixed,{},0.030415500048547983,
+nba_sequence,2,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",18.037888083024882,
+nba_sequence,2,Full,RF,tpe,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",9.441941666067578,
+nba_sequence,2,Full,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",7.726862750016153,1345.0
+nba_sequence,2,Full,RNN,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.6489232919411734,4737.0
+nba_sequence,2,Full,Ridge,grid,"{""alpha"": 10.0}",0.05251950002275407,
+nba_sequence,2,Full,Ridge,tpe,"{""alpha"": 10.0}",0.045276292017661035,
+nba_sequence,2,Full,SeqTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",28.047502291970886,8929.0
+nba_sequence,2,Full,SeqTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",13.077555208001286,8929.0
+nba_sequence,2,Full,TCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",271.6289225000655,9281.0
+nba_sequence,2,Full,TCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",132.2668030000059,9281.0
+nba_sequence,2,Full,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",2.4305548750562593,
+nba_sequence,2,Full,XGB,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",1.231249792035669,
+nba_sequence,2,No age,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",44.53153675002977,27777.0
+nba_sequence,2,No age,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",40.66789787495509,10305.0
+nba_sequence,2,No age,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",28.828882375033572,3873.0
+nba_sequence,2,No age,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",25.530478333006613,5153.0
+nba_sequence,2,No age,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",2.538232332910411,
+nba_sequence,2,No age,Linear,grid,"{""fit_intercept"": true}",0.04256633296608925,
+nba_sequence,2,No age,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",4.944775374955498,5441.0
+nba_sequence,2,No age,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",16.176516041043214,
+nba_sequence,2,No age,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",9.64837929198984,4673.0
+nba_sequence,2,No age,Ridge,grid,"{""alpha"": 10.0}",0.061028916970826685,
+nba_sequence,2,No age,SeqTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",25.382718082983047,8897.0
+nba_sequence,2,No age,TCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",269.4123089580098,9153.0
+nba_sequence,2,No age,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",2.303515790961683,
+nba_sequence,2,No availability,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",39.22343970905058,27777.0
+nba_sequence,2,No availability,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",49.46215799998026,36993.0
+nba_sequence,2,No availability,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",18.30267087498214,3873.0
+nba_sequence,2,No availability,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",27.719349332968704,18497.0
+nba_sequence,2,No availability,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",2.349311292055063,
+nba_sequence,2,No availability,Linear,grid,"{""fit_intercept"": true}",0.036952665890567005,
+nba_sequence,2,No availability,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",3.415752709028311,1697.0
+nba_sequence,2,No availability,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",15.43548212503083,
+nba_sequence,2,No availability,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",6.603246875107288,4673.0
+nba_sequence,2,No availability,Ridge,grid,"{""alpha"": 10.0}",0.048048000084236264,
+nba_sequence,2,No availability,SeqTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",24.52751175011508,8897.0
+nba_sequence,2,No availability,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",252.2178738330258,9153.0
+nba_sequence,2,No availability,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",2.1200528329936787,
+nba_sequence,2,No oldest season,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",40.55330266698729,7937.0
+nba_sequence,2,No oldest season,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",47.79875712492503,37505.0
+nba_sequence,2,No oldest season,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",25.61332362506073,14081.0
+nba_sequence,2,No oldest season,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",24.761651624925435,18753.0
+nba_sequence,2,No oldest season,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",2.4368197500007227,
+nba_sequence,2,No oldest season,Linear,grid,"{""fit_intercept"": false}",0.1456378330476582,
+nba_sequence,2,No oldest season,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",8.244998916983604,5185.0
+nba_sequence,2,No oldest season,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",13.011147749959491,
+nba_sequence,2,No oldest season,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",8.291082458104938,1345.0
+nba_sequence,2,No oldest season,Ridge,grid,"{""alpha"": 10.0}",0.14876491692848504,
+nba_sequence,2,No oldest season,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",23.797005209024064,8897.0
+nba_sequence,2,No oldest season,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",272.8446559170261,9281.0
+nba_sequence,2,No oldest season,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",2.0382670830003917,
+nba_sequence,2,No past production,BiGRU,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",58.326687916065566,7361.0
+nba_sequence,2,No past production,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",48.786844125017524,35969.0
+nba_sequence,2,No past production,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",27.320642957929522,13505.0
+nba_sequence,2,No past production,LSTM,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",24.3086633750936,4897.0
+nba_sequence,2,No past production,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",1.8083506670081988,
+nba_sequence,2,No past production,Linear,grid,"{""fit_intercept"": true}",0.033716083969920874,
+nba_sequence,2,No past production,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",4.5010261670686305,1505.0
+nba_sequence,2,No past production,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",9.41042195900809,
+nba_sequence,2,No past production,RNN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",8.433442291920073,1249.0
+nba_sequence,2,No past production,Ridge,grid,"{""alpha"": 100.0}",0.04785491700749844,
+nba_sequence,2,No past production,SeqTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",23.60018433292862,2369.0
+nba_sequence,2,No past production,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",242.65862050000578,2401.0
+nba_sequence,2,No past production,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",1.5555227919248864,
+nba_sequence,2,No physique,BiGRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",57.870374957914464,27393.0
+nba_sequence,2,No physique,BiLSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",66.4045077089686,36481.0
+nba_sequence,2,No physique,GRU,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",19.495405083987862,3777.0
+nba_sequence,2,No physique,LSTM,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",34.909320458071306,18241.0
+nba_sequence,2,No physique,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",2.1969831249443814,
+nba_sequence,2,No physique,Linear,grid,"{""fit_intercept"": true}",0.0366143339779228,
+nba_sequence,2,No physique,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",4.154366040951572,5249.0
+nba_sequence,2,No physique,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",14.027724749990739,
+nba_sequence,2,No physique,RNN,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",9.632847624947317,1281.0
+nba_sequence,2,No physique,Ridge,grid,"{""alpha"": 10.0}",0.05523320904467255,
+nba_sequence,2,No physique,SeqTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 16}",25.554014916997403,2385.0
+nba_sequence,2,No physique,TCN,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",264.22994383296464,2465.0
+nba_sequence,2,No physique,XGB,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""reg_lambda"": 10.0}",1.9725393330445513,
+students,0,Full,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",2.3137577089946717,
+students,0,Full,AdaBoost,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",1.175588332931511,
+students,0,Full,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.5791777500417084,
+students,0,Full,CatBoost,tpe,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.03}",0.3832958749262616,
+students,0,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.5415655419928953,1433.0
+students,0,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",0.860668541979976,1433.0
+students,0,Full,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.058677874971181154,
+students,0,Full,ELM,tpe,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.05664779199287295,
+students,0,Full,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.2114615408936515,
+students,0,Full,ExtraTrees,tpe,"{""max_depth"": 12, ""max_features"": 1.0, ""min_samples_leaf"": 10}",0.6398300000000745,
+students,0,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",9.232816750067286,9025.0
+students,0,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",5.066244625020772,9025.0
+students,0,Full,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",3.1969254589639604,4673.0
+students,0,Full,GatedMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.685150791076012,4673.0
+students,0,Full,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.4631664999760687,
+students,0,Full,HGB,tpe,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",0.7756709590321407,
+students,0,Full,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.0854729579295963,
+students,0,Full,KNN,tpe,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.06890512502286583,
+students,0,Full,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.6113086660625413,
+students,0,Full,LightGBM,tpe,"{""learning_rate"": 0.03, ""min_child_samples"": 10, ""num_leaves"": 7}",0.3838167500216514,
+students,0,Full,Linear,grid,"{""fit_intercept"": true}",0.12548270798288286,
+students,0,Full,Linear,tpe,"{""fit_intercept"": true}",0.11000958294607699,
+students,0,Full,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",4.741446333006024,1377.0
+students,0,Full,MLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",3.981542041990906,1377.0
+students,0,Full,Mean,fixed,{},0.016695749945938587,
+students,0,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.5568051659502089,
+students,0,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.30507479095831513,
+students,0,Full,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.6704940419876948,
+students,0,Full,RF,tpe,"{""max_depth"": 6, ""max_features"": 1.0, ""min_samples_leaf"": 10}",0.8971304160077125,
+students,0,Full,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.535412958008237,17537.0
+students,0,Full,ResMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.3573261660058051,4673.0
+students,0,Full,Ridge,grid,"{""alpha"": 10.0}",0.03363316704053432,
+students,0,Full,Ridge,tpe,"{""alpha"": 10.0}",0.045565207954496145,
+students,0,Full,SVM,grid,"{""C"": 0.1}",0.046002416987903416,
+students,0,Full,SVM,tpe,"{""C"": 0.1}",0.03684016701299697,
+students,0,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.04668100003618747,
+students,0,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 1.0}",0.0401645420351997,
+students,0,Full,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.0451348340138793,
+students,0,Full,Tree,tpe,"{""max_depth"": null, ""min_samples_leaf"": 10}",0.039457083912566304,
+students,0,Full,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.591072625014931,
+students,0,Full,XGB,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.2638560840860009,
+students,0,No activations,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 64}",1.3444518750766292,4801.0
+students,0,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",1.715540917008184,9025.0
+students,0,No cross branch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.1520965830422938,1433.0
+students,0,No gates,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.1755944999167696,4673.0
+students,0,No gender,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 50}",2.176118833012879,
+students,0,No gender,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.5075756669975817,
+students,0,No gender,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.6811160409124568,1394.0
+students,0,No gender,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.05340450000949204,
+students,0,No gender,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.0654743749182671,
+students,0,No gender,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",6.526431416976266,2433.0
+students,0,No gender,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",2.624289874918759,4641.0
+students,0,No gender,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.2727048329543322,
+students,0,No gender,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.08558983297552913,
+students,0,No gender,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 31}",0.46355837502051145,
+students,0,No gender,Linear,grid,"{""fit_intercept"": true}",0.01566570799332112,
+students,0,No gender,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.395943708019331,1345.0
+students,0,No gender,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.4309078339720145,
+students,0,No gender,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.4796469160355628,
+students,0,No gender,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",2.7117317500524223,17473.0
+students,0,No gender,Ridge,grid,"{""alpha"": 10.0}",0.02662583300843835,
+students,0,No gender,SVM,grid,"{""C"": 0.1}",0.03823824995197356,
+students,0,No gender,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03647462499793619,
+students,0,No gender,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 10}",0.032732583000324667,
+students,0,No gender,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.4919398750644177,
+students,0,No lunch,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 100}",2.1898866669507697,
+students,0,No lunch,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.49640187504701316,
+students,0,No lunch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.5785241250414401,1394.0
+students,0,No lunch,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 128}",0.05456575006246567,
+students,0,No lunch,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.0891437919344753,
+students,0,No lunch,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",6.9910745829110965,8961.0
+students,0,No lunch,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",2.7337334170006216,4641.0
+students,0,No lunch,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.2762842080555856,
+students,0,No lunch,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.08606995898298919,
+students,0,No lunch,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 31}",0.4339479160262272,
+students,0,No lunch,Linear,grid,"{""fit_intercept"": false}",0.018256332958117127,
+students,0,No lunch,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.4789497500751168,1345.0
+students,0,No lunch,RBFNet,grid,"{""alpha"": 10.0, ""centres"": 64, ""gamma"": 1.0}",0.471740375040099,
+students,0,No lunch,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.7162118330597878,
+students,0,No lunch,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",2.6194154999684542,4641.0
+students,0,No lunch,Ridge,grid,"{""alpha"": 10.0}",0.04270749993156642,
+students,0,No lunch,SVM,grid,"{""C"": 0.01}",0.04445370892062783,
+students,0,No lunch,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03831645904574543,
+students,0,No lunch,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 10}",0.04899862501770258,
+students,0,No lunch,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.4584710840135813,
+students,0,No parental education,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 100}",1.956865833955817,
+students,0,No parental education,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.36370433401316404,
+students,0,No parental education,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.4984280409989879,1238.0
+students,0,No parental education,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.055766541976481676,
+students,0,No parental education,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.9700237920042127,
+students,0,No parental education,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",7.3869711249135435,2369.0
+students,0,No parental education,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",3.074850208009593,17217.0
+students,0,No parental education,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",1.0212324589956552,
+students,0,No parental education,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.059557583066634834,
+students,0,No parental education,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.3675957090454176,
+students,0,No parental education,Linear,grid,"{""fit_intercept"": true}",0.013638124917633832,
+students,0,No parental education,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.4270321250660345,1217.0
+students,0,No parental education,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 0.1}",0.4128315420821309,
+students,0,No parental education,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.406367791001685,
+students,0,No parental education,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",2.511748000048101,4513.0
+students,0,No parental education,Ridge,grid,"{""alpha"": 10.0}",0.03619825001806021,
+students,0,No parental education,SVM,grid,"{""C"": 0.1}",0.03728054102975875,
+students,0,No parental education,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.032870791968889534,
+students,0,No parental education,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 2}",0.03637270804028958,
+students,0,No parental education,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.41411454195622355,
+students,0,No preparation,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",1.9764584170188755,
+students,0,No preparation,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.41413554106839,
+students,0,No preparation,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.579954707995057,1394.0
+students,0,No preparation,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.04943020804785192,
+students,0,No preparation,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.1614788330625743,
+students,0,No preparation,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",6.274703999981284,2433.0
+students,0,No preparation,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.838248874992132,4641.0
+students,0,No preparation,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.2892496249405667,
+students,0,No preparation,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.079728165990673,
+students,0,No preparation,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.38709299999754876,
+students,0,No preparation,Linear,grid,"{""fit_intercept"": true}",0.017210000078193843,
+students,0,No preparation,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.4009254159172997,1345.0
+students,0,No preparation,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.4422160830581561,
+students,0,No preparation,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.4276023750426248,
+students,0,No preparation,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.599686042056419,4641.0
+students,0,No preparation,Ridge,grid,"{""alpha"": 1.0}",0.03861429204698652,
+students,0,No preparation,SVM,grid,"{""C"": 0.3}",0.03824208304286003,
+students,0,No preparation,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03440237499307841,
+students,0,No preparation,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 10}",0.03397645801305771,
+students,0,No preparation,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.4285378750646487,
+students,0,No residuals,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.3583070000167936,4673.0
+students,1,Full,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 50}",1.843253790982999,
+students,1,Full,AdaBoost,tpe,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 50}",0.6479315829928964,
+students,1,Full,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.48377537506166846,
+students,1,Full,CatBoost,tpe,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.2773451249813661,
+students,1,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.3818468330428004,1433.0
+students,1,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",0.6837502910057083,1433.0
+students,1,Full,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.050534124951809645,
+students,1,Full,ELM,tpe,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.045055916998535395,
+students,1,Full,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.0678235420491546,
+students,1,Full,ExtraTrees,tpe,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",0.5523855419596657,
+students,1,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",8.228630917030387,9025.0
+students,1,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",4.510433083050884,9025.0
+students,1,Full,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",2.3465289579471573,4673.0
+students,1,Full,GatedMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.2229345419909805,4673.0
+students,1,Full,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.195045374915935,
+students,1,Full,HGB,tpe,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",0.6381511670770124,
+students,1,Full,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.06106395798269659,
+students,1,Full,KNN,tpe,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.05000295792706311,
+students,1,Full,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.44151575001887977,
+students,1,Full,LightGBM,tpe,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.25009045796468854,
+students,1,Full,Linear,grid,"{""fit_intercept"": true}",0.018130999989807606,
+students,1,Full,Linear,tpe,"{""fit_intercept"": true}",0.0181983329821378,
+students,1,Full,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.3701492920517921,1377.0
+students,1,Full,MLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",0.7571226670406759,1377.0
+students,1,Full,Mean,fixed,{},0.009815708035603166,
+students,1,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.46003950003068894,
+students,1,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",0.24382916709873825,
+students,1,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.4730131670366973,
+students,1,Full,RF,tpe,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",0.5750162079930305,
+students,1,Full,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.369356833049096,17537.0
+students,1,Full,ResMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",1.0693910419940948,17537.0
+students,1,Full,Ridge,grid,"{""alpha"": 1.0}",0.028783416957594454,
+students,1,Full,Ridge,tpe,"{""alpha"": 0.1}",0.028299625031650066,
+students,1,Full,SVM,grid,"{""C"": 0.1}",0.02926279092207551,
+students,1,Full,SVM,tpe,"{""C"": 0.1}",0.02694929193239659,
+students,1,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03385295800399035,
+students,1,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.02989033400081098,
+students,1,Full,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.033399749896489084,
+students,1,Full,Tree,tpe,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.028439291985705495,
+students,1,Full,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.47158679098356515,
+students,1,Full,XGB,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.28080979199148715,
+students,1,No activations,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",1.3155268330592662,1377.0
+students,1,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",1.6151282079517841,9025.0
+students,1,No cross branch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",0.9849625830538571,1433.0
+students,1,No gates,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.0935276669915766,4673.0
+students,1,No gender,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",1.7948829169617966,
+students,1,No gender,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 1.0, ""learning_rate"": 0.03}",0.42191270797047764,
+students,1,No gender,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.5729141669580713,1394.0
+students,1,No gender,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",0.04826062498614192,
+students,1,No gender,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",0.9786123329540715,
+students,1,No gender,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",6.417841083020903,8961.0
+students,1,No gender,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.6620305409887806,4641.0
+students,1,No gender,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.1, ""max_leaf_nodes"": 7}",1.1628748329821974,
+students,1,No gender,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""distance""}",0.07523987500462681,
+students,1,No gender,LightGBM,grid,"{""learning_rate"": 0.1, ""min_child_samples"": 30, ""num_leaves"": 7}",0.3827867499785498,
+students,1,No gender,Linear,grid,"{""fit_intercept"": true}",0.015098165953531861,
+students,1,No gender,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.3658815830713138,1345.0
+students,1,No gender,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.4277908329386264,
+students,1,No gender,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.3394560830201954,
+students,1,No gender,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.6028274999698624,17473.0
+students,1,No gender,Ridge,grid,"{""alpha"": 1.0}",0.03240091691259295,
+students,1,No gender,SVM,grid,"{""C"": 0.1}",0.03164370800368488,
+students,1,No gender,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03226970799732953,
+students,1,No gender,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 10}",0.03339395800139755,
+students,1,No gender,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.40548145899083465,
+students,1,No lunch,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 1, ""n_estimators"": 100}",1.8667748339939862,
+students,1,No lunch,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.37887545907869935,
+students,1,No lunch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.7079587500775233,1394.0
+students,1,No lunch,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.053062958060763776,
+students,1,No lunch,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",0.9713661659043282,
+students,1,No lunch,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",6.714511374942958,2433.0
+students,1,No lunch,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",2.8620895829517394,4641.0
+students,1,No lunch,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.3295849590795115,
+students,1,No lunch,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.07328295800834894,
+students,1,No lunch,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.3908263329649344,
+students,1,No lunch,Linear,grid,"{""fit_intercept"": true}",0.018238625023514032,
+students,1,No lunch,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.3080194590147585,1345.0
+students,1,No lunch,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.49465799995232373,
+students,1,No lunch,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.3567635000217706,
+students,1,No lunch,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",2.5996072919806466,4641.0
+students,1,No lunch,Ridge,grid,"{""alpha"": 10.0}",0.029784291051328182,
+students,1,No lunch,SVM,grid,"{""C"": 0.1}",0.03495591692626476,
+students,1,No lunch,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03262770804576576,
+students,1,No lunch,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.033739999984391034,
+students,1,No lunch,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.3997391250450164,
+students,1,No parental education,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",1.9806937080575153,
+students,1,No parental education,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.4220076249912381,
+students,1,No parental education,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.6310911249602214,1238.0
+students,1,No parental education,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.06179429090116173,
+students,1,No parental education,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.9365962500451133,
+students,1,No parental education,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",6.44464970799163,8833.0
+students,1,No parental education,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",2.6549934160429984,4513.0
+students,1,No parental education,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",0.9241579169174656,
+students,1,No parental education,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.054563375073485076,
+students,1,No parental education,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 31}",0.33961370901670307,
+students,1,No parental education,Linear,grid,"{""fit_intercept"": true}",0.014551667030900717,
+students,1,No parental education,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.5270094159059227,1217.0
+students,1,No parental education,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 0.1}",0.38950808299705386,
+students,1,No parental education,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",1.2659731660969555,
+students,1,No parental education,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.6774395829997957,4513.0
+students,1,No parental education,Ridge,grid,"{""alpha"": 1.0}",0.02903108310420066,
+students,1,No parental education,SVM,grid,"{""C"": 0.3}",0.03417358302976936,
+students,1,No parental education,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.02786204090807587,
+students,1,No parental education,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 2}",0.029155416996218264,
+students,1,No parental education,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.34460970805957913,
+students,1,No preparation,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 100}",1.8658210840076208,
+students,1,No preparation,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.3735865829512477,
+students,1,No preparation,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.6971852919086814,1394.0
+students,1,No preparation,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.056759417057037354,
+students,1,No preparation,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.997738542035222,
+students,1,No preparation,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",6.752442458062433,2433.0
+students,1,No preparation,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.9718736249487847,4641.0
+students,1,No preparation,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.2415005000075325,
+students,1,No preparation,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""distance""}",0.06652491702698171,
+students,1,No preparation,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.3795789999421686,
+students,1,No preparation,Linear,grid,"{""fit_intercept"": true}",0.022437250008806586,
+students,1,No preparation,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.4547238749219105,1345.0
+students,1,No preparation,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.4338512910762802,
+students,1,No preparation,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.4376650829799473,
+students,1,No preparation,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.7396598749328405,17473.0
+students,1,No preparation,Ridge,grid,"{""alpha"": 10.0}",0.03917045798152685,
+students,1,No preparation,SVM,grid,"{""C"": 0.1}",0.03396812500432134,
+students,1,No preparation,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.040241124923340976,
+students,1,No preparation,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.042229916085489094,
+students,1,No preparation,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.41005929198581725,
+students,1,No residuals,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.1594952499726787,4673.0
+students,2,Full,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 100}",2.0619807089678943,
+students,2,Full,AdaBoost,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 100}",0.9709287090227008,
+students,2,Full,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.44478429201990366,
+students,2,Full,CatBoost,tpe,"{""depth"": 6, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.20093399996403605,
+students,2,Full,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.384749999968335,1433.0
+students,2,Full,DCN,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",0.7606719169998541,1433.0
+students,2,Full,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.06417958298698068,
+students,2,Full,ELM,tpe,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 128}",0.05848725000396371,
+students,2,Full,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.1317773340269923,
+students,2,Full,ExtraTrees,tpe,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",0.669816542067565,
+students,2,Full,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",8.954900166019797,2465.0
+students,2,Full,FeatureTransformer,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 16}",4.779549665981904,2465.0
+students,2,Full,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.7069770420202985,4673.0
+students,2,Full,GatedMLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.3958721669623628,4673.0
+students,2,Full,HGB,grid,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.4289576660376042,
+students,2,Full,HGB,tpe,"{""l2_regularization"": 0.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",0.748271582997404,
+students,2,Full,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.06699312501586974,
+students,2,Full,KNN,tpe,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.05806429195217788,
+students,2,Full,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 31}",0.46617895795498043,
+students,2,Full,LightGBM,tpe,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 31}",0.19497979199513793,
+students,2,Full,Linear,grid,"{""fit_intercept"": false}",0.015727459103800356,
+students,2,Full,Linear,tpe,"{""fit_intercept"": true}",0.017823125002905726,
+students,2,Full,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.432273791055195,1377.0
+students,2,Full,MLP,tpe,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",0.7781015420332551,1377.0
+students,2,Full,Mean,fixed,{},0.015041457954794168,
+students,2,Full,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.5635043330257758,
+students,2,Full,RBFNet,tpe,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 1.0}",0.2926347920438275,
+students,2,Full,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.4112138750497252,
+students,2,Full,RF,tpe,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",0.7608240409754217,
+students,2,Full,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",2.5757247919682413,17537.0
+students,2,Full,ResMLP,tpe,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",1.4187248341040686,17537.0
+students,2,Full,Ridge,grid,"{""alpha"": 10.0}",0.034962791018188,
+students,2,Full,Ridge,tpe,"{""alpha"": 10.0}",0.03103049995843321,
+students,2,Full,SVM,grid,"{""C"": 0.1}",0.03787316707894206,
+students,2,Full,SVM,tpe,"{""C"": 0.3}",0.039551291964016855,
+students,2,Full,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03497449995484203,
+students,2,Full,Sparse,tpe,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.0324317499762401,
+students,2,Full,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.03976641607005149,
+students,2,Full,Tree,tpe,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.033749790978617966,
+students,2,Full,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.49825574993155897,
+students,2,Full,XGB,tpe,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 1.0}",0.27137508301530033,
+students,2,No activations,MLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",1.3474977089790627,1377.0
+students,2,No attention,FeatureTransformer,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",1.5622178328922018,9025.0
+students,2,No cross branch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.1115332499612123,1433.0
+students,2,No gates,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",2.134552040952258,4673.0
+students,2,No gender,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 1, ""n_estimators"": 100}",2.312235875055194,
+students,2,No gender,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.7179587910650298,
+students,2,No gender,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.739315666956827,1394.0
+students,2,No gender,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.05851633392740041,
+students,2,No gender,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.0136744170449674,
+students,2,No gender,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",7.405097207985818,2433.0
+students,2,No gender,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 32}",2.8882813750533387,4641.0
+students,2,No gender,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.30295370798558,
+students,2,No gender,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.08528395905159414,
+students,2,No gender,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 31}",0.4221448750467971,
+students,2,No gender,Linear,grid,"{""fit_intercept"": false}",0.017632833099924028,
+students,2,No gender,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.5299636670388281,1345.0
+students,2,No gender,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.4779857089743018,
+students,2,No gender,RF,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.3976994999684393,
+students,2,No gender,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 64}",2.8006272499915212,17473.0
+students,2,No gender,Ridge,grid,"{""alpha"": 10.0}",0.03133541706483811,
+students,2,No gender,SVM,grid,"{""C"": 0.1}",0.04295425000600517,
+students,2,No gender,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.033899417030625045,
+students,2,No gender,Tree,grid,"{""max_depth"": 2, ""min_samples_leaf"": 2}",0.03322304191533476,
+students,2,No gender,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.456889208056964,
+students,2,No lunch,AdaBoost,grid,"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 50}",2.043247083085589,
+students,2,No lunch,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.42233604099601507,
+students,2,No lunch,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.6300087079871446,1394.0
+students,2,No lunch,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.058490540948696434,
+students,2,No lunch,ExtraTrees,grid,"{""max_depth"": 12, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.091730457963422,
+students,2,No lunch,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",6.835424125078134,8961.0
+students,2,No lunch,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",2.8010885409312323,4641.0
+students,2,No lunch,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.4197930409573019,
+students,2,No lunch,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.07965979201253504,
+students,2,No lunch,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.4244605420390144,
+students,2,No lunch,Linear,grid,"{""fit_intercept"": true}",0.018225166015326977,
+students,2,No lunch,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.38660066598095,1345.0
+students,2,No lunch,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.4596964999800548,
+students,2,No lunch,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.4936634589685127,
+students,2,No lunch,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.01, ""width"": 32}",2.6532150839921087,4641.0
+students,2,No lunch,Ridge,grid,"{""alpha"": 10.0}",0.028357582981698215,
+students,2,No lunch,SVM,grid,"{""C"": 0.1}",0.0341630830662325,
+students,2,No lunch,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03424270800314844,
+students,2,No lunch,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.03297870804090053,
+students,2,No lunch,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.4385400000028312,
+students,2,No parental education,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",2.2699595409212634,
+students,2,No parental education,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.3908958750544116,
+students,2,No parental education,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.938956666039303,1238.0
+students,2,No parental education,ELM,grid,"{""activation"": ""relu"", ""alpha"": 10.0, ""width"": 32}",0.059710292029194534,
+students,2,No parental education,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 3}",0.9953755420865491,
+students,2,No parental education,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",7.177092207944952,8833.0
+students,2,No parental education,GatedMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.0090569580206648,17217.0
+students,2,No parental education,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.0860837911022827,
+students,2,No parental education,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""distance""}",0.07924624998122454,
+students,2,No parental education,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 31}",0.3448543749982491,
+students,2,No parental education,Linear,grid,"{""fit_intercept"": true}",0.01576300000306219,
+students,2,No parental education,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 64}",2.0840906659141183,4481.0
+students,2,No parental education,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 16, ""gamma"": 0.1}",0.41291270800866187,
+students,2,No parental education,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.3990958750946447,
+students,2,No parental education,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",3.5054111670469865,17217.0
+students,2,No parental education,Ridge,grid,"{""alpha"": 10.0}",0.03279037505853921,
+students,2,No parental education,SVM,grid,"{""C"": 0.1}",0.03670029202476144,
+students,2,No parental education,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.033870500046759844,
+students,2,No parental education,Tree,grid,"{""max_depth"": 4, ""min_samples_leaf"": 2}",0.03789070888888091,
+students,2,No parental education,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.3944579999661073,
+students,2,No preparation,AdaBoost,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""n_estimators"": 50}",1.9047705419361591,
+students,2,No preparation,CatBoost,grid,"{""depth"": 4, ""l2_leaf_reg"": 10.0, ""learning_rate"": 0.03}",0.3916766250040382,
+students,2,No preparation,DCN,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",1.749553416040726,1394.0
+students,2,No preparation,ELM,grid,"{""activation"": ""tanh"", ""alpha"": 10.0, ""width"": 32}",0.05271337495651096,
+students,2,No preparation,ExtraTrees,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",0.979246124974452,
+students,2,No preparation,FeatureTransformer,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 16}",6.329448207980022,2433.0
+students,2,No preparation,GatedMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.01, ""width"": 32}",2.8897940419847146,4641.0
+students,2,No preparation,HGB,grid,"{""l2_regularization"": 1.0, ""learning_rate"": 0.05, ""max_leaf_nodes"": 7}",1.198605875018984,
+students,2,No preparation,KNN,grid,"{""n_neighbors"": 31, ""weights"": ""uniform""}",0.063094999990426,
+students,2,No preparation,LightGBM,grid,"{""learning_rate"": 0.03, ""min_child_samples"": 30, ""num_leaves"": 7}",0.37562404095660895,
+students,2,No preparation,Linear,grid,"{""fit_intercept"": true}",0.018228833097964525,
+students,2,No preparation,MLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",1.2877855420811102,1345.0
+students,2,No preparation,RBFNet,grid,"{""alpha"": 0.1, ""centres"": 64, ""gamma"": 0.1}",0.48530512501019984,
+students,2,No preparation,RF,grid,"{""max_depth"": 6, ""max_features"": 0.7, ""min_samples_leaf"": 10}",1.4693782499525696,
+students,2,No preparation,ResMLP,grid,"{""lr"": 0.003, ""weight_decay"": 0.0001, ""width"": 32}",2.580892457976006,4641.0
+students,2,No preparation,Ridge,grid,"{""alpha"": 10.0}",0.03343683306593448,
+students,2,No preparation,SVM,grid,"{""C"": 0.1}",0.032445000018924475,
+students,2,No preparation,Sparse,grid,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.03166091698221862,
+students,2,No preparation,Tree,grid,"{""max_depth"": 8, ""min_samples_leaf"": 10}",0.035830542095936835,
+students,2,No preparation,XGB,grid,"{""learning_rate"": 0.03, ""max_depth"": 3, ""reg_lambda"": 10.0}",0.4022929579950869,
+students,2,No residuals,ResMLP,grid,"{""lr"": 0.01, ""weight_decay"": 0.0001, ""width"": 64}",2.3931231249589473,17537.0

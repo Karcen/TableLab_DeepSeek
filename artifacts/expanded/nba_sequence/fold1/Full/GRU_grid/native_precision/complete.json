@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "nba_sequence",
+    "fold": 1,
+    "variant": "Full",
+    "model": "GRU",
+    "method": "grid",
+    "cls": false,
+    "channels": 7,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold1/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold1/Full",
+    "seed": 142
+  },
+  "selected_params": {
+    "lr": 0.01,
+    "weight_decay": 0.0001,
+    "width": 64
+  },
+  "seconds": 11.898828083998524,
+  "parameter_count": 14081,
+  "model_sha256": "3f3f40b3624c85013f358428ceb048fbfea5886052db0c5db3dc9437a962eeb2",
+  "prediction_sha256": "b105bad39a54ab5fa856301e7c5964d4b5e879ffd0936edbef0d907d69a41c61",
+  "metrics_sha256": "afd72a7b8a8b338fadede742723f9b9721b8ebe9f1f02e14602fe781e369e94d"
+}

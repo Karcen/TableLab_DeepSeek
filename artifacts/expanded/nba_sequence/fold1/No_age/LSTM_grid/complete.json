@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "nba_sequence",
+    "fold": 1,
+    "variant": "No age",
+    "model": "LSTM",
+    "method": "grid",
+    "cls": false,
+    "channels": 6,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold1/No_age/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold1/No_age",
+    "seed": 142
+  },
+  "selected_params": {
+    "lr": 0.01,
+    "weight_decay": 0.0001,
+    "width": 32
+  },
+  "seconds": 11.270013082888909,
+  "parameter_count": 5153,
+  "model_sha256": "791c05e344f9e30bb7c91a6ea5273761e37e030b9f5b7df54659c7abf673be4c",
+  "prediction_sha256": "94e0ca19662f56d688cea8b71d9252882a71a31f5daa7e3f627d66045f7e17f0",
+  "metrics_sha256": "1411536ad6f9a3d0ce4f700b2a360bdd43f157c814244cacebc03a69cbb6bd8b",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "39b7c4f85ec5e81fca9e66ca9f0630a54edbf8e170aa63ca080aebc06ff28640",
+  "max_prediction_rounding_correction": 2.580618037484328e-06
+}

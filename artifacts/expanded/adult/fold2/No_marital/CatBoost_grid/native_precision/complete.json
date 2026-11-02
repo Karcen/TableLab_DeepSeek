@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 2,
+    "variant": "No marital",
+    "model": "CatBoost",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/No_marital/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/No_marital",
+    "seed": 242
+  },
+  "selected_params": {
+    "depth": 6,
+    "l2_leaf_reg": 10.0,
+    "learning_rate": 0.1
+  },
+  "seconds": 14.75668404204771,
+  "parameter_count": null,
+  "model_sha256": "ed3561b4106858d67d7fd15df7d10c585116ffab6c1bf63111320a96d4035d82",
+  "prediction_sha256": "8e8625ae56e5a485ab94e43ee3973c294efb788313642a912de15bebe500a500",
+  "metrics_sha256": "bbd36d6da994a71d003570957523969e8dc97e230fc488e92ba03821db4bbdff"
+}

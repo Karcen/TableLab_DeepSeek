@@ -1,0 +1,26 @@
+{
+  "task": {
+    "dataset": "nba",
+    "fold": 2,
+    "variant": "No activations",
+    "model": "MLP",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold2/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold2/No_activations",
+    "seed": 242,
+    "architecture_ablation": "No activations"
+  },
+  "selected_params": {
+    "lr": 0.003,
+    "weight_decay": 0.01,
+    "width": 32
+  },
+  "seconds": 6.954132584040053,
+  "parameter_count": 2145,
+  "model_sha256": "8c00bca61e77657e21d8205235364629bffad183c64b11301b6a8ac0504f9a46",
+  "prediction_sha256": "621e6ed4451d5da3764074bef04c3dfcce1a46e60baf0558243fdca3ada51eab",
+  "metrics_sha256": "315affb6d585fcc0ddb5873af391cb1c7e59d6d3518ef5d017c0586be29cbae1"
+}

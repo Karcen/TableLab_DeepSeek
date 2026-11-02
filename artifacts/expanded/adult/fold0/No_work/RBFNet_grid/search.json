@@ -1,0 +1,143 @@
+{
+  "model": "RBFNet",
+  "method": "grid",
+  "rows": [
+    {
+      "trial": 0,
+      "params": {
+        "alpha": 0.1,
+        "centres": 16,
+        "gamma": 0.1
+      },
+      "fold_scores": [
+        0.858064021188392,
+        0.8678789704797025,
+        0.8689365736958194
+      ],
+      "score": 0.8649598551213047,
+      "seconds": 0.23111658298876137,
+      "reused_duplicate_candidate": false
+    },
+    {
+      "trial": 1,
+      "params": {
+        "alpha": 0.1,
+        "centres": 16,
+        "gamma": 1.0
+      },
+      "fold_scores": [
+        0.8669733940834728,
+        0.8716576028398946,
+        0.8759513464898336
+      ],
+      "score": 0.8715274478044005,
+      "seconds": 0.31210070801898837,
+      "reused_duplicate_candidate": false
+    },
+    {
+      "trial": 2,
+      "params": {
+        "alpha": 0.1,
+        "centres": 64,
+        "gamma": 0.1
+      },
+      "fold_scores": [
+        0.8599161672306244,
+        0.8681930117508914,
+        0.8709019181703548
+      ],
+      "score": 0.8663370323839569,
+      "seconds": 0.6224856249755248,
+      "reused_duplicate_candidate": false
+    },
+    {
+      "trial": 3,
+      "params": {
+        "alpha": 0.1,
+        "centres": 64,
+        "gamma": 1.0
+      },
+      "fold_scores": [
+        0.8678634853580403,
+        0.8717049441696278,
+        0.8773388759266307
+      ],
+      "score": 0.8723024351514329,
+      "seconds": 0.7405642910161987,
+      "reused_duplicate_candidate": false
+    },
+    {
+      "trial": 4,
+      "params": {
+        "alpha": 10.0,
+        "centres": 16,
+        "gamma": 0.1
+      },
+      "fold_scores": [
+        0.8228893311144764,
+        0.8381317899014777,
+        0.834539805697806
+      ],
+      "score": 0.83185364223792,
+      "seconds": 0.22010387503542006,
+      "reused_duplicate_candidate": false
+    },
+    {
+      "trial": 5,
+      "params": {
+        "alpha": 10.0,
+        "centres": 16,
+        "gamma": 1.0
+      },
+      "fold_scores": [
+        0.8625003773122188,
+        0.8701463380070618,
+        0.8722708454952478
+      ],
+      "score": 0.8683058536048428,
+      "seconds": 0.18539620796218514,
+      "reused_duplicate_candidate": false
+    },
+    {
+      "trial": 6,
+      "params": {
+        "alpha": 10.0,
+        "centres": 64,
+        "gamma": 0.1
+      },
+      "fold_scores": [
+        0.8403584951754692,
+        0.8521130536035532,
+        0.8535920260061705
+      ],
+      "score": 0.848687858261731,
+      "seconds": 0.626611499930732,
+      "reused_duplicate_candidate": false
+    },
+    {
+      "trial": 7,
+      "params": {
+        "alpha": 10.0,
+        "centres": 64,
+        "gamma": 1.0
+      },
+      "fold_scores": [
+        0.8655904207712752,
+        0.8713839009799133,
+        0.87524603383118
+      ],
+      "score": 0.8707401185274563,
+      "seconds": 0.576204999932088,
+      "reused_duplicate_candidate": false
+    }
+  ],
+  "best_params": {
+    "alpha": 0.1,
+    "centres": 64,
+    "gamma": 1.0
+  },
+  "unique_candidates": 8,
+  "requested_evaluations": 8,
+  "actual_inner_fits": 24,
+  "duplicate_policy": "Identical deterministic candidate scores reused within one search; evaluations remain in trace."
+}

@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 1,
+    "variant": "No marital",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/No_marital/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold1/No_marital",
+    "seed": 142
+  },
+  "selected_params": {
+    "learning_rate": 0.1,
+    "min_child_samples": 30,
+    "num_leaves": 7
+  },
+  "seconds": 4.573979041073471,
+  "parameter_count": null,
+  "model_sha256": "b72fa301f7304f302fadd99ef9ae438eed0863e0941ba8977cc9b1cdf03648a5",
+  "prediction_sha256": "2f5820a6e7a35dcf419ca5b3657cc9af5db69cf4388df854b6986a6412e73047",
+  "metrics_sha256": "c898333ba24e7c0eb19d2a04eb38b0d7743e3efe532345ef25ab4989ae22e485"
+}

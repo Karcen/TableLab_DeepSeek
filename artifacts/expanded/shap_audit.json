@@ -1,0 +1,105 @@
+{
+  "total_explained": 43893,
+  "folds": [
+    {
+      "dataset": "house",
+      "fold": 0,
+      "n_explained": 487,
+      "max_additivity_error": 2.9103830456733704e-10,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    },
+    {
+      "dataset": "house",
+      "fold": 1,
+      "n_explained": 487,
+      "max_additivity_error": 4.656612873077393e-10,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    },
+    {
+      "dataset": "house",
+      "fold": 2,
+      "n_explained": 486,
+      "max_additivity_error": 2.3283064365386963e-10,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    },
+    {
+      "dataset": "adult",
+      "fold": 0,
+      "n_explained": 10855,
+      "max_additivity_error": 6.217248937900877e-15,
+      "model": "HGB_grid fixed before results",
+      "units": "log_odds"
+    },
+    {
+      "dataset": "adult",
+      "fold": 1,
+      "n_explained": 10853,
+      "max_additivity_error": 9.769962616701378e-15,
+      "model": "HGB_grid fixed before results",
+      "units": "log_odds"
+    },
+    {
+      "dataset": "adult",
+      "fold": 2,
+      "n_explained": 10853,
+      "max_additivity_error": 7.993605777301127e-15,
+      "model": "HGB_grid fixed before results",
+      "units": "log_odds"
+    },
+    {
+      "dataset": "nba",
+      "fold": 0,
+      "n_explained": 2706,
+      "max_additivity_error": 1.7763568394002505e-14,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    },
+    {
+      "dataset": "nba",
+      "fold": 1,
+      "n_explained": 2883,
+      "max_additivity_error": 1.7763568394002505e-14,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    },
+    {
+      "dataset": "nba",
+      "fold": 2,
+      "n_explained": 3283,
+      "max_additivity_error": 2.3092638912203256e-14,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    },
+    {
+      "dataset": "students",
+      "fold": 0,
+      "n_explained": 334,
+      "max_additivity_error": 2.842170943040401e-14,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    },
+    {
+      "dataset": "students",
+      "fold": 1,
+      "n_explained": 333,
+      "max_additivity_error": 1.4210854715202004e-14,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    },
+    {
+      "dataset": "students",
+      "fold": 2,
+      "n_explained": 333,
+      "max_additivity_error": 1.4210854715202004e-14,
+      "model": "HGB_grid fixed before results",
+      "units": "target_units"
+    }
+  ],
+  "background": "training tree-path counts",
+  "encoded_fields": "sum signed encoded contributions before absolute importance",
+  "record_sampling": false,
+  "max_additivity_error": 4.656612873077393e-10
+}

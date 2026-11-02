@@ -7,145 +7,160 @@
 \citation{lewis2020}
 \@writefile{toc}{\contentsline {section}{\numberline {I}研究问题}{3}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {II}结果}{3}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}多模型与嵌套验证}{3}{subsection.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}网格与 TPE 贝叶斯搜索的实际收益}{3}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}训练误差与验证误差}{3}{subsection.2.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces 三折外层验证的均值与折间标准差}}{4}{table.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}扩展模型的共同验证}{3}{subsection.2.1}\protected@file@percent }
+\newlabel{sec:expanded-results}{{\mbox  {II-A}}{3}{扩展模型的共同验证}{subsection.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}网格与 TPE 的外层比较}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces 扩展实验：网格流程的三折外层均值及标准差}}{4}{table.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:new-models}{{I}{4}{三折外层验证的均值与折间标准差}{table.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-D}}SHAP 解释与特征组消融}{4}{subsection.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-E}}原单次划分的计算复核}{4}{subsection.2.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 九种预设方法及四条调参流程的外层表现。小点为各折，较大点与误差线为三折均值与标准差。按各任务自身指标排序，不能跨任务比较数值大小。}}{5}{figure.1}\protected@file@percent }
-\newlabel{fig:new-benchmark}{{1}{5}{九种预设方法及四条调参流程的外层表现。小点为各折，较大点与误差线为三折均值与标准差。按各任务自身指标排序，不能跨任务比较数值大小。}{figure.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-E}1}房价预测}{5}{subsubsection.2.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 提升树内层搜索轨迹。每条线为截至相应候选次数的最优内层分数，误差线为三个外层训练子集上该分数的标准差。网格横轴表示预设枚举顺序，TPE 按已有结果选择下一候选。内层曲线用于观察搜索过程，最终表现由外层记录评价。}}{6}{figure.2}\protected@file@percent }
-\newlabel{fig:new-search}{{2}{6}{提升树内层搜索轨迹。每条线为截至相应候选次数的最优内层分数，误差线为三个外层训练子集上该分数的标准差。网格横轴表示预设枚举顺序，TPE 按已有结果选择下一候选。内层曲线用于观察搜索过程，最终表现由外层记录评价。}{figure.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces 相同的 292 套房屋，不同的估价方法}}{6}{table.2}\protected@file@percent }
-\newlabel{tab:houses}{{II}{6}{相同的 292 套房屋，不同的估价方法}{table.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 学习曲线。横轴为外层训练集使用比例，NBA 按最早的完整赛季逐步增加，Adult 按记录指纹组增加；其余任务使用固定顺序的嵌套子样本。各子样本重新拟合预处理。训练与验证点均为三折均值，误差线为折间标准差。分类使用对数损失，回归使用 RMSE。}}{7}{figure.3}\protected@file@percent }
-\newlabel{fig:new-learning}{{3}{7}{学习曲线。横轴为外层训练集使用比例，NBA 按最早的完整赛季逐步增加，Adult 按记录指纹组增加；其余任务使用固定顺序的嵌套子样本。各子样本重新拟合预处理。训练与验证点均为三折均值，误差线为折间标准差。分类使用对数损失，回归使用 RMSE。}{figure.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 决策树复杂度曲线。Full 表示不限制树深。训练与验证使用同一误差定义；相邻折有重合训练样本，误差线描述折间差异。}}{8}{figure.4}\protected@file@percent }
-\newlabel{fig:new-complexity}{{4}{8}{决策树复杂度曲线。Full 表示不限制树深。训练与验证使用同一误差定义；相邻折有重合训练样本，误差线描述折间差异。}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-E}2}收入分类}{8}{subsubsection.2.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 原始字段层面的平均绝对 SHAP。先对每条记录中属于同一原始字段的编码贡献求和，再取绝对值；点与误差线表示各折平均绝对贡献的均值和标准差。分类单位为对数几率，回归单位与目标一致。全部外层验证记录参与计算。}}{9}{figure.5}\protected@file@percent }
-\newlabel{fig:new-shap}{{5}{9}{原始字段层面的平均绝对 SHAP。先对每条记录中属于同一原始字段的编码贡献求和，再取绝对值；点与误差线表示各折平均绝对贡献的均值和标准差。分类单位为对数几率，回归单位与目标一致。全部外层验证记录参与计算。}{figure.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces 固定阈值下的两类错误与概率误差}}{9}{table.3}\protected@file@percent }
-\newlabel{tab:adult}{{III}{9}{固定阈值下的两类错误与概率误差}{table.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces SHAP 贡献分布。每点对应一条外层验证记录在相应原始字段上的贡献；纵向抖动只用于显示重叠，横向位置保持计算值。各任务采用全部外层验证记录；类别编码贡献先按原字段相加。}}{10}{figure.6}\protected@file@percent }
-\newlabel{fig:new-beeswarm}{{6}{10}{SHAP 贡献分布。每点对应一条外层验证记录在相应原始字段上的贡献；纵向抖动只用于显示重叠，横向位置保持计算值。各任务采用全部外层验证记录；类别编码贡献先按原字段相加。}{figure.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-E}3}球员得分与学生成绩}{10}{subsubsection.2.5.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 预先指定字段的取值与 SHAP 贡献。四个面板分别使用居住面积、教育编码、年龄和午餐类别；每点对应一条外层验证记录，透明度用于显示重叠。午餐类别仅沿横轴作确定性抖动。曲线或点云描述拟合模型中的关联。}}{11}{figure.7}\protected@file@percent }
-\newlabel{fig:new-dependence}{{7}{11}{预先指定字段的取值与 SHAP 贡献。四个面板分别使用居住面积、教育编码、年龄和午餐类别；每点对应一条外层验证记录，透明度用于显示重叠。午餐类别仅沿横轴作确定性抖动。曲线或点云描述拟合模型中的关联。}{figure.7}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces 预测得分时的验证误差}}{11}{table.4}\protected@file@percent }
-\newlabel{tab:scores}{{IV}{11}{预测得分时的验证误差}{table.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces 特征组消融并重新进行内层网格搜索后的性能变化。Only area + quality 表示仅保留地上居住面积与整体质量，其余 No 标签表示删去对应字段或组。正值表示相对全部字段的性能损失，负值表示改善；同一折的两种配置使用完全相同的训练与验证记录。点与误差线为三折配对变化的均值和标准差。}}{12}{figure.8}\protected@file@percent }
-\newlabel{fig:new-ablation}{{8}{12}{特征组消融并重新进行内层网格搜索后的性能变化。Only area + quality 表示仅保留地上居住面积与整体质量，其余 No 标签表示删去对应字段或组。正值表示相对全部字段的性能损失，负值表示改善；同一折的两种配置使用完全相同的训练与验证记录。点与误差线为三折配对变化的均值和标准差。}{figure.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}意义}{12}{section.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces 代表性单条预测的字段贡献。每个任务按全部外层验证记录的绝对预测误差排序，取中间记录；橙色条提高预测，蓝色条降低预测，虚线表示基准输出。分类在对数几率尺度分解，回归在目标单位分解；具体行号、真实值、预测值与加和核对保存在计算记录中。}}{13}{figure.9}\protected@file@percent }
-\newlabel{fig:new-local}{{9}{13}{代表性单条预测的字段贡献。每个任务按全部外层验证记录的绝对预测误差排序，取中间记录；橙色条提高预测，蓝色条降低预测，虚线表示基准输出。分类在对数几率尺度分解，回归在目标单位分解；具体行号、真实值、预测值与加和核对保存在计算记录中。}{figure.9}{}}
+\newlabel{tab:expanded-models}{{I}{4}{扩展实验：网格流程的三折外层均值及标准差}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}神经网络拟合与消融}{4}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-D}}NBA 历史赛季预测}{4}{subsection.2.4}\protected@file@percent }
+\newlabel{sec:nba-sequence}{{\mbox  {II-D}}{4}{NBA 历史赛季预测}{subsection.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 扩展模型在四个任务中的外层表现。圆点为网格，方块为 TPE，灰色菱形为不调参的常数参照；横线为三折标准差。每项同时展示两种搜索，以网格均值排序。全部记录及模型均保留，未按测试成绩筛选模型。}}{5}{figure.1}\protected@file@percent }
+\newlabel{fig:expanded-benchmark}{{1}{5}{扩展模型在四个任务中的外层表现。圆点为网格，方块为 TPE，灰色菱形为不调参的常数参照；横线为三折标准差。每项同时展示两种搜索，以网格均值排序。全部记录及模型均保留，未按测试成绩筛选模型。}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-E}}固定提升树的 SHAP 解释}{5}{subsection.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 样本量与复杂度控制。每行一个任务，左列使用网格提升树，固定完整外层训练集内选出的参数，增加训练样本比例；每个子样本重新拟合预处理。Adult 以指纹组抽取，NBA 取最早完整赛季，因此其比例是赛季近似值。右列改变决策树深度，叶节点最少两条，Full 表示不限制深度。线与阴影为三折均值及标准差，验证记录保持不变。这些控制用于诊断，不增加排行榜条目。}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig:expanded-fit}{{2}{6}{样本量与复杂度控制。每行一个任务，左列使用网格提升树，固定完整外层训练集内选出的参数，增加训练样本比例；每个子样本重新拟合预处理。Adult 以指纹组抽取，NBA 取最早完整赛季，因此其比例是赛季近似值。右列改变决策树深度，叶节点最少两条，Full 表示不限制深度。线与阴影为三折均值及标准差，验证记录保持不变。这些控制用于诊断，不增加排行榜条目。}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 固定四十轮预算下的拟合诊断。颜色区分残差 MLP 与字段 Transformer，虚线为训练、实线为外层验证，阴影为三折标准差。展示模型固定为残差 MLP 与字段 Transformer，不按外层成绩挑选；曲线仅记录，未用于选择轮数或早停。回归损失转换回原目标尺度，分类为对数损失。}}{7}{figure.3}\protected@file@percent }
+\newlabel{fig:expanded-training}{{3}{7}{固定四十轮预算下的拟合诊断。颜色区分残差 MLP 与字段 Transformer，虚线为训练、实线为外层验证，阴影为三折标准差。展示模型固定为残差 MLP 与字段 Transformer，不按外层成绩挑选；曲线仅记录，未用于选择轮数或早停。回归损失转换回原目标尺度，分类为对数损失。}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-F}}Adult 后续扩展测试}{7}{subsection.2.6}\protected@file@percent }
+\newlabel{sec:adult-holdout}{{\mbox  {II-F}}{7}{Adult 后续扩展测试}{subsection.2.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 全部二十项可训练模型的特征组消融。每个模型与字段组对应三个并排色条，依次为三个外层折，显示删减后相对同折完整模型的指标损失百分比；正值为退化，负值为改善。各面板使用各自的线性色标。删减后重新拟合预处理并网格调参；Only area + quality 为仅保留地上居住面积与整体质量的配置。所有逐折差值保留，未只展示有利结果。}}{8}{figure.4}\protected@file@percent }
+\newlabel{fig:expanded-ablation}{{4}{8}{全部二十项可训练模型的特征组消融。每个模型与字段组对应三个并排色条，依次为三个外层折，显示删减后相对同折完整模型的指标损失百分比；正值为退化，负值为改善。各面板使用各自的线性色标。删减后重新拟合预处理并网格调参；Only area + quality 为仅保留地上居住面积与整体质量的配置。所有逐折差值保留，未只展示有利结果。}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-G}}原单次划分的计算复核}{8}{subsection.2.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 五项神经网络结构控制在四任务中的配对变化。每个任务含三个并排色条，对应三个外层折；指标损失定义同图~\ref {fig:expanded-ablation}。控制分别关闭激活、残差相加、自注意力，或将交叉分支输出置零、门控置为一；其余训练规则一致，每项控制重新网格调参。该比较检验本地实现中的部件，不能解释为对同名论文完整模型的复现。}}{9}{figure.5}\protected@file@percent }
+\newlabel{fig:expanded-architecture}{{5}{9}{五项神经网络结构控制在四任务中的配对变化。每个任务含三个并排色条，对应三个外层折；指标损失定义同图~\ref {fig:expanded-ablation}。控制分别关闭激活、残差相加、自注意力，或将交叉分支输出置零、门控置为一；其余训练规则一致，每项控制重新网格调参。该比较检验本地实现中的部件，不能解释为对同名论文完整模型的复现。}{figure.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces 相同三赛季历史窗口上的 NBA 下一赛季预测}}{9}{table.2}\protected@file@percent }
+\newlabel{tab:expanded-sequence}{{II}{9}{相同三赛季历史窗口上的 NBA 下一赛季预测}{table.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces NBA 历史窗口任务的性能与信息依赖。a，十五项条目的网格、TPE 或固定参照结果，误差线为三折标准差。b，十三项可训练条目分别删去年龄、身体属性、历史产出、出场次数，或只保留最近两个赛季；每格三个色条保留同折损失。两赛季控制使用相同目标记录，未另换较容易的样本。}}{10}{figure.6}\protected@file@percent }
+\newlabel{fig:expanded-sequence}{{6}{10}{NBA 历史窗口任务的性能与信息依赖。a，十五项条目的网格、TPE 或固定参照结果，误差线为三折标准差。b，十三项可训练条目分别删去年龄、身体属性、历史产出、出场次数，或只保留最近两个赛季；每格三个色条保留同折损失。两赛季控制使用相同目标记录，未另换较容易的样本。}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-G}1}房价预测}{10}{subsubsection.2.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-G}2}收入分类}{10}{subsubsection.2.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 固定提升树对四任务全部外层验证记录的平均绝对 SHAP。柱与误差线分别为三折均值和标准差；分类在原始对数几率尺度，回归在目标单位，房价以千美元表示。没有只解释预测较准的记录，贡献加和逐条核对。}}{11}{figure.7}\protected@file@percent }
+\newlabel{fig:expanded-shap}{{7}{11}{固定提升树对四任务全部外层验证记录的平均绝对 SHAP。柱与误差线分别为三折均值和标准差；分类在原始对数几率尺度，回归在目标单位，房价以千美元表示。没有只解释预测较准的记录，贡献加和逐条核对。}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-G}3}球员得分与学生成绩}{11}{subsubsection.2.7.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Adult 后续扩展测试：按训练数据中的 CV 均值排序}}{12}{table.3}\protected@file@percent }
+\newlabel{tab:adult-holdout}{{III}{12}{Adult 后续扩展测试：按训练数据中的 CV 均值排序}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces 相同的 292 套房屋，不同的估价方法}}{12}{table.4}\protected@file@percent }
+\newlabel{tab:houses}{{IV}{12}{相同的 292 套房屋，不同的估价方法}{table.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces 固定阈值下的两类错误与概率误差}}{12}{table.5}\protected@file@percent }
+\newlabel{tab:adult}{{V}{12}{固定阈值下的两类错误与概率误差}{table.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces 房价与收入的单条 SHAP 分解。各任务在全部外层验证记录中按绝对预测误差排序，取中间记录；字段按该记录贡献的绝对值排序。灰色为基准，蓝、橙为负、正贡献，青色为最终原始输出。分类输出为对数几率，须经 sigmoid 才得到概率。行号、真实值与预测值随图保存。}}{13}{figure.8}\protected@file@percent }
+\newlabel{fig:expanded-local}{{8}{13}{房价与收入的单条 SHAP 分解。各任务在全部外层验证记录中按绝对预测误差排序，取中间记录；字段按该记录贡献的绝对值排序。灰色为基准，蓝、橙为负、正贡献，青色为最终原始输出。分类输出为对数几率，须经 sigmoid 才得到概率。行号、真实值与预测值随图保存。}{figure.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces 预测得分时的验证误差}}{13}{table.6}\protected@file@percent }
+\newlabel{tab:scores}{{VI}{13}{预测得分时的验证误差}{table.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}意义}{13}{section.3}\protected@file@percent }
 \citation{house}
-\citation{adult}
-\citation{nba}
-\citation{student}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Adult 收入分类的 ROC 曲线。每个阈值对应一个点。斜虚线给出随机排序的参照。}}{14}{figure.10}\protected@file@percent }
-\newlabel{fig:roc}{{10}{14}{Adult 收入分类的 ROC 曲线。每个阈值对应一个点。斜虚线给出随机排序的参照。}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Adult 后续扩展测试。a，全部二十一个条目按训练数据中的 CV 均值排序，青色菱形为测试前预选模型，误差线为 95\% 区间。b，预选模型减去六项事先指定的提升树和网络参照；若参照与预选模型相同则略去自身。两面板均按指纹组配对重抽样，正差表示预选模型较高。原测试文件已用于前期研究，图中区间不能消除此前查看和模型设计选择的影响。}}{14}{figure.9}\protected@file@percent }
+\newlabel{fig:expanded-holdout}{{9}{14}{Adult 后续扩展测试。a，全部二十一个条目按训练数据中的 CV 均值排序，青色菱形为测试前预选模型，误差线为 95\% 区间。b，预选模型减去六项事先指定的提升树和网络参照；若参照与预选模型相同则略去自身。两面板均按指纹组配对重抽样，正差表示预选模型较高。原测试文件已用于前期研究，图中区间不能消除此前查看和模型设计选择的影响。}{figure.9}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}方法}{14}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}数据与原单次划分复核}{14}{subsection.4.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces 原单次划分复核的样本和输入变量}}{14}{table.5}\protected@file@percent }
-\newlabel{tab:sample}{{V}{14}{原单次划分复核的样本和输入变量}{table.5}{}}
-\citation{nestedcv}
-\citation{optunadocs}
-\citation{shapdocs}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}扩展实验的验证与搜索协议}{15}{subsection.4.2}\protected@file@percent }
-\newlabel{sec:new-protocol}{{\mbox  {IV-B}}{15}{扩展实验的验证与搜索协议}{subsection.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}解释、消融与结果核对}{15}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}字段检索与统计计算}{16}{subsection.4.4}\protected@file@percent }
-\newlabel{eq:tfidf}{{1}{16}{字段检索与统计计算}{equation.1}{}}
-\newlabel{eq:mean}{{2}{16}{字段检索与统计计算}{equation.2}{}}
+\citation{adult}
+\citation{nba}
+\citation{student}
+\citation{xgboost2016,lightgbm2017,catboost2018}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces 原单次划分复核的样本和输入变量}}{15}{table.7}\protected@file@percent }
+\newlabel{tab:sample}{{VII}{15}{原单次划分复核的样本和输入变量}{table.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}扩展比较与搜索协议}{15}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:new-protocol}{{\mbox  {IV-B}}{15}{扩展比较与搜索协议}{subsection.4.2}{}}
+\citation{dcn2017}
+\citation{transformer2017}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces 扩展实验的参数域与固定训练量}}{16}{table.8}\protected@file@percent }
+\newlabel{tab:expanded-spaces}{{VIII}{16}{扩展实验的参数域与固定训练量}{table.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}网络训练与结构控制}{16}{subsection.4.3}\protected@file@percent }
+\citation{torchlstm,tcn2018,transformer2017}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}NBA 历史窗口的构造}{17}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}解释、精度与复算}{17}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-F}}Adult 后续扩展测试的冻结与复算}{18}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-G}}前期 Adult 十三流程的预留测试协议}{18}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-H}}字段检索与统计计算}{19}{subsection.4.8}\protected@file@percent }
+\newlabel{eq:tfidf}{{1}{19}{字段检索与统计计算}{equation.1}{}}
+\newlabel{eq:mean}{{2}{19}{字段检索与统计计算}{equation.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-I}}原单次划分的预测模型与评价方法}{19}{subsection.4.9}\protected@file@percent }
+\newlabel{eq:base}{{3}{19}{原单次划分的预测模型与评价方法}{equation.3}{}}
 \citation{sklearn}
 \citation{breiman2001}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}预测模型与评价方法}{17}{subsection.4.5}\protected@file@percent }
-\newlabel{eq:base}{{3}{17}{预测模型与评价方法}{equation.3}{}}
-\newlabel{eq:slope}{{4}{17}{预测模型与评价方法}{equation.4}{}}
-\newlabel{eq:logit}{{5}{17}{预测模型与评价方法}{equation.5}{}}
-\newlabel{eq:loss}{{6}{17}{预测模型与评价方法}{equation.6}{}}
-\newlabel{eq:tree}{{7}{17}{预测模型与评价方法}{equation.7}{}}
-\newlabel{eq:metrics}{{8}{18}{预测模型与评价方法}{equation.8}{}}
-\@writefile{toc}{\contentsline {section}{附录\nobreakspace  A: 数学推导与计算示例}{19}{section*.2}\protected@file@percent }
-\newlabel{app:math}{{A}{19}{\appendixname \nobreakspace \thesectiondis \\* 数学推导与计算示例}{section*.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-A}}从均值到一元回归}{19}{subsection.Appendix.A.1}\protected@file@percent }
-\newlabel{app:eq:constant}{{A.2}{19}{从均值到一元回归}{equation.Appendix.A.2}{}}
-\newlabel{app:eq:line}{{A.3}{19}{从均值到一元回归}{equation.Appendix.A.3}{}}
-\newlabel{app:eq:ols-loss}{{A.4}{19}{从均值到一元回归}{equation.Appendix.A.4}{}}
-\newlabel{app:eq:ols-intercept}{{A.5}{19}{从均值到一元回归}{equation.Appendix.A.5}{}}
-\newlabel{app:eq:ols-slope}{{A.6}{20}{从均值到一元回归}{equation.Appendix.A.6}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces 三条教学计算记录，来自上传的 \nolinkurl  {train.csv}。}}{20}{table.Appendix.A.1}\protected@file@percent }
-\newlabel{app:eq:ols-orthogonal}{{A.8}{20}{从均值到一元回归}{equation.Appendix.A.8}{}}
+\newlabel{eq:slope}{{4}{20}{原单次划分的预测模型与评价方法}{equation.4}{}}
+\newlabel{eq:logit}{{5}{20}{原单次划分的预测模型与评价方法}{equation.5}{}}
+\newlabel{eq:loss}{{6}{20}{原单次划分的预测模型与评价方法}{equation.6}{}}
+\newlabel{eq:tree}{{7}{20}{原单次划分的预测模型与评价方法}{equation.7}{}}
+\newlabel{eq:metrics}{{8}{20}{原单次划分的预测模型与评价方法}{equation.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-J}}代码公开与复现}{21}{subsection.4.10}\protected@file@percent }
+\newlabel{sec:reproducibility}{{\mbox  {IV-J}}{21}{代码公开与复现}{subsection.4.10}{}}
+\@writefile{toc}{\contentsline {section}{附录\nobreakspace  A: 数学推导与计算示例}{22}{section*.2}\protected@file@percent }
+\newlabel{app:math}{{A}{22}{\appendixname \nobreakspace \thesectiondis \\* 数学推导与计算示例}{section*.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-A}}从均值到一元回归}{22}{subsection.Appendix.A.1}\protected@file@percent }
+\newlabel{app:eq:constant}{{A.2}{22}{从均值到一元回归}{equation.Appendix.A.2}{}}
+\newlabel{app:eq:line}{{A.3}{22}{从均值到一元回归}{equation.Appendix.A.3}{}}
+\newlabel{app:eq:ols-loss}{{A.4}{22}{从均值到一元回归}{equation.Appendix.A.4}{}}
+\newlabel{app:eq:ols-intercept}{{A.5}{22}{从均值到一元回归}{equation.Appendix.A.5}{}}
+\newlabel{app:eq:ols-slope}{{A.6}{23}{从均值到一元回归}{equation.Appendix.A.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces 三条教学计算记录，来自上传的 \nolinkurl  {train.csv}。}}{23}{table.Appendix.A.1}\protected@file@percent }
+\newlabel{app:eq:ols-orthogonal}{{A.8}{23}{从均值到一元回归}{equation.Appendix.A.8}{}}
 \citation{sklearnpitfalls}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-B}}多元房价回归}{21}{subsection.Appendix.A.2}\protected@file@percent }
-\newlabel{app:eq:scale}{{A.10}{21}{多元房价回归}{equation.Appendix.A.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-B}}多元房价回归}{24}{subsection.Appendix.A.2}\protected@file@percent }
+\newlabel{app:eq:scale}{{A.10}{24}{多元房价回归}{equation.Appendix.A.10}{}}
 \citation{sklearn}
-\newlabel{app:eq:normal}{{A.14}{22}{多元房价回归}{equation.Appendix.A.14}{}}
-\newlabel{app:eq:matrix-ols}{{A.15}{22}{多元房价回归}{equation.Appendix.A.15}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces 仅列非零项。展示值经过四舍五入，重算使用完整精度。}}{23}{table.Appendix.A.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-C}}收入分类与逻辑回归}{23}{subsection.Appendix.A.3}\protected@file@percent }
-\newlabel{app:eq:logit}{{A.17}{23}{收入分类与逻辑回归}{equation.Appendix.A.17}{}}
-\newlabel{app:eq:sigmoid}{{A.18}{23}{收入分类与逻辑回归}{equation.Appendix.A.18}{}}
-\newlabel{app:eq:crossentropy}{{A.20}{23}{收入分类与逻辑回归}{equation.Appendix.A.20}{}}
+\newlabel{app:eq:normal}{{A.14}{25}{多元房价回归}{equation.Appendix.A.14}{}}
+\newlabel{app:eq:matrix-ols}{{A.15}{25}{多元房价回归}{equation.Appendix.A.15}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces 仅列非零项。展示值经过四舍五入，重算使用完整精度。}}{26}{table.Appendix.A.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-C}}收入分类与逻辑回归}{26}{subsection.Appendix.A.3}\protected@file@percent }
+\newlabel{app:eq:logit}{{A.17}{26}{收入分类与逻辑回归}{equation.Appendix.A.17}{}}
+\newlabel{app:eq:sigmoid}{{A.18}{26}{收入分类与逻辑回归}{equation.Appendix.A.18}{}}
+\newlabel{app:eq:crossentropy}{{A.20}{26}{收入分类与逻辑回归}{equation.Appendix.A.20}{}}
 \citation{sklearn}
-\newlabel{app:eq:penalized}{{A.22}{24}{收入分类与逻辑回归}{equation.Appendix.A.22}{}}
-\newlabel{app:eq:logit-gradient}{{A.23}{24}{收入分类与逻辑回归}{equation.Appendix.A.23}{}}
-\newlabel{app:eq:logit-hessian}{{A.24}{24}{收入分类与逻辑回归}{equation.Appendix.A.24}{}}
+\newlabel{app:eq:penalized}{{A.22}{27}{收入分类与逻辑回归}{equation.Appendix.A.22}{}}
+\newlabel{app:eq:logit-gradient}{{A.23}{27}{收入分类与逻辑回归}{equation.Appendix.A.23}{}}
+\newlabel{app:eq:logit-hessian}{{A.24}{27}{收入分类与逻辑回归}{equation.Appendix.A.24}{}}
 \citation{sklearntree}
 \citation{sklearnforestclass}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-D}}回归树与随机森林}{25}{subsection.Appendix.A.4}\protected@file@percent }
-\newlabel{app:eq:tree-split}{{A.26}{25}{回归树与随机森林}{equation.Appendix.A.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-D}}回归树与随机森林}{28}{subsection.Appendix.A.4}\protected@file@percent }
+\newlabel{app:eq:tree-split}{{A.26}{28}{回归树与随机森林}{equation.Appendix.A.26}{}}
 \citation{sklearnforestreg}
 \citation{sklearnforestclass}
-\newlabel{app:eq:forest-var}{{A.31}{26}{回归树与随机森林}{equation.Appendix.A.31}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-E}}预测评价}{26}{subsection.Appendix.A.5}\protected@file@percent }
-\newlabel{app:eq:rmse}{{A.34}{27}{预测评价}{equation.Appendix.A.34}{}}
-\newlabel{app:eq:r2}{{A.35}{27}{预测评价}{equation.Appendix.A.35}{}}
+\newlabel{app:eq:forest-var}{{A.31}{29}{回归树与随机森林}{equation.Appendix.A.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-E}}预测评价}{29}{subsection.Appendix.A.5}\protected@file@percent }
+\newlabel{app:eq:rmse}{{A.34}{30}{预测评价}{equation.Appendix.A.34}{}}
+\newlabel{app:eq:r2}{{A.35}{30}{预测评价}{equation.Appendix.A.35}{}}
 \citation{sklearntfidf}
-\newlabel{app:eq:auc}{{A.40}{28}{预测评价}{equation.Appendix.A.40}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-F}}本地字段检索}{28}{subsection.Appendix.A.6}\protected@file@percent }
+\newlabel{app:eq:auc}{{A.40}{31}{预测评价}{equation.Appendix.A.40}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {A-F}}本地字段检索}{31}{subsection.Appendix.A.6}\protected@file@percent }
 \citation{lewis2020}
-\newlabel{app:eq:cosine}{{A.45}{29}{本地字段检索}{equation.Appendix.A.45}{}}
+\newlabel{app:eq:cosine}{{A.45}{32}{本地字段检索}{equation.Appendix.A.45}{}}
 \citation{adult}
 \citation{lewis2020}
-\@writefile{toc}{\contentsline {section}{附录\nobreakspace  B: 统计计算与分析参数}{30}{section*.3}\protected@file@percent }
-\newlabel{app:aggregate}{{B}{30}{\appendixname \nobreakspace \thesectiondis \\* 统计计算与分析参数}{section*.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-A}}社区均价}{30}{subsection.Appendix.B.1}\protected@file@percent }
-\newlabel{app:eq:mean}{{B.2}{30}{社区均价}{equation.Appendix.B.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-B}}从问题到计算}{30}{subsection.Appendix.B.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{附录\nobreakspace  B: 统计计算与分析参数}{33}{section*.3}\protected@file@percent }
+\newlabel{app:aggregate}{{B}{33}{\appendixname \nobreakspace \thesectiondis \\* 统计计算与分析参数}{section*.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-A}}社区均价}{33}{subsection.Appendix.B.1}\protected@file@percent }
+\newlabel{app:eq:mean}{{B.2}{33}{社区均价}{equation.Appendix.B.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-B}}从问题到计算}{33}{subsection.Appendix.B.2}\protected@file@percent }
 \citation{house}
 \citation{adult}
 \citation{nba}
 \citation{student}
-\@writefile{toc}{\contentsline {section}{附录\nobreakspace  C: 补充数据与实验图}{32}{section*.4}\protected@file@percent }
-\newlabel{app:results}{{C}{32}{\appendixname \nobreakspace \thesectiondis \\* 补充数据与实验图}{section*.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {C-A}}房价预测}{32}{subsection.Appendix.C.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {C.1}{\ignorespaces 房价主配置的验证误差。横轴为千美元，数值越小越好。}}{32}{figure.Appendix.C.1}\protected@file@percent }
-\newlabel{app:fig:house}{{C.1}{32}{房价主配置的验证误差。横轴为千美元，数值越小越好。}{figure.Appendix.C.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {C-B}}球员得分}{32}{subsection.Appendix.C.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {C.2}{\ignorespaces NBA 后六个赛季共 3,283 条记录的验证误差。单位为场均得分。}}{33}{figure.Appendix.C.2}\protected@file@percent }
-\newlabel{app:fig:nba}{{C.2}{33}{NBA 后六个赛季共 3,283 条记录的验证误差。单位为场均得分。}{figure.Appendix.C.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {C-C}}学生成绩}{33}{subsection.Appendix.C.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {C.3}{\ignorespaces 使用四个背景字段预测数学成绩，验证样本为 200 条。同期阅读、写作分数未作为输入。}}{33}{figure.Appendix.C.3}\protected@file@percent }
-\newlabel{app:fig:students}{{C.3}{33}{使用四个背景字段预测数学成绩，验证样本为 200 条。同期阅读、写作分数未作为输入。}{figure.Appendix.C.3}{}}
-\@writefile{toc}{\contentsline {section}{附录\nobreakspace  D: 实现、数据与运行记录}{34}{section*.5}\protected@file@percent }
-\newlabel{app:implementation}{{D}{34}{\appendixname \nobreakspace \thesectiondis \\* 实现、数据与运行记录}{section*.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-A}}程序实现与操作}{34}{subsection.Appendix.D.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{附录\nobreakspace  C: 补充数据与实验图}{35}{section*.4}\protected@file@percent }
+\newlabel{app:results}{{C}{35}{\appendixname \nobreakspace \thesectiondis \\* 补充数据与实验图}{section*.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {C-A}}房价预测}{35}{subsection.Appendix.C.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {C-B}}球员得分}{35}{subsection.Appendix.C.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {C-C}}学生成绩}{35}{subsection.Appendix.C.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {C.1}{\ignorespaces 原单次划分协议下的四任务比较，与正文嵌套验证分别报告。a，房价 RMSE，单位为千美元，验证 292 条。b，Adult ROC 曲线，验证 6,512 条，斜虚线为随机排序参照。c，NBA 后六季 RMSE，验证 3,283 条。d，学生数学 RMSE，验证 200 条。三个回归面板均比较训练均值、OLS 与随机森林；均为单次划分，无折间误差范围。}}{36}{figure.Appendix.C.1}\protected@file@percent }
+\newlabel{app:fig:house}{{C.1}{36}{原单次划分协议下的四任务比较，与正文嵌套验证分别报告。a，房价 RMSE，单位为千美元，验证 292 条。b，Adult ROC 曲线，验证 6,512 条，斜虚线为随机排序参照。c，NBA 后六季 RMSE，验证 3,283 条。d，学生数学 RMSE，验证 200 条。三个回归面板均比较训练均值、OLS 与随机森林；均为单次划分，无折间误差范围。}{figure.Appendix.C.1}{}}
+\newlabel{app:fig:nba}{{C.1}{36}{原单次划分协议下的四任务比较，与正文嵌套验证分别报告。a，房价 RMSE，单位为千美元，验证 292 条。b，Adult ROC 曲线，验证 6,512 条，斜虚线为随机排序参照。c，NBA 后六季 RMSE，验证 3,283 条。d，学生数学 RMSE，验证 200 条。三个回归面板均比较训练均值、OLS 与随机森林；均为单次划分，无折间误差范围。}{figure.Appendix.C.1}{}}
+\newlabel{app:fig:students}{{C.1}{36}{原单次划分协议下的四任务比较，与正文嵌套验证分别报告。a，房价 RMSE，单位为千美元，验证 292 条。b，Adult ROC 曲线，验证 6,512 条，斜虚线为随机排序参照。c，NBA 后六季 RMSE，验证 3,283 条。d，学生数学 RMSE，验证 200 条。三个回归面板均比较训练均值、OLS 与随机森林；均为单次划分，无折间误差范围。}{figure.Appendix.C.1}{}}
+\newlabel{fig:roc}{{C.1}{36}{原单次划分协议下的四任务比较，与正文嵌套验证分别报告。a，房价 RMSE，单位为千美元，验证 292 条。b，Adult ROC 曲线，验证 6,512 条，斜虚线为随机排序参照。c，NBA 后六季 RMSE，验证 3,283 条。d，学生数学 RMSE，验证 200 条。三个回归面板均比较训练均值、OLS 与随机森林；均为单次划分，无折间误差范围。}{figure.Appendix.C.1}{}}
+\@writefile{toc}{\contentsline {section}{附录\nobreakspace  D: 实现、数据与运行记录}{37}{section*.5}\protected@file@percent }
+\newlabel{app:implementation}{{D}{37}{\appendixname \nobreakspace \thesectiondis \\* 实现、数据与运行记录}{section*.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-A}}程序实现与操作}{37}{subsection.Appendix.D.1}\protected@file@percent }
 \citation{adult}
 \citation{nbaglossary}
 \citation{student}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-B}}数据处理记录}{35}{subsection.Appendix.D.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-C}}软件参数与统计约定}{36}{subsection.Appendix.D.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-D}}运行与检查记录}{36}{subsection.Appendix.D.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-E}}自由中文问答的后续评价}{37}{subsection.Appendix.D.5}\protected@file@percent }
-\newlabel{app:qa-evaluation}{{\mbox  {D-E}}{37}{自由中文问答的后续评价}{subsection.Appendix.D.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-F}}在 Mac 上准备与运行}{37}{subsection.Appendix.D.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-G}}重建文档}{38}{subsection.Appendix.D.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-B}}数据处理记录}{38}{subsection.Appendix.D.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-C}}软件参数与统计约定}{39}{subsection.Appendix.D.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-D}}运行与检查记录}{39}{subsection.Appendix.D.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-E}}自由中文问答的后续评价}{40}{subsection.Appendix.D.5}\protected@file@percent }
+\newlabel{app:qa-evaluation}{{\mbox  {D-E}}{40}{自由中文问答的后续评价}{subsection.Appendix.D.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-F}}在 Mac 上准备与运行}{40}{subsection.Appendix.D.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {D-G}}重建文档}{41}{subsection.Appendix.D.7}\protected@file@percent }
 \bibstyle{IEEEtranN}
 \bibdata{merged_refs}
 \bibcite{herzig2020}{{1}{2020}{{Herzig et~al.}}{{Herzig, Nowak, M{\"u}ller, Piccinno, and Eisenschlos}}}
@@ -154,16 +169,20 @@
 \bibcite{adult}{{4}{1996}{{Becker and Kohavi}}{{}}}
 \bibcite{nba}{{5}{n.d.}{{justinas}}{{}}}
 \bibcite{student}{{6}{n.d.}{{spscientist}}{{}}}
-\bibcite{nestedcv}{{7}{n.d.{}}{{scikit-learn developers}}{{}}}
-\bibcite{optunadocs}{{8}{n.d.}{{Optuna developers}}{{}}}
-\bibcite{shapdocs}{{9}{n.d.}{{SHAP developers}}{{}}}
-\bibcite{sklearn}{{10}{n.d.{}}{{scikit-learn developers}}{{}}}
-\bibcite{breiman2001}{{11}{2001}{{Breiman}}{{}}}
-\bibcite{sklearnpitfalls}{{12}{n.d.{}}{{scikit-learn developers}}{{}}}
-\bibcite{sklearntree}{{13}{n.d.{}}{{scikit-learn developers}}{{}}}
-\bibcite{sklearnforestclass}{{14}{n.d.{}}{{scikit-learn developers}}{{}}}
-\bibcite{sklearnforestreg}{{15}{n.d.{}}{{scikit-learn developers}}{{}}}
-\bibcite{sklearntfidf}{{16}{n.d.{}}{{scikit-learn developers}}{{}}}
-\bibcite{nbaglossary}{{17}{n.d.}{{National Basketball Association}}{{}}}
-\@writefile{toc}{\contentsline {section}{参考文献}{39}{section*.6}\protected@file@percent }
-\gdef \@abspage@last{40}
+\bibcite{xgboost2016}{{7}{2016}{{Chen and Guestrin}}{{}}}
+\bibcite{lightgbm2017}{{8}{2017}{{Ke et~al.}}{{Ke, Meng, Finley, Wang, Chen, Ma, Ye, and Liu}}}
+\bibcite{catboost2018}{{9}{2018}{{Prokhorenkova et~al.}}{{Prokhorenkova, Gusev, Vorobev, Dorogush, and Gulin}}}
+\bibcite{dcn2017}{{10}{2017}{{Wang et~al.}}{{Wang, Fu, Fu, and Wang}}}
+\bibcite{transformer2017}{{11}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{torchlstm}{{12}{n.d.}{{PyTorch developers}}{{}}}
+\bibcite{tcn2018}{{13}{2018}{{Bai et~al.}}{{Bai, Kolter, and Koltun}}}
+\bibcite{sklearn}{{14}{n.d.{}}{{scikit-learn developers}}{{}}}
+\bibcite{breiman2001}{{15}{2001}{{Breiman}}{{}}}
+\bibcite{sklearnpitfalls}{{16}{n.d.{}}{{scikit-learn developers}}{{}}}
+\bibcite{sklearntree}{{17}{n.d.{}}{{scikit-learn developers}}{{}}}
+\bibcite{sklearnforestclass}{{18}{n.d.{}}{{scikit-learn developers}}{{}}}
+\bibcite{sklearnforestreg}{{19}{n.d.{}}{{scikit-learn developers}}{{}}}
+\bibcite{sklearntfidf}{{20}{n.d.{}}{{scikit-learn developers}}{{}}}
+\@writefile{toc}{\contentsline {section}{参考文献}{42}{section*.6}\protected@file@percent }
+\bibcite{nbaglossary}{{21}{n.d.}{{National Basketball Association}}{{}}}
+\gdef \@abspage@last{44}

@@ -1,0 +1,41 @@
+{
+  "model": "Linear",
+  "method": "grid",
+  "rows": [
+    {
+      "trial": 0,
+      "params": {
+        "fit_intercept": true
+      },
+      "fold_scores": [
+        -13.90138608759033,
+        -13.960357124548135,
+        -13.17864548340776
+      ],
+      "score": -13.680129565182076,
+      "seconds": 0.001987084047868848,
+      "reused_duplicate_candidate": false
+    },
+    {
+      "trial": 1,
+      "params": {
+        "fit_intercept": false
+      },
+      "fold_scores": [
+        -14.031113519833175,
+        -13.83815898756186,
+        -13.629426289698628
+      ],
+      "score": -13.832899599031222,
+      "seconds": 0.0014269578969106078,
+      "reused_duplicate_candidate": false
+    }
+  ],
+  "best_params": {
+    "fit_intercept": true
+  },
+  "unique_candidates": 2,
+  "requested_evaluations": 2,
+  "actual_inner_fits": 6,
+  "duplicate_policy": "Identical deterministic candidate scores reused within one search; evaluations remain in trace."
+}

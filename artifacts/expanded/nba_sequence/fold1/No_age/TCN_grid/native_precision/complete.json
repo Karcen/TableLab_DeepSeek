@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "nba_sequence",
+    "fold": 1,
+    "variant": "No age",
+    "model": "TCN",
+    "method": "grid",
+    "cls": false,
+    "channels": 6,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold1/No_age/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold1/No_age",
+    "seed": 142
+  },
+  "selected_params": {
+    "lr": 0.01,
+    "weight_decay": 0.01,
+    "width": 64
+  },
+  "seconds": 127.84653520793654,
+  "parameter_count": 9153,
+  "model_sha256": "35f4641c8c4b9065bb18af7cea490fde6c5a74e60ee90d9663c9bce460f4c9b5",
+  "prediction_sha256": "8fb434483bdb58a6f7d329d986b81d2d5a795842d98d7245d2780666ae23d794",
+  "metrics_sha256": "a7edc29ebe4b292fc556d1e6e23aeab7e0f682584f872d284a107aca817b9d65"
+}

@@ -1,0 +1,25 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 0,
+    "variant": "No age",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold0/No_age/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold0/No_age",
+    "seed": 42
+  },
+  "selected_params": {
+    "learning_rate": 0.1,
+    "min_child_samples": 30,
+    "num_leaves": 7
+  },
+  "seconds": 5.528116125031374,
+  "parameter_count": null,
+  "model_sha256": "3c4fb976f026bb4a5c4024953a156f54091c54c523b5c6141bbfa6258cb1f879",
+  "prediction_sha256": "e3fbfb9ffbf820346292fe91037c1f4d5c449fdc453b994f5c0d76edb0cffbae",
+  "metrics_sha256": "0dec8003cda9ecca51b128a14a1cb6e307b24119cc81025d87bae1504825cf0f"
+}

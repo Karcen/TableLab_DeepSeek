@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "nba",
+    "fold": 2,
+    "variant": "No age",
+    "model": "AdaBoost",
+    "method": "grid",
+    "cls": false,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold2/No_age/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba/fold2/No_age",
+    "seed": 242
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "max_depth": 3,
+    "n_estimators": 50
+  },
+  "seconds": 7.5654372500721365,
+  "parameter_count": null,
+  "model_sha256": "f136dc27c51cc82b8648a37f6934412df54d88e577a28e68b7e1712b5dae6c93",
+  "prediction_sha256": "1a73b16daf6dbb6155338d96cb6a2d2f0f861fff23002435cb2992e3ad5bd736",
+  "metrics_sha256": "2ccaa3076c42fb6abe331222f7bafdab3fc6b6038baa467a7650394bfa834f29",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "d0733ad23f8d1e0f6a68bf5ee84d0c71da5cd21ed89b759be2f785d8b4604d9b",
+  "max_prediction_rounding_correction": 1.7763568394002505e-15
+}

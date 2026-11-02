@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 2,
+    "variant": "No education",
+    "model": "CatBoost",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/No_education/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/No_education",
+    "seed": 242
+  },
+  "selected_params": {
+    "depth": 6,
+    "l2_leaf_reg": 10.0,
+    "learning_rate": 0.1
+  },
+  "seconds": 15.527152583934367,
+  "parameter_count": null,
+  "model_sha256": "2528280415d7b74d8cc1b3f28c96ea32b3e29abca01954d8ff68302d218356bd",
+  "prediction_sha256": "d5587082e9b0f910b89563fb815c32bb287995c16163218e27f1dfa85bd286f4",
+  "metrics_sha256": "bb10a0efe926d00efa1e4014a67f626ffdab045729bd45387c15b4a622fe2987",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "0dbb9587afa541e6c1ca37794d72b1d7d2ab44a93fa391500462de27945e2b1a",
+  "max_prediction_rounding_correction": 9.974659986866641e-17
+}

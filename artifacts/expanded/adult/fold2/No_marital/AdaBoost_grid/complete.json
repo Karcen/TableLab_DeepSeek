@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 2,
+    "variant": "No marital",
+    "model": "AdaBoost",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/No_marital/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/No_marital",
+    "seed": 242
+  },
+  "selected_params": {
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "n_estimators": 100
+  },
+  "seconds": 21.729880708036944,
+  "parameter_count": null,
+  "model_sha256": "1f496c67283c4ae0e0b33b2198c7486ad48665bf3b414258dafc81021708fed1",
+  "prediction_sha256": "cccf22ccf6d61c1a1fda8a3bbdab767f7848938e46c881ef0eeeb7d939776d51",
+  "metrics_sha256": "c17603cf3d110bc6289053e6087732193fe51aa7b3cb064f7871e1c17c5c04a3",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "92f5c927f8c1f512ed1adaf217a394f92bab372b0a50306de01ceebff8bba610",
+  "max_prediction_rounding_correction": 9.71445146547012e-17
+}

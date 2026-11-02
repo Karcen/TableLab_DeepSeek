@@ -1,0 +1,28 @@
+{
+  "task": {
+    "dataset": "nba_sequence",
+    "fold": 1,
+    "variant": "No oldest season",
+    "model": "LightGBM",
+    "method": "grid",
+    "cls": false,
+    "channels": 7,
+    "steps": 2,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold1/No_oldest_season/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/nba_sequence/fold1/No_oldest_season",
+    "seed": 142
+  },
+  "selected_params": {
+    "learning_rate": 0.03,
+    "min_child_samples": 10,
+    "num_leaves": 7
+  },
+  "seconds": 1.5903143340256065,
+  "parameter_count": null,
+  "model_sha256": "2b3560e542d7af09497a1fe5feda831d2d6cebac781e9e42abe11f2ade5513d4",
+  "prediction_sha256": "470f5da7bb9d4a07410fa593406bf5be019fcf5e0688bb888a97bf06305b3669",
+  "metrics_sha256": "ef12e3bae8b5eed2a19b24b3379a82f6b6b8ea2414a8738cfe2c566ecf6c4ca8",
+  "precision_protocol_sha256": "b7c51ad848ffa6c8a50468e50e00ee3c6be668d51d4475ae9994d1bb83f741aa",
+  "native_predictions_sha256": "0932c88fd483f8047e413187581f658a0add0429bbdae9dd76ce5586fe25bb72",
+  "max_prediction_rounding_correction": 3.552713678800501e-15
+}

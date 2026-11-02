@@ -1,0 +1,26 @@
+{
+  "task": {
+    "dataset": "adult",
+    "fold": 2,
+    "variant": "No attention",
+    "model": "FeatureTransformer",
+    "method": "grid",
+    "cls": true,
+    "channels": 0,
+    "steps": 3,
+    "cache_path": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/Full/prepared.joblib",
+    "folder": "/Users/karcenzheng/Downloads/郑嘉诚机器学习大作业/TableLab_DeepSeek/artifacts/expanded/adult/fold2/No_attention",
+    "seed": 242,
+    "architecture_ablation": "No attention"
+  },
+  "selected_params": {
+    "lr": 0.01,
+    "weight_decay": 0.01,
+    "width": 32
+  },
+  "seconds": 29.012911166995764,
+  "parameter_count": 9825,
+  "model_sha256": "7d54ecc95446fc1b9f351486d1058d8cc3ccc4e8f1797cabd95fb57d8e1b04c5",
+  "prediction_sha256": "080d23320d3d9b4a15e6763000e53547bd7b4aca38a11b56c3743f3b75b4af1f",
+  "metrics_sha256": "eff39a17c7150e401cdfc353c6430100227c34f5296d58cc1f343769e520753a"
+}

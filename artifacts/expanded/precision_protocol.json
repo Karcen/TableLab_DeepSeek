@@ -1,0 +1,10 @@
+{
+  "created_at_utc": "2026-11-01T18:29:27.551342+00:00",
+  "specification": {
+    "code_sha256": "f958b8ae8f33ed379d10ea8b561963d4dc7d998a9b13794259e3fe71a169ef0a",
+    "rule": "Cast model predictions to float64 before inverse target scaling; export all decimal digits; recompute metrics in float64",
+    "training": "No fitting, parameter changes, threshold changes or search decisions",
+    "preservation": "Native precision predictions, metrics and completion marker archived per flow; model SHA256 unchanged",
+    "persistence": "Use exact last-season points from saved sequence master, rather than decoding a float32 scaled value"
+  }
+}
