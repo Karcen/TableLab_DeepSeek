@@ -18,11 +18,7 @@ TableLab 是一个机器学习课程项目。用户用中文描述问题，程�
 
 ## 论文与展示
 
-- [课程论文](docs/paper.pdf)
-- [Beamer 展示稿](docs/presentation.pdf)
-- [实验结果说明](docs/research_summary.md)
-
-LaTeX 和 BibTeX 源码在 `docs/source`。`docs/demo_on_mac.txt` 是现场操作说明；`docs/classroom_replay.html` 可在不调用 API 的情况下回放固定例题，回答新问题需启动网页。
+以往打包版本提到的课程论文、Beamer 展示稿、实验汇总、LaTeX 源码和离线课堂回放，目前**未收录在这个 GitHub 仓库**。因此不提供指向 `docs/` 的失效链接。网页应用和仓库已提交的实验结果见下文。
 
 ## 扩展模型实验
 
@@ -40,11 +36,11 @@ LaTeX 和 BibTeX 源码在 `docs/source`。`docs/demo_on_mac.txt` 是现场操�
 
 Adult 对 21 项网格或固定条目另做后续扩展测试。按 CV 事先预选的 CatBoost 测试 AUC 为 0.8924，95% 分组 bootstrap 区间为 [0.8871, 0.8977]。原测试已用于前期十三流程，因此不称新的盲测；测试成绩没有用于回调参数或阈值。其余任务仍缺独立新样本。NBA 历史任务改变了输入和样本，不能用它与原 NBA 任务的误差差值直接说明网络收益。
 
-SHAP 固定解释提升树，覆盖全部外层验证记录；消融删除输入或关闭部件后重新训练。字段贡献与删减不直接识别现实中的因果效应。检索仍只检查十六道固定题，其中十五道含英文字段名，真实 DeepSeek API 方案质量尚未评价。完整数字、解释和复现办法见 [实验说明](docs/research_summary.md)。
+SHAP 固定解释提升树，覆盖全部外层验证记录；消融删除输入或关闭部件后重新训练。字段贡献与删减不直接识别现实中的因果效应。检索仍只检查十六道固定题，其中十五道含英文字段名，真实 DeepSeek API 方案质量尚未评价。本仓库中已有的结果与核对资料见 `artifacts/expanded` 和 `codes/verification`；此前单独的实验说明文档未包含在仓库中。
 
 ## 复现与核对
 
-先启动一次网页准备 Python 环境，停止服务后运行 `Run-Expanded.command`。它会安装固定版本依赖，完成嵌套搜索、消融、双精度预测导出和结果核对，再绘图并编译论文与 Madrid 展示稿。批量实验不调用 DeepSeek API，每个模型单线程，已完成组合按冻结协议复用。
+先启动一次网页准备 Python 环境，停止服务后运行 `Run-Expanded.command`。它会安装固定版本依赖，完成嵌套搜索、消融、双精度预测导出和结果核对，再绘图并尝试编译论文与 Madrid 展示稿。但当前仓库缺少 `docs/` 目录，文档构建步骤会失败，需先恢复相应文件。批量实验不调用 DeepSeek API，每个模型单线程，已完成组合按冻结协议复用。
 
 扩展结果在 `artifacts/expanded`。前期十三流程保留在 `artifacts/research`，其 Adult 测试保留在 `artifacts/holdout/adult`；新增扩展测试另存于 `artifacts/expanded/holdout_extension`，不覆盖前期记录。修改冻结训练代码前，应先归档不兼容结果。
 
@@ -56,8 +52,7 @@ codes/.venv/bin/python codes/tools/verify_expanded.py
 codes/.venv/bin/python codes/tools/verify_expanded_holdout.py
 codes/.venv/bin/python codes/tools/verify_expanded_shap.py
 
-# 重建论文与展示稿
-bash docs/build_docs.sh
+# 当前仓库未包含历史版本的 docs/build_docs.sh。
 
 # 修改文件前核对交付清单
 shasum -a 256 -c codes/verification/research/files.sha256
@@ -73,6 +68,5 @@ shasum -a 256 -c codes/verification/research/files.sha256
 | `artifacts/research` | 四任务嵌套验证的模型和逐条结果 |
 | `figures`、`tables` | 原单次划分复核的图与结果表 |
 | `models` | 原实验的训练方案、划分、预测和演示记录 |
-| `docs` | 论文、展示稿、源码、操作说明和历史版本 |
 
-数据来源及其核实情况见论文附录 C、D 和 `data/manifest.json`。
+数据来源及其核实情况见 `data/manifest.json`。此前提到的论文附录 C、D 未收录在当前仓库中。
