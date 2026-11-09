@@ -18,11 +18,7 @@ If double-clicking reports a permission error, type `bash` followed by a space i
 
 ## Paper and slides
 
-- [Course paper, in Chinese](docs/paper.pdf)
-- [Beamer slides, in Chinese](docs/presentation.pdf)
-- [Experiment summary, in Chinese](docs/research_summary.md)
-
-LaTeX and BibTeX sources are in `docs/source`. The file `docs/demo_on_mac.txt` contains demonstration instructions. Open `docs/classroom_replay.html` to replay fixed examples without API calls; new questions require the web app.
+The course paper, presentation, experiment summary, LaTeX sources, and offline classroom replay referred to by earlier distributions are **not included in the current GitHub repository**. This section will be linked again if those files are published. The interactive application and saved results have separate entries below.
 
 ## Experiments
 
@@ -40,15 +36,15 @@ Each trainable entry has grid and TPE searches. Most domains have eight configur
 
 Adult also has a subsequent test extension for the 21 grid or fixed entries. The model selected from CV before testing is CatBoost: test AUC 0.8924, with a 95% cluster-bootstrap interval of [0.8871, 0.8977]. The original test had already been used for the earlier 13 procedures, so this is not a new blind test. Test scores did not change parameters or thresholds. The other tasks still lack new independent test samples. The NBA history task uses different inputs and records from the original NBA task; their errors do not directly measure an architecture gain.
 
-SHAP explains a boosting reference fixed before the expanded results, on all outer-validation records. Ablation measures performance after retraining with less information or a disabled component. Neither field attribution nor feature removal identifies real-world causal effects. Retrieval is still checked on 16 fixed questions, 15 containing English field names; real DeepSeek plan quality has not been evaluated. [Results and methods, in Chinese](docs/research_summary.md).
+SHAP explains a boosting reference fixed before the expanded results, on all outer-validation records. Ablation measures performance after retraining with less information or a disabled component. Neither field attribution nor feature removal identifies real-world causal effects. Retrieval is still checked on 16 fixed questions, 15 containing English field names; real DeepSeek plan quality has not been evaluated.. See the saved outputs under `artifacts/expanded` and `codes/verification` for the material committed here; the separate summary document is not included.
 
 ## Reproduce and check results
 
-Launch the app once to prepare the Python environment, stop the web service, then run `Run-Expanded.command`. It installs the pinned research dependencies, runs nested search and ablations, exports predictions in float64, checks the results, generates figures, and rebuilds the paper and Madrid slides. Batch experiments make no DeepSeek API calls. Each model uses one CPU thread; completed jobs are reused under the frozen protocol.
+Launch the app once to prepare the Python environment, stop the web service, then run `Run-Expanded.command`. It installs the pinned research dependencies, runs nested search and ablations, exports predictions in float64, checks the results, generates figures, and then attempts to rebuild paper and slides. The current repository lacks the required `docs/` directory, so that document-build step will fail until its sources are restored. Batch experiments make no DeepSeek API calls. Each model uses one CPU thread; completed jobs are reused under the frozen protocol.
 
 Expanded results are in `artifacts/expanded`. The earlier thirteen-procedure comparison is in `artifacts/research`, and its Adult test is in `artifacts/holdout/adult`; those records remain unchanged. The new Adult test extension is stored separately under `artifacts/expanded/holdout_extension`. Archive incompatible results before changing a frozen training implementation.
 
-Figures use the designated Nature Skills directory, `~/Downloads/SKILLS/nature-skills-main/skills/nature-figure`. Set `NATURE_FIGURE_SKILL` to use another location. Document compilation needs XeLaTeX, BibTeX, and Font Awesome 5.
+Figures use the designated Nature Skills directory, `~/Downloads/SKILLS/nature-skills-main/skills/nature-figure`. Set `NATURE_FIGURE_SKILL` to use another location. The former documentation build requires separate XeLaTeX and BibTeX sources, which are not included in this repository.
 
 ```bash
 # Recompute expanded metrics and check every split and search
@@ -56,8 +52,7 @@ codes/.venv/bin/python codes/tools/verify_expanded.py
 codes/.venv/bin/python codes/tools/verify_expanded_holdout.py
 codes/.venv/bin/python codes/tools/verify_expanded_shap.py
 
-# Rebuild the paper and slides
-bash docs/build_docs.sh
+# The historical docs/build_docs.sh is not included in this repository.
 
 # Check the delivered files before modifying them
 shasum -a 256 -c codes/verification/research/files.sha256
@@ -73,6 +68,5 @@ shasum -a 256 -c codes/verification/research/files.sha256
 | `artifacts/research` | Models and row-level results from nested validation |
 | `figures`, `tables` | Figures and result tables from the earlier single-split checks |
 | `models` | Earlier training plans, splits, predictions, and demonstration records |
-| `docs` | Paper, slides, sources, instructions, and archived versions |
 
-Dataset sources and their verification status are recorded in Appendices C and D of the paper and in `data/manifest.json`.
+Dataset sources and their verification status are recorded in `data/manifest.json`. The paper appendices referred to in the earlier distribution are not included here.
